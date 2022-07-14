@@ -72,3 +72,23 @@ crashlytics-build.properties
 # Exceptions 
 !*.dll 
 !*.obj
+Assets/Skybox add-on/Images/Skybox_1.psd
+Assets/Skybox add-on/Images/Skybox_1.psd.meta
+Assets/Skybox add-on/Images/Skybox_10.psd
+Assets/Skybox add-on/Images/Skybox_10.psd.meta
+Assets/Skybox add-on/Images/Skybox_2.psd
+Assets/Skybox add-on/Images/Skybox_2.psd.meta
+Assets/Skybox add-on/Images/Skybox_3.psd
+Assets/Skybox add-on/Images/Skybox_3.psd.meta
+Assets/Skybox add-on/Images/Skybox_4.psd
+Assets/Skybox add-on/Images/Skybox_4.psd.meta
+Assets/Skybox add-on/Images/Skybox_5.psd
+Assets/Skybox add-on/Images/Skybox_5.psd.meta
+Assets/Skybox add-on/Images/Skybox_6.psd
+Assets/Skybox add-on/Images/Skybox_6.psd.meta
+Assets/Skybox add-on/Images/Skybox_7.psd
+Assets/Skybox add-on/Images/Skybox_7.psd.meta
+Assets/Skybox add-on/Images/Skybox_8.psd
+Assets/Skybox add-on/Images/Skybox_8.psd.meta
+Assets/Skybox add-on/Images/Skybox_9.psd
+Assets/Skybox add-on/Images/Skybox_9.psd.meta
