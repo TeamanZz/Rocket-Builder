@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   constantVelocity: 3
   rotationDamping: 7
-  sideSpeed: 10
+  sideSpeed: 7
   joystick: {fileID: 456962603}
   shuttleModel: {fileID: 690339253}
 --- !u!54 &126157149
