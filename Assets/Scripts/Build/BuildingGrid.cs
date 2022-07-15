@@ -13,21 +13,27 @@ public class BuildingGrid : MonoBehaviour
     [SerializeField] private Vector2Int gridSize;
     public List<BuildItem> placedItems = new List<BuildItem>();
     public int countOfItems;
-
     [SerializeField] public BuildItem[,] grid;
-
+    public List<BuildItem[,]> gridList = new List<BuildItem[,]>();
+    [SerializeField] private Transform normalBuildPosition;
+    [SerializeField] private Vector3 debugPosition;
     [field: SerializeField] public BuildItem placingItem { get; set; }
     [SerializeField] private Transform rocketObject;
+    [SerializeField] private List<BuildItem> connectors = new List<BuildItem>();
 
     [Header("ControlText")] [SerializeField]
     private float maxItemsWeight;
-
     [SerializeField] private float currentItemsWeight;
-
     [Space(5f)] [Header("UI")] [SerializeField]
     private Text weightControlText;
 
-    public Vector3 debugPosition;
+    
+    
+    [Header("EndBuild")] 
+    [SerializeField] private Transform startRocketPosition;
+    [SerializeField] private Camera rocketCamera;
+    [SerializeField] private GameObject blackScreenPrefab;
+    [SerializeField] private GameObject uiItems;
 
     private void Awake()
     {
@@ -38,13 +44,9 @@ public class BuildingGrid : MonoBehaviour
 
     public void ResizeGrid()
     {
-        var currentGridXSize = gameObject.transform.position.x * 2;
-        var currentGridYSize = gameObject.transform.position.z * 2;
-
-        gridSize.x = (int) currentGridXSize;
-        gridSize.y = (int) currentGridYSize;
-
-        transform.localScale = new Vector3(currentGridXSize / 10, 1, currentGridYSize / 10);
+        var xScale = gridSize.x / 10;
+        var yScale = gridSize.y / 10;
+        transform.localScale = new Vector3(xScale,1,yScale);
     }
 
     public void StartPlacingItem(BuildItem placingItemPrefab)
@@ -52,10 +54,20 @@ public class BuildingGrid : MonoBehaviour
         if (placingItem != null)
         {
             Destroy(placingItem.gameObject);
+            for (int i = 0; i < placingItem.connectorList.Count; i++)
+            {
+                connectors.RemoveAt(i);
+                Destroy(connectors[i]);
+                i--;
+            }
         }
 
         placingItem = Instantiate(placingItemPrefab);
         placingItem.transform.parent = rocketObject;
+        for (int i = 0; i < placingItem.connectorList.Count; i++)
+        {
+            connectors.Add(placingItem.connectorList[i]);
+        }
     }
 
     private void OnDrawGizmos()
@@ -89,7 +101,7 @@ public class BuildingGrid : MonoBehaviour
         {
             Vector3 worldPos = ray.GetPoint(position);
             debugPosition = worldPos;
-            Debug.Log(worldPos);
+            //Debug.Log(worldPos);
             var x = Mathf.RoundToInt(worldPos.x);
             var y = Mathf.RoundToInt(worldPos.y);
 
@@ -111,7 +123,7 @@ public class BuildingGrid : MonoBehaviour
             }
 
             placingItem.transform.position = new Vector3(x, y, 0);
-            Debug.Log(placingItem.transform.position);
+            
             placingItem.SetTransparent(available);
 
             if (Input.GetMouseButtonDown(0) && available == true &&
@@ -129,17 +141,26 @@ public class BuildingGrid : MonoBehaviour
 
     private bool IsPlaceTaken(int placeX, int placeY)
     {
-        for (int x = 0; x < placingItem.Size.x; x++)
+        if (placingItem.isThisItemHasConnectors)
         {
-            for (int y = 0; y < placingItem.Size.y; y++)
+            return false;
+        }
+        else
+        {
+            
+            
+            for (int x = 0; x < placingItem.Size.x; x++)
             {
-                if (grid[placeX + x, placeY + y] != null)
+                for (int y = 0; y < placingItem.Size.y; y++)
                 {
-                    return true;
+                    
+                    if (grid[placeX + x, placeY + y] != null)
+                    {
+                        return true;
+                    }
                 }
             }
         }
-
         return false;
     }
 
@@ -153,8 +174,14 @@ public class BuildingGrid : MonoBehaviour
             }
         }
 
+        for (int i = 0; i < placingItem.AllowedToBuildCells.Count; i++)
+        {
+            Debug.Log(i + "" + " point = " + " " + placingItem.AllowedToBuildCells[i].x);
+        }
+        Debug.Log(placingItem.transform.position);
+        
         AddWeightToText();
-        placedItems.Add(placingItem);
+        placedItems.Add(placingItem);   
         placingItem.SetNormal();
         countOfItems++;
         placingItem.id = countOfItems;
@@ -197,5 +224,22 @@ public class BuildingGrid : MonoBehaviour
         DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight), Mathf.Round(0), 1f);
         placedItems.Clear();
         countOfItems = 0;
+        connectors.Clear();
+    }
+
+    public void EndBuidling()
+    {
+        StartCoroutine(EndBuildingCorutine());
+    }
+    
+    public IEnumerator EndBuildingCorutine()
+    {
+        var blackScreen = Instantiate(blackScreenPrefab);
+        uiItems.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        Destroy(blackScreen);
+        rocketObject.transform.position = startRocketPosition.position;
+        rocketCamera.gameObject.SetActive(true);
+        mainCamera.gameObject.SetActive(false);
     }
 }
