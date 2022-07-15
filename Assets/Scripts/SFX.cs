@@ -6,7 +6,7 @@ public class SFX : MonoBehaviour
 {
     public static SFX Instance;
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip playerGunHit;
     private GameObject lastSource;
     private void Awake()
     {
@@ -20,7 +20,7 @@ public class SFX : MonoBehaviour
             audioSource.pitch = 1;
         }
         lastSource = source;
-        audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(playerGunHit);
         audioSource.pitch += 0.05f;
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 19818802}
   - component: {fileID: 19954344}
   m_Layer: 0
-  m_Name: RoundHitBlue
+  m_Name: Enemy Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
