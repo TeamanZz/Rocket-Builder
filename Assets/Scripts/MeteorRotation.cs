@@ -9,7 +9,6 @@ public class MeteorRotation : MonoBehaviour
     void Start()
     {
         Vector3 rotateValue = new Vector3(Random.Range(-3600, 3600f), Random.Range(-3600, 3600f), Random.Range(-3600, 3600f));
-        Debug.Log(rotateValue);
         transform.DORotate(rotateValue, 60, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Incremental);
     }
 
