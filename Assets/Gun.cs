@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Gun : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Gun : MonoBehaviour
     public Transform muzzle;
     public Transform targetVector;
     public Transform ship;
+    public UnityEvent OnShoot;
 
     private void Start()
     {
@@ -21,6 +23,7 @@ public class Gun : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(timeBetweenShots);
+            OnShoot.Invoke();
             var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, -ship.eulerAngles.z));
             newProjectile.GetComponent<Projectile>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;

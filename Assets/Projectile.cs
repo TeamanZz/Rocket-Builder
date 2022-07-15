@@ -10,13 +10,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(DestroyBulletAfterTime());
-    }
-
-    private IEnumerator DestroyBulletAfterTime()
-    {
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.65f);
     }
 
     private void OnTriggerEnter(Collider other)
