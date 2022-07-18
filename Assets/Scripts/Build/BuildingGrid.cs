@@ -8,45 +8,34 @@ using DG.Tweening;
 
 public class BuildingGrid : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
-    [Header("Grids")] 
+    [Header("Grids")]
     [SerializeField] private Vector2Int gridSize;
     public List<BuildItem> placedItems = new List<BuildItem>();
     public int countOfItems;
     [SerializeField] public BuildItem[,] grid;
-    public List<BuildItem[,]> gridList = new List<BuildItem[,]>();
-    [SerializeField] private Transform normalBuildPosition;
     [SerializeField] private Vector3 debugPosition;
     [field: SerializeField] public BuildItem placingItem { get; set; }
     [SerializeField] private Transform rocketObject;
     [SerializeField] private List<BuildItem> connectors = new List<BuildItem>();
 
-    [Header("ControlText")] [SerializeField]
+    [Header("ControlText")]
+    [SerializeField]
     private float maxItemsWeight;
     [SerializeField] private float currentItemsWeight;
-    [Space(5f)] [Header("UI")] [SerializeField]
-    private Text weightControlText;
+    [Space(5f)]
 
-    
-    
-    [Header("EndBuild")] 
+    [Header("EndBuild")]
     [SerializeField] private Transform startRocketPosition;
     [SerializeField] private Camera rocketCamera;
     [SerializeField] private GameObject blackScreenPrefab;
     [SerializeField] private GameObject uiItems;
 
+    private Camera mainCamera;
+
     private void Awake()
     {
-        weightControlText.text = $"Weight : {currentItemsWeight} / {maxItemsWeight}";
         grid = new BuildItem[gridSize.x, gridSize.y];
         mainCamera = Camera.main;
-    }
-
-    public void ResizeGrid()
-    {
-        var xScale = gridSize.x / 10;
-        var yScale = gridSize.y / 10;
-        transform.localScale = new Vector3(xScale,1,yScale);
     }
 
     public void StartPlacingItem(BuildItem placingItemPrefab)
@@ -73,34 +62,28 @@ public class BuildingGrid : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawSphere(debugPosition,0.5f);
+        Gizmos.DrawSphere(debugPosition, 0.5f);
 
         for (int i = 0; i < gridSize.x; i++)
         {
             for (int j = 0; j < gridSize.y; j++)
             {
-                Gizmos.DrawWireCube(new Vector3(i,j,0), new Vector3(1f,1f,1f));
+                Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
             }
         }
     }
 
     private void Update()
     {
-
-        weightControlText.text = (currentItemsWeight).ToString("0.0") + "/" + (maxItemsWeight).ToString("0.0");
-
-        if (placingItem == null) 
+        if (placingItem == null)
             return;
 
         var groundPlane = new Plane(Vector3.forward, Vector3.one);
         var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        
-        
         if (groundPlane.Raycast(ray, out float position))
         {
             Vector3 worldPos = ray.GetPoint(position);
-            debugPosition = worldPos;
             //Debug.Log(worldPos);
             var x = Mathf.RoundToInt(worldPos.x);
             var y = Mathf.RoundToInt(worldPos.y);
@@ -117,13 +100,13 @@ public class BuildingGrid : MonoBehaviour
                 available = false;
             }
 
-            if (available && IsPlaceTaken(x, y))
+            if (IsPlaceTaken(x, y))
             {
                 available = false;
             }
 
             placingItem.transform.position = new Vector3(x, y, 0);
-            
+
             placingItem.SetTransparent(available);
 
             if (Input.GetMouseButtonDown(0) && available == true &&
@@ -147,13 +130,11 @@ public class BuildingGrid : MonoBehaviour
         }
         else
         {
-            
-            
             for (int x = 0; x < placingItem.Size.x; x++)
             {
                 for (int y = 0; y < placingItem.Size.y; y++)
                 {
-                    
+
                     if (grid[placeX + x, placeY + y] != null)
                     {
                         return true;
@@ -174,14 +155,8 @@ public class BuildingGrid : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < placingItem.AllowedToBuildCells.Count; i++)
-        {
-            Debug.Log(i + "" + " point = " + " " + placingItem.AllowedToBuildCells[i].x);
-        }
-        Debug.Log(placingItem.transform.position);
-        
         AddWeightToText();
-        placedItems.Add(placingItem);   
+        placedItems.Add(placingItem);
         placingItem.SetNormal();
         countOfItems++;
         placingItem.id = countOfItems;
@@ -213,7 +188,6 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
-
     public void DeleteAllItems()
     {
         for (int i = 0; i < placedItems.Count; i++)
@@ -231,7 +205,7 @@ public class BuildingGrid : MonoBehaviour
     {
         StartCoroutine(EndBuildingCorutine());
     }
-    
+
     public IEnumerator EndBuildingCorutine()
     {
         var blackScreen = Instantiate(blackScreenPrefab);
