@@ -23,7 +23,7 @@ public class BuildItem : MonoBehaviour
         mainRenderer = GetComponentInChildren<Renderer>();
     }
 
-    public void SetTransparent(bool available)
+    public void HandleColor(bool available)
     {
         if (available)
             mainRenderer.material.color = new Color(0f, 1f, 0.07f, 0.55f);
@@ -31,9 +31,14 @@ public class BuildItem : MonoBehaviour
             mainRenderer.material.color = new Color(1f, 0f, 0.02f, 0.62f);
     }
 
-    public void SetNormal()
+    public void SetNormalColor()
     {
         mainRenderer.material.color = Color.white;
+    }
+
+    public void SetGrayColor()
+    {
+        mainRenderer.material.color = new Color(0.02f, 0.02f, 0.02f, 1f);
     }
 
     private void OnDrawGizmos()

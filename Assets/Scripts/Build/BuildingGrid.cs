@@ -60,40 +60,23 @@ public class BuildingGrid : MonoBehaviour
             Vector3 worldPos = ray.GetPoint(position);
             var x = Mathf.RoundToInt(worldPos.x);
             var y = Mathf.RoundToInt(worldPos.y);
+            placingItem.transform.position = new Vector3(x, y, 0);
 
             bool available = true;
 
-            placingItem.transform.position = new Vector3(x, y, 0);
-
-            if (x < 0 || x > gridSize.x - placingItem.Size.x)
-            {
-                available = false;
-            }
-
-            if (y < 0 || y > gridSize.y - placingItem.Size.y)
-            {
-                available = false;
-            }
-
             if (IsPlaceTaken(x, y))
-            {
                 available = false;
-            }
 
-            placingItem.SetTransparent(available);
+            placingItem.HandleColor(available);
 
             if (Input.GetMouseButtonDown(0))
             {
                 if (available)
-                {
                     PlaceFlyingItem(x, y);
-                }
                 else
-                {
                     Destroy(placingItem.gameObject);
-                    placingItem = null;
-                    placingItemData = null;
-                }
+
+                ClearPlacingVariables();
             }
         }
     }
@@ -104,11 +87,11 @@ public class BuildingGrid : MonoBehaviour
         {
             for (int y = 0; y < placingItem.Size.y; y++)
             {
-                //Check On Exit Of Bounds
+                //Проверка на выход за границы сетки
                 if ((placeX + x) >= gridSize.x || (placeY + y) >= gridSize.y || (placeX + x) < 0 || (placeY + y) < 0)
                     return true;
 
-                //Check On Existing Item In Cell
+                //Проверка на то, занята ли ячейка
                 if (grid[placeX + x, placeY + y])
                 {
                     return true;
@@ -124,27 +107,34 @@ public class BuildingGrid : MonoBehaviour
         {
             for (int y = 0; y < placingItem.Size.y; y++)
             {
-                grid[placeX + x, placeY + y] = placingItem;
                 placingItem.currentPosition = new Vector2Int(placeX + x, placeY + y);
+                grid[placeX + x, placeY + y] = placingItem;
             }
         }
 
         AddConnectorsToList(placeX, placeY);
         placedItems.Add(placingItem);
-        placingItem.SetNormal();
+        placingItem.SetNormalColor();
 
+        CheckOnMainRocketPiece(placeX, placeY);
+    }
+
+    private void CheckOnMainRocketPiece(int placeX, int placeY)
+    {
+        //Идём по всем коннекторам новой части ракеты
         for (int i = 0; i < placingItem.connectors.Count; i++)
         {
+            //Если на позиции коннектора есть соседняя часть ракеты
             if (grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y])
             {
-                Debug.Log("Ok1");
                 var nearItem = grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
                 for (int j = 0; j < nearItem.connectors.Count; j++)
                 {
-                    Debug.Log("Place X = " + placeX + "| " + "nearItem.connectors[j].x = " + nearItem.connectors[j].x + "| ");
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
                     if (placeX == (nearItem.connectors[j].x + nearItem.currentPosition.x) && placeY == (nearItem.connectors[j].y + nearItem.currentPosition.y))
                     {
-                        Debug.Log("Ok2");
+                        //Если соседняя часть ракеты является частью ракеты (связана с капсулой)
                         if (nearItem.isMainRocketPiece)
                         {
                             placingItem.isMainRocketPiece = true;
@@ -153,9 +143,8 @@ public class BuildingGrid : MonoBehaviour
                 }
             }
         }
-
-        placingItem = null;
-        placingItemData = null;
+        if (!placingItem.isMainRocketPiece)
+            placingItem.SetGrayColor();
     }
 
     private void AddConnectorsToList(int placeX, int placeY)
@@ -187,6 +176,12 @@ public class BuildingGrid : MonoBehaviour
 
         DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight), Mathf.Round(0), 1f);
         placedItems.Clear();
+    }
+
+    private void ClearPlacingVariables()
+    {
+        placingItem = null;
+        placingItemData = null;
     }
 
     private void OnDrawGizmos()
