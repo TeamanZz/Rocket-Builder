@@ -107,7 +107,7 @@ public class BuildingGrid : MonoBehaviour
         {
             for (int y = 0; y < placingItem.Size.y; y++)
             {
-                placingItem.currentPosition = new Vector2Int(placeX + x, placeY + y);
+                placingItem.placedPosition = new Vector2Int(placeX + x, placeY + y);
                 grid[placeX + x, placeY + y] = placingItem;
             }
         }
@@ -132,12 +132,17 @@ public class BuildingGrid : MonoBehaviour
                 for (int j = 0; j < nearItem.connectors.Count; j++)
                 {
                     //Если у новой и у соседней части ракеты обе стороны стыкуются
-                    if (placeX == (nearItem.connectors[j].x + nearItem.currentPosition.x) && placeY == (nearItem.connectors[j].y + nearItem.currentPosition.y))
+                    if (placeX == (nearItem.connectors[j].x + nearItem.placedPosition.x) && placeY == (nearItem.connectors[j].y + nearItem.placedPosition.y))
                     {
                         //Если соседняя часть ракеты является частью ракеты (связана с капсулой)
                         if (nearItem.isMainRocketPiece)
                         {
                             placingItem.isMainRocketPiece = true;
+
+                            for (int z = 0; z < placingItem.connectors.Count; z++)
+                            {
+                                CheckOnNewRocketPieces(placingItem);
+                            }
                         }
                     }
                 }
@@ -145,6 +150,37 @@ public class BuildingGrid : MonoBehaviour
         }
         if (!placingItem.isMainRocketPiece)
             placingItem.SetGrayColor();
+    }
+
+    public void CheckOnNewRocketPieces(BuildItem itemToCheck)
+    {
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < itemToCheck.connectors.Count; i++)
+        {
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if (grid[itemToCheck.placedPosition.x + (int)itemToCheck.connectors[i].x, itemToCheck.placedPosition.y + (int)itemToCheck.connectors[i].y])
+            {
+                var nearItem = grid[itemToCheck.placedPosition.x + (int)itemToCheck.connectors[i].x, itemToCheck.placedPosition.y + (int)itemToCheck.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (itemToCheck.placedPosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && itemToCheck.placedPosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        //Если соседняя часть ракеты является частью ракеты (связана с капсулой)
+                        if (!nearItem.isMainRocketPiece)
+                        {
+                            nearItem.isMainRocketPiece = true;
+                            nearItem.SetNormalColor();
+                            for (int z = 0; z < itemToCheck.connectors.Count; z++)
+                            {
+                                CheckOnNewRocketPieces(nearItem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private void AddConnectorsToList(int placeX, int placeY)

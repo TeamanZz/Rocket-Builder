@@ -10,7 +10,7 @@ public class BuildItem : MonoBehaviour
 
     [Header("ItemSettings")]
     public Vector2Int Size = Vector2Int.one;
-    public Vector2Int currentPosition = Vector2Int.one;
+    public Vector2Int placedPosition = Vector2Int.one;
     public List<Vector2> connectors = new List<Vector2>();
 
     private BuildingGrid buildingGrid;

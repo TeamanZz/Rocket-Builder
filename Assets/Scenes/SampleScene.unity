@@ -5432,7 +5432,7 @@ MonoBehaviour:
   id: 0
   mainRenderer: {fileID: 825584855}
   Size: {x: 1, y: 1}
-  currentPosition: {x: 4, y: 6}
+  placedPosition: {x: 4, y: 6}
   connectors:
   - {x: 0, y: -1}
   isMainRocketPiece: 1
