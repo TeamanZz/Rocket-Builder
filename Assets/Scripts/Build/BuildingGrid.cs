@@ -20,6 +20,7 @@ public class BuildingGrid : MonoBehaviour
     private float currentItemsWeight;
     private Camera mainCamera;
     private Vector3 debugPosition;
+    public BuildItem startCapsule;
 
     public List<Vector2> connectorsList = new List<Vector2>();
 
@@ -27,6 +28,11 @@ public class BuildingGrid : MonoBehaviour
     {
         grid = new BuildItem[gridSize.x, gridSize.y];
         mainCamera = Camera.main;
+    }
+
+    private void Start()
+    {
+        grid[4, 6] = startCapsule;
     }
 
     public void StartPlacingItem(BuildItem placingItemPrefab)
@@ -119,6 +125,7 @@ public class BuildingGrid : MonoBehaviour
             for (int y = 0; y < placingItem.Size.y; y++)
             {
                 grid[placeX + x, placeY + y] = placingItem;
+                placingItem.currentPosition = new Vector2Int(placeX + x, placeY + y);
             }
         }
 
@@ -126,9 +133,25 @@ public class BuildingGrid : MonoBehaviour
         placedItems.Add(placingItem);
         placingItem.SetNormal();
 
-        if (connectorsList.Contains(new Vector2(placeX, placeY)))
+        for (int i = 0; i < placingItem.connectors.Count; i++)
         {
-            placingItem.isConnected = true;
+            if (grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y])
+            {
+                Debug.Log("Ok1");
+                var nearItem = grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y];
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    Debug.Log("Place X = " + placeX + "| " + "nearItem.connectors[j].x = " + nearItem.connectors[j].x + "| ");
+                    if (placeX == (nearItem.connectors[j].x + nearItem.currentPosition.x) && placeY == (nearItem.connectors[j].y + nearItem.currentPosition.y))
+                    {
+                        Debug.Log("Ok2");
+                        if (nearItem.isMainRocketPiece)
+                        {
+                            placingItem.isMainRocketPiece = true;
+                        }
+                    }
+                }
+            }
         }
 
         placingItem = null;
@@ -148,23 +171,11 @@ public class BuildingGrid : MonoBehaviour
     {
         for (var i = 0; i < placedItems.Count; i++)
         {
-            if (!placedItems[i].isConnected)
+            if (!placedItems[i].isMainRocketPiece)
             {
                 Destroy(placedItems[i].gameObject);
             }
         }
-    }
-
-    public void AddWeightToText()
-    {
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight + placingItemData.itemWeight), 1f);
-    }
-
-    public void RemoveWeightFromText()
-    {
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight - placingItemData.itemWeight), 1f);
     }
 
     public void DeleteAllItems()
