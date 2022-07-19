@@ -23,6 +23,7 @@ public class GameStateHandler : MonoBehaviour
         var blackScreen = Instantiate(blackScreenPrefab);
         uiItems.SetActive(false);
         buildingGrid.CheckOnDisconnectedParts();
+        buildingGrid.ToggleItemsConnectors();
         yield return new WaitForSeconds(1f);
         Destroy(blackScreen);
         rocketObject.transform.position = startRocketPosition.position;

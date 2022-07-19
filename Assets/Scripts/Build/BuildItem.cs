@@ -12,6 +12,7 @@ public class BuildItem : MonoBehaviour
     public Vector2Int Size = Vector2Int.one;
     public Vector2Int placedPosition = Vector2Int.one;
     public List<Vector2> connectors = new List<Vector2>();
+    public List<GameObject> connectorsGO = new List<GameObject>();
 
     private BuildingGrid buildingGrid;
 
@@ -21,6 +22,14 @@ public class BuildItem : MonoBehaviour
     {
         buildingGrid = FindObjectOfType<BuildingGrid>();
         mainRenderer = GetComponentInChildren<Renderer>();
+    }
+
+    public void ToggleConnectors()
+    {
+        for (var i = 0; i < connectorsGO.Count; i++)
+        {
+            connectorsGO[i].SetActive(!connectorsGO[i].activeSelf);
+        }
     }
 
     public void HandleColor(bool available)

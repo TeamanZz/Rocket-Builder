@@ -3804,6 +3804,7 @@ GameObject:
   - component: {fileID: 1024147403}
   - component: {fileID: 1024147402}
   - component: {fileID: 1024147404}
+  - component: {fileID: 1024147405}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -3875,7 +3876,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024147400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -3924,6 +3925,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1024147405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024147400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ba1f0979a2d8446a9215a36746444a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildItemPrefab: {fileID: 1552455209799071742, guid: ea76d3e778326344c88807a4fca6d34d, type: 3}
 --- !u!1 &1029025634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,6 +4802,7 @@ GameObject:
   - component: {fileID: 1476593623}
   - component: {fileID: 1476593622}
   - component: {fileID: 1476593624}
+  - component: {fileID: 1476593625}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4859,7 +4874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476593620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4895,19 +4910,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1476593622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1114677883}
-        m_TargetAssemblyTypeName: BuildingGrid, Assembly-CSharp
-        m_MethodName: StartPlacingItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: BuildItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1476593625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476593620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ba1f0979a2d8446a9215a36746444a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildItemPrefab: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
 --- !u!4 &1494845589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
@@ -4978,7 +4994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5435,6 +5451,7 @@ MonoBehaviour:
   placedPosition: {x: 4, y: 6}
   connectors:
   - {x: 0, y: -1}
+  connectorsGO: []
   isMainRocketPiece: 1
 --- !u!4 &1736286213 stripped
 Transform:
@@ -5573,6 +5590,7 @@ GameObject:
   - component: {fileID: 1761513303}
   - component: {fileID: 1761513302}
   - component: {fileID: 1761513304}
+  - component: {fileID: 1761513305}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -5644,7 +5662,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761513300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -5693,6 +5711,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1761513305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761513300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ba1f0979a2d8446a9215a36746444a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildItemPrefab: {fileID: 2732716468544178742, guid: 00fd26be0b4498540899d535cd845ed5, type: 3}
 --- !u!1 &1777039481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,7 +5779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12596,23 +12627,6 @@ RectTransform:
   m_AnchoredPosition: {x: 270, y: 0.48962402}
   m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8533907528421567014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533907528421567017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &8533907528421567015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12647,7 +12661,6 @@ GameObject:
   - component: {fileID: 8533907528421567013}
   - component: {fileID: 8533907528421567012}
   - component: {fileID: 8533907528421567015}
-  - component: {fileID: 8533907528421567014}
   m_Layer: 5
   m_Name: Grid World
   m_TagString: Untagged

@@ -48,9 +48,12 @@ MonoBehaviour:
   id: 0
   mainRenderer: {fileID: 3077756755623369805}
   Size: {x: 1, y: 1}
+  placedPosition: {x: 1, y: 1}
   connectors:
   - {x: 0, y: 1}
-  isConnected: 0
+  connectorsGO:
+  - {fileID: 5637750402228400731}
+  isMainRocketPiece: 0
 --- !u!114 &9081235849518119672
 MonoBehaviour:
   m_ObjectHideFlags: 0

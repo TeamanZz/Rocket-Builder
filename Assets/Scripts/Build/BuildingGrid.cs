@@ -8,6 +8,7 @@ using DG.Tweening;
 
 public class BuildingGrid : MonoBehaviour
 {
+    public static BuildingGrid Instance;
     [Header("Grids")]
     [SerializeField] private Vector2Int gridSize;
     public List<BuildItem> placedItems = new List<BuildItem>();
@@ -24,8 +25,11 @@ public class BuildingGrid : MonoBehaviour
 
     public List<Vector2> connectorsList = new List<Vector2>();
 
+    private Vector2 currentPlacingItemPosition;
+
     private void Awake()
     {
+        Instance = this;
         grid = new BuildItem[gridSize.x, gridSize.y];
         mainCamera = Camera.main;
     }
@@ -35,13 +39,16 @@ public class BuildingGrid : MonoBehaviour
         grid[4, 6] = startCapsule;
     }
 
+    public void ToggleItemsConnectors()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].ToggleConnectors();
+        }
+    }
+
     public void StartPlacingItem(BuildItem placingItemPrefab)
     {
-        if (placingItem != null)
-        {
-            Destroy(placingItem.gameObject);
-        }
-
         placingItem = Instantiate(placingItemPrefab);
         placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
@@ -57,28 +64,37 @@ public class BuildingGrid : MonoBehaviour
 
         if (groundPlane.Raycast(ray, out float position))
         {
+            float x;
+            float y;
             Vector3 worldPos = ray.GetPoint(position);
-            var x = Mathf.RoundToInt(worldPos.x);
-            var y = Mathf.RoundToInt(worldPos.y);
-            placingItem.transform.position = new Vector3(x, y, 0);
-
-            bool available = true;
-
-            if (IsPlaceTaken(x, y))
-                available = false;
-
-            placingItem.HandleColor(available);
-
-            if (Input.GetMouseButtonDown(0))
+            if ((worldPos.x) >= gridSize.x - 0.5f || (worldPos.y) >= gridSize.y - 0.5f || (worldPos.x) <= -0.5f || (worldPos.y) <= -0.5f)
             {
-                if (available)
-                    PlaceFlyingItem(x, y);
-                else
-                    Destroy(placingItem.gameObject);
-
-                ClearPlacingVariables();
+                x = worldPos.x;
+                y = worldPos.y;
             }
+            else
+            {
+                x = Mathf.RoundToInt(worldPos.x);
+                y = Mathf.RoundToInt(worldPos.y);
+            }
+            currentPlacingItemPosition = new Vector2(x, y);
+            placingItem.transform.position = new Vector3(x, y, 0);
         }
+    }
+
+    public void HandleDropItem()
+    {
+        bool available = true;
+
+        if (IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
+            available = false;
+
+        if (available)
+            PlaceFlyingItem();
+        else
+            Destroy(placingItem.gameObject);
+
+        ClearPlacingVariables();
     }
 
     private bool IsPlaceTaken(int placeX, int placeY)
@@ -101,13 +117,17 @@ public class BuildingGrid : MonoBehaviour
         return false;
     }
 
-    public void PlaceFlyingItem(int placeX, int placeY)
+    public void PlaceFlyingItem()
     {
+        int placeX = Mathf.RoundToInt(currentPlacingItemPosition.x);
+        int placeY = Mathf.RoundToInt(currentPlacingItemPosition.y);
+
         for (int x = 0; x < placingItem.Size.x; x++)
         {
             for (int y = 0; y < placingItem.Size.y; y++)
             {
                 placingItem.placedPosition = new Vector2Int(placeX + x, placeY + y);
+
                 grid[placeX + x, placeY + y] = placingItem;
             }
         }
@@ -124,8 +144,12 @@ public class BuildingGrid : MonoBehaviour
         //Идём по всем коннекторам новой части ракеты
         for (int i = 0; i < placingItem.connectors.Count; i++)
         {
+            //Проверка на выход за границы сетки
+            if ((placeX + placingItem.connectors[i].x) >= gridSize.x || (placeY + placingItem.connectors[i].y) >= gridSize.y || (placeX + placingItem.connectors[i].x) < 0 || (placeY + placingItem.connectors[i].y) < 0)
+                continue;
+
             //Если на позиции коннектора есть соседняя часть ракеты
-            if (grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y])
+            if ((grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y]))
             {
                 var nearItem = grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y];
                 //Идём по всем коннекторам соседней части ракеты
@@ -157,6 +181,14 @@ public class BuildingGrid : MonoBehaviour
         //Идём по всем коннекторам новой части ракеты
         for (int i = 0; i < itemToCheck.connectors.Count; i++)
         {
+
+            //Проверка на выход за границы сетки
+            if ((itemToCheck.placedPosition.x + placingItem.connectors[i].x) >= gridSize.x ||
+            (itemToCheck.placedPosition.y + placingItem.connectors[i].y) >= gridSize.y ||
+            (itemToCheck.placedPosition.x + placingItem.connectors[i].x) < 0 ||
+            (itemToCheck.placedPosition.y + placingItem.connectors[i].y) < 0)
+                continue;
+
             //Если на позиции коннектора есть соседняя часть ракеты
             if (grid[itemToCheck.placedPosition.x + (int)itemToCheck.connectors[i].x, itemToCheck.placedPosition.y + (int)itemToCheck.connectors[i].y])
             {
