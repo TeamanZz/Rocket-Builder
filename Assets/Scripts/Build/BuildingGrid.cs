@@ -11,27 +11,17 @@ public class BuildingGrid : MonoBehaviour
     [Header("Grids")]
     [SerializeField] private Vector2Int gridSize;
     public List<BuildItem> placedItems = new List<BuildItem>();
-    public int countOfItems;
     [SerializeField] public BuildItem[,] grid;
-    [SerializeField] private Vector3 debugPosition;
     [field: SerializeField] public BuildItem placingItem { get; set; }
     [field: SerializeField] public BuildItemDataBase placingItemData { get; set; }
     [SerializeField] private Transform rocketObject;
-    [SerializeField] private List<BuildItem> connectors = new List<BuildItem>();
 
-    [Header("ControlText")]
-    [SerializeField]
     private float maxItemsWeight;
-    [SerializeField] private float currentItemsWeight;
-    [Space(5f)]
-
-    [Header("EndBuild")]
-    [SerializeField] private Transform startRocketPosition;
-    [SerializeField] private Camera rocketCamera;
-    [SerializeField] private GameObject blackScreenPrefab;
-    [SerializeField] private GameObject uiItems;
-
+    private float currentItemsWeight;
     private Camera mainCamera;
+    private Vector3 debugPosition;
+
+    public List<Vector2> connectorsList = new List<Vector2>();
 
     private void Awake()
     {
@@ -44,21 +34,11 @@ public class BuildingGrid : MonoBehaviour
         if (placingItem != null)
         {
             Destroy(placingItem.gameObject);
-            for (int i = 0; i < placingItem.connectorList.Count; i++)
-            {
-                connectors.RemoveAt(i);
-                Destroy(connectors[i]);
-                i--;
-            }
         }
 
         placingItem = Instantiate(placingItemPrefab);
         placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
-        for (int i = 0; i < placingItem.connectorList.Count; i++)
-        {
-            connectors.Add(placingItem.connectorList[i]);
-        }
     }
 
     private void Update()
@@ -72,7 +52,6 @@ public class BuildingGrid : MonoBehaviour
         if (groundPlane.Raycast(ray, out float position))
         {
             Vector3 worldPos = ray.GetPoint(position);
-
             var x = Mathf.RoundToInt(worldPos.x);
             var y = Mathf.RoundToInt(worldPos.y);
 
@@ -97,35 +76,36 @@ public class BuildingGrid : MonoBehaviour
 
             placingItem.SetTransparent(available);
 
-            if (Input.GetMouseButtonDown(0) && available == true &&
-                currentItemsWeight + placingItemData.itemWeight < maxItemsWeight)
+            if (Input.GetMouseButtonDown(0))
             {
-                PlaceFlyingItem(x, y);
-            }
-            else if (Input.GetMouseButtonDown(0) && available == false)
-            {
-                Destroy(placingItem.gameObject);
-                placingItem = null;
+                if (available)
+                {
+                    PlaceFlyingItem(x, y);
+                }
+                else
+                {
+                    Destroy(placingItem.gameObject);
+                    placingItem = null;
+                    placingItemData = null;
+                }
             }
         }
     }
 
     private bool IsPlaceTaken(int placeX, int placeY)
     {
-        if (placingItem.isThisItemHasConnectors)
+        for (int x = 0; x < placingItem.Size.x; x++)
         {
-            return false;
-        }
-        else
-        {
-            for (int x = 0; x < placingItem.Size.x; x++)
+            for (int y = 0; y < placingItem.Size.y; y++)
             {
-                for (int y = 0; y < placingItem.Size.y; y++)
+                //Check On Exit Of Bounds
+                if ((placeX + x) >= gridSize.x || (placeY + y) >= gridSize.y || (placeX + x) < 0 || (placeY + y) < 0)
+                    return true;
+
+                //Check On Existing Item In Cell
+                if (grid[placeX + x, placeY + y])
                 {
-                    if (grid[placeX + x, placeY + y] != null)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
         }
@@ -142,12 +122,37 @@ public class BuildingGrid : MonoBehaviour
             }
         }
 
-        AddWeightToText();
+        AddConnectorsToList(placeX, placeY);
         placedItems.Add(placingItem);
         placingItem.SetNormal();
-        countOfItems++;
-        placingItem.id = countOfItems;
+
+        if (connectorsList.Contains(new Vector2(placeX, placeY)))
+        {
+            placingItem.isConnected = true;
+        }
+
         placingItem = null;
+        placingItemData = null;
+    }
+
+    private void AddConnectorsToList(int placeX, int placeY)
+    {
+        for (int i = 0; i < placingItem.connectors.Count; i++)
+        {
+            if (!connectorsList.Contains(new Vector2(placeX + placingItem.connectors[i].x, placeY + placingItem.connectors[i].y)))
+                connectorsList.Add(new Vector2(placeX + placingItem.connectors[i].x, placeY + placingItem.connectors[i].y));
+        }
+    }
+
+    public void CheckOnDisconnectedParts()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            if (!placedItems[i].isConnected)
+            {
+                Destroy(placedItems[i].gameObject);
+            }
+        }
     }
 
     public void AddWeightToText()
@@ -162,19 +167,6 @@ public class BuildingGrid : MonoBehaviour
             Mathf.Round(currentItemsWeight - placingItemData.itemWeight), 1f);
     }
 
-    public void DeclineItem()
-    {
-        if (placingItem != null)
-        {
-            placingItem = null;
-        }
-        else
-        {
-            Destroy(placingItem.gameObject);
-            placingItem = null;
-        }
-    }
-
     public void DeleteAllItems()
     {
         for (int i = 0; i < placedItems.Count; i++)
@@ -184,24 +176,6 @@ public class BuildingGrid : MonoBehaviour
 
         DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight), Mathf.Round(0), 1f);
         placedItems.Clear();
-        countOfItems = 0;
-        connectors.Clear();
-    }
-
-    public void EndBuidling()
-    {
-        StartCoroutine(EndBuildingCoroutine());
-    }
-
-    public IEnumerator EndBuildingCoroutine()
-    {
-        var blackScreen = Instantiate(blackScreenPrefab);
-        uiItems.SetActive(false);
-        yield return new WaitForSeconds(1f);
-        Destroy(blackScreen);
-        rocketObject.transform.position = startRocketPosition.position;
-        rocketCamera.gameObject.SetActive(true);
-        mainCamera.gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos()

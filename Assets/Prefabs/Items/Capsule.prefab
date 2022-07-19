@@ -46,13 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  mainRenderer: {fileID: 5107369026164886996}
   Size: {x: 1, y: 1}
-  AllowedToBuildCells:
+  connectors:
   - {x: 0, y: -1}
-  mainRenderer: {fileID: 0}
-  buildingGrid: {fileID: 0}
-  isThisItemHasConnectors: 0
-  connectorList: []
 --- !u!114 &1192394823081093959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +114,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9de576e61d0cc954f8ac60785eee9477, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9de576e61d0cc954f8ac60785eee9477, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 347eed3d3870e36408acb9e20787569d, type: 2}
     - target: {fileID: 919132149155446097, guid: 9de576e61d0cc954f8ac60785eee9477, type: 3}
       propertyPath: m_Name
       value: Capsule
@@ -126,5 +131,10 @@ PrefabInstance:
 --- !u!4 &6244849794040985275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9de576e61d0cc954f8ac60785eee9477, type: 3}
+  m_PrefabInstance: {fileID: 5845831403790831952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5107369026164886996 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9de576e61d0cc954f8ac60785eee9477, type: 3}
   m_PrefabInstance: {fileID: 5845831403790831952}
   m_PrefabAsset: {fileID: 0}

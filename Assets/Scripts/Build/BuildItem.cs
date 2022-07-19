@@ -6,16 +6,15 @@ using UnityEngine;
 public class BuildItem : MonoBehaviour
 {
     public int id;
+    [SerializeField] private Renderer mainRenderer;
+
     [Header("ItemSettings")]
     public Vector2Int Size = Vector2Int.one;
-    public List<Vector2> AllowedToBuildCells = new List<Vector2>();
+    public List<Vector2> connectors = new List<Vector2>();
 
-    [SerializeField] private Renderer mainRenderer;
-    [SerializeField] private BuildingGrid buildingGrid;
+    private BuildingGrid buildingGrid;
 
-    [Header("Connectors")]
-    [SerializeField] public bool isThisItemHasConnectors;
-    [SerializeField] public List<BuildItem> connectorList = new List<BuildItem>();
+    public bool isConnected;
 
     private void Awake()
     {
@@ -36,24 +35,6 @@ public class BuildItem : MonoBehaviour
         mainRenderer.material.color = Color.white;
     }
 
-    public void DeleteItemFromGrid()
-    {
-        if (id <= 0)
-            id = 1;
-
-        buildingGrid.placingItem = gameObject.GetComponent<BuildItem>();
-        buildingGrid.RemoveWeightFromText();
-        buildingGrid.placedItems.RemoveAt(id - 1);
-        buildingGrid.countOfItems--;
-
-        for (int i = 0; i < buildingGrid.placedItems.Count; i++)
-        {
-            buildingGrid.placedItems[i].id -= 1;
-        }
-
-        Destroy(gameObject);
-    }
-
     private void OnDrawGizmos()
     {
         for (int x = 0; x < Size.x; x++)
@@ -65,10 +46,10 @@ public class BuildItem : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < AllowedToBuildCells.Count; i++)
+        for (int i = 0; i < connectors.Count; i++)
         {
             Gizmos.color = new Color(0f, 1f, 0.17f, 0.56f);
-            Gizmos.DrawCube(transform.position + new Vector3(AllowedToBuildCells[i].x, AllowedToBuildCells[i].y, 0), new Vector3(1f, 1f, 1f));
+            Gizmos.DrawCube(transform.position + new Vector3(connectors[i].x, connectors[i].y, 0), new Vector3(1f, 1f, 1f));
         }
 
     }
