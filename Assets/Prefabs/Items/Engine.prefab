@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128057728178856618}
   - component: {fileID: 1552455209799071742}
+  - component: {fileID: 9081235849518119672}
   m_Layer: 0
   m_Name: Engine
   m_TagString: Untagged
@@ -44,16 +45,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e009e889d9a0a884c9922e567a8ffd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   Size: {x: 1, y: 1}
   AllowedToBuildCells:
   - {x: 1, y: 0}
   - {x: -1, y: 0}
   mainRenderer: {fileID: 3077756755623369805}
-  id: 0
   buildingGrid: {fileID: 0}
-  <itemWeight>k__BackingField: 0
-  connectorList: []
   isThisItemHasConnectors: 0
+  connectorList: []
+--- !u!114 &9081235849518119672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386636548950027322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716ff40c0958b59419fd49df4a1609f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemWeight: 0
 --- !u!1001 &4429280164930633929
 PrefabInstance:
   m_ObjectHideFlags: 0

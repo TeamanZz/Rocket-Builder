@@ -15,6 +15,7 @@ public class BuildingGrid : MonoBehaviour
     [SerializeField] public BuildItem[,] grid;
     [SerializeField] private Vector3 debugPosition;
     [field: SerializeField] public BuildItem placingItem { get; set; }
+    [field: SerializeField] public BuildItemDataBase placingItemData { get; set; }
     [SerializeField] private Transform rocketObject;
     [SerializeField] private List<BuildItem> connectors = new List<BuildItem>();
 
@@ -52,24 +53,11 @@ public class BuildingGrid : MonoBehaviour
         }
 
         placingItem = Instantiate(placingItemPrefab);
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
         for (int i = 0; i < placingItem.connectorList.Count; i++)
         {
             connectors.Add(placingItem.connectorList[i]);
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(debugPosition, 0.5f);
-
-        for (int i = 0; i < gridSize.x; i++)
-        {
-            for (int j = 0; j < gridSize.y; j++)
-            {
-                Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
-            }
         }
     }
 
@@ -84,11 +72,13 @@ public class BuildingGrid : MonoBehaviour
         if (groundPlane.Raycast(ray, out float position))
         {
             Vector3 worldPos = ray.GetPoint(position);
-            //Debug.Log(worldPos);
+
             var x = Mathf.RoundToInt(worldPos.x);
             var y = Mathf.RoundToInt(worldPos.y);
 
             bool available = true;
+
+            placingItem.transform.position = new Vector3(x, y, 0);
 
             if (x < 0 || x > gridSize.x - placingItem.Size.x)
             {
@@ -105,12 +95,10 @@ public class BuildingGrid : MonoBehaviour
                 available = false;
             }
 
-            placingItem.transform.position = new Vector3(x, y, 0);
-
             placingItem.SetTransparent(available);
 
             if (Input.GetMouseButtonDown(0) && available == true &&
-                currentItemsWeight + placingItem.itemWeight < maxItemsWeight)
+                currentItemsWeight + placingItemData.itemWeight < maxItemsWeight)
             {
                 PlaceFlyingItem(x, y);
             }
@@ -134,7 +122,6 @@ public class BuildingGrid : MonoBehaviour
             {
                 for (int y = 0; y < placingItem.Size.y; y++)
                 {
-
                     if (grid[placeX + x, placeY + y] != null)
                     {
                         return true;
@@ -166,13 +153,13 @@ public class BuildingGrid : MonoBehaviour
     public void AddWeightToText()
     {
         DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight + placingItem.itemWeight), 1f);
+            Mathf.Round(currentItemsWeight + placingItemData.itemWeight), 1f);
     }
 
     public void RemoveWeightFromText()
     {
         DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight - placingItem.itemWeight), 1f);
+            Mathf.Round(currentItemsWeight - placingItemData.itemWeight), 1f);
     }
 
     public void DeclineItem()
@@ -203,10 +190,10 @@ public class BuildingGrid : MonoBehaviour
 
     public void EndBuidling()
     {
-        StartCoroutine(EndBuildingCorutine());
+        StartCoroutine(EndBuildingCoroutine());
     }
 
-    public IEnumerator EndBuildingCorutine()
+    public IEnumerator EndBuildingCoroutine()
     {
         var blackScreen = Instantiate(blackScreenPrefab);
         uiItems.SetActive(false);
@@ -215,5 +202,19 @@ public class BuildingGrid : MonoBehaviour
         rocketObject.transform.position = startRocketPosition.position;
         rocketCamera.gameObject.SetActive(true);
         mainCamera.gameObject.SetActive(false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(debugPosition, 0.5f);
+
+        for (int i = 0; i < gridSize.x; i++)
+        {
+            for (int j = 0; j < gridSize.y; j++)
+            {
+                Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
+            }
+        }
     }
 }
