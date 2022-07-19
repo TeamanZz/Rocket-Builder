@@ -17,6 +17,7 @@ public class BuildItem : MonoBehaviour
     private BuildingGrid buildingGrid;
 
     public bool isMainRocketPiece;
+    public bool isMainCapsule;
 
     private void Awake()
     {

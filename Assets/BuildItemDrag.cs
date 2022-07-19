@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BuildItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class BuildItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public BuildItem buildItemPrefab;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        BuildingGrid.Instance.StartPlacingNewItem(buildItemPrefab);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-
+        BuildItem dragObject = GetComponent<BuildItem>();
+        BuildingGrid.Instance.StartPlacingExistItem(dragObject);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         BuildingGrid.Instance.HandleDropItem();
     }
+
+    public void OnDrag(PointerEventData eventData) { }
 }

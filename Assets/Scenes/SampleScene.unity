@@ -3409,6 +3409,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3481,6 +3482,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1001 &993932613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4376,8 +4393,6 @@ MonoBehaviour:
   <placingItemData>k__BackingField: {fileID: 0}
   rocketObject: {fileID: 1059592324}
   startCapsule: {fileID: 1729810630}
-  connectorsList:
-  - {x: 4, y: 5}
 --- !u!1 &1139425181
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,6 +5413,8 @@ GameObject:
   - component: {fileID: 1729810628}
   - component: {fileID: 1729810630}
   - component: {fileID: 1729810629}
+  - component: {fileID: 1729810631}
+  - component: {fileID: 1729810633}
   m_Layer: 0
   m_Name: Capsule(Clone)
   m_TagString: Untagged
@@ -5451,8 +5468,35 @@ MonoBehaviour:
   placedPosition: {x: 4, y: 6}
   connectors:
   - {x: 0, y: -1}
-  connectorsGO: []
+  connectorsGO:
+  - {fileID: 825584853}
   isMainRocketPiece: 1
+  isMainCapsule: 1
+--- !u!114 &1729810631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729810627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcef74c21b57f54bb0d51ebd473061e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1729810633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729810627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1736286213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475604, guid: 69dc6d30617446f438d58a0ecdb61c03, type: 3}

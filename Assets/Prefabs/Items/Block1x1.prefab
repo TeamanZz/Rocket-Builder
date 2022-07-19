@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9130321604304303207}
   - component: {fileID: 2732716468544178742}
   - component: {fileID: -6764852549467469340}
+  - component: {fileID: -15345440215521862}
+  - component: {fileID: 1983813854658912172}
   m_Layer: 0
   m_Name: Block1x1
   m_TagString: Untagged
@@ -74,6 +76,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemWeight: 0
   fuelValue: 15
+--- !u!114 &-15345440215521862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890486460493849665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcef74c21b57f54bb0d51ebd473061e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1983813854658912172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890486460493849665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &70566249822743957
 PrefabInstance:
   m_ObjectHideFlags: 0

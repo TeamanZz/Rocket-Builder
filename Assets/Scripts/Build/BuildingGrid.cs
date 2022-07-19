@@ -23,8 +23,6 @@ public class BuildingGrid : MonoBehaviour
     private Vector3 debugPosition;
     public BuildItem startCapsule;
 
-    public List<Vector2> connectorsList = new List<Vector2>();
-
     private Vector2 currentPlacingItemPosition;
 
     private void Awake()
@@ -47,11 +45,27 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
-    public void StartPlacingItem(BuildItem placingItemPrefab)
+    public void StartPlacingNewItem(BuildItem placingItemPrefab)
     {
         placingItem = Instantiate(placingItemPrefab);
         placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
+    }
+    public void StartPlacingExistItem(BuildItem existPlacingItem)
+    {
+        placingItem = existPlacingItem;
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
+        placingItem.transform.parent = rocketObject;
+        RemovePlacingItemFromGridData();
+    }
+
+    private void RemovePlacingItemFromGridData()
+    {
+        if (!placingItem.isMainCapsule)
+            placingItem.isMainRocketPiece = false;
+
+        placedItems.Remove(placingItem);
+        grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
     }
 
     private void Update()
@@ -132,7 +146,7 @@ public class BuildingGrid : MonoBehaviour
             }
         }
 
-        AddConnectorsToList(placeX, placeY);
+        // AddConnectorsToList(placeX, placeY);
         placedItems.Add(placingItem);
         placingItem.SetNormalColor();
 
@@ -141,6 +155,12 @@ public class BuildingGrid : MonoBehaviour
 
     private void CheckOnMainRocketPiece(int placeX, int placeY)
     {
+        if (placingItem.isMainCapsule)
+        {
+            CheckOnNewRocketPieces(placingItem);
+            return;
+        }
+
         //Идём по всем коннекторам новой части ракеты
         for (int i = 0; i < placingItem.connectors.Count; i++)
         {
@@ -181,12 +201,11 @@ public class BuildingGrid : MonoBehaviour
         //Идём по всем коннекторам новой части ракеты
         for (int i = 0; i < itemToCheck.connectors.Count; i++)
         {
-
             //Проверка на выход за границы сетки
-            if ((itemToCheck.placedPosition.x + placingItem.connectors[i].x) >= gridSize.x ||
-            (itemToCheck.placedPosition.y + placingItem.connectors[i].y) >= gridSize.y ||
-            (itemToCheck.placedPosition.x + placingItem.connectors[i].x) < 0 ||
-            (itemToCheck.placedPosition.y + placingItem.connectors[i].y) < 0)
+            if ((itemToCheck.placedPosition.x + itemToCheck.connectors[i].x) >= gridSize.x ||
+            (itemToCheck.placedPosition.y + itemToCheck.connectors[i].y) >= gridSize.y ||
+            (itemToCheck.placedPosition.x + itemToCheck.connectors[i].x) < 0 ||
+            (itemToCheck.placedPosition.y + itemToCheck.connectors[i].y) < 0)
                 continue;
 
             //Если на позиции коннектора есть соседняя часть ракеты
@@ -212,15 +231,6 @@ public class BuildingGrid : MonoBehaviour
                     }
                 }
             }
-        }
-    }
-
-    private void AddConnectorsToList(int placeX, int placeY)
-    {
-        for (int i = 0; i < placingItem.connectors.Count; i++)
-        {
-            if (!connectorsList.Contains(new Vector2(placeX + placingItem.connectors[i].x, placeY + placingItem.connectors[i].y)))
-                connectorsList.Add(new Vector2(placeX + placingItem.connectors[i].x, placeY + placingItem.connectors[i].y));
         }
     }
 
