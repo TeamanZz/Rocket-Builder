@@ -12,7 +12,7 @@ public class BuildItem : MonoBehaviour
     public Vector2Int Size = Vector2Int.one;
     public Vector2Int placedPosition = Vector2Int.one;
     public List<Vector2> connectors = new List<Vector2>();
-    public List<GameObject> connectorsGO = new List<GameObject>();
+    public List<Transform> connectorsGO = new List<Transform>();
 
     private BuildingGrid buildingGrid;
 
@@ -22,23 +22,41 @@ public class BuildItem : MonoBehaviour
     private void Awake()
     {
         buildingGrid = FindObjectOfType<BuildingGrid>();
-        mainRenderer = GetComponentInChildren<Renderer>();
+        // mainRenderer = GetComponentInChildren<Renderer>();
+    }
+
+    public void IncreaseScale()
+    {
+        transform.localScale = Vector3.one * 0.55f;
+    }
+
+    public void SetNormalScale()
+    {
+        transform.localScale = Vector3.one * 0.5f;
     }
 
     public void ToggleConnectors()
     {
         for (var i = 0; i < connectorsGO.Count; i++)
         {
-            connectorsGO[i].SetActive(!connectorsGO[i].activeSelf);
+            connectorsGO[i].gameObject.SetActive(!connectorsGO[i].gameObject.activeSelf);
         }
     }
 
-    public void HandleColor(bool available)
+    public void HandleColorGreenOrRed(bool available)
     {
         if (available)
             mainRenderer.material.color = new Color(0f, 1f, 0.07f, 0.55f);
         else
             mainRenderer.material.color = new Color(1f, 0f, 0.02f, 0.62f);
+    }
+
+    public void HandleColorWhiteOrGray()
+    {
+        if (isMainRocketPiece)
+            SetNormalColor();
+        else
+            SetGrayColor();
     }
 
     public void SetNormalColor()

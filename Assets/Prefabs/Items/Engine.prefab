@@ -54,8 +54,9 @@ MonoBehaviour:
   connectors:
   - {x: 0, y: 1}
   connectorsGO:
-  - {fileID: 5637750402228400731}
+  - {fileID: 6461790917591273890}
   isMainRocketPiece: 0
+  isMainCapsule: 0
 --- !u!114 &9081235849518119672
 MonoBehaviour:
   m_ObjectHideFlags: 0

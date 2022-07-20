@@ -35,6 +35,42 @@ public class BuildingGrid : MonoBehaviour
     private void Start()
     {
         grid[4, 6] = startCapsule;
+        startCapsule.placedPosition = new Vector2Int(4, 6);
+    }
+
+    private void RecalculateStateOFItems()
+    {
+        BuildItem nearItem = new BuildItem();
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < startCapsule.connectors.Count; i++)
+        {
+            Vector2Int capsulePosition = startCapsule.placedPosition;
+            //Проверка на выход за границы сетки
+            if ((capsulePosition.x + startCapsule.connectors[i].x) >= gridSize.x ||
+            (capsulePosition.y + startCapsule.connectors[i].y) >= gridSize.y ||
+            (capsulePosition.y + startCapsule.connectors[i].x) < 0 ||
+            (capsulePosition.y + startCapsule.connectors[i].y) < 0)
+                continue;
+
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if ((grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y]))
+            {
+                nearItem = grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (capsulePosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && capsulePosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        nearItem.isMainRocketPiece = true;
+                        for (int z = 0; z < nearItem.connectors.Count; z++)
+                        {
+                            CheckOnNewRocketPieces(nearItem);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void ToggleItemsConnectors()
@@ -50,13 +86,34 @@ public class BuildingGrid : MonoBehaviour
         placingItem = Instantiate(placingItemPrefab);
         placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
+        placingItem.IncreaseScale();
     }
+
     public void StartPlacingExistItem(BuildItem existPlacingItem)
     {
         placingItem = existPlacingItem;
         placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
+        placingItem.SetNormalColor();
+        placingItem.IncreaseScale();
+
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            if (placedItems[i].isMainCapsule)
+                continue;
+            Debug.Log("Hehe");
+            placedItems[i].isMainRocketPiece = false;
+        }
         RemovePlacingItemFromGridData();
+        // Debug.Log(placedItems.Count);
+
+        if (placingItem != startCapsule)
+            RecalculateStateOFItems();
+
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].HandleColorWhiteOrGray();
+        }
     }
 
     private void RemovePlacingItemFromGridData()
@@ -145,10 +202,15 @@ public class BuildingGrid : MonoBehaviour
                 grid[placeX + x, placeY + y] = placingItem;
             }
         }
-
+        placingItem.SetNormalScale();
         // AddConnectorsToList(placeX, placeY);
         placedItems.Add(placingItem);
         placingItem.SetNormalColor();
+
+        if (placingItem.isMainCapsule)
+        {
+            startCapsule = placingItem;
+        }
 
         CheckOnMainRocketPiece(placeX, placeY);
     }
