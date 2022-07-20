@@ -19,20 +19,27 @@ public class LevelProgress : MonoBehaviour
     public float targetHeight;
     public TextMeshProUGUI targetHeightText;
 
+
     private void Awake()
     {
         Instance = this;
+        targetHeightText.text = targetHeight.ToString();
     }
 
     private void Start()
     {
         icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
-        var twen = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
+        fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
         DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);
     }
 
     private void FixedUpdate()
     {
         currentHeightText.text = (int)currentHeight + " m";
+    }
+
+    public void CancelFillTween()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -13,6 +13,9 @@ public class Gun : MonoBehaviour
     public Transform ship;
     public UnityEvent OnShoot;
 
+    [SerializeField] private bool isEnemyGun;
+    [SerializeField] private float enemyProjectileSpeed;
+
     private void Start()
     {
         StartCoroutine(ShootRepeatedely());
@@ -26,7 +29,15 @@ public class Gun : MonoBehaviour
             var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, -ship.eulerAngles.z));
             newProjectile.GetComponent<Projectile>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;
-            newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * 20, ForceMode.Impulse);
+            if (isEnemyGun)
+            {
+                newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * enemyProjectileSpeed, ForceMode.Impulse);
+                Debug.Log("Shooted");
+            }
+            else
+            {
+                newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * 20, ForceMode.Impulse);    
+            }
             OnShoot.Invoke();
         }
     }

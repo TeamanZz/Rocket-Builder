@@ -4,9 +4,74 @@
     <e p="C:\Users\young\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\young\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Rocket Buidler 3D.-1073682727.00" t="ExcludeRecursive" />
     <e p="F:\WORK\Rocket Buidler 3D" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="#OnePotatoKingdom_FULL" t="Include">
+          <e p="Bonus_Assets" t="Include">
+            <e p="Rotation_Script" t="Include">
+              <e p="Rotatator.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Epic Toon FX" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ETFXButtonScript.cs" t="Include" />
+              <e p="ETFXFireProjectile.cs" t="Include" />
+              <e p="ETFXLoopScript.cs" t="Include" />
+              <e p="ETFXMouseOrbit.cs" t="Include" />
+              <e p="ETFXProjectileScript.cs" t="Include" />
+              <e p="ETFXSceneManager.cs" t="Include" />
+              <e p="ETFXTarget.cs" t="Include" />
+              <e p="VFX Library" t="Include">
+                <e p="ParticleEffectsLibrary.cs" t="Include" />
+                <e p="PEButtonScript.cs" t="Include" />
+                <e p="UICanvasManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Environment FX.txt" t="Include" />
+            </e>
+            <e p="Interactive" t="Include">
+              <e p="Interactive FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Joystick Pack" t="Include">
+          <e p="Examples" t="Include">
+            <e p="JoystickPlayerExample.cs" t="Include" />
+            <e p="JoystickSetterExample.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Base" t="Include">
+              <e p="Joystick.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="DynamicJoystickEditor.cs" t="Include" />
+              <e p="FloatingJoystickEditor.cs" t="Include" />
+              <e p="JoystickEditor.cs" t="Include" />
+              <e p="VariableJoystickEditor.cs" t="Include" />
+            </e>
+            <e p="Joysticks" t="Include">
+              <e p="DynamicJoystick.cs" t="Include" />
+              <e p="FixedJoystick.cs" t="Include" />
+              <e p="FloatingJoystick.cs" t="Include" />
+              <e p="VariableJoystick.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -31,8 +96,71 @@
             <e p="BuildUIButton.cs" t="Include" />
             <e p="Connector.cs" t="Include" />
           </e>
+          <e p="CameraBoundsController.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="EnemyMoving.cs" t="Include" />
+            <e p="EnemyProjectile.cs" t="Include" />
+            <e p="EnemyRotation.cs" t="Include" />
+            <e p="EnemySpawner.cs" t="Include" />
+            <e p="RandomSpawner.cs" t="Include" />
+            <e p="SatelliteMovement.cs" t="Include" />
+            <e p="SpawnEnemy.cs" t="Include" />
+          </e>
+          <e p="EnemyBase.cs" t="Include" />
+          <e p="Gun.cs" t="Include" />
+          <e p="HeightController.cs" t="Include" />
+          <e p="LevelProgress.cs" t="Include" />
+          <e p="LockCameraZ.cs" t="Include" />
+          <e p="MeteorRotation.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
           <e p="Rocket" t="Include">
             <e p="RocketController.cs" t="Include" />
+          </e>
+          <e p="SFX.cs" t="Include" />
+          <e p="Space" t="Include">
+            <e p="Item.cs" t="Include" />
+            <e p="ItemPickUp.cs" t="Include" />
+          </e>
+          <e p="SpaceShip" t="Include">
+            <e p="SpaceShipHealth.cs" t="Include" />
+            <e p="SpaceShipMovement.cs" t="Include" />
+          </e>
+          <e p="SwipeDetector.cs" t="Include" />
+          <e p="uGUITools.cs" t="Include" />
+          <e p="WInLose" t="Include">
+            <e p="Lose.cs" t="Include" />
+            <e p="Win.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
       </e>

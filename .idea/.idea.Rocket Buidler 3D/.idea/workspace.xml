@@ -12,10 +12,24 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/Chat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/ChatManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,6 +41,24 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildingGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyGun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
       </list>
     </option>
   </component>
@@ -39,6 +71,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -73,6 +106,13 @@
       <workItem from="1657792504347" duration="12597000" />
       <workItem from="1657877008331" duration="8902000" />
       <workItem from="1657889433871" duration="7974000" />
+      <workItem from="1657972468906" duration="8902000" />
+      <workItem from="1658056565982" duration="4568000" />
+      <workItem from="1658131814136" duration="11077000" />
+      <workItem from="1658151518927" duration="4901000" />
+      <workItem from="1658217143729" duration="17774000" />
+      <workItem from="1658304171650" duration="6559000" />
+      <workItem from="1658320477064" duration="3977000" />
     </task>
     <servers />
   </component>
@@ -86,9 +126,13 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="730" y="217" key="RiderGenerateDialog/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1657795347334" />
-    <state x="623" y="223" key="search.everywhere.popup" timestamp="1657720221441">
+    <state x="461" y="161" key="SettingsEditor" timestamp="1658141971579">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1657720221441" />
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1658141971579" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1658222885486">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1658222885486" />
   </component>
 </project>

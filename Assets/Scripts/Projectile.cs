@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Projectile : MonoBehaviour
 {
@@ -10,7 +12,12 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 0.65f);
+        Destroy(gameObject, 1.5f);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(hitParticles, gameObject.transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +26,8 @@ public class Projectile : MonoBehaviour
         if (!wasCollided && other.gameObject.TryGetComponent<EnemyBase>(out enemy))
         {
             Vector3 particlesPosition = new Vector3(enemy.transform.position.x + Random.Range(-0.5f, 0.5f), enemy.transform.position.y + Random.Range(-1f, 0f), enemy.transform.position.z - 1);
-            Instantiate(hitParticles, particlesPosition, Quaternion.identity);
+            var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity);
+            Destroy(hitParticle,2f);
             wasCollided = true;
             enemy.DescreaseHealth(damage);
             Destroy(gameObject);
