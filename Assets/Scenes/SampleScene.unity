@@ -965,6 +965,7 @@ GameObject:
   - component: {fileID: 197832814}
   - component: {fileID: 197832813}
   - component: {fileID: 197832815}
+  - component: {fileID: 197832816}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1030,6 +1031,22 @@ MonoBehaviour:
   - {fileID: 1044736795}
   - {fileID: 1688736884}
   - {fileID: 1488462800}
+--- !u!114 &197832816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197832812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd93139df010404bb0e8b2b423bd0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trueFuelValue: 0
+  trueShieldValue: 0
+  fuelValueText: {fileID: 563891683}
+  shieldValueText: {fileID: 2076126735}
 --- !u!1001 &204050787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2681,7 +2698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fuel - 140
+  m_text: Fuel - 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f5a8f7bbcc7ee94f8fe4cb8e67d35bd, type: 2}
   m_sharedMaterial: {fileID: 633643834968870515, guid: 4f5a8f7bbcc7ee94f8fe4cb8e67d35bd, type: 2}
@@ -7479,7 +7496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shield - 50
+  m_text: Shield - 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6788aa03e28930a499e5ae2008176251, type: 2}
   m_sharedMaterial: {fileID: 633643834968870515, guid: 6788aa03e28930a499e5ae2008176251, type: 2}
@@ -7506,7 +7523,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.6
+  m_fontSize: 42.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7766,13 +7783,17 @@ PrefabInstance:
       propertyPath: buildItemPrefab
       value: 
       objectReference: {fileID: 2732716468544178742, guid: 00fd26be0b4498540899d535cd845ed5, type: 3}
+    - target: {fileID: 2365906493438653844, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 183013f467f6a7645a755c858f7a099f, type: 3}
     - target: {fileID: 2365906493438653846, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2365906494652788146, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}

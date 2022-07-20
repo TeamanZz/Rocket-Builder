@@ -24,7 +24,8 @@ public class BuildItem : MonoBehaviour
         Capsule,
         Fuel,
         Jet,
-        Weapon
+        Weapon,
+        Shield
     }
 
     public void IncreaseScale()

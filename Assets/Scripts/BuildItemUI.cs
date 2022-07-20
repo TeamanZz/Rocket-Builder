@@ -17,6 +17,7 @@ public class BuildItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.DOPunchRotation(Vector3.forward * 7, 0.5f);
         transform.DOLocalMoveY(transform.localPosition.y + 30, 0.3f).SetEase(Ease.InOutBack).SetLoops(2, LoopType.Yoyo);
         partsUIItem.DescreaseCount();
+        // ResourcesHandler.Instance.DecreaseFuelValue(partsUIItem.statValue);
     }
 
     public void OnDrag(PointerEventData eventData) { }

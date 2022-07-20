@@ -64,6 +64,17 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
+    public int GetConnectedFuelValue()
+    {
+        int rocketFuelValue = 0;
+        var fuelItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel);
+        for (var i = 0; i < fuelItemsList.Count; i++)
+        {
+            rocketFuelValue += fuelItemsList[i].placingItemUI.statValue;
+        }
+        return rocketFuelValue;
+    }
+
     public void CheckOnCompletedRocket()
     {
         bool hasCapsule = false;
@@ -71,28 +82,18 @@ public class BuildingGrid : MonoBehaviour
         bool hasFuel = false;
 
         if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Capsule))
-        {
             hasCapsule = true;
-        }
 
         if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet))
-        {
             hasJet = true;
-        }
 
         if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel))
-        {
             hasFuel = true;
-        }
 
         if (hasCapsule && hasJet && hasFuel)
-        {
             GameStateHandler.Instance.EnableFlightButton();
-        }
         else
-        {
             GameStateHandler.Instance.DisableFlightButton();
-        }
     }
 
     public void DeleteAllItems()
@@ -101,7 +102,6 @@ public class BuildingGrid : MonoBehaviour
         {
             if (!placedItems[i].isMainCapsule)
             {
-                Debug.Log("delete");
                 placedItems[i].placingItemUI.IncreaseCount();
                 grid[placedItems[i].placedPosition.x, placedItems[i].placedPosition.y] = null;
                 Destroy(placedItems[i].gameObject);
@@ -109,6 +109,7 @@ public class BuildingGrid : MonoBehaviour
             }
         }
         CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetZeroStats();
     }
 
     private void ClearPlacingVariables()
@@ -133,7 +134,7 @@ public class BuildingGrid : MonoBehaviour
         placingItem.transform.parent = rocketObject;
         placingItem.SetNormalColor();
         placingItem.IncreaseScale();
-
+        // ResourcesHandler.Instance.HandleStatsDecrease(placingItem);
         for (var i = 0; i < placedItems.Count; i++)
         {
             if (placedItems[i].isMainCapsule)
@@ -141,13 +142,12 @@ public class BuildingGrid : MonoBehaviour
             placedItems[i].isMainRocketPiece = false;
         }
         RemovePlacingItemFromGridData();
-        // Debug.Log(placedItems.Count);
 
         if (placingItem != startCapsule)
             RecalculateStateOFItems();
 
         CheckOnCompletedRocket();
-
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
         for (var i = 0; i < placedItems.Count; i++)
         {
             placedItems[i].HandleColorWhiteOrGray();
@@ -179,7 +179,9 @@ public class BuildingGrid : MonoBehaviour
             available = false;
 
         if (available)
+        {
             PlaceFlyingItem();
+        }
         else
         {
             placingItem.placingItemUI.IncreaseCount();
@@ -224,7 +226,6 @@ public class BuildingGrid : MonoBehaviour
             }
         }
         placingItem.SetNormalScale();
-        // AddConnectorsToList(placeX, placeY);
         placedItems.Add(placingItem);
         placingItem.SetNormalColor();
 
@@ -235,6 +236,7 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnMainRocketPiece(placeX, placeY);
         CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
     }
 
     private void CheckOnMainRocketPiece(int placeX, int placeY)
@@ -363,8 +365,6 @@ public class BuildingGrid : MonoBehaviour
             }
         }
     }
-
-
 
     private void OnDrawGizmos()
     {
