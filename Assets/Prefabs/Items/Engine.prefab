@@ -55,8 +55,10 @@ MonoBehaviour:
   - {x: 0, y: 1}
   connectorsGO:
   - {fileID: 6461790917591273890}
+  <placingItemUI>k__BackingField: {fileID: 0}
   isMainRocketPiece: 0
   isMainCapsule: 0
+  itemType: 2
 --- !u!114 &9081235849518119672
 MonoBehaviour:
   m_ObjectHideFlags: 0

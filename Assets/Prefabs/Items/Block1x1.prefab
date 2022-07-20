@@ -61,8 +61,10 @@ MonoBehaviour:
   - {fileID: 1589158031329708672}
   - {fileID: 6765040308798690885}
   - {fileID: 397049779857260433}
+  <placingItemUI>k__BackingField: {fileID: 0}
   isMainRocketPiece: 0
   isMainCapsule: 0
+  itemType: 1
 --- !u!114 &-6764852549467469340
 MonoBehaviour:
   m_ObjectHideFlags: 0

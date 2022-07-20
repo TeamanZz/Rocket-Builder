@@ -17,8 +17,6 @@ public class BuildingGrid : MonoBehaviour
     [field: SerializeField] public BuildItemDataBase placingItemData { get; set; }
     [SerializeField] private Transform rocketObject;
 
-    private float maxItemsWeight;
-    private float currentItemsWeight;
     private Camera mainCamera;
     private Vector3 debugPosition;
     public BuildItem startCapsule;
@@ -36,93 +34,6 @@ public class BuildingGrid : MonoBehaviour
     {
         grid[4, 6] = startCapsule;
         startCapsule.placedPosition = new Vector2Int(4, 6);
-    }
-
-    private void RecalculateStateOFItems()
-    {
-        BuildItem nearItem = new BuildItem();
-        //Идём по всем коннекторам новой части ракеты
-        for (int i = 0; i < startCapsule.connectors.Count; i++)
-        {
-            Vector2Int capsulePosition = startCapsule.placedPosition;
-            //Проверка на выход за границы сетки
-            if ((capsulePosition.x + startCapsule.connectors[i].x) >= gridSize.x ||
-            (capsulePosition.y + startCapsule.connectors[i].y) >= gridSize.y ||
-            (capsulePosition.y + startCapsule.connectors[i].x) < 0 ||
-            (capsulePosition.y + startCapsule.connectors[i].y) < 0)
-                continue;
-
-            //Если на позиции коннектора есть соседняя часть ракеты
-            if ((grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y]))
-            {
-                nearItem = grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y];
-                //Идём по всем коннекторам соседней части ракеты
-                for (int j = 0; j < nearItem.connectors.Count; j++)
-                {
-                    //Если у новой и у соседней части ракеты обе стороны стыкуются
-                    if (capsulePosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && capsulePosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
-                    {
-                        nearItem.isMainRocketPiece = true;
-                        for (int z = 0; z < nearItem.connectors.Count; z++)
-                        {
-                            CheckOnNewRocketPieces(nearItem);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    public void ToggleItemsConnectors()
-    {
-        for (var i = 0; i < placedItems.Count; i++)
-        {
-            placedItems[i].ToggleConnectors();
-        }
-    }
-
-    public void StartPlacingNewItem(BuildItem placingItemPrefab)
-    {
-        placingItem = Instantiate(placingItemPrefab);
-        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
-        placingItem.transform.parent = rocketObject;
-        placingItem.IncreaseScale();
-    }
-
-    public void StartPlacingExistItem(BuildItem existPlacingItem)
-    {
-        placingItem = existPlacingItem;
-        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
-        placingItem.transform.parent = rocketObject;
-        placingItem.SetNormalColor();
-        placingItem.IncreaseScale();
-
-        for (var i = 0; i < placedItems.Count; i++)
-        {
-            if (placedItems[i].isMainCapsule)
-                continue;
-            Debug.Log("Hehe");
-            placedItems[i].isMainRocketPiece = false;
-        }
-        RemovePlacingItemFromGridData();
-        // Debug.Log(placedItems.Count);
-
-        if (placingItem != startCapsule)
-            RecalculateStateOFItems();
-
-        for (var i = 0; i < placedItems.Count; i++)
-        {
-            placedItems[i].HandleColorWhiteOrGray();
-        }
-    }
-
-    private void RemovePlacingItemFromGridData()
-    {
-        if (!placingItem.isMainCapsule)
-            placingItem.isMainRocketPiece = false;
-
-        placedItems.Remove(placingItem);
-        grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
     }
 
     private void Update()
@@ -153,6 +64,113 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
+    public void CheckOnCompletedRocket()
+    {
+        bool hasCapsule = false;
+        bool hasJet = false;
+        bool hasFuel = false;
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Capsule))
+        {
+            hasCapsule = true;
+        }
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet))
+        {
+            hasJet = true;
+        }
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel))
+        {
+            hasFuel = true;
+        }
+
+        if (hasCapsule && hasJet && hasFuel)
+        {
+            GameStateHandler.Instance.EnableFlightButton();
+        }
+        else
+        {
+            GameStateHandler.Instance.DisableFlightButton();
+        }
+    }
+
+    public void DeleteAllItems()
+    {
+        for (int i = placedItems.Count - 1; i >= 0; i--)
+        {
+            if (!placedItems[i].isMainCapsule)
+            {
+                Debug.Log("delete");
+                placedItems[i].placingItemUI.IncreaseCount();
+                grid[placedItems[i].placedPosition.x, placedItems[i].placedPosition.y] = null;
+                Destroy(placedItems[i].gameObject);
+                placedItems.Remove(placedItems[i]);
+            }
+        }
+        CheckOnCompletedRocket();
+    }
+
+    private void ClearPlacingVariables()
+    {
+        placingItem = null;
+        placingItemData = null;
+    }
+
+    public void StartPlacingNewItem(BuildItem placingItemPrefab, PartsUIItem uiItem)
+    {
+        placingItem = Instantiate(placingItemPrefab);
+        placingItem.placingItemUI = uiItem;
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
+        placingItem.transform.parent = rocketObject;
+        placingItem.IncreaseScale();
+    }
+
+    public void StartPlacingExistItem(BuildItem existPlacingItem)
+    {
+        placingItem = existPlacingItem;
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
+        placingItem.transform.parent = rocketObject;
+        placingItem.SetNormalColor();
+        placingItem.IncreaseScale();
+
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            if (placedItems[i].isMainCapsule)
+                continue;
+            placedItems[i].isMainRocketPiece = false;
+        }
+        RemovePlacingItemFromGridData();
+        // Debug.Log(placedItems.Count);
+
+        if (placingItem != startCapsule)
+            RecalculateStateOFItems();
+
+        CheckOnCompletedRocket();
+
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].HandleColorWhiteOrGray();
+        }
+    }
+
+    public void ToggleItemsConnectors()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].ToggleConnectors();
+        }
+    }
+
+    private void RemovePlacingItemFromGridData()
+    {
+        if (!placingItem.isMainCapsule)
+            placingItem.isMainRocketPiece = false;
+
+        placedItems.Remove(placingItem);
+        grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
+    }
+
     public void HandleDropItem()
     {
         bool available = true;
@@ -163,7 +181,10 @@ public class BuildingGrid : MonoBehaviour
         if (available)
             PlaceFlyingItem();
         else
+        {
+            placingItem.placingItemUI.IncreaseCount();
             Destroy(placingItem.gameObject);
+        }
 
         ClearPlacingVariables();
     }
@@ -213,6 +234,7 @@ public class BuildingGrid : MonoBehaviour
         }
 
         CheckOnMainRocketPiece(placeX, placeY);
+        CheckOnCompletedRocket();
     }
 
     private void CheckOnMainRocketPiece(int placeX, int placeY)
@@ -296,6 +318,41 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
+    private void RecalculateStateOFItems()
+    {
+        BuildItem nearItem = new BuildItem();
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < startCapsule.connectors.Count; i++)
+        {
+            Vector2Int capsulePosition = startCapsule.placedPosition;
+            //Проверка на выход за границы сетки
+            if ((capsulePosition.x + startCapsule.connectors[i].x) >= gridSize.x ||
+            (capsulePosition.y + startCapsule.connectors[i].y) >= gridSize.y ||
+            (capsulePosition.y + startCapsule.connectors[i].x) < 0 ||
+            (capsulePosition.y + startCapsule.connectors[i].y) < 0)
+                continue;
+
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if ((grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y]))
+            {
+                nearItem = grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (capsulePosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && capsulePosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        nearItem.isMainRocketPiece = true;
+                        for (int z = 0; z < nearItem.connectors.Count; z++)
+                        {
+                            CheckOnNewRocketPieces(nearItem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public void CheckOnDisconnectedParts()
     {
         for (var i = 0; i < placedItems.Count; i++)
@@ -307,22 +364,7 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
-    public void DeleteAllItems()
-    {
-        for (int i = 0; i < placedItems.Count; i++)
-        {
-            Destroy(placedItems[i].gameObject);
-        }
 
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight), Mathf.Round(0), 1f);
-        placedItems.Clear();
-    }
-
-    private void ClearPlacingVariables()
-    {
-        placingItem = null;
-        placingItemData = null;
-    }
 
     private void OnDrawGizmos()
     {

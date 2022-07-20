@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStateHandler : MonoBehaviour
 {
+    public static GameStateHandler Instance;
     [Header("EndBuild")]
     [SerializeField] private Transform startRocketPosition;
     [SerializeField] private Camera rocketCamera;
@@ -12,6 +13,23 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] private Transform rocketObject;
 
     public BuildingGrid buildingGrid;
+
+    public GameObject cantFlyButton;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void EnableFlightButton()
+    {
+        cantFlyButton.SetActive(false);
+    }
+
+    public void DisableFlightButton()
+    {
+        cantFlyButton.SetActive(true);
+    }
 
     public void EndBuidling()
     {
