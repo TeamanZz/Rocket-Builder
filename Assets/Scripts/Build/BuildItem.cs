@@ -14,16 +14,8 @@ public class BuildItem : MonoBehaviour
     public List<Vector2> connectors = new List<Vector2>();
     public List<Transform> connectorsGO = new List<Transform>();
 
-    private BuildingGrid buildingGrid;
-
     public bool isMainRocketPiece;
     public bool isMainCapsule;
-
-    private void Awake()
-    {
-        buildingGrid = FindObjectOfType<BuildingGrid>();
-        // mainRenderer = GetComponentInChildren<Renderer>();
-    }
 
     public void IncreaseScale()
     {

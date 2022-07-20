@@ -18,6 +18,23 @@ public class GameStateHandler : MonoBehaviour
         StartCoroutine(EndBuildingCoroutine());
     }
 
+    private void CenterRocket()
+    {
+        // for (var i = 1; i < rocketObject.transform.childCount; i++)
+        // {
+        //     rocketObject.transform.GetChild(i).SetParent(buildingGrid.startCapsule.transform);
+        // }
+
+        // buildingGrid.startCapsule.transform.parent = null;
+        // buildingGrid.startCapsule.transform.position = startRocketPosition.position;
+        // buildingGrid.startCapsule.transform.parent = rocketObject;
+
+        // for (var i = 1; i < rocketObject.transform.childCount; i++)
+        // {
+        //     rocketObject.transform.GetChild(i).SetParent(rocketObject);
+        // }
+    }
+
     public IEnumerator EndBuildingCoroutine()
     {
         var blackScreen = Instantiate(blackScreenPrefab);
@@ -26,6 +43,7 @@ public class GameStateHandler : MonoBehaviour
         buildingGrid.ToggleItemsConnectors();
         yield return new WaitForSeconds(1f);
         Destroy(blackScreen);
+        CenterRocket();
         rocketObject.transform.position = startRocketPosition.position;
         rocketCamera.gameObject.SetActive(true);
         Camera.main.gameObject.SetActive(false);
