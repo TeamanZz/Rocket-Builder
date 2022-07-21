@@ -227,12 +227,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d164b960aeaf0fc4894baa8460307326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 13
+  startHealth: 10
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  enemyReward: 2
   currentHealth: 0
   healthBar: {fileID: 2362408015234630373}
+  healthBarBg: {fileID: 2779065780843547512}
   oneHitHealthBarFill: 0
+  startFuel: 0
+  startShield: 0
+  currentFuel: 0
+  currentShield: 0
+  playerFuelBar: {fileID: 0}
+  playerShieldBar: {fileID: 0}
+  fuelBarText: {fileID: 0}
+  shieldBarText: {fileID: 0}
+  oneHitFuelBarFill: 0
+  oneHitShieldBarFill: 0
+  shieldParticle: {fileID: 0}
+  destroyShieldParticle: {fileID: 0}
+  levelProgress: {fileID: 0}
   isPlayer: 0
+  isPlayerOnPlanet: 0
+  playerMoney: {fileID: 0}
+  loseScreenPrefab: {fileID: 0}
 --- !u!1 &7123459976462478866
 GameObject:
   m_ObjectHideFlags: 0

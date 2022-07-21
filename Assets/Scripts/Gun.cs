@@ -32,7 +32,6 @@ public class Gun : MonoBehaviour
             if (isEnemyGun)
             {
                 newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * enemyProjectileSpeed, ForceMode.Impulse);
-                Debug.Log("Shooted");
             }
             else
             {

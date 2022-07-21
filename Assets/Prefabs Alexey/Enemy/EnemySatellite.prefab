@@ -53,8 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 15
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  enemyReward: 5
   currentHealth: 0
   healthBar: {fileID: 925957756702158038}
+  healthBarBg: {fileID: 925957755273603032}
   oneHitHealthBarFill: 0
   startFuel: 0
   startShield: 0
@@ -70,6 +72,8 @@ MonoBehaviour:
   destroyShieldParticle: {fileID: 0}
   levelProgress: {fileID: 0}
   isPlayer: 0
+  isPlayerOnPlanet: 0
+  playerMoney: {fileID: 0}
   loseScreenPrefab: {fileID: 0}
 --- !u!135 &4852872284460761532
 SphereCollider:
@@ -535,6 +539,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   isEnemyGun: 1
+  enemyProjectileSpeed: 0
 --- !u!1 &925957755748685530
 GameObject:
   m_ObjectHideFlags: 0

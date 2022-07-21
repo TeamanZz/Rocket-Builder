@@ -11,9 +11,11 @@ public class EnemyBase : MonoBehaviour
     public float startHealth;
     public GameObject deathParticles;
 
+    [SerializeField] private int enemyReward;
     [SerializeField] private float currentHealth;
 
     [SerializeField] private Image healthBar;
+    [SerializeField] private Image healthBarBg;
     [SerializeField] private float oneHitHealthBarFill;
 
     [Header("PlayerSettingAndBar")]
@@ -33,13 +35,15 @@ public class EnemyBase : MonoBehaviour
     public GameObject shieldParticle;
     [SerializeField] private ParticleSystem destroyShieldParticle;
     [SerializeField] private LevelProgress levelProgress;
-    [SerializeField] private bool isPlayer; public bool isPlayerOnPlanet; 
+    [SerializeField] private bool isPlayer; public bool isPlayerOnPlanet;
+    [SerializeField] private Money playerMoney;
     [Space(30)]
     [Header("WinLoseCondition")]
     [SerializeField] private GameObject loseScreenPrefab;
 
     private void Awake()
     {
+        playerMoney = FindObjectOfType<Money>();
         levelProgress = FindObjectOfType<LevelProgress>();
         currentHealth = startHealth;
         currentFuel = startFuel;
@@ -61,6 +65,10 @@ public class EnemyBase : MonoBehaviour
         {
             fuelBarText.text = $"{currentFuel} / {startFuel}";
             shieldBarText.text = $"{currentShield} / {startShield}";
+        }
+        else
+        {
+            healthBarBg.rectTransform.rotation = Quaternion.Euler(0,0,0);
         }
     }
 
@@ -144,6 +152,7 @@ public class EnemyBase : MonoBehaviour
             {
                 Instantiate(deathParticles, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                playerMoney.AddCoins(enemyReward);
             }
             else
             {

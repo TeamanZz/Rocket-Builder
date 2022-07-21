@@ -52,13 +52,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
       </list>
     </option>
   </component>
@@ -113,6 +114,7 @@
       <workItem from="1658217143729" duration="17774000" />
       <workItem from="1658304171650" duration="6559000" />
       <workItem from="1658320477064" duration="3977000" />
+      <workItem from="1658392521113" duration="1249000" />
     </task>
     <servers />
   </component>

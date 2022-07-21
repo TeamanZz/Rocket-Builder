@@ -149,10 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d164b960aeaf0fc4894baa8460307326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 18
+  startHealth: 14
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  enemyReward: 7
   currentHealth: 0
   healthBar: {fileID: 7151898128126361965}
+  healthBarBg: {fileID: 5201065850341978875}
   oneHitHealthBarFill: 0
   startFuel: 0
   startShield: 0
@@ -169,6 +171,7 @@ MonoBehaviour:
   levelProgress: {fileID: 0}
   isPlayer: 0
   isPlayerOnPlanet: 0
+  playerMoney: {fileID: 0}
   loseScreenPrefab: {fileID: 0}
 --- !u!65 &4228160044456138237
 BoxCollider:

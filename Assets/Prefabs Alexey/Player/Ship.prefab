@@ -847,6 +847,7 @@ GameObject:
   - component: {fileID: 5575421382826163859}
   - component: {fileID: 5575421382826163858}
   - component: {fileID: 5575421382826163857}
+  - component: {fileID: 5938298167446270145}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -916,7 +917,10 @@ MonoBehaviour:
   oneHitShieldBarFill: 0
   shieldParticle: {fileID: 8167107598347246031}
   destroyShieldParticle: {fileID: 5154210826423255418}
+  levelProgress: {fileID: 0}
   isPlayer: 1
+  isPlayerOnPlanet: 0
+  loseScreenPrefab: {fileID: 0}
 --- !u!65 &5575421382826163859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -963,6 +967,18 @@ MonoBehaviour:
   shuttleModel: {fileID: 5575421382396265080}
   <spawnEnemyPosition>k__BackingField: {fileID: 5575421383377156162}
   endEnemiesPosition: {fileID: 0}
+--- !u!114 &5938298167446270145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575421382826163863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df30a1264c5523f42b04fc7d49ef4823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5575421383377156163
 GameObject:
   m_ObjectHideFlags: 0

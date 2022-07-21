@@ -122,6 +122,7 @@
             <e p="ItemPickUp.cs" t="Include" />
           </e>
           <e p="SpaceShip" t="Include">
+            <e p="Money.cs" t="Include" />
             <e p="SpaceShipHealth.cs" t="Include" />
             <e p="SpaceShipMovement.cs" t="Include" />
           </e>
