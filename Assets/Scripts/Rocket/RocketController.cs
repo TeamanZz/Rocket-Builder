@@ -7,7 +7,7 @@ public class RocketController : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.Space))
         {
             gameObject.transform.Translate(Vector3.forward * Time.deltaTime * 20);
         }

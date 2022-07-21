@@ -8,238 +8,388 @@ using DG.Tweening;
 
 public class BuildingGrid : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
-    [Header("Grids")] 
+    public static BuildingGrid Instance;
+    [Header("Grids")]
     [SerializeField] private Vector2Int gridSize;
     public List<BuildItem> placedItems = new List<BuildItem>();
-    public int countOfItems;
     [SerializeField] public BuildItem[,] grid;
-    public List<BuildItem[,]> gridList = new List<BuildItem[,]>();
-    [SerializeField] private Transform normalBuildPosition;
-    [SerializeField] private Vector3 debugPosition;
     [field: SerializeField] public BuildItem placingItem { get; set; }
+    [field: SerializeField] public BuildItemDataBase placingItemData { get; set; }
     [SerializeField] private Transform rocketObject;
-    [SerializeField] private List<BuildItem> connectors = new List<BuildItem>();
 
-    [Header("ControlText")] [SerializeField]
-    private float maxItemsWeight;
-    [SerializeField] private float currentItemsWeight;
-    [Space(5f)] [Header("UI")] [SerializeField]
-    private Text weightControlText;
+    private Camera mainCamera;
+    private Vector3 debugPosition;
+    public BuildItem startCapsule;
 
-    
-    
-    [Header("EndBuild")] 
-    [SerializeField] private Transform startRocketPosition;
-    [SerializeField] private Camera rocketCamera;
-    [SerializeField] private GameObject blackScreenPrefab;
-    [SerializeField] private GameObject uiItems;
+    private Vector2 currentPlacingItemPosition;
 
     private void Awake()
     {
-        weightControlText.text = $"Weight : {currentItemsWeight} / {maxItemsWeight}";
+        Instance = this;
         grid = new BuildItem[gridSize.x, gridSize.y];
         mainCamera = Camera.main;
     }
 
-    public void ResizeGrid()
+    private void Start()
     {
-        var xScale = gridSize.x / 10;
-        var yScale = gridSize.y / 10;
-        transform.localScale = new Vector3(xScale,1,yScale);
-    }
-
-    public void StartPlacingItem(BuildItem placingItemPrefab)
-    {
-        if (placingItem != null)
-        {
-            Destroy(placingItem.gameObject);
-            for (int i = 0; i < placingItem.connectorList.Count; i++)
-            {
-                connectors.RemoveAt(i);
-                Destroy(connectors[i]);
-                i--;
-            }
-        }
-
-        placingItem = Instantiate(placingItemPrefab);
-        placingItem.transform.parent = rocketObject;
-        for (int i = 0; i < placingItem.connectorList.Count; i++)
-        {
-            connectors.Add(placingItem.connectorList[i]);
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(debugPosition,0.5f);
-
-        for (int i = 0; i < gridSize.x; i++)
-        {
-            for (int j = 0; j < gridSize.y; j++)
-            {
-                Gizmos.DrawWireCube(new Vector3(i,j,0), new Vector3(1f,1f,1f));
-            }
-        }
+        grid[4, 6] = startCapsule;
+        startCapsule.placedPosition = new Vector2Int(4, 6);
     }
 
     private void Update()
     {
-
-        weightControlText.text = (currentItemsWeight).ToString("0.0") + "/" + (maxItemsWeight).ToString("0.0");
-
-        if (placingItem == null) 
+        if (placingItem == null)
             return;
 
         var groundPlane = new Plane(Vector3.forward, Vector3.one);
         var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        
-        
         if (groundPlane.Raycast(ray, out float position))
         {
+            float x;
+            float y;
             Vector3 worldPos = ray.GetPoint(position);
-            debugPosition = worldPos;
-            //Debug.Log(worldPos);
-            var x = Mathf.RoundToInt(worldPos.x);
-            var y = Mathf.RoundToInt(worldPos.y);
-
-            bool available = true;
-
-            if (x < 0 || x > gridSize.x - placingItem.Size.x)
+            if ((worldPos.x) >= gridSize.x - 0.5f || (worldPos.y) >= gridSize.y - 0.5f || (worldPos.x) <= -0.5f || (worldPos.y) <= -0.5f)
             {
-                available = false;
+                x = worldPos.x;
+                y = worldPos.y;
             }
-
-            if (y < 0 || y > gridSize.y - placingItem.Size.y)
+            else
             {
-                available = false;
+                x = Mathf.RoundToInt(worldPos.x);
+                y = Mathf.RoundToInt(worldPos.y);
             }
-
-            if (available && IsPlaceTaken(x, y))
-            {
-                available = false;
-            }
-
+            currentPlacingItemPosition = new Vector2(x, y);
             placingItem.transform.position = new Vector3(x, y, 0);
-            
-            placingItem.SetTransparent(available);
+        }
+    }
 
-            if (Input.GetMouseButtonDown(0) && available == true &&
-                currentItemsWeight + placingItem.itemWeight < maxItemsWeight)
+    public int GetConnectedFuelValue()
+    {
+        int rocketFuelValue = 0;
+        var fuelItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel);
+        for (var i = 0; i < fuelItemsList.Count; i++)
+        {
+            rocketFuelValue += fuelItemsList[i].placingItemUI.statValue;
+        }
+        return rocketFuelValue;
+    }
+
+    public int GetConnectedShieldValue()
+    {
+        int rocketShieldValue = 0;
+        var shieldItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
+        for (var i = 0; i < shieldItemsList.Count; i++)
+        {
+            rocketShieldValue += shieldItemsList[i].placingItemUI.statValue;
+        }
+        return rocketShieldValue;
+    }
+
+    public void CheckOnCompletedRocket()
+    {
+        bool hasCapsule = false;
+        bool hasJet = false;
+        bool hasFuel = false;
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Capsule))
+            hasCapsule = true;
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet))
+            hasJet = true;
+
+        if (placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel))
+            hasFuel = true;
+
+        if (hasCapsule && hasJet && hasFuel)
+            GameStateHandler.Instance.EnableFlightButton();
+        else
+            GameStateHandler.Instance.DisableFlightButton();
+    }
+
+    public void DeleteAllItems()
+    {
+        for (int i = placedItems.Count - 1; i >= 0; i--)
+        {
+            if (!placedItems[i].isMainCapsule)
             {
-                PlaceFlyingItem(x, y);
-            }
-            else if (Input.GetMouseButtonDown(0) && available == false)
-            {
-                Destroy(placingItem.gameObject);
-                placingItem = null;
+                placedItems[i].placingItemUI.IncreaseCount();
+                grid[placedItems[i].placedPosition.x, placedItems[i].placedPosition.y] = null;
+                Destroy(placedItems[i].gameObject);
+                placedItems.Remove(placedItems[i]);
             }
         }
+        CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetZeroStats();
+    }
+
+    private void ClearPlacingVariables()
+    {
+        placingItem = null;
+        placingItemData = null;
+    }
+
+    public void StartPlacingNewItem(BuildItem placingItemPrefab, PartsUIItem uiItem)
+    {
+        placingItem = Instantiate(placingItemPrefab);
+        placingItem.placingItemUI = uiItem;
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
+        placingItem.transform.parent = rocketObject;
+        placingItem.IncreaseScale();
+    }
+
+    public void StartPlacingExistItem(BuildItem existPlacingItem)
+    {
+        placingItem = existPlacingItem;
+        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
+        placingItem.transform.parent = rocketObject;
+        placingItem.SetNormalColor();
+        placingItem.IncreaseScale();
+        // ResourcesHandler.Instance.HandleStatsDecrease(placingItem);
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            if (placedItems[i].isMainCapsule)
+                continue;
+            placedItems[i].isMainRocketPiece = false;
+        }
+        RemovePlacingItemFromGridData();
+
+        if (placingItem != startCapsule)
+            RecalculateStateOFItems();
+
+        CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].HandleColorWhiteOrGray();
+        }
+    }
+
+    public void ToggleItemsConnectors()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].ToggleConnectors();
+        }
+    }
+
+    private void RemovePlacingItemFromGridData()
+    {
+        if (!placingItem.isMainCapsule)
+            placingItem.isMainRocketPiece = false;
+
+        placedItems.Remove(placingItem);
+        grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
+    }
+
+    public void HandleDropItem()
+    {
+        bool available = true;
+
+        if (IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
+            available = false;
+
+        if (available)
+        {
+            PlaceFlyingItem();
+        }
+        else
+        {
+            placingItem.placingItemUI.IncreaseCount();
+            Destroy(placingItem.gameObject);
+        }
+
+        ClearPlacingVariables();
     }
 
     private bool IsPlaceTaken(int placeX, int placeY)
     {
-        if (placingItem.isThisItemHasConnectors)
+        for (int x = 0; x < placingItem.Size.x; x++)
         {
-            return false;
-        }
-        else
-        {
-            
-            
-            for (int x = 0; x < placingItem.Size.x; x++)
+            for (int y = 0; y < placingItem.Size.y; y++)
             {
-                for (int y = 0; y < placingItem.Size.y; y++)
+                //Проверка на выход за границы сетки
+                if ((placeX + x) >= gridSize.x || (placeY + y) >= gridSize.y || (placeX + x) < 0 || (placeY + y) < 0)
+                    return true;
+
+                //Проверка на то, занята ли ячейка
+                if (grid[placeX + x, placeY + y])
                 {
-                    
-                    if (grid[placeX + x, placeY + y] != null)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
         }
         return false;
     }
 
-    public void PlaceFlyingItem(int placeX, int placeY)
+    public void PlaceFlyingItem()
     {
+        int placeX = Mathf.RoundToInt(currentPlacingItemPosition.x);
+        int placeY = Mathf.RoundToInt(currentPlacingItemPosition.y);
+
         for (int x = 0; x < placingItem.Size.x; x++)
         {
             for (int y = 0; y < placingItem.Size.y; y++)
             {
+                placingItem.placedPosition = new Vector2Int(placeX + x, placeY + y);
+
                 grid[placeX + x, placeY + y] = placingItem;
             }
         }
+        placingItem.SetNormalScale();
+        placedItems.Add(placingItem);
+        placingItem.SetNormalColor();
 
-        for (int i = 0; i < placingItem.AllowedToBuildCells.Count; i++)
+        if (placingItem.isMainCapsule)
         {
-            Debug.Log(i + "" + " point = " + " " + placingItem.AllowedToBuildCells[i].x);
-        }
-        Debug.Log(placingItem.transform.position);
-        
-        AddWeightToText();
-        placedItems.Add(placingItem);   
-        placingItem.SetNormal();
-        countOfItems++;
-        placingItem.id = countOfItems;
-        placingItem = null;
-    }
-
-    public void AddWeightToText()
-    {
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight + placingItem.itemWeight), 1f);
-    }
-
-    public void RemoveWeightFromText()
-    {
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight),
-            Mathf.Round(currentItemsWeight - placingItem.itemWeight), 1f);
-    }
-
-    public void DeclineItem()
-    {
-        if (placingItem != null)
-        {
-            placingItem = null;
-        }
-        else
-        {
-            Destroy(placingItem.gameObject);
-            placingItem = null;
-        }
-    }
-
-
-    public void DeleteAllItems()
-    {
-        for (int i = 0; i < placedItems.Count; i++)
-        {
-            Destroy(placedItems[i].gameObject);
+            startCapsule = placingItem;
         }
 
-        DOTween.To(x => currentItemsWeight = x, Mathf.Round(currentItemsWeight), Mathf.Round(0), 1f);
-        placedItems.Clear();
-        countOfItems = 0;
-        connectors.Clear();
+        CheckOnMainRocketPiece(placeX, placeY);
+        CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
     }
 
-    public void EndBuidling()
+    private void CheckOnMainRocketPiece(int placeX, int placeY)
     {
-        StartCoroutine(EndBuildingCorutine());
+        if (placingItem.isMainCapsule)
+        {
+            CheckOnNewRocketPieces(placingItem);
+            return;
+        }
+
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < placingItem.connectors.Count; i++)
+        {
+            //Проверка на выход за границы сетки
+            if ((placeX + placingItem.connectors[i].x) >= gridSize.x || (placeY + placingItem.connectors[i].y) >= gridSize.y || (placeX + placingItem.connectors[i].x) < 0 || (placeY + placingItem.connectors[i].y) < 0)
+                continue;
+
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if ((grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y]))
+            {
+                var nearItem = grid[placeX + (int)placingItem.connectors[i].x, placeY + (int)placingItem.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (placeX == (nearItem.connectors[j].x + nearItem.placedPosition.x) && placeY == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        //Если соседняя часть ракеты является частью ракеты (связана с капсулой)
+                        if (nearItem.isMainRocketPiece)
+                        {
+                            placingItem.isMainRocketPiece = true;
+
+                            for (int z = 0; z < placingItem.connectors.Count; z++)
+                            {
+                                CheckOnNewRocketPieces(placingItem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (!placingItem.isMainRocketPiece)
+            placingItem.SetGrayColor();
     }
-    
-    public IEnumerator EndBuildingCorutine()
+
+    public void CheckOnNewRocketPieces(BuildItem itemToCheck)
     {
-        var blackScreen = Instantiate(blackScreenPrefab);
-        uiItems.SetActive(false);
-        yield return new WaitForSeconds(1f);
-        Destroy(blackScreen);
-        rocketObject.transform.position = startRocketPosition.position;
-        rocketCamera.gameObject.SetActive(true);
-        mainCamera.gameObject.SetActive(false);
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < itemToCheck.connectors.Count; i++)
+        {
+            //Проверка на выход за границы сетки
+            if ((itemToCheck.placedPosition.x + itemToCheck.connectors[i].x) >= gridSize.x ||
+            (itemToCheck.placedPosition.y + itemToCheck.connectors[i].y) >= gridSize.y ||
+            (itemToCheck.placedPosition.x + itemToCheck.connectors[i].x) < 0 ||
+            (itemToCheck.placedPosition.y + itemToCheck.connectors[i].y) < 0)
+                continue;
+
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if (grid[itemToCheck.placedPosition.x + (int)itemToCheck.connectors[i].x, itemToCheck.placedPosition.y + (int)itemToCheck.connectors[i].y])
+            {
+                var nearItem = grid[itemToCheck.placedPosition.x + (int)itemToCheck.connectors[i].x, itemToCheck.placedPosition.y + (int)itemToCheck.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (itemToCheck.placedPosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && itemToCheck.placedPosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        //Если соседняя часть ракеты является частью ракеты (связана с капсулой)
+                        if (!nearItem.isMainRocketPiece)
+                        {
+                            nearItem.isMainRocketPiece = true;
+                            nearItem.SetNormalColor();
+                            for (int z = 0; z < itemToCheck.connectors.Count; z++)
+                            {
+                                CheckOnNewRocketPieces(nearItem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void RecalculateStateOFItems()
+    {
+        BuildItem nearItem = new BuildItem();
+        //Идём по всем коннекторам новой части ракеты
+        for (int i = 0; i < startCapsule.connectors.Count; i++)
+        {
+            Vector2Int capsulePosition = startCapsule.placedPosition;
+            //Проверка на выход за границы сетки
+            if ((capsulePosition.x + startCapsule.connectors[i].x) >= gridSize.x ||
+            (capsulePosition.y + startCapsule.connectors[i].y) >= gridSize.y ||
+            (capsulePosition.y + startCapsule.connectors[i].x) < 0 ||
+            (capsulePosition.y + startCapsule.connectors[i].y) < 0)
+                continue;
+
+            //Если на позиции коннектора есть соседняя часть ракеты
+            if ((grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y]))
+            {
+                nearItem = grid[capsulePosition.x + (int)startCapsule.connectors[i].x, capsulePosition.y + (int)startCapsule.connectors[i].y];
+                //Идём по всем коннекторам соседней части ракеты
+                for (int j = 0; j < nearItem.connectors.Count; j++)
+                {
+                    //Если у новой и у соседней части ракеты обе стороны стыкуются
+                    if (capsulePosition.x == (nearItem.connectors[j].x + nearItem.placedPosition.x) && capsulePosition.y == (nearItem.connectors[j].y + nearItem.placedPosition.y))
+                    {
+                        nearItem.isMainRocketPiece = true;
+                        for (int z = 0; z < nearItem.connectors.Count; z++)
+                        {
+                            CheckOnNewRocketPieces(nearItem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void CheckOnDisconnectedParts()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            if (!placedItems[i].isMainRocketPiece)
+            {
+                Destroy(placedItems[i].gameObject);
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(debugPosition, 0.5f);
+
+        for (int i = 0; i < gridSize.x; i++)
+        {
+            for (int j = 0; j < gridSize.y; j++)
+            {
+                Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
+            }
+        }
     }
 }
