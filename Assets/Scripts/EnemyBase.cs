@@ -19,14 +19,14 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private float oneHitHealthBarFill;
 
     [Header("PlayerSettingAndBar")]
-    [SerializeField] private float startFuel;
-    [SerializeField] private float startShield;
+    [SerializeField] public float startFuel;
+    [SerializeField] public float startShield;
     [SerializeField] private float currentFuel;
     [SerializeField] private float currentShield;
+    [SerializeField] private float fuelDecreaseMultiplier;
     [Space(20)]
     [SerializeField] private Image playerFuelBar;
     [SerializeField] private Image playerShieldBar;
-    [SerializeField] private Text fuelBarText;
     [SerializeField] private Text shieldBarText;
     [Space(20)]
     [SerializeField] private float oneHitFuelBarFill;
@@ -47,15 +47,9 @@ public class EnemyBase : MonoBehaviour
         levelProgress = FindObjectOfType<LevelProgress>();
         currentHealth = startHealth;
         currentFuel = startFuel;
-        currentShield = startShield;
         if (!isPlayer)
         {
             oneHitHealthBarFill = healthBar.fillAmount / startHealth;
-        }
-        else
-        {
-            oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
-            oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
         }
     }
 
@@ -63,7 +57,9 @@ public class EnemyBase : MonoBehaviour
     {
         if (isPlayer)
         {
-            fuelBarText.text = $"{currentFuel} / {startFuel}";
+            oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
+            oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
+            currentShield = startShield;
             shieldBarText.text = $"{currentShield} / {startShield}";
         }
         else
@@ -76,7 +72,6 @@ public class EnemyBase : MonoBehaviour
     {
         if (isPlayer)
         {
-            fuelBarText.text = $"{Mathf.RoundToInt(currentFuel)} / {startFuel}";
             playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
             playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
 
@@ -86,7 +81,7 @@ public class EnemyBase : MonoBehaviour
             }
             else
             {
-                currentFuel -= Time.fixedDeltaTime * 10;   
+                currentFuel -= Time.fixedDeltaTime * fuelDecreaseMultiplier;   
             }
 
             if (currentFuel <= 0)
@@ -143,7 +138,6 @@ public class EnemyBase : MonoBehaviour
                 }
             }
             
-            fuelBarText.text = $"{currentFuel} / {startFuel}";
             shieldBarText.text = $"{currentShield} / {startShield}";
         }
         else
@@ -194,7 +188,6 @@ public class EnemyBase : MonoBehaviour
     {
         levelProgress.CancelFillTween();
         Instantiate(deathParticles, transform.position, Quaternion.identity);
-        fuelBarText.gameObject.SetActive(false);
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
         playerShieldBar.gameObject.SetActive(false);

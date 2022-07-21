@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     [SerializeField] private int coinsCounter;
+
+    private void Awake()
+    {
+        coinsCounter = PlayerPrefs.GetInt("PlayerMoney");
+    }
 
     public void AddCoins(int count)
     {

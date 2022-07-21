@@ -96,7 +96,12 @@
             <e p="BuildUIButton.cs" t="Include" />
             <e p="Connector.cs" t="Include" />
           </e>
+          <e p="BuildItemDataBase.cs" t="Include" />
+          <e p="BuildItemDataBody.cs" t="Include" />
+          <e p="BuildItemDrag.cs" t="Include" />
+          <e p="BuildItemUI.cs" t="Include" />
           <e p="CameraBoundsController.cs" t="Include" />
+          <e p="CameraWidth.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="EnemyMoving.cs" t="Include" />
             <e p="EnemyProjectile.cs" t="Include" />
@@ -107,12 +112,18 @@
             <e p="SpawnEnemy.cs" t="Include" />
           </e>
           <e p="EnemyBase.cs" t="Include" />
+          <e p="EventType.cs" t="Include" />
+          <e p="GameStateHandler.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
+          <e p="ItemsListHandler.cs" t="Include" />
           <e p="LevelProgress.cs" t="Include" />
           <e p="LockCameraZ.cs" t="Include" />
           <e p="MeteorRotation.cs" t="Include" />
+          <e p="NewPartsHandler.cs" t="Include" />
+          <e p="PartsUIItem.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="ResourcesHandler.cs" t="Include" />
           <e p="Rocket" t="Include">
             <e p="RocketController.cs" t="Include" />
           </e>

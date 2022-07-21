@@ -31,7 +31,7 @@ public class SpaceShipMovement : MonoBehaviour
         spaceRB.velocity = new Vector3(joystick.Horizontal * sideSpeed, constantVelocity, 0);
         Heeling();
     }
-
+    
     private void Heeling()
     {
         if (joystick.Horizontal != 0)

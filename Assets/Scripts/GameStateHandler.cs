@@ -7,10 +7,20 @@ public class GameStateHandler : MonoBehaviour
     public static GameStateHandler Instance;
     [Header("EndBuild")]
     [SerializeField] private Transform startRocketPosition;
-    [SerializeField] private Camera rocketCamera;
     [SerializeField] private GameObject blackScreenPrefab;
     [SerializeField] private GameObject uiItems;
     [SerializeField] private Transform rocketObject;
+
+    [Header("ItemsToActive")]
+    [SerializeField] private GameObject[] itemsToActive;
+    [Header("ItemsToUnActive")]
+    [SerializeField] private GameObject[] itemsToUnActive;
+
+    [Header("ShipSettings")] 
+    [SerializeField] private ResourcesHandler resourcesHandler;
+    [SerializeField] private EnemyBase playerShipHealth;
+    [SerializeField] private SpaceShipMovement playerShipMovement;
+    
 
     public BuildingGrid buildingGrid;
 
@@ -19,6 +29,9 @@ public class GameStateHandler : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        resourcesHandler = FindObjectOfType<ResourcesHandler>();
+        playerShipHealth = GameObject.FindWithTag("Player").GetComponent<EnemyBase>();
+        playerShipMovement = FindObjectOfType<SpaceShipMovement>();
     }
 
     public void EnableFlightButton()
@@ -34,6 +47,26 @@ public class GameStateHandler : MonoBehaviour
     public void EndBuidling()
     {
         StartCoroutine(EndBuildingCoroutine());
+    }
+
+    public void SetShipSettings()
+    {
+        playerShipHealth.enabled = true;
+        playerShipHealth.startFuel = resourcesHandler.trueFuelValue;
+        playerShipHealth.startShield = resourcesHandler.trueShieldValue;
+        for (int i = 0; i < itemsToActive.Length; i++)
+        {
+            itemsToActive[i].SetActive(true);
+            Debug.Log("Activate item");
+        }
+        for (int i = 0; i < itemsToUnActive.Length; i++)
+        {
+            itemsToUnActive[i].SetActive(false);
+            Debug.Log("UnActivate item");
+        }
+        playerShipMovement.constantVelocity = 3f;
+        playerShipMovement.rotationDamping = 7f;
+        playerShipMovement.sideSpeed = 3;
     }
 
     private void CenterRocket()
@@ -60,10 +93,9 @@ public class GameStateHandler : MonoBehaviour
         buildingGrid.CheckOnDisconnectedParts();
         buildingGrid.ToggleItemsConnectors();
         yield return new WaitForSeconds(1f);
+        SetShipSettings();
         Destroy(blackScreen);
         CenterRocket();
         rocketObject.transform.position = startRocketPosition.position;
-        rocketCamera.gameObject.SetActive(true);
-        Camera.main.gameObject.SetActive(false);
     }
 }

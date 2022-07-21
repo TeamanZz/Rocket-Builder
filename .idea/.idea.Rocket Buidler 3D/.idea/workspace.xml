@@ -16,6 +16,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/ChatManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,20 +47,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
       </list>
     </option>
   </component>
@@ -115,6 +117,7 @@
       <workItem from="1658304171650" duration="6559000" />
       <workItem from="1658320477064" duration="3977000" />
       <workItem from="1658392521113" duration="1249000" />
+      <workItem from="1658397435921" duration="8316000" />
     </task>
     <servers />
   </component>
