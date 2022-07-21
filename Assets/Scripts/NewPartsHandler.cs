@@ -6,12 +6,16 @@ public class NewPartsHandler : MonoBehaviour
 {
     public int lastUnlockedEventIndex = 0;
     public List<UnlockableEvent> unlockEvents = new List<UnlockableEvent>();
+    public GameObject shieldsListButton;
 
     [ContextMenu("UnlockNextEvent")]
     public void UnlockNextEvent()
     {
         if (lastUnlockedEventIndex > unlockEvents.Count - 1)
             return;
+
+        if (lastUnlockedEventIndex == 0)
+            shieldsListButton.SetActive(true);
 
         unlockEvents[lastUnlockedEventIndex].UnlockThisEvent();
         lastUnlockedEventIndex++;
