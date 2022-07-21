@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 3540818632114191509}
   - component: {fileID: 5199281037020365677}
   - component: {fileID: 3114142044895753243}
+  - component: {fileID: 6143679420810378452}
   m_Layer: 0
   m_Name: EnemyRocket
   m_TagString: Untagged
@@ -197,10 +198,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118934467015349552}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0742297, z: 1.5033709}
+  m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 1.952231e-17, y: -0.017942667, z: -0.029876232}
 --- !u!114 &3114142044895753243
 MonoBehaviour:
@@ -216,6 +217,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   explodeDamage: 15
+--- !u!65 &6143679420810378452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118934467015349552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.9, z: 1.4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3815385464402301892
 GameObject:
   m_ObjectHideFlags: 0

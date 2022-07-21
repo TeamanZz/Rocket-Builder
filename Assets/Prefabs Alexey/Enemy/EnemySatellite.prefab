@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 925957754603105126}
-  - component: {fileID: 1584145818600872474}
   - component: {fileID: 4852872284460761532}
-  - component: {fileID: 3356514012528146526}
+  - component: {fileID: 5998819536488920363}
   - component: {fileID: 6444198316790759387}
-  - component: {fileID: 1228173769982786927}
+  - component: {fileID: 1584145818600872474}
+  - component: {fileID: 3356514012528146526}
   m_Layer: 0
   m_Name: EnemySatellite
   m_TagString: Untagged
@@ -39,6 +39,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4852872284460761532
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925957754603105121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &5998819536488920363
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925957754603105121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6444198316790759387
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925957754603105121}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 88
+  m_CollisionDetection: 0
 --- !u!114 &1584145818600872474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,9 +104,9 @@ MonoBehaviour:
   startShield: 0
   currentFuel: 0
   currentShield: 0
+  fuelDecreaseMultiplier: 0
   playerFuelBar: {fileID: 0}
   playerShieldBar: {fileID: 0}
-  fuelBarText: {fileID: 0}
   shieldBarText: {fileID: 0}
   oneHitFuelBarFill: 0
   oneHitShieldBarFill: 0
@@ -75,19 +117,6 @@ MonoBehaviour:
   isPlayerOnPlanet: 0
   playerMoney: {fileID: 0}
   loseScreenPrefab: {fileID: 0}
---- !u!135 &4852872284460761532
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925957754603105121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3356514012528146526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,35 +132,6 @@ MonoBehaviour:
   satelliteSpeed: 3
   deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   explodeDamage: 15
---- !u!54 &6444198316790759387
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925957754603105121}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 88
-  m_CollisionDetection: 0
---- !u!65 &1228173769982786927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925957754603105121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &925957754838613854
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +538,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  canShoot: 1
   isEnemyGun: 1
   enemyProjectileSpeed: 0
 --- !u!1 &925957755748685530
