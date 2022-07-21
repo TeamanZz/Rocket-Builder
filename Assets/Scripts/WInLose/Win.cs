@@ -22,7 +22,8 @@ public class Win : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        BuildItem buildItem;
+        if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             StartScene();
         }
