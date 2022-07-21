@@ -7,8 +7,13 @@ public class ItemPickUp : MonoBehaviour
 {
     [SerializeField] private GameObject itemOnDestroy;
 
-    private void OnDestroy()
+    private void OnTriggerEnter(Collider other)
     {
-        Instantiate(itemOnDestroy,transform.position,Quaternion.identity);
+        SpaceShipMovement playerComponent;
+        if (other.TryGetComponent<SpaceShipMovement>(out playerComponent))
+        {
+            var effect = Instantiate(itemOnDestroy, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

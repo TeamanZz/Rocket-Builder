@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4928319, g: 0.21388131, b: 0.37816912, a: 1}
+  m_IndirectSpecularColor: {r: 0.49282742, g: 0.21387824, b: 0.37815723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2331,7 +2331,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 1}
+  m_Size: {x: 0.5, y: 0.45, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &281492725
 MonoBehaviour:
@@ -6221,6 +6221,7 @@ MonoBehaviour:
   blackScreenPrefab: {fileID: 9214229249639063122, guid: 81b1b7530f713724f8aa1c17fb58d664, type: 3}
   uiItems: {fileID: 1610719139}
   rocketObject: {fileID: 281492722}
+  rocketContainer: {fileID: 245171070}
   itemsToActive:
   - {fileID: 129134880}
   - {fileID: 1906972788}
@@ -11963,7 +11964,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b041b1da0f1f4984eaa820aa616b835a, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11971,7 +11972,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.091
 --- !u!222 &1336607114
 CanvasRenderer:
   m_ObjectHideFlags: 0

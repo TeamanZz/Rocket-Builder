@@ -10,17 +10,18 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] private GameObject blackScreenPrefab;
     [SerializeField] private GameObject uiItems;
     [SerializeField] private Transform rocketObject;
+    [SerializeField] private Transform rocketContainer;
 
     [Header("ItemsToActive")]
     [SerializeField] private GameObject[] itemsToActive;
     [Header("ItemsToUnActive")]
     [SerializeField] private GameObject[] itemsToUnActive;
 
-    [Header("ShipSettings")] 
+    [Header("ShipSettings")]
     [SerializeField] private ResourcesHandler resourcesHandler;
     [SerializeField] private EnemyBase playerShipHealth;
     [SerializeField] private SpaceShipMovement playerShipMovement;
-    
+
 
     public BuildingGrid buildingGrid;
 
@@ -63,12 +64,10 @@ public class GameStateHandler : MonoBehaviour
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);
-            Debug.Log("Activate item");
         }
         for (int i = 0; i < itemsToUnActive.Length; i++)
         {
             itemsToUnActive[i].SetActive(false);
-            Debug.Log("UnActivate item");
         }
         playerShipMovement.constantVelocity = 3f;
         playerShipMovement.rotationDamping = 7f;
@@ -77,19 +76,17 @@ public class GameStateHandler : MonoBehaviour
 
     private void CenterRocket()
     {
-        // for (var i = 1; i < rocketObject.transform.childCount; i++)
-        // {
-        //     rocketObject.transform.GetChild(i).SetParent(buildingGrid.startCapsule.transform);
-        // }
+        for (var i = rocketContainer.transform.childCount - 1; i > 0; i--)
+        {
+            rocketContainer.transform.GetChild(i).SetParent(buildingGrid.startCapsule.transform);
+        }
 
-        // buildingGrid.startCapsule.transform.parent = null;
-        // buildingGrid.startCapsule.transform.position = startRocketPosition.position;
-        // buildingGrid.startCapsule.transform.parent = rocketObject;
+        buildingGrid.startCapsule.transform.localPosition = Vector3.zero;
 
-        // for (var i = 1; i < rocketObject.transform.childCount; i++)
-        // {
-        //     rocketObject.transform.GetChild(i).SetParent(rocketObject);
-        // }
+        for (var i = buildingGrid.startCapsule.transform.childCount - 1; i > 0; i--)
+        {
+            buildingGrid.startCapsule.transform.GetChild(i).SetParent(rocketContainer);
+        }
     }
 
     public IEnumerator EndBuildingCoroutine()
