@@ -75,6 +75,17 @@ public class BuildingGrid : MonoBehaviour
         return rocketFuelValue;
     }
 
+    public int GetConnectedShieldValue()
+    {
+        int rocketShieldValue = 0;
+        var shieldItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
+        for (var i = 0; i < shieldItemsList.Count; i++)
+        {
+            rocketShieldValue += shieldItemsList[i].placingItemUI.statValue;
+        }
+        return rocketShieldValue;
+    }
+
     public void CheckOnCompletedRocket()
     {
         bool hasCapsule = false;
@@ -148,6 +159,7 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnCompletedRocket();
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         for (var i = 0; i < placedItems.Count; i++)
         {
             placedItems[i].HandleColorWhiteOrGray();
@@ -236,6 +248,7 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnMainRocketPiece(placeX, placeY);
         CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
     }
 

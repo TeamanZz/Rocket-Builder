@@ -35,6 +35,12 @@ public class ResourcesHandler : MonoBehaviour
         DOTween.To(() => fuelValueView, x => fuelValueView = (int)x, trueFuelValue, 1);
     }
 
+    public void SetNewShieldValue(int newShieldValue)
+    {
+        trueShieldValue = newShieldValue;
+        DOTween.To(() => shieldValueView, x => shieldValueView = (int)x, trueShieldValue, 1);
+    }
+
     public void HandleStatsIncrease(BuildItem buildItem)
     {
         if (buildItem.itemType == BuildItem.ItemType.Fuel)
