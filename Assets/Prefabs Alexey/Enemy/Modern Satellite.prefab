@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1329436071074954822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6966520099296234758}
+  - component: {fileID: 5210919951534799389}
+  - component: {fileID: 2851785561565775014}
+  - component: {fileID: 868818888038348829}
+  m_Layer: 0
+  m_Name: Player Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6966520099296234758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329436071074954822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3118934467015349518}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5210919951534799389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329436071074954822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  explodeDamage: 15
+--- !u!65 &2851785561565775014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329436071074954822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.72, y: 1.24, z: 1.48}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &868818888038348829
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329436071074954822}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &1394906348959882721
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,10 +188,8 @@ GameObject:
   - component: {fileID: 1589250034864300364}
   - component: {fileID: 3540818632114191509}
   - component: {fileID: 5199281037020365677}
-  - component: {fileID: 3114142044895753243}
-  - component: {fileID: 6143679420810378452}
-  m_Layer: 0
-  m_Name: EnemyRocket
+  m_Layer: 6
+  m_Name: Modern Satellite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +209,7 @@ Transform:
   - {fileID: 3118934465872183437}
   - {fileID: 8004360047904708540}
   - {fileID: 1436879161941940336}
+  - {fileID: 6966520099296234758}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -151,29 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 14
-  deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   enemyReward: 7
-  currentHealth: 0
+  deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   healthBar: {fileID: 7151898128126361965}
   healthBarBg: {fileID: 5201065850341978875}
-  oneHitHealthBarFill: 0
-  startFuel: 0
-  startShield: 0
-  currentFuel: 0
-  currentShield: 0
-  fuelDecreaseMultiplier: 0
-  playerFuelBar: {fileID: 0}
-  playerShieldBar: {fileID: 0}
-  shieldBarText: {fileID: 0}
-  oneHitFuelBarFill: 0
-  oneHitShieldBarFill: 0
-  shieldParticle: {fileID: 0}
-  destroyShieldParticle: {fileID: 0}
-  levelProgress: {fileID: 0}
-  isPlayer: 0
-  isPlayerOnPlanet: 0
-  playerMoney: {fileID: 0}
-  loseScreenPrefab: {fileID: 0}
 --- !u!54 &3540818632114191509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,7 +245,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &5199281037020365677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,33 +259,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 1.952231e-17, y: -0.017942667, z: -0.029876232}
---- !u!114 &3114142044895753243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3118934467015349552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  explodeDamage: 15
---- !u!65 &6143679420810378452
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3118934467015349552}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9, z: 1.4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3815385464402301892
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +441,10 @@ PrefabInstance:
       propertyPath: targetVector
       value: 
       objectReference: {fileID: 8004360047151720468}
+    - target: {fileID: 5266321356662674625, guid: 6bed8969835ac4f44af9ef839a6a147a, type: 3}
+      propertyPath: projectileSpeed
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5266321356662674625, guid: 6bed8969835ac4f44af9ef839a6a147a, type: 3}
       propertyPath: enemyProjectileSpeed
       value: 12

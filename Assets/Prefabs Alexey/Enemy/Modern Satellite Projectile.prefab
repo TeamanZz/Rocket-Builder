@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5813146492077229948}
-  - component: {fileID: 2570217607744985389}
   - component: {fileID: 5693037538349611238}
   - component: {fileID: 4811992286145423405}
+  - component: {fileID: 6751972330938164377}
   m_Layer: 0
-  m_Name: ROcket
+  m_Name: Modern Satellite Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2570217607744985389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6571475669746660478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3d73183cffc6a4498c76b6678c6e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  wasCollided: 0
-  hitParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!54 &5693037538349611238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +63,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37071943, y: 0.5806389, z: 0.4444652}
   m_Center: {x: 0.009821832, y: -0.15581894, z: 0}
+--- !u!114 &6751972330938164377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571475669746660478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cd9616e619a6341920820147ea316a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  wasCollided: 0
+  hitParticles: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 3}
+  timeUntilDestroy: 1
 --- !u!1001 &1592632268595069944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,7 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c190bfff6e66ce8449e88e30545f4a0e, type: 3}
       propertyPath: m_Name
-      value: Enemy Rocet
+      value: Enemy Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c190bfff6e66ce8449e88e30545f4a0e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c190bfff6e66ce8449e88e30545f4a0e, type: 3}

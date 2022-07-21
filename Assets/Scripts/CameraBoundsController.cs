@@ -5,7 +5,9 @@ using Cinemachine;
 
 public class CameraBoundsController : MonoBehaviour
 {
-    public float boundValue;
+    public float boundReach;
+    public float leftBound;
+    public float rightBound;
     public CinemachineVirtualCamera cineCamera;
 
     private float cineXValue;
@@ -26,17 +28,17 @@ public class CameraBoundsController : MonoBehaviour
     private void DoParralax()
     {
         cineXValue = (transform.position.x - -5) / (5 + 5);
-        transposer.m_ScreenX = Mathf.Clamp(Mathf.Lerp(transposer.m_ScreenX, cineXValue, Time.deltaTime), 0.45f, 0.55f);
+        transposer.m_ScreenX = Mathf.Clamp(Mathf.Lerp(transposer.m_ScreenX, cineXValue, Time.deltaTime), leftBound, rightBound);
     }
 
     private void StopTrackingSpaceShipPosition()
     {
-        if ((transform.position.x > boundValue || transform.position.x < -boundValue) && componentAdded == false)
+        if ((transform.position.x > boundReach || transform.position.x < -boundReach) && componentAdded == false)
         {
             componentAdded = true;
             cineCamera.gameObject.AddComponent<LockCameraZ>().m_ZPosition = cineCamera.transform.position.x;
         }
-        else if (((transform.position.x < boundValue && transform.position.x > -boundValue) || (transform.position.x > -boundValue && transform.position.x < boundValue)) && componentAdded == true)
+        else if (((transform.position.x < boundReach && transform.position.x > -boundReach) || (transform.position.x > -boundReach && transform.position.x < boundReach)) && componentAdded == true)
         {
             componentAdded = false;
             Destroy(cineCamera.gameObject.GetComponent<LockCameraZ>());

@@ -9,12 +9,12 @@ public class StuckWithEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        BuildItem buildItem;
+        if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             Instantiate(deathParticle, transform.position, Quaternion.identity);
-            other.gameObject.GetComponent<EnemyBase>().DescreaseHealth(explodeDamage);
-            Destroy(gameObject);
+            PlayerRocket.Instance.DescreaseHealth(explodeDamage);
+            Destroy(transform.parent.gameObject);
         }
     }
-
 }

@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Projectile : MonoBehaviour
+public class PlayerProjectile : ProjectileBase
 {
-    [HideInInspector] public float damage = 1;
     public bool wasCollided;
     public GameObject hitParticles;
 
@@ -27,7 +26,7 @@ public class Projectile : MonoBehaviour
         {
             Vector3 particlesPosition = new Vector3(enemy.transform.position.x + Random.Range(-0.5f, 0.5f), enemy.transform.position.y + Random.Range(-1f, 0f), enemy.transform.position.z - 1);
             var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity);
-            Destroy(hitParticle,1f);
+            Destroy(hitParticle, 1f);
             wasCollided = true;
             enemy.DescreaseHealth(damage);
             Destroy(gameObject);

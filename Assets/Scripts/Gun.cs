@@ -7,20 +7,16 @@ public class Gun : MonoBehaviour
 {
     public float timeBetweenShots = 0.5f;
     public float damage = 1;
+    public float projectileSpeed;
     public GameObject bulletPrefab;
     public Transform muzzle;
     public Transform targetVector;
-    public Transform ship;
     public UnityEvent OnShoot;
     public bool canShoot = true;
-
-    [SerializeField] private bool isEnemyGun;
-    [SerializeField] private float enemyProjectileSpeed;
 
     private void Start()
     {
         StartCoroutine(ShootRepeatedely());
-        ship = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     private IEnumerator ShootRepeatedely()
@@ -28,18 +24,11 @@ public class Gun : MonoBehaviour
         if (canShoot)
         {
             yield return new WaitForSeconds(timeBetweenShots);
-            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, -ship.eulerAngles.z));
-            newProjectile.GetComponent<Projectile>().damage = damage;
+            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z));
+            newProjectile.GetComponent<ProjectileBase>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;
-            if (isEnemyGun)
-            {
-                newProjectile.GetComponent<Rigidbody>()
-                    .AddForce(forceVector.normalized * enemyProjectileSpeed, ForceMode.Impulse);
-            }
-            else
-            {
-                newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * 20, ForceMode.Impulse);
-            }
+
+            newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * projectileSpeed, ForceMode.Impulse);
 
             OnShoot.Invoke();
             yield return ShootRepeatedely();

@@ -9,12 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 925957754603105126}
-  - component: {fileID: 4852872284460761532}
   - component: {fileID: 5998819536488920363}
   - component: {fileID: 6444198316790759387}
   - component: {fileID: 1584145818600872474}
   - component: {fileID: 3356514012528146526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemySatellite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,22 +35,10 @@ Transform:
   - {fileID: 925957755681687293}
   - {fileID: 925957756165879089}
   - {fileID: 925957755154748919}
+  - {fileID: 1715982322793190871}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4852872284460761532
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925957754603105121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &5998819536488920363
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -80,7 +67,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 88
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1584145818600872474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,29 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 15
-  deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   enemyReward: 5
-  currentHealth: 0
+  deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   healthBar: {fileID: 925957756702158038}
   healthBarBg: {fileID: 925957755273603032}
-  oneHitHealthBarFill: 0
-  startFuel: 0
-  startShield: 0
-  currentFuel: 0
-  currentShield: 0
-  fuelDecreaseMultiplier: 0
-  playerFuelBar: {fileID: 0}
-  playerShieldBar: {fileID: 0}
-  shieldBarText: {fileID: 0}
-  oneHitFuelBarFill: 0
-  oneHitShieldBarFill: 0
-  shieldParticle: {fileID: 0}
-  destroyShieldParticle: {fileID: 0}
-  levelProgress: {fileID: 0}
-  isPlayer: 0
-  isPlayerOnPlanet: 0
-  playerMoney: {fileID: 0}
-  loseScreenPrefab: {fileID: 0}
 --- !u!114 &3356514012528146526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,8 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satelliteSpeed: 3
-  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  explodeDamage: 15
 --- !u!1 &925957754838613854
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,10 +485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.3
   damage: 1
+  projectileSpeed: 0
   bulletPrefab: {fileID: 6055687186568386677, guid: 3b92c33c05574d94f9c0dd971ce74bfa, type: 3}
   muzzle: {fileID: 925957756156565867}
   targetVector: {fileID: 925957756180355362}
-  ship: {fileID: 925957755897113313}
   OnShoot:
     m_PersistentCalls:
       m_Calls:
@@ -539,8 +505,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   canShoot: 1
-  isEnemyGun: 1
-  enemyProjectileSpeed: 0
 --- !u!1 &925957755748685530
 GameObject:
   m_ObjectHideFlags: 0
@@ -19826,3 +19790,79 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9172451811849887094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715982322793190871}
+  - component: {fileID: 1287478477966065018}
+  - component: {fileID: 4779958883495290399}
+  - component: {fileID: 3233346976729671440}
+  m_Layer: 0
+  m_Name: Player Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715982322793190871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172451811849887094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925957754603105126}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1287478477966065018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172451811849887094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  explodeDamage: 15
+--- !u!135 &4779958883495290399
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172451811849887094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: -0.12, z: 0}
+--- !u!54 &3233346976729671440
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172451811849887094}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0

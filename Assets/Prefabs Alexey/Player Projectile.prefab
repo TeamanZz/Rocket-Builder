@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6055687186568386683}
   - component: {fileID: 6184603093799647257}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Player Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3d73183cffc6a4498c76b6678c6e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   wasCollided: 0
   hitParticles: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 3}
+  damage: 1
 --- !u!54 &6055687186568386683
 Rigidbody:
   m_ObjectHideFlags: 0

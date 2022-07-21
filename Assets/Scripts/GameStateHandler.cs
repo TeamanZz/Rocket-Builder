@@ -18,10 +18,8 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] private GameObject[] itemsToUnActive;
 
     [Header("ShipSettings")]
-    [SerializeField] private ResourcesHandler resourcesHandler;
-    [SerializeField] private EnemyBase playerShipHealth;
-    [SerializeField] private SpaceShipMovement playerShipMovement;
-
+    private ResourcesHandler resourcesHandler;
+    private SpaceShipMovement playerShipMovement;
 
     public BuildingGrid buildingGrid;
 
@@ -31,7 +29,6 @@ public class GameStateHandler : MonoBehaviour
     {
         Instance = this;
         resourcesHandler = FindObjectOfType<ResourcesHandler>();
-        playerShipHealth = GameObject.FindWithTag("Player").GetComponent<EnemyBase>();
         playerShipMovement = FindObjectOfType<SpaceShipMovement>();
     }
 
@@ -52,15 +49,14 @@ public class GameStateHandler : MonoBehaviour
 
     public void SetShipSettings()
     {
-        var gunsList =
-            buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
         {
             gun.GetComponent<Gun>().AllowShoot();
         }
-        playerShipHealth.enabled = true;
-        playerShipHealth.startFuel = resourcesHandler.trueFuelValue;
-        playerShipHealth.startShield = resourcesHandler.trueShieldValue;
+        PlayerRocket.Instance.enabled = true;
+        PlayerRocket.Instance.startFuel = resourcesHandler.trueFuelValue;
+        PlayerRocket.Instance.startShield = resourcesHandler.trueShieldValue;
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);
@@ -89,6 +85,42 @@ public class GameStateHandler : MonoBehaviour
         }
     }
 
+    private void SetNewRocketContainerOffset()
+    {
+        float minDistance = Mathf.Infinity;
+        float maxDistance = Mathf.NegativeInfinity;
+
+        for (int i = 0; i < buildingGrid.placedItems.Count; i++)
+        {
+            if (buildingGrid.placedItems[i].transform.position.y < minDistance)
+            {
+                Debug.Log("New min");
+                minDistance = buildingGrid.placedItems[i].transform.position.y;
+            }
+        }
+
+        for (int i = 0; i < buildingGrid.placedItems.Count; i++)
+        {
+            if (buildingGrid.placedItems[i].transform.position.y > maxDistance)
+            {
+                maxDistance = buildingGrid.placedItems[i].transform.position.y;
+            }
+        }
+        Debug.Log(minDistance);
+
+        for (var i = buildingGrid.placedItems.Count - 1; i >= 0; i--)
+        {
+            buildingGrid.placedItems[i].transform.parent = null;
+        }
+        Debug.Log("min =" + minDistance + "max =" + maxDistance);
+        var newYValue = (minDistance + maxDistance) / 2;
+        rocketContainer.transform.position = new Vector3(rocketContainer.transform.position.x, newYValue, rocketContainer.transform.position.z);
+        for (var i = buildingGrid.placedItems.Count - 1; i >= 0; i--)
+        {
+            buildingGrid.placedItems[i].transform.parent = rocketContainer;
+        }
+    }
+
     public IEnumerator EndBuildingCoroutine()
     {
         var blackScreen = Instantiate(blackScreenPrefab);
@@ -99,6 +131,7 @@ public class GameStateHandler : MonoBehaviour
         SetShipSettings();
         Destroy(blackScreen);
         CenterRocket();
+        SetNewRocketContainerOffset();
         rocketObject.transform.position = startRocketPosition.position;
     }
 }
