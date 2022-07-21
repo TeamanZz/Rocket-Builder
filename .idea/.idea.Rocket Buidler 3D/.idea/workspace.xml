@@ -23,7 +23,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,11 +59,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +122,7 @@
       <workItem from="1658320477064" duration="3977000" />
       <workItem from="1658392521113" duration="1249000" />
       <workItem from="1658397435921" duration="8316000" />
+      <workItem from="1658410406374" duration="3140000" />
     </task>
     <servers />
   </component>

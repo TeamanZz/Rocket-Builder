@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6764852549467469340}
   - component: {fileID: -15345440215521862}
   - component: {fileID: 1983813854658912172}
+  - component: {fileID: 6048007948651405783}
   m_Layer: 0
   m_Name: Weapon 1
   m_TagString: Untagged
@@ -105,6 +106,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6048007948651405783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890486460493849665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5802a41457051c64f8aa9236a39c1f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenShots: 0.1
+  damage: 1
+  bulletPrefab: {fileID: 6055687186568386677, guid: 3b92c33c05574d94f9c0dd971ce74bfa, type: 3}
+  muzzle: {fileID: 8724962556607147107}
+  targetVector: {fileID: 8724962555304447150}
+  ship: {fileID: 0}
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 32ce7e835f013fd4498562c6c55ba623, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canShoot: 0
+  isEnemyGun: 0
+  enemyProjectileSpeed: 0
 --- !u!1001 &70566249822743957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,11 +534,22 @@ PrefabInstance:
       propertyPath: timeBetweenShots
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3438214769379210784, guid: 5643a0b745835ef4cac517b32f8837e8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5643a0b745835ef4cac517b32f8837e8, type: 3}
 --- !u!4 &8724962555765682950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3438214768681714627, guid: 5643a0b745835ef4cac517b32f8837e8, type: 3}
+  m_PrefabInstance: {fileID: 6243032701167333573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8724962556607147107 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3438214769325038758, guid: 5643a0b745835ef4cac517b32f8837e8, type: 3}
+  m_PrefabInstance: {fileID: 6243032701167333573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8724962555304447150 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3438214769033116779, guid: 5643a0b745835ef4cac517b32f8837e8, type: 3}
   m_PrefabInstance: {fileID: 6243032701167333573}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7125031292586642405

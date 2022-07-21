@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 4090886421971347501}
   - component: {fileID: 5484356078737914520}
   - component: {fileID: 2105495241057400507}
+  - component: {fileID: 7139358520711619709}
   m_Layer: 0
   m_Name: ItemContainer
   m_TagString: Untagged
@@ -264,9 +265,9 @@ MonoBehaviour:
   startShield: 0
   currentFuel: 0
   currentShield: 0
+  fuelDecreaseMultiplier: 0
   playerFuelBar: {fileID: 0}
   playerShieldBar: {fileID: 0}
-  fuelBarText: {fileID: 0}
   shieldBarText: {fileID: 0}
   oneHitFuelBarFill: 0
   oneHitShieldBarFill: 0
@@ -290,6 +291,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemOnDestroy: {fileID: 6637345069168375974, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}
+--- !u!114 &7139358520711619709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801642455905783612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  explodeDamage: 15
 --- !u!1 &4882419096924052825
 GameObject:
   m_ObjectHideFlags: 0

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 3928086112683785003}
   - component: {fileID: 3928086112683785002}
   - component: {fileID: 3928086112683784996}
+  - component: {fileID: 3330663993774763792}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -194,7 +195,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3928086112683784998}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.77
@@ -238,9 +239,9 @@ MonoBehaviour:
   startShield: 0
   currentFuel: 0
   currentShield: 0
+  fuelDecreaseMultiplier: 0
   playerFuelBar: {fileID: 0}
   playerShieldBar: {fileID: 0}
-  fuelBarText: {fileID: 0}
   shieldBarText: {fileID: 0}
   oneHitFuelBarFill: 0
   oneHitShieldBarFill: 0
@@ -251,6 +252,20 @@ MonoBehaviour:
   isPlayerOnPlanet: 0
   playerMoney: {fileID: 0}
   loseScreenPrefab: {fileID: 0}
+--- !u!114 &3330663993774763792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928086112683784998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  explodeDamage: 15
 --- !u!1 &7123459976462478866
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,4 +45,10 @@ public class Gun : MonoBehaviour
             yield return ShootRepeatedely();
         }
     }
+
+    public void AllowShoot()
+    {
+        canShoot = true;
+        StartCoroutine(ShootRepeatedely());
+    }
 }

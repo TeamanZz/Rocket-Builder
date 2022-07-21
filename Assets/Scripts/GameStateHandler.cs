@@ -51,6 +51,12 @@ public class GameStateHandler : MonoBehaviour
 
     public void SetShipSettings()
     {
+        var gunsList =
+            buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        foreach (var gun in gunsList)
+        {
+            gun.GetComponent<Gun>().AllowShoot();
+        }
         playerShipHealth.enabled = true;
         playerShipHealth.startFuel = resourcesHandler.trueFuelValue;
         playerShipHealth.startShield = resourcesHandler.trueShieldValue;
