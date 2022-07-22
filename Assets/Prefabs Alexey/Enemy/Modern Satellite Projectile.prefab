@@ -78,7 +78,7 @@ MonoBehaviour:
   damage: 1
   wasCollided: 0
   hitParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  timeUntilDestroy: 1
+  timeUntilDestroy: 3
 --- !u!1001 &1592632268595069944
 PrefabInstance:
   m_ObjectHideFlags: 0

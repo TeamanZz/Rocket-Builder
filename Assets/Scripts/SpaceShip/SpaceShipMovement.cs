@@ -36,7 +36,7 @@ public class SpaceShipMovement : MonoBehaviour
     {
         if (joystick.Horizontal != 0)
         {
-            needAngle = Quaternion.Euler(0, joystick.Horizontal * -15, -joystick.Horizontal * 30);
+            needAngle = Quaternion.Euler(0, shuttleModel.rotation.eulerAngles.y, -joystick.Horizontal * 30);
             shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
         }
 
