@@ -10,16 +10,9 @@ public class Win : MonoBehaviour
     [SerializeField] private GameObject secondCamera;
     [SerializeField] private GameObject blackScreenPrefab, winScreenPrefab;
     [SerializeField] private Transform startPos, finalPos;
-    [SerializeField] private LevelProgress levelProgress;
     [SerializeField] private BuildingGrid buildingGrid;
     [SerializeField] private GameObject buildings;
-
     [SerializeField] private GameObject rotatedCamera;
-
-    private void Start()
-    {
-        levelProgress = FindObjectOfType<LevelProgress>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -42,7 +35,7 @@ public class Win : MonoBehaviour
         {
             gun.GetComponent<Gun>().ForbidShoot();
         }
-        levelProgress.CancelFillTween();
+        LevelProgress.Instance.CancelFillTween();
         PlayerRocket.Instance.isPlayerOnPlanet = true;
         for (int i = 0; i < thingsToSetFalse.Length; i++)
         {

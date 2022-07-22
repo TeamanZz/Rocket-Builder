@@ -26,6 +26,10 @@ public class GameStateHandler : MonoBehaviour
 
     public GameObject cantFlyButton;
 
+    public float rocketConstantVelocity = 3f;
+    public float rocketRotationDamping = 7f;
+    public int rocketSideSpeed = 3;
+
     private void Awake()
     {
         Instance = this;
@@ -77,9 +81,9 @@ public class GameStateHandler : MonoBehaviour
         {
             itemsToUnActive[i].SetActive(false);
         }
-        playerShipMovement.constantVelocity = 3f;
-        playerShipMovement.rotationDamping = 7f;
-        playerShipMovement.sideSpeed = 3;
+        playerShipMovement.constantVelocity = rocketConstantVelocity;
+        playerShipMovement.rotationDamping = rocketRotationDamping;
+        playerShipMovement.sideSpeed = rocketSideSpeed;
     }
 
     private void CenterRocket()

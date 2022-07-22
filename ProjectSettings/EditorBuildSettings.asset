@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Fly Scene.unity
-    guid: b47e135a9f7722c4eba0148eb46aabe9
+    path: Assets/Scenes/Build_Fly_Scene.unity
+    guid: e0375aba79e262e4b9b53c2c88e3a9e1
   m_configObjects: {}

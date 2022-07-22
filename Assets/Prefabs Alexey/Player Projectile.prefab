@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6055687186568386677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 2, z: 4}
   m_Children:
   - {fileID: 6055687186051806626}
   - {fileID: 3632002059564572376}
@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3d73183cffc6a4498c76b6678c6e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   wasCollided: 0
   hitParticles: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 3}
-  damage: 1
 --- !u!54 &6055687186568386683
 Rigidbody:
   m_ObjectHideFlags: 0

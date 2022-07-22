@@ -19836,7 +19836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  explodeDamage: 15
+  explodeDamage: 3
 --- !u!135 &4779958883495290399
 SphereCollider:
   m_ObjectHideFlags: 0
