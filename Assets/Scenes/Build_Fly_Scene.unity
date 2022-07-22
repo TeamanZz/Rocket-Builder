@@ -4500,11 +4500,11 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  randomizePosition: {x: 0, y: 25, z: 6.8671}
+  randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -4
   maxXpPosition: 4
-  minEnemiesCount: 2
-  maxEnemiesCount: 5
+  minEnemiesCount: 1
+  maxEnemiesCount: 2
   wasSpawned: 0
 --- !u!65 &678706971
 BoxCollider:
@@ -7227,11 +7227,11 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  randomizePosition: {x: 0, y: 25, z: 6.8671}
+  randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -4
   maxXpPosition: 4
-  minEnemiesCount: 2
-  maxEnemiesCount: 5
+  minEnemiesCount: 1
+  maxEnemiesCount: 2
   wasSpawned: 0
 --- !u!65 &974486142
 BoxCollider:
@@ -9454,11 +9454,11 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  randomizePosition: {x: 0, y: 25, z: 6.8671}
+  randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -4
   maxXpPosition: 4
-  minEnemiesCount: 2
-  maxEnemiesCount: 5
+  minEnemiesCount: 1
+  maxEnemiesCount: 2
   wasSpawned: 0
 --- !u!65 &1227742239
 BoxCollider:
@@ -9768,11 +9768,11 @@ MonoBehaviour:
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
-  randomizePosition: {x: 0, y: 25, z: 6.8671}
+  randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -4
   maxXpPosition: 4
-  minEnemiesCount: 2
-  maxEnemiesCount: 5
+  minEnemiesCount: 1
+  maxEnemiesCount: 2
   wasSpawned: 0
 --- !u!65 &1239992627
 BoxCollider:
@@ -14886,7 +14886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 3
-  m_FollowOffset: {x: 0, y: 0, z: -20}
+  m_FollowOffset: {x: 0, y: 0, z: -24}
   m_XDamping: 0
   m_YDamping: 1
   m_ZDamping: 1
@@ -17611,11 +17611,11 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  randomizePosition: {x: 0, y: 25, z: 6.8671}
+  randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -4
   maxXpPosition: 4
-  minEnemiesCount: 2
-  maxEnemiesCount: 5
+  minEnemiesCount: 1
+  maxEnemiesCount: 2
   wasSpawned: 0
 --- !u!65 &1990465256
 BoxCollider:
