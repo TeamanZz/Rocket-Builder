@@ -51,21 +51,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerRocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
       </list>
     </option>
   </component>
@@ -123,6 +124,7 @@
       <workItem from="1658392521113" duration="1249000" />
       <workItem from="1658397435921" duration="8316000" />
       <workItem from="1658410406374" duration="3140000" />
+      <workItem from="1658471448493" duration="7431000" />
     </task>
     <servers />
   </component>
@@ -140,9 +142,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1658141971579" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1658222885486">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1658478370072">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1658222885486" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1658478370072" />
   </component>
 </project>

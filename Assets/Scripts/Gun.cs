@@ -40,4 +40,10 @@ public class Gun : MonoBehaviour
         canShoot = true;
         StartCoroutine(ShootRepeatedely());
     }
+
+    public void ForbidShoot()
+    {
+        canShoot = false;
+        StopCoroutine(ShootRepeatedely());
+    }
 }

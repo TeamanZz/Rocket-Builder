@@ -8,9 +8,10 @@ public class Item : MonoBehaviour
     [SerializeField] private GameObject pickUpEffect;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        BuildItem buildItem;
+        if (other.TryGetComponent<BuildItem>(out buildItem))
         {
-            var effect = Instantiate(pickUpEffect, transform.position, Quaternion.identity);
+            Instantiate(pickUpEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

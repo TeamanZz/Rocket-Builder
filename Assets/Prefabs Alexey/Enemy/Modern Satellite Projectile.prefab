@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   wasCollided: 0
-  hitParticles: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 3}
+  hitParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   timeUntilDestroy: 1
 --- !u!1001 &1592632268595069944
 PrefabInstance:

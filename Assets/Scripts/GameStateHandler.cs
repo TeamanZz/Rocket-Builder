@@ -20,6 +20,7 @@ public class GameStateHandler : MonoBehaviour
     [Header("ShipSettings")]
     private ResourcesHandler resourcesHandler;
     private SpaceShipMovement playerShipMovement;
+    private PlayerRocket playerRocket;
 
     public BuildingGrid buildingGrid;
 
@@ -28,6 +29,7 @@ public class GameStateHandler : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        playerRocket = FindObjectOfType<PlayerRocket>();
         resourcesHandler = FindObjectOfType<ResourcesHandler>();
         playerShipMovement = FindObjectOfType<SpaceShipMovement>();
     }
@@ -54,9 +56,19 @@ public class GameStateHandler : MonoBehaviour
         {
             gun.GetComponent<Gun>().AllowShoot();
         }
+
+        var shieldList =
+            buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
+        foreach (var shield in shieldList)
+        {
+            PlayerRocket.Instance.shieldParticle.SetActive(true);
+        }
+
         PlayerRocket.Instance.enabled = true;
         PlayerRocket.Instance.startFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.startShield = resourcesHandler.trueShieldValue;
+        PlayerRocket.Instance.currentFuel = resourcesHandler.trueFuelValue;
+        PlayerRocket.Instance.currentShield = resourcesHandler.trueShieldValue;
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);

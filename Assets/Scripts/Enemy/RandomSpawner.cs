@@ -11,7 +11,7 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] private int minXPosition, maxXpPosition;
     [SerializeField] private int minEnemiesCount, maxEnemiesCount;
 
-    private bool wasSpawned;
+    public bool wasSpawned;
 
     private void OnTriggerEnter(Collider other)
     {

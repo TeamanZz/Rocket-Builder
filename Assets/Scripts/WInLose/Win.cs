@@ -11,6 +11,7 @@ public class Win : MonoBehaviour
     [SerializeField] private GameObject blackScreenPrefab, winScreenPrefab;
     [SerializeField] private Transform startPos, finalPos;
     [SerializeField] private LevelProgress levelProgress;
+    [SerializeField] private BuildingGrid buildingGrid;
     [SerializeField] private GameObject buildings;
 
     [SerializeField] private GameObject rotatedCamera;
@@ -35,6 +36,11 @@ public class Win : MonoBehaviour
         if (PlayerRocket.Instance.shieldParticle.activeSelf)
         {
             PlayerRocket.Instance.shieldParticle.SetActive(false);
+        }
+        var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        foreach (var gun in gunsList)
+        {
+            gun.GetComponent<Gun>().ForbidShoot();
         }
         levelProgress.CancelFillTween();
         PlayerRocket.Instance.isPlayerOnPlanet = true;

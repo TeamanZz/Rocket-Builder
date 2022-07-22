@@ -10,40 +10,69 @@ public class PlayerRocket : MonoBehaviour
     public static PlayerRocket Instance;
 
     [Header("PlayerSettingAndBar")]
-    [HideInInspector] public float startFuel;
-    [HideInInspector] public float startShield;
-    private float currentFuel;
-    private float currentShield;
+    [SerializeField] public float startFuel;
+    [SerializeField] public float startShield;
+    [SerializeField] public float currentFuel;
+    [SerializeField] public float currentShield;
     [SerializeField] private float fuelDecreaseMultiplier;
     [Space(20)]
     [SerializeField] private Image playerFuelBar;
     [SerializeField] private Image playerShieldBar;
     [SerializeField] private TextMeshProUGUI shieldBarText;
     [Space(20)]
-    private float oneHitFuelBarFill;
-    private float oneHitShieldBarFill;
+    [SerializeField] private float oneHitFuelBarFill;
+    [SerializeField] private float oneHitShieldBarFill;
     [Space(20)]
     public GameObject shieldParticle;
     [SerializeField] private ParticleSystem destroyShieldParticlePrefab;
-    private LevelProgress levelProgress;
+    [SerializeField] private LevelProgress levelProgress;
+    [SerializeField] private BuildingGrid buildingGrid;
     public bool isPlayerOnPlanet;
+
     [Header("WinLoseCondition")]
+    [SerializeField] private Vector3 startRocketPos;
     [SerializeField] private GameObject loseScreen;
     public Transform rocketContainer;
 
     private void Awake()
     {
         Instance = this;
-        levelProgress = FindObjectOfType<LevelProgress>();
+        //levelProgress = FindObjectOfType<LevelProgress>();
         currentFuel = startFuel;
     }
 
     private void Start()
     {
+        startRocketPos = gameObject.transform.position;
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
         oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
         currentShield = startShield;
         shieldBarText.text = $"{currentShield} / {startShield}";
+    }
+    
+    private void FixedUpdate()
+    {
+
+        playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
+        playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
+
+        if (!isPlayerOnPlanet)
+        {
+            currentFuel -= Time.fixedDeltaTime * fuelDecreaseMultiplier;
+        }
+        else
+        {
+            return;
+        }
+
+        if (currentFuel <= 0)
+        {
+            Dead();
+        }
+        else if (currentShield <= 0)
+        {
+            currentShield = 0;
+        }
     }
 
     public void RemoveShieldPoints()
@@ -99,6 +128,7 @@ public class PlayerRocket : MonoBehaviour
         SFX.Instance.PlayHitSound(gameObject);
     }
 
+    [ContextMenu("Test Dead")]
     public void Dead()
     {
         levelProgress.CancelFillTween();
@@ -106,31 +136,26 @@ public class PlayerRocket : MonoBehaviour
         shieldBarText.gameObject.SetActive(false);
         playerShieldBar.gameObject.SetActive(false);
         loseScreen.SetActive(true);
-        Destroy(gameObject);
+        Instantiate(destroyShieldParticlePrefab);
+        gameObject.SetActive(false);
     }
 
-    private void FixedUpdate()
+    public void RestartLevel()
     {
-
-        playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
-        playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
-
-        if (isPlayerOnPlanet)
+        currentFuel = startFuel;
+        currentShield = startShield;
+        gameObject.transform.position = startRocketPos;
+        gameObject.SetActive(true);
+        var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        foreach (var gun in gunsList)
         {
-            return;
+            gun.GetComponent<Gun>().AllowShoot();
         }
-        else
-        {
-            currentFuel -= Time.fixedDeltaTime * fuelDecreaseMultiplier;
-        }
-
-        if (currentFuel <= 0)
-        {
-            Dead();
-        }
-        else if (currentShield <= 0)
-        {
-            currentShield = 0;
-        }
+        levelProgress.RestartFillTween();
+        playerFuelBar.gameObject.SetActive(true);
+        shieldBarText.gameObject.SetActive(true);
+        playerShieldBar.gameObject.SetActive(true);
+        loseScreen.SetActive(false);
     }
+    
 }

@@ -10,4 +10,9 @@ public class Lose : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void RestartLevelWithSameRocket()
+    {
+        PlayerRocket.Instance.RestartLevel();
+    }
 }
