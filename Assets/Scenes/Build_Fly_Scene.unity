@@ -6136,9 +6136,9 @@ MonoBehaviour:
   - {fileID: 1165061444}
   buildingGrid: {fileID: 1256540989}
   cantFlyButton: {fileID: 2079775079}
-  rocketConstantVelocity: 4
+  rocketConstantVelocity: 6
   rocketRotationDamping: 7
-  rocketSideSpeed: 3
+  rocketSideSpeed: 4
 --- !u!4 &879907196
 Transform:
   m_ObjectHideFlags: 0

@@ -12,11 +12,6 @@ public class EnemyProjectile : ProjectileBase
     {
         Destroy(gameObject, timeUntilDestroy);
     }
-    
-    private void OnDestroy()
-    {
-        Instantiate(hitParticles, gameObject.transform.position, Quaternion.identity);
-    }
 
     private void OnTriggerEnter(Collider other)
     {

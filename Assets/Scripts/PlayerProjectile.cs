@@ -14,11 +14,6 @@ public class PlayerProjectile : ProjectileBase
         Destroy(gameObject, 1.5f);
     }
 
-    private void OnDestroy()
-    {
-        Instantiate(hitParticles, gameObject.transform.position, Quaternion.identity);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         EnemyBase enemy;
