@@ -4,28 +4,71 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private GameObject[] itemsToActive;
-    [SerializeField] private GameObject[] itemsToUnActive;
+    public static Menu Instance;
+
     [SerializeField] private GameObject blackScreenPrefab;
 
-    public void ClickOnStartGame()
+    public List<GameObject> previewScreenToBuildEnable = new List<GameObject>();
+    public List<GameObject> previewScreenToBuildDisable = new List<GameObject>();
+
+    public List<GameObject> endScreenToPreviewEnable = new List<GameObject>();
+    public List<GameObject> endScreenToPreviewDisable = new List<GameObject>();
+
+    public List<GameObject> objectsToEnableFly = new List<GameObject>();
+    public List<GameObject> objectsToDisableFly = new List<GameObject>();
+
+    public List<RandomSpawner> triggers = new List<RandomSpawner>();
+    public Transform enemiesContainer;
+
+    private void Awake()
     {
-        StartCoroutine(StartGameScreenSetToActive());
+        Instance = this;
     }
 
-    public IEnumerator StartGameScreenSetToActive()
+    public void ActivateFlyScreen()
     {
-        var screen = Instantiate(blackScreenPrefab);
-        yield return new WaitForSeconds(1f);
-        for (int i = 0; i < itemsToActive.Length; i++)
+
+    }
+
+    public void ResetAllTriggers()
+    {
+        foreach (var item in triggers)
         {
-            itemsToActive[i].SetActive(true);
+            item.wasSpawned = false;
+        }
+    }
+
+    public void DestroyAllActiveEnemies()
+    {
+        for (var i = enemiesContainer.childCount - 1; i >= 0; i--)
+        {
+            Destroy(enemiesContainer.GetChild(i).gameObject);
+        }
+    }
+
+    public void ActivateBuildScreen()
+    {
+        for (int i = 0; i < previewScreenToBuildEnable.Count; i++)
+        {
+            previewScreenToBuildEnable[i].SetActive(true);
         }
 
-        for (int i = 0; i < itemsToUnActive.Length; i++)
+        for (int i = 0; i < previewScreenToBuildDisable.Count; i++)
         {
-            itemsToUnActive[i].SetActive(false);
+            previewScreenToBuildDisable[i].SetActive(false);
         }
-        Destroy(screen,2f);
+    }
+
+    public void ActivatePreviewScreen()
+    {
+        for (int i = 0; i < endScreenToPreviewEnable.Count; i++)
+        {
+            endScreenToPreviewEnable[i].SetActive(true);
+        }
+
+        for (int i = 0; i < endScreenToPreviewDisable.Count; i++)
+        {
+            endScreenToPreviewDisable[i].SetActive(false);
+        }
     }
 }

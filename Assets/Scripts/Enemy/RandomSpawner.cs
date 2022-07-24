@@ -11,6 +11,8 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] private int minXPosition, maxXpPosition;
     [SerializeField] private int minEnemiesCount, maxEnemiesCount;
 
+    public Transform enemiesParent;
+
     public bool wasSpawned;
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +40,6 @@ public class RandomSpawner : MonoBehaviour
         var posY = SpaceShipMovement.Instance.gameObject.transform.position.y;
         Random randomIndex = new Random();
         int index = randomIndex.Next(1, enemiesPrefabs.Length);
-        Instantiate(enemiesPrefabs[index], new Vector3(posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity);
+        Instantiate(enemiesPrefabs[index], new Vector3(transform.position.x + posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity).transform.parent = enemiesParent;
     }
 }

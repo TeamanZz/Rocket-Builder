@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Lose : MonoBehaviour
 {
-
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -13,6 +12,10 @@ public class Lose : MonoBehaviour
 
     public void RestartLevelWithSameRocket()
     {
-        PlayerRocket.Instance.RestartLevel();
+        Menu.Instance.ActivatePreviewScreen();
+        PlayerRocket.Instance.gameObject.SetActive(true);
+        PlayerRocket.Instance.RestartRocket();
+        Menu.Instance.ResetAllTriggers();
+        Menu.Instance.DestroyAllActiveEnemies();
     }
 }

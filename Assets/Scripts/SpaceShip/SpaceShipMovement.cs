@@ -26,6 +26,13 @@ public class SpaceShipMovement : MonoBehaviour
         startAngle = shuttleModel.rotation;
     }
 
+    public void SetZeroVariables()
+    {
+        constantVelocity = 0;
+        rotationDamping = 0;
+        sideSpeed = 0;
+    }
+
     private void FixedUpdate()
     {
         spaceRB.velocity = new Vector3(joystick.Horizontal * sideSpeed, constantVelocity, 0);

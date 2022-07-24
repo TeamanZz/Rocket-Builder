@@ -5,7 +5,8 @@ using Cinemachine;
 
 public class CameraBoundsController : MonoBehaviour
 {
-    public float boundReach;
+    public float boundReachLeft;
+    public float boundReachRight;
     public float leftBound;
     public float rightBound;
     public CinemachineVirtualCamera cineCamera;
@@ -21,8 +22,9 @@ public class CameraBoundsController : MonoBehaviour
 
     private void Update()
     {
-        DoParralax();
-        StopTrackingSpaceShipPosition();
+        // DoParralax();
+        // StopTrackingSpaceShipPosition();
+        // Debug.Log(transform.position.x);
     }
 
     private void DoParralax()
@@ -33,12 +35,12 @@ public class CameraBoundsController : MonoBehaviour
 
     private void StopTrackingSpaceShipPosition()
     {
-        if ((transform.position.x > boundReach || transform.position.x < -boundReach) && componentAdded == false)
+        if ((transform.position.x > boundReachRight || transform.position.x < boundReachLeft) && componentAdded == false)
         {
             componentAdded = true;
             cineCamera.gameObject.AddComponent<LockCameraZ>().m_ZPosition = cineCamera.transform.position.x;
         }
-        else if (((transform.position.x < boundReach && transform.position.x > -boundReach) || (transform.position.x > -boundReach && transform.position.x < boundReach)) && componentAdded == true)
+        else if (((transform.position.x < boundReachRight && transform.position.x > boundReachLeft) || (transform.position.x > boundReachLeft && transform.position.x < boundReachRight)) && componentAdded == true)
         {
             componentAdded = false;
             Destroy(cineCamera.gameObject.GetComponent<LockCameraZ>());

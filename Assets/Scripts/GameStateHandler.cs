@@ -20,20 +20,19 @@ public class GameStateHandler : MonoBehaviour
     [Header("ShipSettings")]
     private ResourcesHandler resourcesHandler;
     private SpaceShipMovement playerShipMovement;
-    private PlayerRocket playerRocket;
 
     public BuildingGrid buildingGrid;
-
+    public CameraBoundsController boundsController;
     public GameObject cantFlyButton;
 
     public float rocketConstantVelocity = 3f;
     public float rocketRotationDamping = 7f;
     public int rocketSideSpeed = 3;
 
+
     private void Awake()
     {
         Instance = this;
-        playerRocket = FindObjectOfType<PlayerRocket>();
         resourcesHandler = FindObjectOfType<ResourcesHandler>();
         playerShipMovement = FindObjectOfType<SpaceShipMovement>();
     }
@@ -69,6 +68,7 @@ public class GameStateHandler : MonoBehaviour
         }
 
         PlayerRocket.Instance.enabled = true;
+        boundsController.enabled = true;
         PlayerRocket.Instance.startFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.startShield = resourcesHandler.trueShieldValue;
         PlayerRocket.Instance.currentFuel = resourcesHandler.trueFuelValue;
@@ -110,7 +110,6 @@ public class GameStateHandler : MonoBehaviour
         {
             if (buildingGrid.placedItems[i].transform.position.y < minDistance)
             {
-                Debug.Log("New min");
                 minDistance = buildingGrid.placedItems[i].transform.position.y;
             }
         }
@@ -122,13 +121,11 @@ public class GameStateHandler : MonoBehaviour
                 maxDistance = buildingGrid.placedItems[i].transform.position.y;
             }
         }
-        Debug.Log(minDistance);
 
         for (var i = buildingGrid.placedItems.Count - 1; i >= 0; i--)
         {
             buildingGrid.placedItems[i].transform.parent = null;
         }
-        Debug.Log("min =" + minDistance + "max =" + maxDistance);
         var newYValue = (minDistance + maxDistance) / 2;
         rocketContainer.transform.position = new Vector3(rocketContainer.transform.position.x, newYValue, rocketContainer.transform.position.z);
         for (var i = buildingGrid.placedItems.Count - 1; i >= 0; i--)
@@ -150,4 +147,5 @@ public class GameStateHandler : MonoBehaviour
         SetNewRocketContainerOffset();
         rocketObject.transform.position = startRocketPosition.position;
     }
+
 }

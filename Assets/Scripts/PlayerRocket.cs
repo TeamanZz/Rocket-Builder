@@ -37,22 +37,22 @@ public class PlayerRocket : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        //levelProgress = FindObjectOfType<LevelProgress>();
-        currentFuel = startFuel;
     }
 
     private void Start()
     {
-        startRocketPos = gameObject.transform.position;
+        startRocketPos = transform.position;
+        currentFuel = startFuel;
+        currentShield = startShield;
+
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
         oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
-        currentShield = startShield;
+
         shieldBarText.text = $"{currentShield} / {startShield}";
     }
-    
+
     private void FixedUpdate()
     {
-
         playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
         playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
 
@@ -135,27 +135,30 @@ public class PlayerRocket : MonoBehaviour
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
         playerShieldBar.gameObject.SetActive(false);
+        SpaceShipMovement.Instance.SetZeroVariables();
         loseScreen.SetActive(true);
         Instantiate(destroyShieldParticlePrefab);
         gameObject.SetActive(false);
     }
 
-    public void RestartLevel()
+    [ContextMenu("Restart Rocket")]
+    public void RestartRocket()
     {
         currentFuel = startFuel;
         currentShield = startShield;
-        gameObject.transform.position = startRocketPos;
-        gameObject.SetActive(true);
+        transform.position = startRocketPos;
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
         {
             gun.GetComponent<Gun>().AllowShoot();
         }
+        rocketContainer.localPosition = Vector3.zero;
         levelProgress.RestartFillTween();
         playerFuelBar.gameObject.SetActive(true);
         shieldBarText.gameObject.SetActive(true);
         playerShieldBar.gameObject.SetActive(true);
+        transform.localPosition = new Vector3(4, 5, 0);
         loseScreen.SetActive(false);
+        this.enabled = false;
     }
-    
 }
