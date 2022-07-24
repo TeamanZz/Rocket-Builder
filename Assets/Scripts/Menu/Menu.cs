@@ -25,11 +25,6 @@ public class Menu : MonoBehaviour
         Instance = this;
     }
 
-    public void ActivateFlyScreen()
-    {
-
-    }
-
     public void ResetAllTriggers()
     {
         foreach (var item in triggers)

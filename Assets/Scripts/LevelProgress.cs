@@ -30,19 +30,13 @@ public class LevelProgress : MonoBehaviour
         targetHeightText.text = targetHeight.ToString();
     }
 
-    private void Start()
-    {
-        startIconPosition = icon.transform.position;
-        StartTween();
-    }
-
-    public void StartTween()
+    public void StartHeightBarFilling()
     {
         iconTween = icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
         fillbarTween = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
         Totween = DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);
     }
-    
+
     private void FixedUpdate()
     {
         currentHeightText.text = (int)currentHeight + " m";
@@ -55,11 +49,11 @@ public class LevelProgress : MonoBehaviour
         fillbarTween.Kill();
     }
 
-    public void RestartFillTween()
+    public void ResetHeightVariables()
     {
         currentHeight = 0;
         fillBar.fillAmount = 0;
-        icon.transform.position = startIconPosition;
-        StartTween();
+        Debug.Log(fillBar.fillAmount + "fill");
+        icon.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
     }
 }

@@ -25,7 +25,6 @@ public class PlayerRocket : MonoBehaviour
     [Space(20)]
     public GameObject shieldParticle;
     [SerializeField] private ParticleSystem destroyShieldParticlePrefab;
-    [SerializeField] private LevelProgress levelProgress;
     [SerializeField] private BuildingGrid buildingGrid;
     public bool isPlayerOnPlanet;
 
@@ -42,9 +41,17 @@ public class PlayerRocket : MonoBehaviour
     private void Start()
     {
         startRocketPos = transform.position;
+        // SetRocketVariables();
+    }
+
+    public void SetRocketVariables()
+    {
         currentFuel = startFuel;
         currentShield = startShield;
-
+        Debug.Log(playerFuelBar.fillAmount);
+        Debug.Log(startFuel);
+        playerFuelBar.fillAmount = 1;
+        playerShieldBar.fillAmount = 1;
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
         oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
 
@@ -83,8 +90,8 @@ public class PlayerRocket : MonoBehaviour
 
     public void RemoveFuelPoints()
     {
-        DOTween.To(x => playerFuelBar.fillAmount = x, (currentFuel * oneHitFuelBarFill),
-            (currentFuel * oneHitFuelBarFill) - oneHitFuelBarFill, 0.1f);
+        // DOTween.To(x => playerFuelBar.fillAmount = x, (currentFuel * oneHitFuelBarFill),
+        //     (currentFuel * oneHitFuelBarFill) - oneHitFuelBarFill, 0.1f);
     }
 
     public void DescreaseHealth(float value)
@@ -131,7 +138,7 @@ public class PlayerRocket : MonoBehaviour
     [ContextMenu("Test Dead")]
     public void Dead()
     {
-        levelProgress.CancelFillTween();
+        LevelProgress.Instance.CancelFillTween();
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
         playerShieldBar.gameObject.SetActive(false);
@@ -146,14 +153,13 @@ public class PlayerRocket : MonoBehaviour
     {
         currentFuel = startFuel;
         currentShield = startShield;
-        transform.position = startRocketPos;
-        var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
-        foreach (var gun in gunsList)
-        {
-            gun.GetComponent<Gun>().AllowShoot();
-        }
+        // var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        // foreach (var gun in gunsList)
+        // {
+        //     gun.GetComponent<Gun>().AllowShoot();
+        // }
         rocketContainer.localPosition = Vector3.zero;
-        levelProgress.RestartFillTween();
+        rocketContainer.localEulerAngles = new Vector3(0, 0, 0);
         playerFuelBar.gameObject.SetActive(true);
         shieldBarText.gameObject.SetActive(true);
         playerShieldBar.gameObject.SetActive(true);

@@ -73,6 +73,8 @@ public class GameStateHandler : MonoBehaviour
         PlayerRocket.Instance.startShield = resourcesHandler.trueShieldValue;
         PlayerRocket.Instance.currentFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.currentShield = resourcesHandler.trueShieldValue;
+        PlayerRocket.Instance.SetRocketVariables();
+        LevelProgress.Instance.ResetHeightVariables();
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);
@@ -145,7 +147,7 @@ public class GameStateHandler : MonoBehaviour
         Destroy(blackScreen);
         CenterRocket();
         SetNewRocketContainerOffset();
+        LevelProgress.Instance.StartHeightBarFilling();
         rocketObject.transform.position = startRocketPosition.position;
     }
-
 }
