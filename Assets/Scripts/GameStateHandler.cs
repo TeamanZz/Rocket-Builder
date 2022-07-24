@@ -141,7 +141,7 @@ public class GameStateHandler : MonoBehaviour
         var blackScreen = Instantiate(blackScreenPrefab);
         uiItems.SetActive(false);
         buildingGrid.CheckOnDisconnectedParts();
-        buildingGrid.ToggleItemsConnectors();
+        buildingGrid.DisableItemsConnectors();
         yield return new WaitForSeconds(1f);
         SetShipSettings();
         Destroy(blackScreen);

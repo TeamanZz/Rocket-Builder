@@ -11,7 +11,7 @@ public class PlayerProjectile : ProjectileBase
 
     private void Start()
     {
-        Destroy(gameObject, 1.5f);
+        StartCoroutine(SpawnParticleAfterDestroy());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,10 +21,15 @@ public class PlayerProjectile : ProjectileBase
         {
             Vector3 particlesPosition = new Vector3(enemy.transform.position.x + Random.Range(-0.5f, 0.5f), enemy.transform.position.y + Random.Range(-1f, 0f), enemy.transform.position.z - 1);
             var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity);
-            Destroy(hitParticle, 1f);
             wasCollided = true;
             enemy.DescreaseHealth(damage);
             Destroy(gameObject);
         }
+    }
+    private IEnumerator SpawnParticleAfterDestroy()
+    {
+        yield return new WaitForSeconds(1.5f);
+        var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

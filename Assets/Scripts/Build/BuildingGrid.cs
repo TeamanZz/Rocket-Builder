@@ -36,6 +36,11 @@ public class BuildingGrid : MonoBehaviour
         startCapsule.placedPosition = new Vector2Int(4, 6);
     }
 
+    private void OnEnable()
+    {
+        EnableItemsConnectors();
+    }
+
     private void Update()
     {
         if (placingItem == null)
@@ -166,11 +171,19 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
-    public void ToggleItemsConnectors()
+    public void EnableItemsConnectors()
     {
         for (var i = 0; i < placedItems.Count; i++)
         {
-            placedItems[i].ToggleConnectors();
+            placedItems[i].EnableConnectors();
+        }
+    }
+
+    public void DisableItemsConnectors()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].DisableConnectors();
         }
     }
 

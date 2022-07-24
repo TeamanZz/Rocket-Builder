@@ -38,11 +38,19 @@ public class BuildItem : MonoBehaviour
         transform.localScale = Vector3.one * 0.5f;
     }
 
-    public void ToggleConnectors()
+    public void EnableConnectors()
     {
         for (var i = 0; i < connectorsGO.Count; i++)
         {
-            connectorsGO[i].gameObject.SetActive(!connectorsGO[i].gameObject.activeSelf);
+            connectorsGO[i].gameObject.SetActive(true);
+        }
+    }
+
+    public void DisableConnectors()
+    {
+        for (var i = 0; i < connectorsGO.Count; i++)
+        {
+            connectorsGO[i].gameObject.SetActive(false);
         }
     }
 
