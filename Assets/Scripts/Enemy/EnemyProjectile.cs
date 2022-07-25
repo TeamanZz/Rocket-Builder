@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class EnemyProjectile : ProjectileBase
@@ -7,7 +8,8 @@ public class EnemyProjectile : ProjectileBase
     public bool wasCollided;
     public GameObject hitParticles;
     public float timeUntilDestroy;
-
+    public float startHealth;
+    private float currentHealth;
     private void Start()
     {
         Destroy(gameObject, timeUntilDestroy);
@@ -23,5 +25,21 @@ public class EnemyProjectile : ProjectileBase
             PlayerRocket.Instance.DescreaseHealth(damage);
             Destroy(gameObject);
         }
+    }
+
+    public void DescreaseHealth(float value)
+    {
+        if (currentHealth <= 0)
+        {
+            Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
+            Destroy(gameObject);
+        }
+        else
+        {
+            currentHealth -= value;
+        }
+
+        float randValue = Random.Range(-0.1f, 0.1f);
+        transform.DOPunchScale(new Vector3(randValue, randValue, randValue), 0.1f).SetEase(Ease.InBack);
     }
 }

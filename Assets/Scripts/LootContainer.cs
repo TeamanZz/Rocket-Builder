@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class LootContainer : MonoBehaviour
 {
     public float startHealth;
+    private float currentHealth;
     [SerializeField] private int enemyReward;
     public GameObject deathParticles;
     public GameObject lootGameobject;
     [SerializeField] private Image healthBar;
     [SerializeField] private Image healthBarBg;
-    private float currentHealth;
     private float oneHitHealthBarFill;
     private Money playerMoney;
 

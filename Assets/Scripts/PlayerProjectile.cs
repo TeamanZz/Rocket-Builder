@@ -35,6 +35,16 @@ public class PlayerProjectile : ProjectileBase
             lootContainer.DescreaseHealth(damage);
             Destroy(gameObject);
         }
+
+        EnemyProjectile enemyProjectile;
+        if (!wasCollided && other.gameObject.TryGetComponent<EnemyProjectile>(out enemyProjectile))
+        {
+            Vector3 particlesPosition = new Vector3(enemyProjectile.transform.position.x + Random.Range(-0.5f, 0.5f), enemyProjectile.transform.position.y + Random.Range(-1f, 0f), enemyProjectile.transform.position.z - 1);
+            var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity, CommonContainer.Instance.transform);
+            wasCollided = true;
+            enemyProjectile.DescreaseHealth(damage);
+            Destroy(gameObject);
+        }
     }
     private IEnumerator SpawnParticleAfterDestroy()
     {
