@@ -12,7 +12,7 @@ public class ItemPickUp : MonoBehaviour
         SpaceShipMovement playerComponent;
         if (other.TryGetComponent<SpaceShipMovement>(out playerComponent))
         {
-            var effect = Instantiate(itemOnDestroy, transform.position, Quaternion.identity);
+            Instantiate(itemOnDestroy, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

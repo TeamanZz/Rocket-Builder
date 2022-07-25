@@ -97,7 +97,7 @@ public class PlayerRocket : MonoBehaviour
         if (currentShield <= 0 || currentShield - value <= 0)
         {
             currentShield = 0;
-            Instantiate(destroyShieldParticlePrefab, transform.position, Quaternion.identity);
+            Instantiate(destroyShieldParticlePrefab, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             shieldParticle.SetActive(false);
             if (currentFuel <= 0)
             {
@@ -113,7 +113,7 @@ public class PlayerRocket : MonoBehaviour
         {
             if (currentShield <= 0 || currentShield - value <= 0)
             {
-                Instantiate(destroyShieldParticlePrefab, transform.position, Quaternion.identity);
+                Instantiate(destroyShieldParticlePrefab, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
                 shieldParticle.SetActive(false);
             }
             else
@@ -141,7 +141,7 @@ public class PlayerRocket : MonoBehaviour
         playerShieldBar.gameObject.SetActive(false);
         SpaceShipMovement.Instance.SetZeroVariables();
         loseScreen.SetActive(true);
-        Instantiate(destroyShieldParticlePrefab);
+        Instantiate(destroyShieldParticlePrefab, CommonContainer.Instance.transform);
         gameObject.SetActive(false);
     }
 

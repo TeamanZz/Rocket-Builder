@@ -12,7 +12,7 @@ public class StuckWithEnemy : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
-            Instantiate(deathParticle, transform.position, Quaternion.identity);
+            Instantiate(deathParticle, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             PlayerRocket.Instance.DescreaseHealth(explodeDamage);
             Destroy(transform.parent.gameObject);
         }

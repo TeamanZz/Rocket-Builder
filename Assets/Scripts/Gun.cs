@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour
         if (canShoot)
         {
             yield return new WaitForSeconds(timeBetweenShots);
-            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z));
+            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), CommonContainer.Instance.transform);
             newProjectile.GetComponent<ProjectileBase>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;
 

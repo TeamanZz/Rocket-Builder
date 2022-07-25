@@ -187,11 +187,9 @@ GameObject:
   - component: {fileID: 1106308320456233330}
   - component: {fileID: 8782410424171610256}
   - component: {fileID: 4090886421971347501}
-  - component: {fileID: 5484356078737914520}
-  - component: {fileID: 2105495241057400507}
-  - component: {fileID: 7139358520711619709}
+  - component: {fileID: 6221117717188782215}
   m_Layer: 6
-  m_Name: ItemContainer
+  m_Name: Loot Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +241,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5484356078737914520
+--- !u!114 &6221117717188782215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,41 +250,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2801642455905783612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d164b960aeaf0fc4894baa8460307326, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ab245f7b6495b84097df4738a0aec44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 25
   enemyReward: 20
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  lootGameobject: {fileID: 6637345069168375974, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}
   healthBar: {fileID: 5046520136818884310}
   healthBarBg: {fileID: 6811324320582568565}
---- !u!114 &2105495241057400507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2801642455905783612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058de6d63ac18734cba0073030bb2d5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemOnDestroy: {fileID: 6637345069168375974, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}
---- !u!114 &7139358520711619709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2801642455905783612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d60bc6a7fd715488c5d8d553f86b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  explodeDamage: 15
 --- !u!1 &4882419096924052825
 GameObject:
   m_ObjectHideFlags: 0

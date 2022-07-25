@@ -1,16 +1,15 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
-public class EnemyBase : MonoBehaviour
+public class LootContainer : MonoBehaviour
 {
     public float startHealth;
     [SerializeField] private int enemyReward;
     public GameObject deathParticles;
+    public GameObject lootGameobject;
     [SerializeField] private Image healthBar;
     [SerializeField] private Image healthBarBg;
     private float currentHealth;
@@ -35,14 +34,14 @@ public class EnemyBase : MonoBehaviour
         if (currentHealth <= 0)
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
-            Destroy(gameObject);
+            Instantiate(lootGameobject, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             playerMoney.AddCoins(enemyReward);
+            Destroy(gameObject);
         }
         else
         {
             currentHealth -= value;
             RemoveHealth();
-            healthBar.fillAmount = oneHitHealthBarFill * currentHealth;
         }
 
         float randValue = Random.Range(-0.1f, 0.1f);

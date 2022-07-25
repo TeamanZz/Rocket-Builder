@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
-            Instantiate(pickUpEffect, transform.position, Quaternion.identity);
+            Instantiate(pickUpEffect, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);
         }
     }

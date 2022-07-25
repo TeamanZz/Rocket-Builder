@@ -41,7 +41,7 @@ public class EnemyMoving : MonoBehaviour
 
         if (canMove)
         {
-            enemyRb.velocity = playerRb.velocity;    
+            enemyRb.velocity = playerRb.velocity;
         }
         else
         {
@@ -51,11 +51,11 @@ public class EnemyMoving : MonoBehaviour
 
     public IEnumerator ScaleObject()
     {
-        transform.localScale = Vector3.one * 0.1f; 
+        transform.localScale = Vector3.one * 0.1f;
         yield return new WaitForSeconds(3f);
         transform.DOScale(1, 1f);
     }
-    
+
     public IEnumerator EnemyMove()
     {
         canMove = true;
@@ -70,14 +70,14 @@ public class EnemyMoving : MonoBehaviour
         yield return new WaitForSeconds(6f);
         fireParticle.SetActive(true);
         transform.DOMove(playerPosition, 1f);
-        Destroy(gameObject,9f);
+        Destroy(gameObject, 9f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            DamageToPlayer();   
+            DamageToPlayer();
         }
     }
 
@@ -86,7 +86,7 @@ public class EnemyMoving : MonoBehaviour
         StopCoroutine(EnemyMove());
         canMove = false;
         playerRb.gameObject.GetComponent<EnemyBase>().DescreaseHealth(5f);
-        Instantiate(deathParticles, transform.position, Quaternion.identity);
+        Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
         Destroy(gameObject);
     }
 }
