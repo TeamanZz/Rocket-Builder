@@ -34,6 +34,7 @@ public class PlayerRocket : MonoBehaviour
     private Vector3 startRocketPos;
     [SerializeField] private GameObject loseScreen;
     public Transform rocketContainer;
+
     public GameObject lowFuelIndication;
     private bool lowFuelEnabled;
 
@@ -99,11 +100,8 @@ public class PlayerRocket : MonoBehaviour
             currentShield = 0;
             Instantiate(destroyShieldParticlePrefab, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             shieldParticle.SetActive(false);
-            if (currentFuel <= 0)
-            {
-                //Dead();
-            }
-            else
+
+            if (currentFuel > 0)
             {
                 currentFuel -= value;
                 playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;

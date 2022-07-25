@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class NewPartsHandler : MonoBehaviour
 {
+    public static NewPartsHandler Instance;
+
     public int lastUnlockedEventIndex = 0;
     public List<UnlockableEvent> unlockEvents = new List<UnlockableEvent>();
     public GameObject shieldsListButton;
+
+    public GameObject rocketPartPopup;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void UnlockNewDuplicate()
+    {
+        rocketPartPopup.SetActive(true);
+    }
 
     [ContextMenu("UnlockNextEvent")]
     public void UnlockNextEvent()

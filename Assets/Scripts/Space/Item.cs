@@ -11,6 +11,7 @@ public class Item : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
+            NewPartsHandler.Instance.UnlockNewDuplicate();
             Instantiate(pickUpEffect, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);
         }
