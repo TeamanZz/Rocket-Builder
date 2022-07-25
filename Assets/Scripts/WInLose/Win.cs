@@ -49,6 +49,7 @@ public class Win : MonoBehaviour
 
     public IEnumerator FinalScene()
     {
+        PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;
         Debug.Log("PlayerShipOnStartPlace");

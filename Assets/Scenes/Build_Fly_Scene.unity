@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49285108, g: 0.21388903, b: 0.37817547, a: 1}
+  m_IndirectSpecularColor: {r: 0.49284577, g: 0.21388501, b: 0.37816408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3898,7 +3898,7 @@ GameObject:
   - component: {fileID: 590770641}
   - component: {fileID: 590770643}
   m_Layer: 5
-  m_Name: Out Of Fuel
+  m_Name: Low Fuel Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3943,7 +3943,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Out Of Fuel
+  m_text: 'low fuel level
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46297340597534d44b8194185f9399c6, type: 2}
   m_sharedMaterial: {fileID: 633643834968870515, guid: 46297340597534d44b8194185f9399c6, type: 2}

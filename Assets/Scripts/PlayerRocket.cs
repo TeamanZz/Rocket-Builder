@@ -92,12 +92,6 @@ public class PlayerRocket : MonoBehaviour
             (currentShield * oneHitShieldBarFill) - oneHitShieldBarFill, 0.1f);
     }
 
-    public void RemoveFuelPoints()
-    {
-        // DOTween.To(x => playerFuelBar.fillAmount = x, (currentFuel * oneHitFuelBarFill),
-        //     (currentFuel * oneHitFuelBarFill) - oneHitFuelBarFill, 0.1f);
-    }
-
     public void DescreaseHealth(float value)
     {
         if (currentShield <= 0 || currentShield - value <= 0)
@@ -112,7 +106,6 @@ public class PlayerRocket : MonoBehaviour
             else
             {
                 currentFuel -= value;
-                RemoveFuelPoints();
                 playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
             }
         }
@@ -169,6 +162,13 @@ public class PlayerRocket : MonoBehaviour
         playerShieldBar.gameObject.SetActive(true);
         transform.localPosition = new Vector3(4, 5, 0);
         loseScreen.SetActive(false);
+        DisableLowFuelIndicator();
         this.enabled = false;
+    }
+
+    public void DisableLowFuelIndicator()
+    {
+        lowFuelIndication.SetActive(false);
+        lowFuelEnabled = false;
     }
 }
