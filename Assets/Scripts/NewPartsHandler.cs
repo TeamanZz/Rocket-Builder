@@ -12,14 +12,20 @@ public class NewPartsHandler : MonoBehaviour
 
     public GameObject rocketPartPopup;
 
+    public List<PartsUIItem> boughtedItems = new List<PartsUIItem>();
+
     private void Awake()
     {
         Instance = this;
     }
-
+    [ContextMenu("UnlockNewDuplicate")]
     public void UnlockNewDuplicate()
     {
         rocketPartPopup.SetActive(true);
+
+        int itemIndex = Random.Range(1, boughtedItems.Count);
+        boughtedItems[itemIndex].IncreaseCount();
+        Debug.Log(itemIndex);
     }
 
     [ContextMenu("UnlockNextEvent")]

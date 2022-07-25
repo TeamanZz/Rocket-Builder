@@ -59,12 +59,8 @@ public class GameStateHandler : MonoBehaviour
             gun.GetComponent<Gun>().AllowShoot();
         }
 
-        var shieldList =
-            buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
-        foreach (var shield in shieldList)
-        {
-            PlayerRocket.Instance.shieldParticle.SetActive(true);
-        }
+        // if (buildingGrid.placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield))
+        //     PlayerRocket.Instance.shieldParticle.SetActive(true);
 
         PlayerRocket.Instance.enabled = true;
         boundsController.enabled = true;

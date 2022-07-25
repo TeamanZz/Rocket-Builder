@@ -15,8 +15,7 @@ public class Money : MonoBehaviour
     public void AddCoins(int count)
     {
         coinsCounter += count;
-        PlayerPrefs.SetInt("PlayerMoney",coinsCounter);
+        PlayerPrefs.SetInt("PlayerMoney", coinsCounter);
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetInt("PlayerMoney"));
     }
 }
