@@ -69,6 +69,22 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
+    public void RemoveDragComponents()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            Destroy(placedItems[i].GetComponent<BuildItemDrag>());
+        }
+    }
+
+    public void AddDragComponents()
+    {
+        for (var i = 0; i < placedItems.Count; i++)
+        {
+            placedItems[i].gameObject.AddComponent<BuildItemDrag>();
+        }
+    }
+
     public int GetConnectedFuelValue()
     {
         int rocketFuelValue = 0;

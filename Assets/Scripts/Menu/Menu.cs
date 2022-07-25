@@ -52,6 +52,9 @@ public class Menu : MonoBehaviour
         {
             previewScreenToBuildDisable[i].SetActive(false);
         }
+
+        BuildingGrid.Instance.AddDragComponents();
+
     }
 
     public void ActivatePreviewScreen()
@@ -65,5 +68,7 @@ public class Menu : MonoBehaviour
         {
             endScreenToPreviewDisable[i].SetActive(false);
         }
+
+        BuildingGrid.Instance.RemoveDragComponents();
     }
 }

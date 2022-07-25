@@ -29,7 +29,6 @@ public class GameStateHandler : MonoBehaviour
     public float rocketRotationDamping = 7f;
     public int rocketSideSpeed = 3;
 
-
     private void Awake()
     {
         Instance = this;
@@ -149,5 +148,6 @@ public class GameStateHandler : MonoBehaviour
         SetNewRocketContainerOffset();
         LevelProgress.Instance.StartHeightBarFilling();
         rocketObject.transform.position = startRocketPosition.position;
+
     }
 }

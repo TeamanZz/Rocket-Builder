@@ -11,6 +11,8 @@ public class PlayerRocket : MonoBehaviour
 
     [Header("PlayerSettingAndBar")]
     [SerializeField] public float startFuel;
+    [SerializeField] private float lowFuelTargetPercent;
+    private float lowFuelIndicationValue;
     [SerializeField] public float startShield;
     [SerializeField] public float currentFuel;
     [SerializeField] public float currentShield;
@@ -29,9 +31,11 @@ public class PlayerRocket : MonoBehaviour
     public bool isPlayerOnPlanet;
 
     [Header("WinLoseCondition")]
-    [SerializeField] private Vector3 startRocketPos;
+    private Vector3 startRocketPos;
     [SerializeField] private GameObject loseScreen;
     public Transform rocketContainer;
+    public GameObject lowFuelIndication;
+    private bool lowFuelEnabled;
 
     private void Awake()
     {
@@ -41,15 +45,13 @@ public class PlayerRocket : MonoBehaviour
     private void Start()
     {
         startRocketPos = transform.position;
-        // SetRocketVariables();
     }
 
     public void SetRocketVariables()
     {
         currentFuel = startFuel;
         currentShield = startShield;
-        Debug.Log(playerFuelBar.fillAmount);
-        Debug.Log(startFuel);
+        lowFuelIndicationValue = startFuel * lowFuelTargetPercent / 100;
         playerFuelBar.fillAmount = 1;
         playerShieldBar.fillAmount = 1;
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
@@ -64,12 +66,14 @@ public class PlayerRocket : MonoBehaviour
         playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
 
         if (!isPlayerOnPlanet)
-        {
             currentFuel -= Time.fixedDeltaTime * fuelDecreaseMultiplier;
-        }
         else
-        {
             return;
+
+        if (!lowFuelEnabled && currentFuel <= lowFuelIndicationValue)
+        {
+            lowFuelEnabled = true;
+            lowFuelIndication.SetActive(true);
         }
 
         if (currentFuel <= 0)
