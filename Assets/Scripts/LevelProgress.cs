@@ -24,6 +24,10 @@ public class LevelProgress : MonoBehaviour
     private Tween fillbarTween;
     [SerializeField] private Vector3 startIconPosition;
 
+    public Image damageIndicator;
+    private Coroutine damageIndicatorCoroutine;
+    private Tween damageIndicatorTween;
+
     private void Awake()
     {
         Instance = this;
@@ -55,5 +59,26 @@ public class LevelProgress : MonoBehaviour
         fillBar.fillAmount = 0;
         Debug.Log(fillBar.fillAmount + "fill");
         icon.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+    }
+
+    [ContextMenu("ShowDamageIndication")]
+    public void ShowDamageIndication()
+    {
+        if (damageIndicatorCoroutine != null)
+        {
+            DOTween.Kill(damageIndicator);
+            StopCoroutine(damageIndicatorCoroutine);
+        }
+        damageIndicatorCoroutine = StartCoroutine(IEShowDamageIndication());
+    }
+
+    private IEnumerator IEShowDamageIndication()
+    {
+        Debug.Log("damage");
+        damageIndicator.color = new Color(1, 1, 1, 0);
+        damageIndicator.gameObject.SetActive(true);
+        damageIndicatorTween = damageIndicator.DOFade(1, 0.2f).SetLoops(2, LoopType.Yoyo);
+        yield return new WaitForSeconds(0.4f);
+        damageIndicator.gameObject.SetActive(false);
     }
 }

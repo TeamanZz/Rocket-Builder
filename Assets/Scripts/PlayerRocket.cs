@@ -126,7 +126,7 @@ public class PlayerRocket : MonoBehaviour
 
         float randValue = Random.Range(-0.1f, 0.1f);
         transform.DOPunchScale(new Vector3(randValue, randValue, randValue), 0.1f).SetEase(Ease.InBack);
-
+        LevelProgress.Instance.ShowDamageIndication();
         SFX.Instance.PlayHitSound(gameObject);
     }
 
