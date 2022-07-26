@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5958809830400985721}
   - component: {fileID: 4491530612616967818}
   m_Layer: 7
-  m_Name: Engine
+  m_Name: Engine 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,6 +253,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 347eed3d3870e36408acb9e20787569d, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 22201826a5bdfc94e9b3a21e6c27fc08, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7573828930758319017, guid: 164b45d78bb52a54b9f877d110727bb5, type: 3}
     - target: {fileID: 919132149155446097, guid: 22201826a5bdfc94e9b3a21e6c27fc08, type: 3}
       propertyPath: m_Name
       value: Engine
@@ -286,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 494686, guid: 7ef15b3b75916c044aa8aa197b362208, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 494686, guid: 7ef15b3b75916c044aa8aa197b362208, type: 3}
       propertyPath: m_LocalScale.y

@@ -81,7 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  mainRenderer: {fileID: 1884825211771882447}
+  renderers:
+  - {fileID: 1884825211771882447}
+  - {fileID: 8976514325310205068}
   Size: {x: 1, y: 1}
   placedPosition: {x: 1, y: 1}
   connectors:
@@ -442,6 +444,11 @@ Transform:
 --- !u!23 &1884825211771882447 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -5062555495335501594, guid: b16fbb0ff8467fe48870164bd1964f2c, type: 3}
+  m_PrefabInstance: {fileID: 2564252509506792233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8976514325310205068 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2376508439416305755, guid: b16fbb0ff8467fe48870164bd1964f2c, type: 3}
   m_PrefabInstance: {fileID: 2564252509506792233}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5410267083460587856

@@ -36,7 +36,7 @@ public class EnemyBase : MonoBehaviour
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);
-            playerMoney.AddCoins(enemyReward);
+            playerMoney.AddCurrency(enemyReward);
         }
         else
         {

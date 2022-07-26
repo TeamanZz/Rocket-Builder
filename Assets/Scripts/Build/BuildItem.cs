@@ -6,7 +6,7 @@ using UnityEngine;
 public class BuildItem : MonoBehaviour
 {
     public int id;
-    [SerializeField] private Renderer mainRenderer;
+    [SerializeField] private List<Renderer> renderers = new List<Renderer>();
 
     [Header("ItemSettings")]
     public Vector2Int Size = Vector2Int.one;
@@ -56,10 +56,13 @@ public class BuildItem : MonoBehaviour
 
     public void HandleColorGreenOrRed(bool available)
     {
-        if (available)
-            mainRenderer.material.color = new Color(0f, 1f, 0.07f, 0.55f);
-        else
-            mainRenderer.material.color = new Color(1f, 0f, 0.02f, 0.62f);
+        foreach (var item in renderers)
+        {
+            if (available)
+                item.material.color = new Color(0f, 1f, 0.07f, 0.55f);
+            else
+                item.material.color = new Color(1f, 0f, 0.02f, 0.62f);
+        }
     }
 
     public void HandleColorWhiteOrGray()
@@ -72,12 +75,18 @@ public class BuildItem : MonoBehaviour
 
     public void SetNormalColor()
     {
-        mainRenderer.material.color = Color.white;
+        foreach (var item in renderers)
+        {
+            item.material.color = Color.white;
+        }
     }
 
     public void SetGrayColor()
     {
-        mainRenderer.material.color = new Color(0.2f, 0.2f, 0.2f, 1f);
+        foreach (var item in renderers)
+        {
+            item.material.color = new Color(0.2f, 0.2f, 0.2f, 1f);
+        }
     }
 
     private void OnDrawGizmos()

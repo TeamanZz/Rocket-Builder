@@ -2,20 +2,43 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Money : MonoBehaviour
 {
-    [SerializeField] private int coinsCounter;
+    public static Money Instance;
+
+    [SerializeField] private int currencyValue;
+    [SerializeField] private TextMeshProUGUI currencyText;
 
     private void Awake()
     {
-        coinsCounter = PlayerPrefs.GetInt("PlayerMoney");
+        Instance = this;
+        HandleView();
     }
 
-    public void AddCoins(int count)
+    public void HandleView()
     {
-        coinsCounter += count;
-        PlayerPrefs.SetInt("PlayerMoney", coinsCounter);
-        PlayerPrefs.Save();
+        currencyText.text = currencyValue.ToString() + " $";
+    }
+
+    public bool IsEnoughCurrency(int value)
+    {
+        if (currencyValue >= value)
+            return true;
+        else
+            return false;
+    }
+
+    public void AddCurrency(int count)
+    {
+        currencyValue += count;
+        HandleView();
+    }
+
+    public void DecreaseCurrency(int count)
+    {
+        currencyValue -= count;
+        HandleView();
     }
 }

@@ -11,7 +11,7 @@ public class BuildItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public PartsUIItem partsUIItem;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (partsUIItem.countValue == 0)
+        if (partsUIItem.countValue == 0 || !partsUIItem.isBoughted)
             return;
         BuildingGrid.Instance.StartPlacingNewItem(buildItemPrefab, partsUIItem);
         transform.DOPunchRotation(Vector3.forward * 7, 0.5f);

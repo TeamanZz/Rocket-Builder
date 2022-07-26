@@ -5,17 +5,17 @@ using UnityEngine;
 public class GameStateHandler : MonoBehaviour
 {
     public static GameStateHandler Instance;
+
+    public float rocketConstantVelocity = 3f;
+    public float rocketRotationDamping = 7f;
+    public int rocketSideSpeed = 3;
+
     [Header("EndBuild")]
     [SerializeField] private Transform startRocketPosition;
     [SerializeField] private GameObject blackScreenPrefab;
     [SerializeField] private GameObject uiItems;
     [SerializeField] private Transform rocketObject;
     [SerializeField] private Transform rocketContainer;
-
-    [Header("ItemsToActive")]
-    [SerializeField] private GameObject[] itemsToActive;
-    [Header("ItemsToUnActive")]
-    [SerializeField] private GameObject[] itemsToUnActive;
 
     [Header("ShipSettings")]
     private ResourcesHandler resourcesHandler;
@@ -25,9 +25,10 @@ public class GameStateHandler : MonoBehaviour
     public CameraBoundsController boundsController;
     public GameObject cantFlyButton;
 
-    public float rocketConstantVelocity = 3f;
-    public float rocketRotationDamping = 7f;
-    public int rocketSideSpeed = 3;
+    [Header("ItemsToActive")]
+    [SerializeField] private GameObject[] itemsToActive;
+    [Header("ItemsToUnActive")]
+    [SerializeField] private GameObject[] itemsToUnActive;
 
     private void Awake()
     {
@@ -64,10 +65,13 @@ public class GameStateHandler : MonoBehaviour
 
         PlayerRocket.Instance.enabled = true;
         boundsController.enabled = true;
+
         PlayerRocket.Instance.startFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.startShield = resourcesHandler.trueShieldValue;
         PlayerRocket.Instance.currentFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.currentShield = resourcesHandler.trueShieldValue;
+        playerShipMovement.SetNewValues(resourcesHandler.trueMoveSpeedValue);
+
         PlayerRocket.Instance.SetRocketVariables();
         LevelProgress.Instance.ResetHeightVariables();
         for (int i = 0; i < itemsToActive.Length; i++)
@@ -78,9 +82,9 @@ public class GameStateHandler : MonoBehaviour
         {
             itemsToUnActive[i].SetActive(false);
         }
-        playerShipMovement.constantVelocity = rocketConstantVelocity;
-        playerShipMovement.rotationDamping = rocketRotationDamping;
-        playerShipMovement.sideSpeed = rocketSideSpeed;
+        // playerShipMovement.constantVelocity = rocketConstantVelocity;
+        // playerShipMovement.rotationDamping = rocketRotationDamping;
+        // playerShipMovement.sideSpeed = rocketSideSpeed;
     }
 
     private void CenterRocket()

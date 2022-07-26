@@ -8,9 +8,15 @@ public class PartsUIItem : MonoBehaviour
 {
     public TextMeshProUGUI countText;
     public TextMeshProUGUI statText;
+    public TextMeshProUGUI priceText;
+    public GameObject statIcon;
     public Image mainImage;
-    public int statValue;
+    public float statValue;
+    public int price;
     public int countValue;
+    public Button buyButton;
+
+    public bool isBoughted;
 
     private void Awake()
     {
@@ -30,16 +36,38 @@ public class PartsUIItem : MonoBehaviour
         HandleView();
     }
 
+    public void BuyItem()
+    {
+        if (!Money.Instance.IsEnoughCurrency(price))
+            return;
+        Money.Instance.DecreaseCurrency(price);
+        isBoughted = true;
+        countText.gameObject.SetActive(true);
+        statText.gameObject.SetActive(true);
+        statIcon.gameObject.SetActive(true);
+        buyButton.gameObject.SetActive(false);
+        HandleView();
+    }
+
     public void HandleView()
     {
-        countText.text = "x" + countValue.ToString();
-        if (countValue == 0)
+        if (!isBoughted)
         {
-            mainImage.color = new Color(0.2f, 0.2f, 0.2f, 1f);
+            countText.gameObject.SetActive(false);
+            statText.gameObject.SetActive(false);
+            statIcon.gameObject.SetActive(false);
+            buyButton.gameObject.SetActive(true);
+            priceText.text = "Buy: " + price.ToString() + " $";
+            mainImage.color = new Color(0.1f, 0.1f, 0.1f, 1f);
         }
         else
         {
-            mainImage.color = Color.white;
+            countText.text = "x" + countValue.ToString();
+            if (countValue == 0)
+                mainImage.color = new Color(1f, 1f, 1f, 0.5f);
+            else
+                mainImage.color = Color.white;
         }
+
     }
 }

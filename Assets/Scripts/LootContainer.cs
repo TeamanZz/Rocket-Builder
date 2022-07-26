@@ -35,7 +35,7 @@ public class LootContainer : MonoBehaviour
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Instantiate(lootGameobject, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
-            playerMoney.AddCoins(enemyReward);
+            playerMoney.AddCurrency(enemyReward);
             Destroy(gameObject);
         }
         else

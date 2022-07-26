@@ -91,7 +91,7 @@ public class BuildingGrid : MonoBehaviour
         var fuelItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel);
         for (var i = 0; i < fuelItemsList.Count; i++)
         {
-            rocketFuelValue += fuelItemsList[i].placingItemUI.statValue;
+            rocketFuelValue += (int)fuelItemsList[i].placingItemUI.statValue;
         }
         return rocketFuelValue;
     }
@@ -102,9 +102,20 @@ public class BuildingGrid : MonoBehaviour
         var shieldItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
         for (var i = 0; i < shieldItemsList.Count; i++)
         {
-            rocketShieldValue += shieldItemsList[i].placingItemUI.statValue;
+            rocketShieldValue += (int)shieldItemsList[i].placingItemUI.statValue;
         }
         return rocketShieldValue;
+    }
+
+    public float GetConnectedMoveSpeedValue()
+    {
+        float moveSpeedValue = 0;
+        var engineItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet);
+        for (var i = 0; i < engineItemsList.Count; i++)
+        {
+            moveSpeedValue += engineItemsList[i].placingItemUI.statValue;
+        }
+        return moveSpeedValue;
     }
 
     public void CheckOnCompletedRocket()
@@ -179,6 +190,7 @@ public class BuildingGrid : MonoBehaviour
             RecalculateStateOFItems();
 
         CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
         ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         for (var i = 0; i < placedItems.Count; i++)

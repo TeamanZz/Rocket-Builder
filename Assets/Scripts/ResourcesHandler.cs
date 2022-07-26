@@ -11,12 +11,14 @@ public class ResourcesHandler : MonoBehaviour
 
     public float trueFuelValue;
     public float trueShieldValue;
-
-    [SerializeField] private TextMeshProUGUI fuelValueText;
-    [SerializeField] private TextMeshProUGUI shieldValueText;
+    public float trueMoveSpeedValue;
 
     private float fuelValueView;
     private float shieldValueView;
+
+
+    [SerializeField] private TextMeshProUGUI fuelValueText;
+    [SerializeField] private TextMeshProUGUI shieldValueText;
 
     private void Awake()
     {
@@ -27,6 +29,11 @@ public class ResourcesHandler : MonoBehaviour
     {
         fuelValueText.text = "Fuel - " + fuelValueView.ToString();
         shieldValueText.text = "Shield - " + shieldValueView.ToString();
+    }
+
+    public void SetNewMoveSpeedValue(float newValue)
+    {
+        trueMoveSpeedValue = newValue;
     }
 
     public void SetNewFuelValue(int newFuelvalue)

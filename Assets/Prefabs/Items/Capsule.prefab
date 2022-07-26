@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  mainRenderer: {fileID: 5107369026164886996}
+  renderers:
+  - {fileID: 5107369026164886996}
   Size: {x: 1, y: 1}
   placedPosition: {x: 1, y: 1}
   connectors:

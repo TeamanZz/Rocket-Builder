@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SpaceShipMovement : MonoBehaviour
 {
+    public float defaultConstantVelocity = 6;
+    public float defaultSideSpeed = 7;
+    public float rotationDamping = 7;
+
     public float constantVelocity;
-    public float rotationDamping;
-    public int sideSpeed;
+    public float sideSpeed;
     public Joystick joystick;
     public Transform shuttleModel;
 
@@ -26,10 +29,15 @@ public class SpaceShipMovement : MonoBehaviour
         startAngle = shuttleModel.rotation;
     }
 
+    public void SetNewValues(float newMoveSpeedValue)
+    {
+        constantVelocity = defaultConstantVelocity + newMoveSpeedValue;
+        sideSpeed = defaultSideSpeed + (newMoveSpeedValue * 1.1f);
+    }
+
     public void SetZeroVariables()
     {
         constantVelocity = 0;
-        rotationDamping = 0;
         sideSpeed = 0;
     }
 

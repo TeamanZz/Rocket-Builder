@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 15
-  enemyReward: 5
+  enemyReward: 15
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   healthBar: {fileID: 925957756702158038}
   healthBarBg: {fileID: 925957755273603032}
