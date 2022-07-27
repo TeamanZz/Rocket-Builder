@@ -73,7 +73,6 @@ public class LevelProgress : MonoBehaviour
 
     private IEnumerator IEShowDamageIndication()
     {
-        Debug.Log("damage");
         damageIndicator.color = new Color(1, 1, 1, 0);
         damageIndicator.gameObject.SetActive(true);
         damageIndicatorTween = damageIndicator.DOFade(1, 0.2f).SetLoops(2, LoopType.Yoyo);

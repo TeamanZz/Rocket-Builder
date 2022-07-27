@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SpaceShipMovement : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class SpaceShipMovement : MonoBehaviour
     [SerializeField] private Transform endEnemiesPosition;
     public static SpaceShipMovement Instance;
 
+    private Tween velocityTween;
+    private Tween sideSpeedTween;
+
+    public bool playerCanControl = true;
+
     private void Awake()
     {
         Instance = this;
@@ -37,13 +43,15 @@ public class SpaceShipMovement : MonoBehaviour
 
     public void SetZeroVariables()
     {
-        constantVelocity = 0;
-        sideSpeed = 0;
+        velocityTween = DOTween.To(() => constantVelocity, x => constantVelocity = x, 0, 2f).SetEase(Ease.OutBack);
+        sideSpeedTween = DOTween.To(() => sideSpeed, x => sideSpeed = x, 0, 2f).SetEase(Ease.OutBack);
     }
 
     private void FixedUpdate()
     {
         spaceRB.velocity = new Vector3(joystick.Horizontal * sideSpeed, constantVelocity, 0);
+        if (!playerCanControl)
+            return;
         Heeling();
     }
 

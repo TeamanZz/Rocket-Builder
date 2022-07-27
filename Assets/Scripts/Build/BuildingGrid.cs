@@ -115,7 +115,6 @@ public class BuildingGrid : MonoBehaviour
         {
             moveSpeedValue += engineItemsList[i].placingItemUI.statValue;
         }
-        Debug.Log(moveSpeedValue + "new move speed");
         return moveSpeedValue;
     }
 

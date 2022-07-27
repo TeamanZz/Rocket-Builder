@@ -19,6 +19,8 @@ public class Win : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
+            if (PlayerRocket.Instance.isDead)
+                return;
             StartScene();
         }
     }

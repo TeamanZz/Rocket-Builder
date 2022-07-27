@@ -13,7 +13,7 @@ public class Lose : MonoBehaviour
     public void RestartLevelWithSameRocket()
     {
         Menu.Instance.ActivatePreviewScreen();
-        PlayerRocket.Instance.gameObject.SetActive(true);
+        // PlayerRocket.Instance.gameObject.SetActive(true);
         PlayerRocket.Instance.RestartRocket();
         Menu.Instance.ResetAllTriggers();
         Menu.Instance.DestroyAllActiveEnemies();

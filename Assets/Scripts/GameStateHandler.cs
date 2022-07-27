@@ -52,6 +52,15 @@ public class GameStateHandler : MonoBehaviour
         StartCoroutine(EndBuildingCoroutine());
     }
 
+    public void DisableGuns()
+    {
+        var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
+        foreach (var gun in gunsList)
+        {
+            gun.GetComponent<Gun>().ForbidShoot();
+        }
+    }
+
     public void SetShipSettings()
     {
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);

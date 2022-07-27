@@ -38,6 +38,12 @@ public class PlayerRocket : MonoBehaviour
     public GameObject lowFuelIndication;
     private bool lowFuelEnabled;
 
+    public Rigidbody rb;
+
+    public Cinemachine.CinemachineVirtualCamera cineCamera;
+
+    public bool isDead;
+
     private void Awake()
     {
         Instance = this;
@@ -130,17 +136,50 @@ public class PlayerRocket : MonoBehaviour
         SFX.Instance.PlayHitSound(gameObject);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Dead();
+        }
+    }
+
     [ContextMenu("Test Dead")]
     public void Dead()
     {
+        if (isDead)
+            return;
+        isDead = true;
+        Debug.Log("AM DEAD");
         LevelProgress.Instance.CancelFillTween();
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
         playerShieldBar.gameObject.SetActive(false);
+        cineCamera.LookAt = null;
+        cineCamera.Follow = null;
+        rocketContainer.GetComponent<PlanetsMovement>().enabled = true;
+        SpaceShipMovement.Instance.playerCanControl = false;
+        StartCoroutine(TurnOffSpeed());
+        GameStateHandler.Instance.DisableGuns();
+        // Vector3 randRotation = new Vector3(0, 0, Random.Range(-360, 360));
+        // rb.MoveRotation(Quaternion.Euler(0, 0, Random.Range(-360, 360)));
+        // rocketContainer.DORotate(randRotation, 3);
+        // loseScreen.SetActive(true);
+        // Instantiate(destroyShieldParticlePrefab, CommonContainer.Instance.transform);
+        // gameObject.SetActive(false);
+    }
+
+    private IEnumerator TurnOffSpeed()
+    {
+        yield return new WaitForSeconds(0.5f);
         SpaceShipMovement.Instance.SetZeroVariables();
+        yield return new WaitForSeconds(1.5f);
+        rocketContainer.GetComponent<PlanetsMovement>().enabled = false;
         loseScreen.SetActive(true);
-        Instantiate(destroyShieldParticlePrefab, CommonContainer.Instance.transform);
-        gameObject.SetActive(false);
+        cineCamera.LookAt = transform;
+        cineCamera.Follow = transform;
+        SpaceShipMovement.Instance.playerCanControl = true;
+        this.enabled = false;
     }
 
     [ContextMenu("Restart Rocket")]
@@ -148,11 +187,6 @@ public class PlayerRocket : MonoBehaviour
     {
         currentFuel = startFuel;
         currentShield = startShield;
-        // var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
-        // foreach (var gun in gunsList)
-        // {
-        //     gun.GetComponent<Gun>().AllowShoot();
-        // }
         rocketContainer.localPosition = Vector3.zero;
         rocketContainer.localEulerAngles = new Vector3(0, 0, 0);
         playerFuelBar.gameObject.SetActive(true);
@@ -161,6 +195,7 @@ public class PlayerRocket : MonoBehaviour
         transform.localPosition = new Vector3(4, 5, 0);
         loseScreen.SetActive(false);
         DisableLowFuelIndicator();
+        isDead = false;
         this.enabled = false;
     }
 
