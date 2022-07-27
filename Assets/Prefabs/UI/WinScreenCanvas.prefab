@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8333605227378717951}
   - component: {fileID: 3922614907776940904}
   - component: {fileID: 7575572517052150496}
-  - component: {fileID: 2155053497417868532}
   m_Layer: 5
   m_Name: WinScreenCanvas
   m_TagString: Untagged
@@ -121,18 +120,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2155053497417868532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900864615956969492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273183ddb70367d45badcbe8ac752f11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3586102176182113919
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2155053497417868532}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Lose, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1

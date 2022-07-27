@@ -190,6 +190,7 @@ public class PlayerRocket : MonoBehaviour
         loseScreen.SetActive(false);
         DisableLowFuelIndicator();
         isDead = false;
+        isPlayerOnPlanet = false;
         this.enabled = false;
     }
 
