@@ -10,6 +10,6 @@ public class PlanetsMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(0, 30 * Time.deltaTime, 0);
+        transform.Rotate(0, 0, 30 * Time.deltaTime);
     }
 }
