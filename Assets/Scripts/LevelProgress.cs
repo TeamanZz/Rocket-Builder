@@ -57,7 +57,6 @@ public class LevelProgress : MonoBehaviour
     {
         currentHeight = 0;
         fillBar.fillAmount = 0;
-        Debug.Log(fillBar.fillAmount + "fill");
         icon.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
     }
 

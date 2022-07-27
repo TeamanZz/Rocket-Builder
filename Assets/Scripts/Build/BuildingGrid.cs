@@ -115,6 +115,7 @@ public class BuildingGrid : MonoBehaviour
         {
             moveSpeedValue += engineItemsList[i].placingItemUI.statValue;
         }
+        Debug.Log(moveSpeedValue + "new move speed");
         return moveSpeedValue;
     }
 
@@ -191,6 +192,7 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnCompletedRocket();
         ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
+        Debug.Log("new move speed" + GetConnectedMoveSpeedValue());
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
         ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         for (var i = 0; i < placedItems.Count; i++)
@@ -289,6 +291,7 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnMainRocketPiece(placeX, placeY);
         CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
         ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
     }
