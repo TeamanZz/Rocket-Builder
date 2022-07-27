@@ -150,7 +150,6 @@ public class PlayerRocket : MonoBehaviour
         if (isDead)
             return;
         isDead = true;
-        Debug.Log("AM DEAD");
         LevelProgress.Instance.CancelFillTween();
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
@@ -161,21 +160,16 @@ public class PlayerRocket : MonoBehaviour
         SpaceShipMovement.Instance.playerCanControl = false;
         StartCoroutine(TurnOffSpeed());
         GameStateHandler.Instance.DisableGuns();
-        // Vector3 randRotation = new Vector3(0, 0, Random.Range(-360, 360));
-        // rb.MoveRotation(Quaternion.Euler(0, 0, Random.Range(-360, 360)));
-        // rocketContainer.DORotate(randRotation, 3);
-        // loseScreen.SetActive(true);
-        // Instantiate(destroyShieldParticlePrefab, CommonContainer.Instance.transform);
-        // gameObject.SetActive(false);
     }
 
     private IEnumerator TurnOffSpeed()
     {
         yield return new WaitForSeconds(0.5f);
         SpaceShipMovement.Instance.SetZeroVariables();
-        yield return new WaitForSeconds(1.5f);
-        rocketContainer.GetComponent<PlanetsMovement>().enabled = false;
+        yield return new WaitForSeconds(1f);
         loseScreen.SetActive(true);
+        yield return new WaitForSeconds(2.2f);
+        rocketContainer.GetComponent<PlanetsMovement>().enabled = false;
         cineCamera.LookAt = transform;
         cineCamera.Follow = transform;
         SpaceShipMovement.Instance.playerCanControl = true;
