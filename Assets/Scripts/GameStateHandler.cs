@@ -80,7 +80,7 @@ public class GameStateHandler : MonoBehaviour
         PlayerRocket.Instance.currentFuel = resourcesHandler.trueFuelValue;
         PlayerRocket.Instance.currentShield = resourcesHandler.trueShieldValue;
         playerShipMovement.SetNewValues(resourcesHandler.trueMoveSpeedValue);
-
+        ScreenShake.Instance.ShakeScreenOnRocketStart();
         PlayerRocket.Instance.SetRocketVariables();
         LevelProgress.Instance.ResetHeightVariables();
         for (int i = 0; i < itemsToActive.Length; i++)

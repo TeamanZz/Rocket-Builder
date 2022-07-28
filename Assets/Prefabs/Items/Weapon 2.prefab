@@ -70,7 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9130321604304303207}
   - component: {fileID: 2732716468544178742}
-  - component: {fileID: -6764852549467469340}
   - component: {fileID: -15345440215521862}
   - component: {fileID: 1983813854658912172}
   - component: {fileID: 555354299835145316}
@@ -132,20 +131,6 @@ MonoBehaviour:
   isMainRocketPiece: 0
   isMainCapsule: 0
   itemType: 3
---- !u!114 &-6764852549467469340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890486460493849665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c33c06bd0ff7c0b4ba3e729cf8277244, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemWeight: 0
-  fuelValue: 15
 --- !u!114 &-15345440215521862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.1
   damage: 1
-  projectileSpeed: 20
+  projectileSpeed: 40
   bulletPrefab: {fileID: 6055687186568386677, guid: 3b92c33c05574d94f9c0dd971ce74bfa, type: 3}
   muzzle: {fileID: 1236035190045244331}
   secondMuzzle: {fileID: 7064175502383459288}
@@ -194,7 +179,7 @@ MonoBehaviour:
   OnShoot:
     m_PersistentCalls:
       m_Calls: []
-  canShoot: 1
+  canShoot: 0
 --- !u!1 &6335993084900102374
 GameObject:
   m_ObjectHideFlags: 0

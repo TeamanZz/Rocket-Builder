@@ -14,7 +14,6 @@ public class BuildingGrid : MonoBehaviour
     public List<BuildItem> placedItems = new List<BuildItem>();
     [SerializeField] public BuildItem[,] grid;
     [field: SerializeField] public BuildItem placingItem { get; set; }
-    [field: SerializeField] public BuildItemDataBase placingItemData { get; set; }
     [SerializeField] private Transform rocketObject;
 
     private Camera mainCamera;
@@ -83,6 +82,11 @@ public class BuildingGrid : MonoBehaviour
         {
             placedItems[i].gameObject.AddComponent<BuildItemDrag>();
         }
+    }
+
+    public List<BuildItem> GetEnginesList()
+    {
+        return placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet);
     }
 
     public int GetConnectedFuelValue()
@@ -158,14 +162,12 @@ public class BuildingGrid : MonoBehaviour
     private void ClearPlacingVariables()
     {
         placingItem = null;
-        placingItemData = null;
     }
 
     public void StartPlacingNewItem(BuildItem placingItemPrefab, PartsUIItem uiItem)
     {
         placingItem = Instantiate(placingItemPrefab);
         placingItem.placingItemUI = uiItem;
-        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
         placingItem.IncreaseScale();
     }
@@ -173,7 +175,6 @@ public class BuildingGrid : MonoBehaviour
     public void StartPlacingExistItem(BuildItem existPlacingItem)
     {
         placingItem = existPlacingItem;
-        placingItemData = placingItem.GetComponent<BuildItemDataBase>();
         placingItem.transform.parent = rocketObject;
         placingItem.SetNormalColor();
         placingItem.IncreaseScale();

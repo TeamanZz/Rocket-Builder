@@ -25,7 +25,6 @@ public class NewPartsHandler : MonoBehaviour
 
         int itemIndex = Random.Range(1, boughtedItems.Count);
         boughtedItems[itemIndex].IncreaseCount();
-        Debug.Log(itemIndex);
     }
 
     [ContextMenu("UnlockNextEvent")]

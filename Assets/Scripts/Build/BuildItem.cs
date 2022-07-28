@@ -6,18 +6,15 @@ using UnityEngine;
 public class BuildItem : MonoBehaviour
 {
     public int id;
-    [SerializeField] private List<Renderer> renderers = new List<Renderer>();
-
-    [Header("ItemSettings")]
+    public PartsUIItem placingItemUI;
     public Vector2Int Size = Vector2Int.one;
-    public Vector2Int placedPosition = Vector2Int.one;
+    public ItemType itemType;
+    [SerializeField] private List<Renderer> renderers = new List<Renderer>();
     public List<Vector2> connectors = new List<Vector2>();
     public List<Transform> connectorsGO = new List<Transform>();
-    [field: SerializeField] public PartsUIItem placingItemUI { get; set; }
-
     public bool isMainRocketPiece;
     public bool isMainCapsule;
-    public ItemType itemType;
+    [HideInInspector] public Vector2Int placedPosition = Vector2Int.one;
 
     public enum ItemType
     {

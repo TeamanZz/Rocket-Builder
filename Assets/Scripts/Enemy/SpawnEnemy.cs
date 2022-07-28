@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (other.gameObject.GetComponent<SpaceShipMovement>())
         {
-            var enemy = Instantiate(enemyPrefab, new Vector3(-100,100,7),Quaternion.identity);
+            var enemy = Instantiate(enemyPrefab, new Vector3(-100, 100, 7), Quaternion.identity);
             enemy.transform.DOMove(spawnPosition.position + spawnCoordinate, 3f).SetEase(Ease.Linear);
         }
     }

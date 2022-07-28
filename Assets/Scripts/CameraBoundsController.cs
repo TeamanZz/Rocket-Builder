@@ -10,10 +10,10 @@ public class CameraBoundsController : MonoBehaviour
     public float leftBound;
     public float rightBound;
     public CinemachineVirtualCamera cineCamera;
+    private CinemachineComposer transposer;
 
     private float cineXValue;
     private bool componentAdded = false;
-    private CinemachineComposer transposer;
 
     private void Awake()
     {
