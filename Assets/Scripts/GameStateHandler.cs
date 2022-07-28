@@ -57,7 +57,7 @@ public class GameStateHandler : MonoBehaviour
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
         {
-            gun.GetComponent<Gun>().ForbidShoot();
+            gun.GetComponent<IShootable>().ForbidShoot();
         }
     }
 
@@ -66,7 +66,7 @@ public class GameStateHandler : MonoBehaviour
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
         {
-            gun.GetComponent<Gun>().AllowShoot();
+            gun.GetComponent<IShootable>().AllowShoot();
         }
 
         // if (buildingGrid.placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield))

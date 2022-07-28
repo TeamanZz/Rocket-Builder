@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1416526376085230048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4635472949404285487}
+  m_Layer: 0
+  m_Name: Muzzle (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4635472949404285487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416526376085230048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.125, y: 1, z: -0.175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9130321604304303207}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2461642261647007099
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2461642261647007099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016, y: 1, z: -0.175}
+  m_LocalPosition: {x: -0.125, y: 1, z: -0.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9130321604304303207}
@@ -43,7 +73,7 @@ GameObject:
   - component: {fileID: -6764852549467469340}
   - component: {fileID: -15345440215521862}
   - component: {fileID: 1983813854658912172}
-  - component: {fileID: 6048007948651405783}
+  - component: {fileID: 555354299835145316}
   m_Layer: 7
   m_Name: Weapon 2
   m_TagString: Untagged
@@ -65,6 +95,8 @@ Transform:
   - {fileID: 2602156373042203842}
   - {fileID: 1236035190045244331}
   - {fileID: 1120007019427678975}
+  - {fileID: 7064175502383459288}
+  - {fileID: 4635472949404285487}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,7 +171,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6048007948651405783
+--- !u!114 &555354299835145316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890486460493849665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5802a41457051c64f8aa9236a39c1f2a, type: 3}
+  m_Script: {fileID: 11500000, guid: e680ec2b2ae62b24099e65bed7a380b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.1
@@ -156,23 +188,13 @@ MonoBehaviour:
   projectileSpeed: 20
   bulletPrefab: {fileID: 6055687186568386677, guid: 3b92c33c05574d94f9c0dd971ce74bfa, type: 3}
   muzzle: {fileID: 1236035190045244331}
+  secondMuzzle: {fileID: 7064175502383459288}
   targetVector: {fileID: 1120007019427678975}
+  secondTargetVector: {fileID: 4635472949404285487}
   OnShoot:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 32ce7e835f013fd4498562c6c55ba623, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  canShoot: 0
+      m_Calls: []
+  canShoot: 1
 --- !u!1 &6335993084900102374
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,11 +219,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6335993084900102374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016, y: 0.603, z: -0.175}
+  m_LocalPosition: {x: -0.125, y: 0.603, z: -0.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9130321604304303207}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7371811150199064296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7064175502383459288}
+  m_Layer: 0
+  m_Name: Muzzle (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7064175502383459288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371811150199064296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.125, y: 0.603, z: -0.175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9130321604304303207}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &70566249822743957
 PrefabInstance:

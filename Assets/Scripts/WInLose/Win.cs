@@ -7,6 +7,7 @@ using UnityEngine;
 public class Win : MonoBehaviour
 {
     [SerializeField] private GameObject[] thingsToSetFalse;
+    [SerializeField] private List<GameObject> thingsToSetTrueAfterWin = new List<GameObject>();
     [SerializeField] private GameObject secondCamera;
     [SerializeField] private Transform startPos, finalPos;
     [SerializeField] private BuildingGrid buildingGrid;
@@ -20,7 +21,7 @@ public class Win : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
-            if (PlayerRocket.Instance.isDead)
+            if (PlayerRocket.Instance.isDead || PlayerRocket.Instance.isPlayerOnPlanet)
                 return;
             StartScene();
         }
@@ -31,34 +32,47 @@ public class Win : MonoBehaviour
     {
         winPanel.gameObject.SetActive(true);
         winPanel.PlayFade();
+
         if (PlayerRocket.Instance.shieldParticle.activeSelf)
             PlayerRocket.Instance.shieldParticle.SetActive(false);
 
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
-            gun.GetComponent<Gun>().ForbidShoot();
+            gun.GetComponent<IShootable>().ForbidShoot();
 
         LevelProgress.Instance.CancelFillTween();
         PlayerRocket.Instance.isPlayerOnPlanet = true;
-
-
-        GetComponent<BoxCollider>().enabled = false;
         StartCoroutine(FinalScene());
     }
 
     public IEnumerator FinalScene()
     {
         yield return new WaitForSeconds(1f);
+
         PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;
-        for (int i = 0; i < thingsToSetFalse.Length; i++)
-        {
-            thingsToSetFalse[i].SetActive(false);
-        }
-        secondCamera.SetActive(true);
-        rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
-        buildings.SetActive(true);
         PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.Linear);
+        rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
+
+        secondCamera.SetActive(true);
+        buildings.SetActive(true);
+
+        for (int i = 0; i < thingsToSetFalse.Length; i++)
+            thingsToSetFalse[i].SetActive(false);
+    }
+
+    public void HandleContinueButton()
+    {
+        Menu.Instance.ActivatePreviewScreen();
+        PlayerRocket.Instance.RestartRocket();
+        Menu.Instance.DestroyAllActiveEnemies();
+        secondCamera.SetActive(false);
+        buildings.SetActive(false);
+
+        for (int i = 0; i < thingsToSetTrueAfterWin.Count; i++)
+            thingsToSetTrueAfterWin[i].SetActive(true);
+
+        winPanel.gameObject.SetActive(false);
     }
 }
