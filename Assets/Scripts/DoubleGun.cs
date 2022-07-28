@@ -18,14 +18,12 @@ public class DoubleGun : MonoBehaviour, IShootable
 
     public UnityEvent OnShoot;
     public bool canShoot = true;
-
-    private void Start()
-    {
-        StartCoroutine(ShootRepeatedely());
-    }
+    [SerializeField] private Animator gunAnimator;
+    [SerializeField] private ParticleSystem shootParticle; 
 
     public void AllowShoot()
     {
+        gunAnimator = GetComponent<Animator>();
         canShoot = true;
         StartCoroutine(ShootRepeatedely());
     }
@@ -41,6 +39,8 @@ public class DoubleGun : MonoBehaviour, IShootable
         if (canShoot)
         {
             yield return new WaitForSeconds(timeBetweenShots);
+            gunAnimator.Play("Shoot",0,0);
+            shootParticle.Play();
             var projectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), CommonContainer.Instance.transform);
             var secondProjectile = Instantiate(bulletPrefab, secondMuzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), CommonContainer.Instance.transform);
 

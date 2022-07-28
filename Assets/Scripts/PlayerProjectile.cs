@@ -50,6 +50,7 @@ public class PlayerProjectile : ProjectileBase
     {
         yield return new WaitForSeconds(1.5f);
         var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
+        Destroy(hitParticle,2f);
         Destroy(gameObject);
     }
 }

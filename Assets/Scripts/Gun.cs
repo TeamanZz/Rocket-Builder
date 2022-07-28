@@ -13,14 +13,13 @@ public class Gun : MonoBehaviour, IShootable
     public Transform targetVector;
     public UnityEvent OnShoot;
     public bool canShoot = true;
-
-    private void Start()
-    {
-        StartCoroutine(ShootRepeatedely());
-    }
+    [SerializeField] private Animator gunAnimator;
+    [SerializeField] private ParticleSystem shootParticle;
+    
 
     public void AllowShoot()
     {
+        gunAnimator = GetComponent<Animator>();
         canShoot = true;
         StartCoroutine(ShootRepeatedely());
     }
@@ -36,6 +35,8 @@ public class Gun : MonoBehaviour, IShootable
         if (canShoot)
         {
             yield return new WaitForSeconds(timeBetweenShots);
+            gunAnimator.Play("Shoot",0,0);
+            shootParticle.Play();
             var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), CommonContainer.Instance.transform);
             newProjectile.GetComponent<ProjectileBase>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;
