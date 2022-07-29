@@ -14,6 +14,7 @@ public class StuckWithEnemy : MonoBehaviour
         {
             Instantiate(deathParticle, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             PlayerRocket.Instance.DescreaseHealth(explodeDamage);
+            EnemyManager.Instance.RemoveEnemyFromContainer(gameObject.GetComponentInParent<EnemyBase>());
             Destroy(transform.parent.gameObject);
         }
     }

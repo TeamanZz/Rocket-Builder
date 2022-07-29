@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: -15345440215521862}
   - component: {fileID: 1983813854658912172}
   - component: {fileID: 6048007948651405783}
-  - component: {fileID: 3530267448021752968}
   - component: {fileID: 2944657374914079513}
   m_Layer: 7
   m_Name: Weapon 1
@@ -175,20 +174,6 @@ MonoBehaviour:
   canShoot: 0
   gunAnimator: {fileID: 0}
   shootParticle: {fileID: 8788734292659390240}
---- !u!114 &3530267448021752968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890486460493849665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbf218f5358df94e96e4f97fae7f65c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  objectToRotate: {fileID: 3411309332716017272}
 --- !u!95 &2944657374914079513
 Animator:
   serializedVersion: 3
@@ -475,11 +460,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b16fbb0ff8467fe48870164bd1964f2c, type: 3}
---- !u!1 &3411309332716017272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b16fbb0ff8467fe48870164bd1964f2c, type: 3}
-  m_PrefabInstance: {fileID: 2564252509506792233}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2602156373042203842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b16fbb0ff8467fe48870164bd1964f2c, type: 3}

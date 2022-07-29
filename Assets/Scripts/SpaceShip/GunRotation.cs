@@ -5,20 +5,50 @@ public class GunRotation : MonoBehaviour
 {
     public Transform target;
     [SerializeField] private Transform objectToRotate;
-    public int speed;
+    [SerializeField] private float aimDistance;
+    
+
     private void FixedUpdate()
     {
-        Vector3 relativePos = target.transform.position - objectToRotate.position;
-        Quaternion LookAtRotation = Quaternion.LookRotation(relativePos);
+        if (EnemyManager.Instance.enemiesContainer.Count != 0)
+        {
+            for (int i = 0; i < EnemyManager.Instance.enemiesContainer.Count; i++)
+            {
+                var supposeTarget = EnemyManager.Instance.enemiesContainer[i];
+                if (aimDistance >= supposeTarget.transform.position.y - transform.position.y)
+                {
+                    target = supposeTarget.transform;
+                }
+                else
+                {
+                    DismissTarget();
+                }
+            }
+        }
 
-        Quaternion LookAtRotationOnly_Y = Quaternion.Euler(objectToRotate.rotation.eulerAngles.x, LookAtRotation.eulerAngles.y + 55, objectToRotate.rotation.eulerAngles.z);
-        objectToRotate.rotation = Quaternion.Slerp(objectToRotate.rotation, LookAtRotationOnly_Y, 4 * Time.deltaTime);
+        if (target != null)
+        {
+            if (aimDistance >= (target.position.y - transform.position.y))
+            {
+                LookAtTarget();
+            }
+        }
+        else if(target == null || target.position.y < transform.position.y)
+        {
+            DismissTarget();
+        }
     }
 
-    /*private void LookAtTarget()
+    private void LookAtTarget()
     {
-        Vector3 direction = target.position - objectToRotate.position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        objectToRotate.rotation = Quaternion.Euler(0,180,rotation.z * 10);
-    }*/
+        Vector3 difference = target.position - objectToRotate.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        objectToRotate.transform.rotation = Quaternion.Euler(0.0f, 180f, 90 - rotationZ);
+    }
+
+    private void DismissTarget()
+    {
+        target = null;
+        objectToRotate.transform.rotation = Quaternion.Euler(0, 180, 0);
+    }
 }

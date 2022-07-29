@@ -12,28 +12,31 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/GunRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/Chat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/ChatManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,7 +49,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildingGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" />
@@ -54,11 +56,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
@@ -67,10 +67,17 @@
         <option value="$PROJECT_DIR$/Assets/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoubleGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/GunRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLaucnher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" />
       </list>
     </option>
   </component>
@@ -131,6 +138,8 @@
       <workItem from="1658471448493" duration="8261000" />
       <workItem from="1658480932395" duration="1000" />
       <workItem from="1659015193569" duration="9541000" />
+      <workItem from="1659082763952" duration="11170000" />
+      <workItem from="1659099849466" duration="6631000" />
     </task>
     <servers />
   </component>
@@ -140,10 +149,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="730" y="217" key="RiderGenerateDialog" timestamp="1657795347334">
+    <state x="730" y="217" key="RiderGenerateDialog" timestamp="1659102157090">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="730" y="217" key="RiderGenerateDialog/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1657795347334" />
+    <state x="730" y="217" key="RiderGenerateDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1659102157090" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1658141971579">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

@@ -28,13 +28,15 @@ public class EnemyBase : MonoBehaviour
     private void Start()
     {
         healthBarBg.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
+        EnemyManager.Instance.AddEnemyAtEnemiesContainer(this);
     }
 
     public void DescreaseHealth(float value)
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 || currentHealth - value <= 0)
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
+            EnemyManager.Instance.RemoveEnemyFromContainer(this);
             Destroy(gameObject);
             playerMoney.AddCurrency(enemyReward);
         }

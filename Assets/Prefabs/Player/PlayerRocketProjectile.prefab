@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2484911358586538603}
-  - component: {fileID: 6578654535000497465}
   - component: {fileID: 1546279882366671467}
   - component: {fileID: 1233507857799470615}
+  - component: {fileID: 9183405249765447985}
   m_Layer: 0
   m_Name: PlayerRocketProjectile
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6578654535000497465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896955837630048702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3d73183cffc6a4498c76b6678c6e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  wasCollided: 0
-  hitParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!54 &1546279882366671467
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +63,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9661345, z: 1}
   m_Center: {x: 0, y: 0.5430672, z: 0}
+--- !u!114 &9183405249765447985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896955837630048702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016f2d7e94bb5c2479982061749b50fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  wasCollided: 0
+  hitParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
 --- !u!1 &7657394432723047493
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4057847819350436708}
   - component: {fileID: 7948379478617718902}
   - component: {fileID: 4148325319983276411}
+  - component: {fileID: 435239015414250688}
   m_Layer: 0
   m_Name: RocketProjectile
   m_TagString: Untagged
@@ -160,6 +161,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &435239015414250688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657394432723047493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064375b5f021c2d478f953cb375cad96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: {x: 0, y: 2, z: 0}
 --- !u!1001 &4417602220439438524
 PrefabInstance:
   m_ObjectHideFlags: 0

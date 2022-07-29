@@ -23,12 +23,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2461642261647007099}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016, y: 1, z: -0.175}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.016, y: 0.95, z: 0.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9130321604304303207}
-  m_RootOrder: 2
+  m_Father: {fileID: 2602156373042203842}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2890486460493849665
 GameObject:
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: -6764852549467469340}
   - component: {fileID: -15345440215521862}
   - component: {fileID: 1983813854658912172}
-  - component: {fileID: 6048007948651405783}
+  - component: {fileID: 3409607697405910243}
   - component: {fileID: 2739930025489770396}
   m_Layer: 7
   m_Name: Weapon 3
@@ -64,8 +64,6 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2602156373042203842}
-  - {fileID: 1236035190045244331}
-  - {fileID: 1120007019427678975}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -140,7 +138,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6048007948651405783
+--- !u!114 &3409607697405910243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,33 +147,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890486460493849665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5802a41457051c64f8aa9236a39c1f2a, type: 3}
+  m_Script: {fileID: 11500000, guid: b0824e1dd64c17d4296961896ac3c01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.75
   damage: 7
-  projectileSpeed: 40
+  projectileSpeed: 45
   bulletPrefab: {fileID: 5896955837630048702, guid: 204fac10bec2fcf49b24a299fd85b847, type: 3}
   muzzle: {fileID: 1236035190045244331}
   targetVector: {fileID: 1120007019427678975}
   OnShoot:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 32ce7e835f013fd4498562c6c55ba623, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  canShoot: 0
+      m_Calls: []
+  canShoot: 1
   gunAnimator: {fileID: 0}
   shootParticle: {fileID: 7593799828506822273}
+  target: {fileID: 0}
+  objectToRotate: {fileID: 2602156373042203842}
+  aimDistance: 25
 --- !u!95 &2739930025489770396
 Animator:
   serializedVersion: 3
@@ -218,12 +207,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6335993084900102374}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016, y: 0.603, z: -0.175}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.016, y: 0.553, z: 0.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9130321604304303207}
-  m_RootOrder: 1
+  m_Father: {fileID: 2602156373042203842}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &70566249822743957
 PrefabInstance:

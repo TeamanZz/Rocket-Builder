@@ -409,8 +409,8 @@
           <e p="CameraWidth.cs" t="Include" />
           <e p="CapsuleCharacter.cs" t="Include" />
           <e p="CommonContainer.cs" t="Include" />
-          <e p="DoubleGun.cs" t="Include" />
           <e p="Enemy" t="Include">
+            <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMoving.cs" t="Include" />
             <e p="EnemyProjectile.cs" t="Include" />
             <e p="EnemyRotation.cs" t="Include" />
@@ -423,7 +423,6 @@
           <e p="EnemyBase.cs" t="Include" />
           <e p="EventType.cs" t="Include" />
           <e p="GameStateHandler.cs" t="Include" />
-          <e p="Gun.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
           <e p="IShootable.cs" t="Include" />
           <e p="ItemsListHandler.cs" t="Include" />
@@ -450,12 +449,17 @@
           <e p="RocketRotator.cs" t="Include" />
           <e p="SFX.cs" t="Include" />
           <e p="Space" t="Include">
+            <e p="EnemyManager.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemPickUp.cs" t="Include" />
           </e>
           <e p="SpaceShip" t="Include">
+            <e p="DoubleGun.cs" t="Include" />
+            <e p="Gun.cs" t="Include" />
             <e p="GunRotation.cs" t="Include" />
             <e p="Money.cs" t="Include" />
+            <e p="RocketLauncher.cs" t="Include" />
+            <e p="RocketProjectile.cs" t="Include" />
             <e p="SpaceShipHealth.cs" t="Include" />
             <e p="SpaceShipMovement.cs" t="Include" />
           </e>
