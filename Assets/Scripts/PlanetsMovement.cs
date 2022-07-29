@@ -5,17 +5,17 @@ using DG.Tweening;
 
 public class PlanetsMovement : MonoBehaviour
 {
-    public float minSpeed;
-    public float maxSpeed;
+    [HideInInspector] public float minSpeed;
+    [HideInInspector] public float maxSpeed;
 
     public float rotateValue;
     private void OnEnable()
     {
-        rotateValue = Random.Range(minSpeed, maxSpeed);
+        // rotateValue = Random.Range(minSpeed, maxSpeed);
     }
 
     private void Update()
     {
-        transform.Rotate(0, 0, 30 * Time.deltaTime);
+        transform.Rotate(0, 0, rotateValue * Time.deltaTime);
     }
 }

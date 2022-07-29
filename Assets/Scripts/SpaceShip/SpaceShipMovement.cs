@@ -20,13 +20,14 @@ public class SpaceShipMovement : MonoBehaviour
 
     [field: SerializeField] public Transform spawnEnemyPosition { get; private set; }
 
-    [SerializeField] private Transform endEnemiesPosition;
     public static SpaceShipMovement Instance;
 
     private Tween velocityTween;
     private Tween sideSpeedTween;
 
     public bool playerCanControl = true;
+
+    public float rocketTrueSpeed;
 
     private void Awake()
     {
@@ -37,8 +38,17 @@ public class SpaceShipMovement : MonoBehaviour
 
     public void SetNewValues(float newMoveSpeedValue)
     {
-        constantVelocity = defaultConstantVelocity + newMoveSpeedValue;
         sideSpeed = defaultSideSpeed + (newMoveSpeedValue * 1.1f);
+        transform.DOScale(new Vector3(2.2f, 1.8f, 2), 0.5f).SetEase(Ease.OutBack).SetLoops(2, LoopType.Yoyo);
+        var velocitySeq = DOTween.Sequence();
+        velocitySeq.Append(DOTween.To(() => constantVelocity, x => constantVelocity = x, defaultConstantVelocity * 2 + newMoveSpeedValue, 1f).SetEase(Ease.InBack));
+        velocitySeq.Append(DOTween.To(() => constantVelocity, x => constantVelocity = x, defaultConstantVelocity + newMoveSpeedValue, 2f));
+        rocketTrueSpeed = defaultConstantVelocity + newMoveSpeedValue;
+    }
+
+    public float GetTrueSpeed()
+    {
+        return rocketTrueSpeed;
     }
 
     public void SetZeroVariables()

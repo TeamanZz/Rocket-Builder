@@ -17,32 +17,25 @@ public class PlayerRocket : MonoBehaviour
     [SerializeField] public float currentFuel;
     [SerializeField] public float currentShield;
     [SerializeField] private float fuelDecreaseMultiplier;
-    [Space(20)]
     [SerializeField] private Image playerFuelBar;
     [SerializeField] private Image playerShieldBar;
     [SerializeField] private TextMeshProUGUI shieldBarText;
-    [Space(20)]
     [SerializeField] private float oneHitFuelBarFill;
     [SerializeField] private float oneHitShieldBarFill;
-    [Space(20)]
     public GameObject shieldParticle;
     [SerializeField] private ParticleSystem destroyShieldParticlePrefab;
     [SerializeField] private BuildingGrid buildingGrid;
     public bool isPlayerOnPlanet;
-
     [Header("WinLoseCondition")]
     private Vector3 startRocketPos;
     [SerializeField] private GameObject loseScreen;
     public Transform rocketContainer;
-
     public GameObject lowFuelIndication;
     private bool lowFuelEnabled;
-
     public Rigidbody rb;
-
     public Cinemachine.CinemachineVirtualCamera cineCamera;
-
     public bool isDead;
+    public Gradient fuelGraident;
 
     private void Awake()
     {
@@ -71,6 +64,8 @@ public class PlayerRocket : MonoBehaviour
     {
         playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
         playerShieldBar.fillAmount = oneHitShieldBarFill * currentShield;
+
+        playerFuelBar.color = fuelGraident.Evaluate(playerFuelBar.fillAmount);
 
         if (!isPlayerOnPlanet)
             currentFuel -= Time.fixedDeltaTime * fuelDecreaseMultiplier;
