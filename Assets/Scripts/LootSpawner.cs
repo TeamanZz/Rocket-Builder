@@ -6,19 +6,26 @@ public class LootSpawner : MonoBehaviour
 {
     public float minLocalY;
     public float maxLocalY;
-
+    [Space]
     public float minLocalX;
     public float maxLocalX;
-
+    [Space]
+    public int maxDuplicatesAllowed = 5;
+    public int currentDuplicatesValue = 0;
+    [Space]
     public GameObject lootPrefab;
     public Transform lootContainer;
 
     private void Start()
     {
-        SpawnLootMeteor();
+        // var randValue = Random.Range(0, 101);
+        // if (randValue <= spawnChance)
+        if (currentDuplicatesValue < maxDuplicatesAllowed)
+            SpawnLootMeteor();
     }
     public void SpawnLootMeteor()
     {
+        currentDuplicatesValue++;
         float localY = Random.Range(minLocalY, maxLocalY);
         float localX = Random.Range(minLocalX, maxLocalX);
 

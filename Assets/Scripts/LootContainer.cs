@@ -15,7 +15,7 @@ public class LootContainer : MonoBehaviour
     [SerializeField] private Image healthBarBg;
     private float oneHitHealthBarFill;
     private Money playerMoney;
-
+    private bool isDead;
     private void Awake()
     {
         playerMoney = FindObjectOfType<Money>();
@@ -31,8 +31,12 @@ public class LootContainer : MonoBehaviour
 
     public void DescreaseHealth(float value)
     {
+        if (isDead)
+            return;
+
         if (currentHealth <= 0)
         {
+            isDead = true;
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Instantiate(lootGameobject, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             playerMoney.AddCurrency(enemyReward);

@@ -52,7 +52,7 @@ public class Win : MonoBehaviour
         PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;
-        PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.Linear);
+        PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.OutBack);
         rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
 
         secondCamera.SetActive(true);

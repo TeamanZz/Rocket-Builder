@@ -36,6 +36,9 @@ public class LevelProgress : MonoBehaviour
 
     public void StartHeightBarFilling()
     {
+        var speed = SpaceShipMovement.Instance.GetTrueSpeed();
+        var distance = LevelsHandler.Instance.GetTargetPlanetPosition();
+        fillTime = distance / speed;
         iconTween = icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
         fillbarTween = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
         Totween = DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);

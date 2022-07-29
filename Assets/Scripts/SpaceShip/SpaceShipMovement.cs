@@ -27,6 +27,8 @@ public class SpaceShipMovement : MonoBehaviour
 
     public bool playerCanControl = true;
 
+    public float rocketTrueSpeed;
+
     private void Awake()
     {
         Instance = this;
@@ -41,6 +43,12 @@ public class SpaceShipMovement : MonoBehaviour
         var velocitySeq = DOTween.Sequence();
         velocitySeq.Append(DOTween.To(() => constantVelocity, x => constantVelocity = x, defaultConstantVelocity * 2 + newMoveSpeedValue, 1f).SetEase(Ease.InBack));
         velocitySeq.Append(DOTween.To(() => constantVelocity, x => constantVelocity = x, defaultConstantVelocity + newMoveSpeedValue, 2f));
+        rocketTrueSpeed = defaultConstantVelocity + newMoveSpeedValue;
+    }
+
+    public float GetTrueSpeed()
+    {
+        return rocketTrueSpeed;
     }
 
     public void SetZeroVariables()
