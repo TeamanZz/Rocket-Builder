@@ -237,7 +237,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &15272074
 PrefabInstance:
@@ -479,7 +479,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &15480869
 Rigidbody:
@@ -517,7 +517,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &15480871
@@ -531,7 +531,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &17781846
 GameObject:
@@ -898,7 +898,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &46653123
 Rigidbody:
@@ -936,7 +936,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &46653125
@@ -950,7 +950,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &49329405
 GameObject:
@@ -1225,12 +1225,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &68354721
@@ -1244,7 +1243,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &77888351
 GameObject:
@@ -1277,7 +1276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &77888353
 Rigidbody:
@@ -1314,8 +1313,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &77888355
@@ -1329,7 +1328,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &78372527
 GameObject:
@@ -1414,7 +1413,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &87444058 stripped
 GameObject:
@@ -1457,7 +1456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &93685322
 Rigidbody:
@@ -1495,7 +1494,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &93685324
@@ -1509,7 +1508,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &113530962
 GameObject:
@@ -1806,12 +1805,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &120413175
@@ -1825,7 +1823,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &122429915
 GameObject:
@@ -1944,6 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130663536}
   - component: {fileID: 130663538}
+  - component: {fileID: 130663537}
   m_Layer: 0
   m_Name: Loot Spawn Trigger
   m_TagString: Untagged
@@ -1959,12 +1958,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130663535}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 234.1, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1199679695}
-  m_RootOrder: 40
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &130663537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130663535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
+  m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!114 &130663538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1978,13 +1990,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minLocalY: 60
-  maxLocalY: 230
+  maxLocalY: 110
   minLocalX: -3
   maxLocalX: 3
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
   lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
   lootContainer: {fileID: 1115710333}
+  wasSpawned: 0
 --- !u!1 &138290629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2475,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &167609669
 GameObject:
@@ -2610,7 +2623,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &181868006
 GameObject:
@@ -2901,7 +2914,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &219956257 stripped
 Transform:
@@ -2991,7 +3004,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &235416508
 GameObject:
@@ -3310,7 +3323,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &269488969
 GameObject:
@@ -3395,7 +3408,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &278603287 stripped
 Transform:
@@ -3760,7 +3773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &296422351
 Rigidbody:
@@ -3798,7 +3811,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &296422353
@@ -3812,7 +3825,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &296456232
 GameObject:
@@ -3878,12 +3891,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &296456236
@@ -3897,7 +3909,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &298365157
 GameObject:
@@ -3974,6 +3986,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298365157}
   m_CullTransparentMesh: 1
+--- !u!1001 &307195738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 328027231}
+    m_Modifications:
+    - target: {fileID: 1019326057566698, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_Name
+      value: WindlinesSpeedy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.9659
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.9659
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.9659023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 217
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: simulationSpeed
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 255.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxGradient.key1.a
+      value: 0.7921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxGradient.key2.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f683447c6570076418716c53d120168a, type: 3}
 --- !u!1 &309720882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,7 +4118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &309720884
 Rigidbody:
@@ -4043,7 +4156,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &309720886
@@ -4057,7 +4170,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &310782560 stripped
 Transform:
@@ -4265,7 +4378,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &326968783
@@ -4279,7 +4392,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &327093699
 GameObject:
@@ -4385,6 +4498,8 @@ Transform:
   m_Children:
   - {fileID: 1097753422}
   - {fileID: 664080138}
+  - {fileID: 863708684}
+  - {fileID: 703723969}
   m_Father: {fileID: 1971422514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4419,7 +4534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &330608144
 Rigidbody:
@@ -4456,8 +4571,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &330608146
@@ -4471,7 +4586,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &353902353
 GameObject:
@@ -4504,7 +4619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &353902355
 Rigidbody:
@@ -4541,8 +4656,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &353902357
@@ -4556,7 +4671,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &356278619
 GameObject:
@@ -4926,7 +5041,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -4945,7 +5059,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &420490683
 GameObject:
@@ -5091,7 +5205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &424858169
 Rigidbody:
@@ -5129,7 +5243,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &424858171
@@ -5143,7 +5257,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &426429518
 GameObject:
@@ -5228,7 +5342,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &436482778
 GameObject:
@@ -5743,7 +5857,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -5762,7 +5875,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &515663805
 GameObject:
@@ -5795,7 +5908,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &515663807
 Rigidbody:
@@ -5833,7 +5946,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &515663809
@@ -5847,7 +5960,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &522568797
 GameObject:
@@ -5988,12 +6101,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &523378217
@@ -6007,7 +6119,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &525963018
 GameObject:
@@ -6125,7 +6237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &529838324
 Rigidbody:
@@ -6163,7 +6275,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &529838326
@@ -6177,7 +6289,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &543414744
 GameObject:
@@ -6627,7 +6739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &568084669
 Rigidbody:
@@ -6664,7 +6776,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -6679,7 +6791,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &576950500
 GameObject:
@@ -6712,7 +6824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &576950502
 Rigidbody:
@@ -6750,7 +6862,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &576950504
@@ -6764,7 +6876,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &585362894
 GameObject:
@@ -6797,7 +6909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &585362896
 Rigidbody:
@@ -6835,7 +6947,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &585362898
@@ -6849,7 +6961,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &590770639
 GameObject:
@@ -7498,7 +7610,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &640399286
 GameObject:
@@ -7583,7 +7695,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &650288161 stripped
 Transform:
@@ -7729,7 +7841,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -7748,7 +7859,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &664080137
 GameObject:
@@ -7803,7 +7914,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664080137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7815,7 +7926,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7909,7 +8020,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -7928,7 +8038,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &675322242
 GameObject:
@@ -8036,7 +8146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &677789309
 Rigidbody:
@@ -8074,7 +8184,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &677789311
@@ -8088,7 +8198,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &678706968
 GameObject:
@@ -8138,12 +8248,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &678706971
@@ -8157,7 +8266,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!54 &678706972
 Rigidbody:
@@ -8319,7 +8428,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &679926003
@@ -8333,7 +8442,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &679951390
 GameObject:
@@ -8441,7 +8550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &681114668
 Rigidbody:
@@ -8479,7 +8588,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &681114670
@@ -8493,7 +8602,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &690083084
 GameObject:
@@ -8526,7 +8635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &690083086
 Rigidbody:
@@ -8564,7 +8673,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &690083088
@@ -8578,7 +8687,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &695454425
 PrefabInstance:
@@ -8879,6 +8988,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1356649538613712522, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
   m_PrefabInstance: {fileID: 695454425}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &703723969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
+  m_PrefabInstance: {fileID: 307195738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716274629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9022,7 +9136,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -9037,7 +9151,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &728405049
 GameObject:
@@ -9279,7 +9393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &738635486
 Rigidbody:
@@ -9317,7 +9431,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &738635488
@@ -9331,7 +9445,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &739306326
 GameObject:
@@ -9397,12 +9511,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &739306330
@@ -9416,7 +9529,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &749597985
 GameObject:
@@ -9726,7 +9839,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &765498835
 PrefabInstance:
@@ -10113,7 +10226,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &771923330
 GameObject:
@@ -10146,7 +10259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &771923332
 Rigidbody:
@@ -10184,7 +10297,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &771923334
@@ -10198,7 +10311,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &785106763 stripped
 GameObject:
@@ -10385,7 +10498,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &814972941
 GameObject:
@@ -10451,7 +10564,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -10470,7 +10582,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &815425703
 GameObject:
@@ -10653,7 +10765,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &820434131
 Rigidbody:
@@ -10691,7 +10803,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &820434133
@@ -10705,7 +10817,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &820887874
 GameObject:
@@ -10870,11 +10982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2365906492827410286, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: m_Name
@@ -11066,7 +11178,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -11085,7 +11196,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &851666885
 PrefabInstance:
@@ -11544,7 +11655,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &879907191
 GameObject:
@@ -11740,7 +11851,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &882644131
 GameObject:
@@ -12035,7 +12146,6 @@ Transform:
   - {fileID: 679926000}
   - {fileID: 1123426894}
   - {fileID: 326968780}
-  - {fileID: 1493856229}
   - {fileID: 424858168}
   - {fileID: 1230808042}
   - {fileID: 1525695833}
@@ -12056,6 +12166,7 @@ Transform:
   - {fileID: 1243251055}
   - {fileID: 1004268019}
   - {fileID: 1517168681}
+  - {fileID: 1493856229}
   m_Father: {fileID: 1072444631}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12106,7 +12217,6 @@ Transform:
   - {fileID: 1831604891}
   - {fileID: 2127662974}
   - {fileID: 1047570763}
-  - {fileID: 1383840868}
   - {fileID: 568084668}
   - {fileID: 1504843080}
   - {fileID: 576950501}
@@ -12127,6 +12237,7 @@ Transform:
   - {fileID: 15480868}
   - {fileID: 952065019}
   - {fileID: 46653122}
+  - {fileID: 1383840868}
   m_Father: {fileID: 1072444631}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12301,12 +12412,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &940372301
@@ -12320,7 +12430,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &941176922
 GameObject:
@@ -12502,7 +12612,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &952065020
 Rigidbody:
@@ -12540,7 +12650,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &952065022
@@ -12554,7 +12664,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &953105964
 PrefabInstance:
@@ -12847,12 +12957,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &965117059
@@ -12866,7 +12975,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &971762047
 GameObject:
@@ -13012,12 +13121,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &974486142
@@ -13031,7 +13139,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1004268018
 GameObject:
@@ -13064,7 +13172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1004268020
 Rigidbody:
@@ -13101,8 +13209,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1004268022
@@ -13116,7 +13224,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &1010063373 stripped
 Transform:
@@ -13601,7 +13709,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -13616,7 +13724,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1056060567
 GameObject:
@@ -13724,7 +13832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1057712022
 Rigidbody:
@@ -13762,7 +13870,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1057712024
@@ -13776,7 +13884,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &1060264111
 PrefabInstance:
@@ -14019,7 +14127,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1072444630
 GameObject:
@@ -14107,7 +14215,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097753421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14213,12 +14321,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1098490429
@@ -14232,7 +14339,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1098672931
 GameObject:
@@ -14994,7 +15101,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1123426897
@@ -15008,7 +15115,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1128955423
 GameObject:
@@ -15451,12 +15558,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1148496184
@@ -15470,92 +15576,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!1 &1157962266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1157962267}
-  - component: {fileID: 1157962270}
-  - component: {fileID: 1157962269}
-  - component: {fileID: 1157962268}
-  m_Layer: 0
-  m_Name: SpawnTrigger (35)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1157962267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157962266}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 259.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1199679695}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1157962268
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157962266}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1157962269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157962266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
-  randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &1157962270
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157962266}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1163571436
 GameObject:
@@ -15588,7 +15609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1163571438
 Rigidbody:
@@ -15626,7 +15647,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1163571440
@@ -15640,7 +15661,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1165061444
 GameObject:
@@ -15985,8 +16006,6 @@ Transform:
   - {fileID: 498274623}
   - {fileID: 814972942}
   - {fileID: 639859187}
-  - {fileID: 1518603129}
-  - {fileID: 1157962267}
   - {fileID: 130663536}
   m_Father: {fileID: 1072444631}
   m_RootOrder: 0
@@ -16074,7 +16093,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1204505429
 GameObject:
@@ -16144,7 +16163,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -16159,7 +16178,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1206511748
 GameObject:
@@ -16244,7 +16263,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1211825846
 GameObject:
@@ -16352,7 +16371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1217915718
 Rigidbody:
@@ -16390,7 +16409,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1217915720
@@ -16404,7 +16423,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1218285618
 GameObject:
@@ -16564,7 +16583,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1224267713
 GameObject:
@@ -16783,7 +16802,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1227742236
 GameObject:
@@ -16833,12 +16852,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1227742239
@@ -16852,7 +16870,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!54 &1227742240
 Rigidbody:
@@ -16966,7 +16984,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1230808043
 Rigidbody:
@@ -17004,7 +17022,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1230808045
@@ -17018,7 +17036,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1238948523
 GameObject:
@@ -17143,12 +17161,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1239992627
@@ -17162,7 +17179,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!54 &1239992628
 Rigidbody:
@@ -17211,7 +17228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1243251056
 Rigidbody:
@@ -17248,8 +17265,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1243251058
@@ -17263,7 +17280,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &1255407101
 PrefabInstance:
@@ -17460,11 +17477,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 35
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
@@ -17966,12 +17983,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1272354905
@@ -17985,7 +18001,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1273176671
 GameObject:
@@ -18553,7 +18569,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1534695262}
+    m_TransformParent: {fileID: 328027231}
     m_Modifications:
     - target: {fileID: 1019326057566698, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_Name
@@ -18561,31 +18577,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.9658997
+      value: 2.9659
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9658997
+      value: 2.9659
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.9659007
+      value: 2.9659023
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.7
+      value: 217
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18617,11 +18633,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: simulationSpeed
-      value: 0.4
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 2.74
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: ShapeModule.m_Scale.z
@@ -18629,7 +18649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+      value: 255.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 198893393215934218, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: TrailModule.colorOverLifetime.maxGradient.key1.a
@@ -19150,7 +19174,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -19169,7 +19192,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1349966238
 GameObject:
@@ -19446,7 +19469,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1370317085
 GameObject:
@@ -19698,12 +19721,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1375963165
@@ -19717,7 +19739,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1376962922
 GameObject:
@@ -19806,6 +19828,7 @@ GameObject:
   - component: {fileID: 1383840871}
   - component: {fileID: 1383840870}
   - component: {fileID: 1383840869}
+  - component: {fileID: 1383840872}
   m_Layer: 0
   m_Name: Loot Spawn Trigger
   m_TagString: Untagged
@@ -19821,11 +19844,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383840867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.8, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 20
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1383840869
 MonoBehaviour:
@@ -19847,6 +19870,7 @@ MonoBehaviour:
   currentDuplicatesValue: 0
   lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
   lootContainer: {fileID: 1115710333}
+  wasSpawned: 0
 --- !u!54 &1383840870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19874,8 +19898,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
+--- !u!65 &1383840872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383840867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1388696169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2697182919837054165, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
@@ -20596,7 +20633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1433948853
 Rigidbody:
@@ -20633,8 +20670,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1433948855
@@ -20648,7 +20685,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1435554852
 GameObject:
@@ -20936,7 +20973,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -20955,7 +20991,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!114 &1457460054 stripped
 MonoBehaviour:
@@ -21032,7 +21068,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -21051,7 +21086,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1466981526
 GameObject:
@@ -21159,7 +21194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1473989496
 Rigidbody:
@@ -21196,8 +21231,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1473989498
@@ -21211,7 +21246,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1484724985
 GameObject:
@@ -21309,6 +21344,7 @@ GameObject:
   - component: {fileID: 1493856232}
   - component: {fileID: 1493856231}
   - component: {fileID: 1493856230}
+  - component: {fileID: 1493856233}
   m_Layer: 0
   m_Name: Loot Spawn Trigger
   m_TagString: Untagged
@@ -21324,11 +21360,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493856228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.8, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 20
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1493856230
 MonoBehaviour:
@@ -21350,6 +21386,7 @@ MonoBehaviour:
   currentDuplicatesValue: 0
   lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
   lootContainer: {fileID: 1115710333}
+  wasSpawned: 0
 --- !u!54 &1493856231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21377,8 +21414,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
+--- !u!65 &1493856233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493856228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1496312028
 GameObject:
   m_ObjectHideFlags: 0
@@ -21485,7 +21535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1504843081
 Rigidbody:
@@ -21522,7 +21572,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -21537,7 +21587,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1509527544
 GameObject:
@@ -21682,7 +21732,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -21697,7 +21747,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1517168680
 GameObject:
@@ -21730,7 +21780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1517168682
 Rigidbody:
@@ -21767,8 +21817,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1517168684
@@ -21782,92 +21832,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!1 &1518603128
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1518603129}
-  - component: {fileID: 1518603132}
-  - component: {fileID: 1518603131}
-  - component: {fileID: 1518603130}
-  m_Layer: 0
-  m_Name: SpawnTrigger (34)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1518603129
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518603128}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 252.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1199679695}
-  m_RootOrder: 38
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1518603130
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518603128}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1518603131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518603128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
-  randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &1518603132
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518603128}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1520730700
 GameObject:
@@ -21980,7 +21945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1525695834
 Rigidbody:
@@ -22018,7 +21983,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1525695836
@@ -22032,7 +21997,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1528077732
 GameObject:
@@ -22237,7 +22202,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1528256938
@@ -22251,7 +22216,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1528483890
 GameObject:
@@ -22321,7 +22286,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -22336,7 +22301,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &1530104892
 PrefabInstance:
@@ -22506,7 +22471,6 @@ Transform:
   m_LocalPosition: {x: 4, y: 116, z: 5.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 863708684}
   - {fileID: 1522008469}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -22652,7 +22616,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -22671,7 +22634,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1558215971
 GameObject:
@@ -23243,12 +23206,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1600881778
@@ -23262,7 +23224,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1603628099
 GameObject:
@@ -24289,7 +24251,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -24308,7 +24269,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1695345011
 GameObject:
@@ -24455,7 +24416,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -24474,7 +24434,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1706514382
 GameObject:
@@ -24507,7 +24467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1706514384
 Rigidbody:
@@ -24544,8 +24504,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1706514386
@@ -24559,7 +24519,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1710663257
 GameObject:
@@ -24653,7 +24613,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1733377885
 Rigidbody:
@@ -24690,8 +24650,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1733377887
@@ -24705,7 +24665,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1740710832
 GameObject:
@@ -24801,12 +24761,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1744259003
@@ -24820,7 +24779,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1748502446
 GameObject:
@@ -25037,12 +24996,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1754169832
@@ -25056,7 +25014,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1755045206
 GameObject:
@@ -25202,7 +25160,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1756032585
@@ -25216,7 +25174,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1763325607
 GameObject:
@@ -25666,12 +25624,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1772440050
@@ -25685,7 +25642,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1784996155
 GameObject:
@@ -25870,7 +25827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1794776048
 Rigidbody:
@@ -25908,7 +25865,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1794776050
@@ -25922,7 +25879,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &1799516054
 PrefabInstance:
@@ -26168,7 +26125,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &1814786467 stripped
 Transform:
@@ -26281,7 +26238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1820490773
 Rigidbody:
@@ -26319,7 +26276,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1820490775
@@ -26333,7 +26290,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1825110076
 GameObject:
@@ -26563,7 +26520,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -26578,7 +26535,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &1841404556
 PrefabInstance:
@@ -26764,7 +26721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1845961106
 Rigidbody:
@@ -26801,8 +26758,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1845961108
@@ -26816,7 +26773,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &1858987932 stripped
 Transform:
@@ -26891,7 +26848,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -26906,7 +26863,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1868829731
 GameObject:
@@ -27298,7 +27255,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1894107937
 GameObject:
@@ -28012,6 +27969,8 @@ MonoBehaviour:
   - {fileID: 543521014}
   thingsToSetTrueAfterWin:
   - {fileID: 1534695261}
+  - {fileID: 882644131}
+  - {fileID: 1540980760}
   secondCamera: {fileID: 1588815476}
   startPos: {fileID: 1042458327}
   finalPos: {fileID: 1364372624}
@@ -28375,7 +28334,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1935256844
 Rigidbody:
@@ -28412,8 +28371,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1935256846
@@ -28427,7 +28386,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1935824226
 GameObject:
@@ -28861,7 +28820,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1955571272
 GameObject:
@@ -28946,7 +28905,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1970880762
 GameObject:
@@ -29031,7 +28990,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1971422513
 GameObject:
@@ -29115,12 +29074,11 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1990465256
@@ -29134,7 +29092,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!54 &1990465257
 Rigidbody:
@@ -29561,7 +29519,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!4 &2042518484 stripped
 Transform:
@@ -29828,7 +29786,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -29847,7 +29804,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &2061054213
 PrefabInstance:
@@ -29953,7 +29910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 895505243}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2065397479
 Rigidbody:
@@ -29990,8 +29947,8 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
+  minEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &2065397481
@@ -30005,7 +29962,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2075607324
 GameObject:
@@ -30090,7 +30047,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1001 &2078041028
 PrefabInstance:
@@ -30296,7 +30253,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -30311,7 +30268,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2094507203
 GameObject:
@@ -30377,7 +30334,6 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
-  - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -12
   maxXpPosition: 12
@@ -30396,7 +30352,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2094738022
 GameObject:
@@ -30481,7 +30437,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2111351395
 GameObject:
@@ -30514,7 +30470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 898008738}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2111351397
 Rigidbody:
@@ -30552,7 +30508,7 @@ MonoBehaviour:
   minXPosition: -3
   maxXpPosition: 3
   minEnemiesCount: 1
-  maxEnemiesCount: 2
+  maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &2111351399
@@ -30566,7 +30522,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2117168276
 GameObject:
@@ -30643,6 +30599,7 @@ MonoBehaviour:
   - {fileID: 1239992626}
   - {fileID: 678706970}
   - {fileID: 1990465255}
+  lootTriggers: []
   enemiesContainer: {fileID: 1115710333}
 --- !u!114 &2117168279
 MonoBehaviour:
@@ -30701,7 +30658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df30a1264c5523f42b04fc7d49ef4823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyValue: 10000
+  currencyValue: 0
   currencyText: {fileID: 65242397}
 --- !u!114 &2117168282
 MonoBehaviour:
@@ -30739,6 +30696,10 @@ MonoBehaviour:
   - 300
   - 320
   targetDistancesUI: f00a0000b80b0000800c0000
+  skyboxes:
+  - {fileID: 2100000, guid: dea6b9c1bcbc448ad97333c375aada1d, type: 2}
+  - {fileID: 2100000, guid: 6c154636a358e41b4bcc5d4158c4c529, type: 2}
+  - {fileID: 2100000, guid: 8e0dbbb3ffcf0401f97b4722ac49f215, type: 2}
 --- !u!114 &2117168283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30970,7 +30931,7 @@ MonoBehaviour:
   randomizePosition: {x: 0, y: 32, z: 6.8671}
   minXPosition: -3
   maxXpPosition: 3
-  minEnemiesCount: 1
+  minEnemiesCount: 2
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
   wasSpawned: 0
@@ -30985,7 +30946,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.262184, y: 0.19336796, z: 6.7254634}
+  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2133514174
 GameObject:

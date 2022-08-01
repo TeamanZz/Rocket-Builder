@@ -15,14 +15,22 @@ public class LootSpawner : MonoBehaviour
     [Space]
     public GameObject lootPrefab;
     public Transform lootContainer;
+    public bool wasSpawned;
 
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        // var randValue = Random.Range(0, 101);
-        // if (randValue <= spawnChance)
-        if (currentDuplicatesValue < maxDuplicatesAllowed)
-            SpawnLootMeteor();
+        if (wasSpawned)
+            return;
+
+        BuildItem buildItem;
+        if (other.TryGetComponent<BuildItem>(out buildItem))
+        {
+            wasSpawned = true;
+            if (currentDuplicatesValue < maxDuplicatesAllowed)
+                SpawnLootMeteor();
+        }
     }
+
     public void SpawnLootMeteor()
     {
         currentDuplicatesValue++;

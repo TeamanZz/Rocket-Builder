@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  placingItemUI: {fileID: 0}
+  Size: {x: 1, y: 1}
+  itemType: 3
   renderers:
   - {fileID: 1884825211771882447}
   - {fileID: 8976514325310205068}
-  Size: {x: 1, y: 1}
-  placedPosition: {x: 1, y: 1}
   connectors:
   - {x: 0, y: 1}
   - {x: 1, y: 0}
@@ -94,10 +95,9 @@ MonoBehaviour:
   - {fileID: 1589158031329708672}
   - {fileID: 6765040308798690885}
   - {fileID: 397049779857260433}
-  <placingItemUI>k__BackingField: {fileID: 0}
   isMainRocketPiece: 0
   isMainCapsule: 0
-  itemType: 3
+  placedPosition: {x: 1, y: 1}
 --- !u!114 &-15345440215521862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenShots: 0.75
   damage: 7
-  projectileSpeed: 45
+  projectileSpeed: 30
   bulletPrefab: {fileID: 5896955837630048702, guid: 204fac10bec2fcf49b24a299fd85b847, type: 3}
   muzzle: {fileID: 1236035190045244331}
   targetVector: {fileID: 1120007019427678975}

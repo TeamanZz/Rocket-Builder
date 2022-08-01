@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d164b960aeaf0fc4894baa8460307326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 4
+  startHealth: 5
   enemyReward: 15
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   healthBar: {fileID: 925957756702158038}
@@ -505,6 +505,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   canShoot: 1
+  gunAnimator: {fileID: 0}
+  shootParticle: {fileID: 0}
 --- !u!1 &925957755748685530
 GameObject:
   m_ObjectHideFlags: 0

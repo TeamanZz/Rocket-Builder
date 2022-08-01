@@ -18,6 +18,8 @@ public class LevelsHandler : MonoBehaviour
     public List<float> targetPlanetYPosition = new List<float>();
     public List<int> targetDistancesUI = new List<int>();
 
+    public List<Material> skyboxes = new List<Material>();
+
     private void Awake()
     {
         Instance = this;
@@ -38,9 +40,24 @@ public class LevelsHandler : MonoBehaviour
         RandomSpawner spawner;
         for (var i = 0; i < levelTriggersContainer[currentLevelIndex].transform.childCount - 1; i++)
         {
-
             if (levelTriggersContainer[currentLevelIndex].transform.GetChild(i).TryGetComponent<RandomSpawner>(out spawner))
                 currentTriggers.Add(spawner);
+        }
+        return currentTriggers;
+    }
+
+    public List<LootSpawner> GetCurrentLootTriggers()
+    {
+        List<LootSpawner> currentTriggers = new List<LootSpawner>();
+        LootSpawner spawner;
+        for (var i = 0; i < levelTriggersContainer[currentLevelIndex].transform.childCount; i++)
+        {
+
+            if (levelTriggersContainer[currentLevelIndex].transform.GetChild(i).TryGetComponent<LootSpawner>(out spawner))
+            {
+                Debug.Log("heh");
+                currentTriggers.Add(spawner);
+            }
         }
         return currentTriggers;
     }
@@ -60,5 +77,6 @@ public class LevelsHandler : MonoBehaviour
         targetPlanetsContainer[currentLevelIndex].SetActive(true);
         levelTriggersContainer[currentLevelIndex].SetActive(true);
         targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
+        RenderSettings.skybox = skyboxes[currentLevelIndex];
     }
 }

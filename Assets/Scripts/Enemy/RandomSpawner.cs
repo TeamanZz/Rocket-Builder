@@ -36,7 +36,7 @@ public class RandomSpawner : MonoBehaviour
     {
         int posX = Random.Range(minXPosition, maxXpPosition + 1);
         var posY = SpaceShipMovement.Instance.gameObject.transform.position.y;
-        int index = Random.Range(1, enemiesPrefabs.Length);
+        int index = Random.Range(0, enemiesPrefabs.Length);
         Instantiate(enemiesPrefabs[index], new Vector3(transform.position.x + posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity).transform.parent = enemiesParent;
     }
 }

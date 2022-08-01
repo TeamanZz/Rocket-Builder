@@ -43,19 +43,19 @@ public class EnemyBase : MonoBehaviour
         else
         {
             currentHealth -= value;
-            RemoveHealth();
-            healthBar.fillAmount = oneHitHealthBarFill * currentHealth;
+            var newFillAmount = currentHealth / startHealth;
+            RemoveHealth(newFillAmount);
         }
 
         float randValue = Random.Range(-0.1f, 0.1f);
-        transform.DOPunchScale(new Vector3(randValue, randValue, randValue), 0.1f).SetEase(Ease.InBack);
+        transform.DOPunchScale(Vector3.one * randValue, 0.1f).SetEase(Ease.InBack);
 
         SFX.Instance.PlayHitSound(gameObject);
     }
 
-    public void RemoveHealth()
+    public void RemoveHealth(float newValue)
     {
-        DOTween.To(x => healthBar.fillAmount = x, (currentHealth * oneHitHealthBarFill),
-            (currentHealth * oneHitHealthBarFill) - oneHitHealthBarFill, 0.1f);
+        DOTween.To(x => healthBar.fillAmount = x, healthBar.fillAmount,
+            newValue, 0.1f);
     }
 }

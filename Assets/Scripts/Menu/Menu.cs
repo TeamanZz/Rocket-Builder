@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
     public List<GameObject> objectsToDisableFly = new List<GameObject>();
 
     public List<RandomSpawner> triggers = new List<RandomSpawner>();
+    public List<LootSpawner> lootTriggers = new List<LootSpawner>();
     public Transform enemiesContainer;
 
     private void Awake()
@@ -30,9 +31,19 @@ public class Menu : MonoBehaviour
         triggers = newList;
     }
 
+    public void SetNewLootTriggers(List<LootSpawner> newList)
+    {
+        lootTriggers = newList;
+    }
+
     public void ResetAllTriggers()
     {
         foreach (var item in triggers)
+        {
+            item.wasSpawned = false;
+        }
+
+        foreach (var item in lootTriggers)
         {
             item.wasSpawned = false;
         }

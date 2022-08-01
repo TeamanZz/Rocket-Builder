@@ -87,6 +87,7 @@ public class GameStateHandler : MonoBehaviour
         PlayerRocket.Instance.EnableRB();
         LevelProgress.Instance.ResetHeightVariables();
         Menu.Instance.SetNewTriggers(LevelsHandler.Instance.GetCurrentTriggers());
+        Menu.Instance.SetNewLootTriggers(LevelsHandler.Instance.GetCurrentLootTriggers());
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);
