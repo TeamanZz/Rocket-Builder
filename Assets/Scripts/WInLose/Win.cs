@@ -42,6 +42,9 @@ public class Win : MonoBehaviour
         winPanel.gameObject.SetActive(true);
         winPanel.PlayFade();
 
+        Menu.Instance.DestroyAllActiveEnemies();
+        EnemyManager.Instance.ClearEnemyList();
+
         if (PlayerRocket.Instance.shieldParticle.activeSelf)
             PlayerRocket.Instance.shieldParticle.SetActive(false);
 
@@ -77,7 +80,6 @@ public class Win : MonoBehaviour
         Menu.Instance.ActivatePreviewScreen();
         LevelsHandler.Instance.SetNewLevel();
         PlayerRocket.Instance.RestartRocket();
-        Menu.Instance.DestroyAllActiveEnemies();
         secondCamera.SetActive(false);
         buildings.SetActive(false);
         rotateTween.Kill();

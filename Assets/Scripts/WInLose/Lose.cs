@@ -33,5 +33,6 @@ public class Lose : MonoBehaviour
         PlayerRocket.Instance.RestartRocket();
         Menu.Instance.ResetAllTriggers();
         Menu.Instance.DestroyAllActiveEnemies();
+        EnemyManager.Instance.ClearEnemyList();
     }
 }

@@ -47,10 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  placingItemUI: {fileID: 0}
+  Size: {x: 1, y: 1}
+  itemType: 1
   renderers:
   - {fileID: 1847534152457717239}
-  Size: {x: 1, y: 1}
-  placedPosition: {x: 1, y: 1}
   connectors:
   - {x: 0, y: 1}
   - {x: 1, y: 0}
@@ -61,10 +62,9 @@ MonoBehaviour:
   - {fileID: 1589158031329708672}
   - {fileID: 6765040308798690885}
   - {fileID: 397049779857260433}
-  <placingItemUI>k__BackingField: {fileID: 0}
   isMainRocketPiece: 0
   isMainCapsule: 0
-  itemType: 1
+  placedPosition: {x: 1, y: 1}
 --- !u!114 &-15345440215521862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +203,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e87e1ddc3e10b7f439dd1db486edb109, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e87e1ddc3e10b7f439dd1db486edb109, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 347eed3d3870e36408acb9e20787569d, type: 2}
+    - target: {fileID: -5754084199372789682, guid: e87e1ddc3e10b7f439dd1db486edb109, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6862765945013490814, guid: b93c3e79fc7bf4a43b408c46f399258b, type: 3}
     - target: {fileID: 919132149155446097, guid: e87e1ddc3e10b7f439dd1db486edb109, type: 3}
       propertyPath: m_Name
       value: Fuel 2
