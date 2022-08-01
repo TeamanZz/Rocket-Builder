@@ -20,6 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/BossHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,11 +31,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/Chat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/BossGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/ChatManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -57,7 +60,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
@@ -70,14 +72,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoubleGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/GunRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLaucnher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGunBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" />
       </list>
     </option>
   </component>
@@ -140,6 +149,8 @@
       <workItem from="1659015193569" duration="9541000" />
       <workItem from="1659082763952" duration="11170000" />
       <workItem from="1659099849466" duration="6631000" />
+      <workItem from="1659348262888" duration="11384000" />
+      <workItem from="1659363259791" duration="32000" />
     </task>
     <servers />
   </component>

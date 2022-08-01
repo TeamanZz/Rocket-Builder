@@ -16,7 +16,7 @@ public class PlayerRocket : MonoBehaviour
     [SerializeField] public float startShield;
     [SerializeField] public float currentFuel;
     [SerializeField] public float currentShield;
-    [SerializeField] private float fuelDecreaseMultiplier;
+    [SerializeField] public float fuelDecreaseMultiplier;
     [SerializeField] private Image playerFuelBar;
     [SerializeField] private Image playerShieldBar;
     [SerializeField] private TextMeshProUGUI shieldBarText;
