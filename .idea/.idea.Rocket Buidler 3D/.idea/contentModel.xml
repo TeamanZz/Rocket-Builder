@@ -376,7 +376,6 @@
             </e>
           </e>
         </e>
-        <e p="LevelsHandler.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -395,16 +394,23 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Boss" t="Include">
+            <e p="BossGun.cs" t="Include" />
+            <e p="BossGunBehaviour.cs" t="Include" />
+            <e p="BossHealth.cs" t="Include" />
+            <e p="BossName.cs" t="Include" />
+            <e p="BossTargetProjectile.cs" t="Include" />
+            <e p="StartBossFight.cs" t="Include" />
+          </e>
           <e p="Build" t="Include">
             <e p="BuildingGrid.cs" t="Include" />
             <e p="BuildItem.cs" t="Include" />
             <e p="BuildUIButton.cs" t="Include" />
             <e p="Connector.cs" t="Include" />
           </e>
-          <e p="BuildItemDataBase.cs" t="Include" />
-          <e p="BuildItemDataBody.cs" t="Include" />
           <e p="BuildItemDrag.cs" t="Include" />
           <e p="BuildItemUI.cs" t="Include" />
+          <e p="ButtonAnimation.cs" t="Include" />
           <e p="CameraBoundsController.cs" t="Include" />
           <e p="CameraWidth.cs" t="Include" />
           <e p="CapsuleCharacter.cs" t="Include" />
@@ -421,12 +427,14 @@
             <e p="StuckWithEnemy.cs" t="Include" />
           </e>
           <e p="EnemyBase.cs" t="Include" />
+          <e p="EngineViewController.cs" t="Include" />
           <e p="EventType.cs" t="Include" />
           <e p="GameStateHandler.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
           <e p="IShootable.cs" t="Include" />
           <e p="ItemsListHandler.cs" t="Include" />
           <e p="LevelProgress.cs" t="Include" />
+          <e p="LevelsHandler.cs" t="Include" />
           <e p="LockCameraZ.cs" t="Include" />
           <e p="LootContainer.cs" t="Include" />
           <e p="LootSpawner.cs" t="Include" />
@@ -447,6 +455,7 @@
           </e>
           <e p="RocketPartPopup.cs" t="Include" />
           <e p="RocketRotator.cs" t="Include" />
+          <e p="ScreenShake.cs" t="Include" />
           <e p="SFX.cs" t="Include" />
           <e p="Space" t="Include">
             <e p="EnemyManager.cs" t="Include" />
@@ -463,6 +472,7 @@
             <e p="SpaceShipHealth.cs" t="Include" />
             <e p="SpaceShipMovement.cs" t="Include" />
           </e>
+          <e p="StartGameScreen.cs" t="Include" />
           <e p="SwipeDetector.cs" t="Include" />
           <e p="uGUITools.cs" t="Include" />
           <e p="WInLose" t="Include">
