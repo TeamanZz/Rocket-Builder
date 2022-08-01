@@ -30,6 +30,8 @@ public class GameStateHandler : MonoBehaviour
     [Header("ItemsToUnActive")]
     [SerializeField] private GameObject[] itemsToUnActive;
 
+    private Vector3 lastCapsulePosition;
+
     private void Awake()
     {
         Instance = this;
@@ -82,6 +84,7 @@ public class GameStateHandler : MonoBehaviour
         playerShipMovement.SetNewValues(resourcesHandler.trueMoveSpeedValue);
         ScreenShake.Instance.ShakeScreenOnRocketStart();
         PlayerRocket.Instance.SetRocketVariables();
+        PlayerRocket.Instance.EnableRB();
         LevelProgress.Instance.ResetHeightVariables();
         Menu.Instance.SetNewTriggers(LevelsHandler.Instance.GetCurrentTriggers());
         for (int i = 0; i < itemsToActive.Length; i++)
@@ -101,7 +104,23 @@ public class GameStateHandler : MonoBehaviour
             rocketContainer.transform.GetChild(i).SetParent(buildingGrid.startCapsule.transform);
         }
 
+        lastCapsulePosition = buildingGrid.startCapsule.transform.localPosition;
         buildingGrid.startCapsule.transform.localPosition = Vector3.zero;
+
+        for (var i = buildingGrid.startCapsule.transform.childCount - 1; i > 0; i--)
+        {
+            buildingGrid.startCapsule.transform.GetChild(i).SetParent(rocketContainer);
+        }
+    }
+
+    public void UnCenterRocket()
+    {
+        for (var i = rocketContainer.transform.childCount - 1; i > 0; i--)
+        {
+            rocketContainer.transform.GetChild(i).SetParent(buildingGrid.startCapsule.transform);
+        }
+
+        buildingGrid.startCapsule.transform.localPosition = lastCapsulePosition;
 
         for (var i = buildingGrid.startCapsule.transform.childCount - 1; i > 0; i--)
         {

@@ -47,6 +47,11 @@ public class PlayerRocket : MonoBehaviour
         startRocketPos = transform.position;
     }
 
+    public void EnableRB()
+    {
+        rb.isKinematic = false;
+    }
+
     public void SetRocketVariables()
     {
         currentFuel = startFuel;
@@ -177,11 +182,13 @@ public class PlayerRocket : MonoBehaviour
         currentFuel = startFuel;
         currentShield = startShield;
         rocketContainer.localPosition = Vector3.zero;
-        rocketContainer.localEulerAngles = new Vector3(0, 0, 0);
+        rocketContainer.localEulerAngles = Vector3.zero;
         playerFuelBar.gameObject.SetActive(true);
         shieldBarText.gameObject.SetActive(true);
         playerShieldBar.gameObject.SetActive(true);
         transform.localPosition = new Vector3(4, 5, 0);
+        GameStateHandler.Instance.UnCenterRocket();
+        rb.isKinematic = true;
         loseScreen.SetActive(false);
         DisableLowFuelIndicator();
         isDead = false;

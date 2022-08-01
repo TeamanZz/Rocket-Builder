@@ -15192,7 +15192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497390, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 280
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 497390, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28014,6 +28014,7 @@ MonoBehaviour:
   buildingGrid: {fileID: 1256540989}
   buildings: {fileID: 167609669}
   rotatedCamera: {fileID: 639018725}
+  rotatedCameraRotation: {x: 0, y: 0, z: 0}
   winPanel: {fileID: 1710663261}
 --- !u!65 &1906972791
 BoxCollider:

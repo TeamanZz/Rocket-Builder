@@ -13,8 +13,17 @@ public class Win : MonoBehaviour
     [SerializeField] private BuildingGrid buildingGrid;
     [SerializeField] private GameObject buildings;
     [SerializeField] private GameObject rotatedCamera;
+    [SerializeField] private Vector3 rotatedCameraRotation;
 
     public WinPanel winPanel;
+
+    private Tween rotateTween;
+    private Tween moveTween;
+
+    private void Start()
+    {
+        rotatedCameraRotation = rotatedCamera.transform.eulerAngles;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,8 +61,8 @@ public class Win : MonoBehaviour
         PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;
-        PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.OutBack);
-        rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
+        moveTween = PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.OutBack);
+        rotateTween = rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
 
         secondCamera.SetActive(true);
         buildings.SetActive(true);
@@ -71,9 +80,11 @@ public class Win : MonoBehaviour
         Menu.Instance.DestroyAllActiveEnemies();
         secondCamera.SetActive(false);
         buildings.SetActive(false);
-
+        rotateTween.Kill();
+        moveTween.Kill();
         for (int i = 0; i < thingsToSetTrueAfterWin.Count; i++)
             thingsToSetTrueAfterWin[i].SetActive(true);
+        rotatedCamera.transform.eulerAngles = rotatedCameraRotation;
 
         winPanel.gameObject.SetActive(false);
     }
