@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class RandomSpawner : MonoBehaviour
 {
@@ -24,8 +24,7 @@ public class RandomSpawner : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             wasSpawned = true;
-            Random random = new Random();
-            int randomCount = random.Next(minEnemiesCount, maxEnemiesCount);
+            int randomCount = Random.Range(minEnemiesCount, maxEnemiesCount + 1);
             for (int i = 0; i < randomCount; i++)
             {
                 SpawnEnemy();
@@ -35,11 +34,9 @@ public class RandomSpawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        Random random = new Random();
-        int posX = random.Next(minXPosition, maxXpPosition);
+        int posX = Random.Range(minXPosition, maxXpPosition + 1);
         var posY = SpaceShipMovement.Instance.gameObject.transform.position.y;
-        Random randomIndex = new Random();
-        int index = randomIndex.Next(1, enemiesPrefabs.Length);
+        int index = Random.Range(1, enemiesPrefabs.Length);
         Instantiate(enemiesPrefabs[index], new Vector3(transform.position.x + posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity).transform.parent = enemiesParent;
     }
 }

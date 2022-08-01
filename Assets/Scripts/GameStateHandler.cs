@@ -83,6 +83,7 @@ public class GameStateHandler : MonoBehaviour
         ScreenShake.Instance.ShakeScreenOnRocketStart();
         PlayerRocket.Instance.SetRocketVariables();
         LevelProgress.Instance.ResetHeightVariables();
+        Menu.Instance.SetNewTriggers(LevelsHandler.Instance.GetCurrentTriggers());
         for (int i = 0; i < itemsToActive.Length; i++)
         {
             itemsToActive[i].SetActive(true);
@@ -91,9 +92,6 @@ public class GameStateHandler : MonoBehaviour
         {
             itemsToUnActive[i].SetActive(false);
         }
-        // playerShipMovement.constantVelocity = rocketConstantVelocity;
-        // playerShipMovement.rotationDamping = rocketRotationDamping;
-        // playerShipMovement.sideSpeed = rocketSideSpeed;
     }
 
     private void CenterRocket()

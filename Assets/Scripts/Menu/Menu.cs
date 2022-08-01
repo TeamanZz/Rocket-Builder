@@ -25,6 +25,11 @@ public class Menu : MonoBehaviour
         Instance = this;
     }
 
+    public void SetNewTriggers(List<RandomSpawner> newList)
+    {
+        triggers = newList;
+    }
+
     public void ResetAllTriggers()
     {
         foreach (var item in triggers)

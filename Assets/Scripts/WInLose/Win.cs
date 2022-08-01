@@ -64,7 +64,9 @@ public class Win : MonoBehaviour
 
     public void HandleContinueButton()
     {
+        Menu.Instance.ResetAllTriggers();
         Menu.Instance.ActivatePreviewScreen();
+        LevelsHandler.Instance.SetNewLevel();
         PlayerRocket.Instance.RestartRocket();
         Menu.Instance.DestroyAllActiveEnemies();
         secondCamera.SetActive(false);

@@ -6,8 +6,13 @@ using Random = UnityEngine.Random;
 
 public class RocketProjectile : ProjectileBase
 {
-     public bool wasCollided;
+    public bool wasCollided;
     public GameObject hitParticles;
+
+    private Transform target;
+    public Rigidbody rb;
+
+    private RocketLauncher rocketLauncher;
 
     private void Start()
     {
@@ -16,14 +21,23 @@ public class RocketProjectile : ProjectileBase
 
     private void Update()
     {
-        if (RocketLauncher.Instance.target != null)
-        {
-            transform.position = Vector3.Lerp(transform.position,RocketLauncher.Instance.target.position,Time.deltaTime / 2 );
-        }
-        else
-        {
-            return;
-        }
+        // if (target != null)
+        // {
+        //     transform.LookAt(target.transform.position, Vector3.right);
+        //     rb.AddRelativeForce(Vector3.forward, ForceMode.Impulse);
+        // }
+        // if (RocketLauncher.Instance.target != null)
+        // {
+        //     transform.position = Vector3.Lerp(transform.position, RocketLauncher.Instance.target.position, Time.deltaTime / 2);
+        // }
+
+    }
+
+    public void InitializeRocket(float newDamage, Transform newTarget, RocketLauncher parentRocketLauncher)
+    {
+        rocketLauncher = parentRocketLauncher;
+        damage = newDamage;
+        target = newTarget;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,7 +76,7 @@ public class RocketProjectile : ProjectileBase
     {
         yield return new WaitForSeconds(1.5f);
         var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
-        Destroy(hitParticle,2f);
+        Destroy(hitParticle, 2f);
         Destroy(gameObject);
     }
 }

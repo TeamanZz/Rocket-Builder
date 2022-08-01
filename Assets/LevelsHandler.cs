@@ -6,7 +6,7 @@ public class LevelsHandler : MonoBehaviour
 {
     public static LevelsHandler Instance;
 
-    private int currentLevelIndex;
+    [SerializeField] private int currentLevelIndex;
     public Transform targetPlanet;
     public List<GameObject> startPlanetsContainer = new List<GameObject>();
     public List<GameObject> targetPlanetsContainer = new List<GameObject>();
@@ -28,13 +28,29 @@ public class LevelsHandler : MonoBehaviour
         return targetDistancesUI[currentLevelIndex];
     }
 
+    public List<RandomSpawner> GetCurrentTriggers()
+    {
+        List<RandomSpawner> currentTriggers = new List<RandomSpawner>();
+        RandomSpawner spawner;
+        for (var i = 0; i < levelTriggersContainer[currentLevelIndex].transform.childCount - 1; i++)
+        {
+
+            if (levelTriggersContainer[currentLevelIndex].transform.GetChild(i).TryGetComponent<RandomSpawner>(out spawner))
+                currentTriggers.Add(spawner);
+        }
+        return currentTriggers;
+    }
+
     public void SetNewLevel()
     {
         startPlanetsContainer[currentLevelIndex].SetActive(false);
         targetPlanetsContainer[currentLevelIndex].SetActive(false);
         levelTriggersContainer[currentLevelIndex].SetActive(false);
 
-        currentLevelIndex++;
+        if (currentLevelIndex >= 2)
+            currentLevelIndex = 0;
+        else
+            currentLevelIndex++;
 
         startPlanetsContainer[currentLevelIndex].SetActive(true);
         targetPlanetsContainer[currentLevelIndex].SetActive(true);
