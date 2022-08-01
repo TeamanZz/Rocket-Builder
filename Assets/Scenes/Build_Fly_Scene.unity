@@ -8692,6 +8692,10 @@ PrefabInstance:
       value: -0.05351778
       objectReference: {fileID: 0}
     - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: placingItemUI
+      value: 
+      objectReference: {fileID: 15272075}
+    - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: <placingItemUI>k__BackingField
       value: 
       objectReference: {fileID: 15272075}
@@ -15192,7 +15196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497390, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 497390, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25111,7 +25115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 73d00bad7f10d7b4799ae888d7cf39b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62a1204f446873c43b83a8a33db81f40, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30712,7 +30716,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevelIndex: 0
+  targetPlanetIcon: {fileID: 1755045208}
   targetPlanet: {fileID: 1906972789}
+  targetPlanetIcons:
+  - {fileID: 21300000, guid: 62a1204f446873c43b83a8a33db81f40, type: 3}
+  - {fileID: 21300000, guid: 3d23c86d8538e4641b54232ecdb69927, type: 3}
+  - {fileID: 21300000, guid: 9a6d3d45af8b9ea4a9aed8410864cfbf, type: 3}
   startPlanetsContainer:
   - {fileID: 1275909570}
   - {fileID: 361204679}

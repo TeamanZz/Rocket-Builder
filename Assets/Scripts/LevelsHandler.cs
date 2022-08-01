@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelsHandler : MonoBehaviour
 {
     public static LevelsHandler Instance;
 
     [SerializeField] private int currentLevelIndex;
+
+    public Image targetPlanetIcon;
     public Transform targetPlanet;
+    public List<Sprite> targetPlanetIcons = new List<Sprite>();
     public List<GameObject> startPlanetsContainer = new List<GameObject>();
     public List<GameObject> targetPlanetsContainer = new List<GameObject>();
     public List<GameObject> levelTriggersContainer = new List<GameObject>();
@@ -55,5 +59,6 @@ public class LevelsHandler : MonoBehaviour
         startPlanetsContainer[currentLevelIndex].SetActive(true);
         targetPlanetsContainer[currentLevelIndex].SetActive(true);
         levelTriggersContainer[currentLevelIndex].SetActive(true);
+        targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
     }
 }

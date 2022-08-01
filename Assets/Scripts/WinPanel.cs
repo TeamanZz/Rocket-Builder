@@ -24,6 +24,11 @@ public class WinPanel : MonoBehaviour
         continueButton.SetActive(true);
     }
 
+    public void DisableContinueButton()
+    {
+        continueButton.SetActive(false);
+    }
+
     public void FadeIn()
     {
         backgroundBlack.color = new Color(0, 0, 0, 0);

@@ -84,6 +84,7 @@ public class Win : MonoBehaviour
         buildings.SetActive(false);
         rotateTween.Kill();
         moveTween.Kill();
+        winPanel.DisableContinueButton();
         for (int i = 0; i < thingsToSetTrueAfterWin.Count; i++)
             thingsToSetTrueAfterWin[i].SetActive(true);
         rotatedCamera.transform.eulerAngles = rotatedCameraRotation;
