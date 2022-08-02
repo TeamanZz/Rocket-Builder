@@ -42,6 +42,7 @@ public class LevelProgress : MonoBehaviour
         iconTween = icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
         fillbarTween = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
         Totween = DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);
+        targetHeightText.text = LevelsHandler.Instance.GetTargetDistanceNuber().ToString();
     }
 
     private void FixedUpdate()

@@ -25,6 +25,20 @@ public class LevelsHandler : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        startPlanetsContainer[currentLevelIndex].SetActive(false);
+        targetPlanetsContainer[currentLevelIndex].SetActive(false);
+        levelTriggersContainer[currentLevelIndex].SetActive(false);
+
+        startPlanetsContainer[currentLevelIndex].SetActive(true);
+        targetPlanetsContainer[currentLevelIndex].SetActive(true);
+        levelTriggersContainer[currentLevelIndex].SetActive(true);
+        targetPlanet.localPosition = new Vector3(targetPlanet.localPosition.x, targetPlanetYPosition[currentLevelIndex], targetPlanet.localPosition.z);
+        targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
+        RenderSettings.skybox = skyboxes[currentLevelIndex];
+    }
+
     public float GetTargetPlanetPosition()
     {
         return targetPlanetYPosition[currentLevelIndex];
@@ -55,7 +69,6 @@ public class LevelsHandler : MonoBehaviour
 
             if (levelTriggersContainer[currentLevelIndex].transform.GetChild(i).TryGetComponent<LootSpawner>(out spawner))
             {
-                Debug.Log("heh");
                 currentTriggers.Add(spawner);
             }
         }
@@ -64,6 +77,8 @@ public class LevelsHandler : MonoBehaviour
 
     public void SetNewLevel()
     {
+        BuildingGrid.Instance.DeleteAllItems();
+        NewPartsHandler.Instance.RemoveAllDuplicates();
         startPlanetsContainer[currentLevelIndex].SetActive(false);
         targetPlanetsContainer[currentLevelIndex].SetActive(false);
         levelTriggersContainer[currentLevelIndex].SetActive(false);
@@ -73,10 +88,13 @@ public class LevelsHandler : MonoBehaviour
         else
             currentLevelIndex++;
 
+        targetPlanet.localPosition = new Vector3(targetPlanet.localPosition.x, targetPlanetYPosition[currentLevelIndex], targetPlanet.localPosition.z);
         startPlanetsContainer[currentLevelIndex].SetActive(true);
         targetPlanetsContainer[currentLevelIndex].SetActive(true);
         levelTriggersContainer[currentLevelIndex].SetActive(true);
         targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
         RenderSettings.skybox = skyboxes[currentLevelIndex];
+
+
     }
 }

@@ -37,6 +37,9 @@ public class PlayerRocket : MonoBehaviour
     public bool isDead;
     public Gradient fuelGraident;
 
+    public GameObject shieldBar;
+    public GameObject boss;
+
     private void Awake()
     {
         Instance = this;
@@ -56,11 +59,22 @@ public class PlayerRocket : MonoBehaviour
     {
         currentFuel = startFuel;
         currentShield = startShield;
+        if (currentShield == 0)
+        {
+            shieldBar.SetActive(false);
+        }
+        else
+        {
+            shieldBar.SetActive(true);
+
+        }
         lowFuelIndicationValue = startFuel * lowFuelTargetPercent / 100;
         playerFuelBar.fillAmount = 1;
         playerShieldBar.fillAmount = 1;
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
         oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
+        fuelDecreaseMultiplier = 2;
+
 
         shieldBarText.text = $"{currentShield} / {startShield}";
     }
@@ -167,6 +181,7 @@ public class PlayerRocket : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         SpaceShipMovement.Instance.SetZeroVariables();
         yield return new WaitForSeconds(1f);
+
         loseScreen.SetActive(true);
         yield return new WaitForSeconds(2.2f);
         rocketContainer.GetComponent<PlanetsMovement>().enabled = false;
@@ -191,6 +206,7 @@ public class PlayerRocket : MonoBehaviour
         rb.isKinematic = true;
         loseScreen.SetActive(false);
         DisableLowFuelIndicator();
+        boss.SetActive(false);
         isDead = false;
         isPlayerOnPlanet = false;
         this.enabled = false;

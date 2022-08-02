@@ -18,8 +18,6 @@ public class SpaceShipMovement : MonoBehaviour
     private Quaternion startAngle;
     private Quaternion needAngle;
 
-    [field: SerializeField] public Transform spawnEnemyPosition { get; private set; }
-
     public static SpaceShipMovement Instance;
 
     private Tween velocityTween;

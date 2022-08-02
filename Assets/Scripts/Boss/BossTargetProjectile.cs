@@ -26,11 +26,9 @@ public class BossTargetProjectile : ProjectileBase
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, target.position, speed);
         Vector3 difference = target.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0.0f, 180f, 90 - rotationZ);
-        
+        transform.rotation = Quaternion.Euler(180, 0, 90 - rotationZ);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,16 +45,12 @@ public class BossTargetProjectile : ProjectileBase
 
     public void DescreaseHealth(float value)
     {
+        currentHealth -= value;
         if (currentHealth <= 0)
         {
             Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);
         }
-        else
-        {
-            currentHealth -= value;
-        }
-
         float randValue = Random.Range(-0.1f, 0.1f);
         transform.DOPunchScale(new Vector3(randValue, randValue, randValue), 0.1f).SetEase(Ease.InBack);
     }

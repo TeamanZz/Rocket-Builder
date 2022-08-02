@@ -192,7 +192,6 @@ public class BuildingGrid : MonoBehaviour
 
         CheckOnCompletedRocket();
         ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
-        Debug.Log("new move speed" + GetConnectedMoveSpeedValue());
         ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
         ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
         for (var i = 0; i < placedItems.Count; i++)

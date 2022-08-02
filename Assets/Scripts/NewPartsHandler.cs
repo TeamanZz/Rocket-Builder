@@ -39,6 +39,20 @@ public class NewPartsHandler : MonoBehaviour
         unlockEvents[lastUnlockedEventIndex].UnlockThisEvent();
         lastUnlockedEventIndex++;
     }
+
+    public void RemoveAllDuplicates()
+    {
+        for (var i = 0; i < boughtedItems.Count; i++)
+        {
+            if (boughtedItems[i].mainImage.GetComponent<BuildItemUI>().buildItemPrefab.itemType == BuildItem.ItemType.Capsule)
+                boughtedItems[i].countValue = 0;
+            else
+            {
+                boughtedItems[i].countValue = 1;
+            }
+            boughtedItems[i].HandleView();
+        }
+    }
 }
 
 [System.Serializable]

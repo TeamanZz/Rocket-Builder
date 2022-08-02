@@ -7,11 +7,11 @@ using Random = UnityEngine.Random;
 public class BossGunBehaviour : MonoBehaviour
 {
     public List<BossGun> bossGuns = new List<BossGun>();
-    public BossGun bossTargetGun;
+    public BossTargetGun bossTargetGun;
     [SerializeField] private int timeBetweenBossAttacks;
     private int countOfAttackingGuns;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(HowMuchGunsWillAttack());
     }
@@ -19,19 +19,18 @@ public class BossGunBehaviour : MonoBehaviour
     private IEnumerator HowMuchGunsWillAttack()
     {
         yield return new WaitForSeconds(timeBetweenBossAttacks);
-        countOfAttackingGuns = Random.Range(1, bossGuns.Count + 2);
-        Debug.Log(countOfAttackingGuns);
+        countOfAttackingGuns = Random.Range(1, bossGuns.Count + 4);
         if (countOfAttackingGuns > bossGuns.Count)
         {
             BossTargetAttack();
         }
         else
         {
-            BossAttack();   
+            BossAttack();
         }
         yield return HowMuchGunsWillAttack();
     }
-    
+
     private void BossAttack()
     {
         for (int i = 0; i < countOfAttackingGuns; i++)

@@ -131,7 +131,7 @@ MonoBehaviour:
   wasCollided: 0
   hitParticles: {fileID: 109660, guid: 0a09a3a2bbd2966428434f3fade79433, type: 3}
   timeUntilDestroy: 3
-  startHealth: 5
+  startHealth: 10
 --- !u!114 &1610693344451792600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19823998, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
       propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19872990, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}

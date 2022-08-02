@@ -129,7 +129,7 @@ MonoBehaviour:
   damage: 1
   hitParticles: {fileID: 109660, guid: 0a09a3a2bbd2966428434f3fade79433, type: 3}
   timeUntilDestroy: 1.5
-  startHealth: 2
+  startHealth: 10
   target: {fileID: 0}
   speed: 0.04
 --- !u!1001 &561824487558656072
