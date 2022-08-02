@@ -7,8 +7,16 @@ public class Item : MonoBehaviour
 {
     private bool isCollected;
     [SerializeField] private GameObject pickUpEffect;
+
+    private void Start()
+    {
+        Destroy(gameObject, 10);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
+
         if (isCollected) return;
 
         BuildItem buildItem;

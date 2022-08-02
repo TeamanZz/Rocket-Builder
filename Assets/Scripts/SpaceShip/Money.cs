@@ -10,6 +10,9 @@ public class Money : MonoBehaviour
 
     [SerializeField] private int currencyValue;
     [SerializeField] private TextMeshProUGUI currencyText;
+    public GameObject moneyTextPrefab;
+    public Transform moneyTextSpawnPos;
+    public Transform moneyTextParent;
 
     private void Awake()
     {
@@ -34,6 +37,7 @@ public class Money : MonoBehaviour
     {
         currencyValue += count;
         HandleView();
+        Instantiate(moneyTextPrefab, moneyTextSpawnPos.position, Quaternion.identity, moneyTextParent);
     }
 
     public void DecreaseCurrency(int count)

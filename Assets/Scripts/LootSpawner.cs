@@ -26,8 +26,8 @@ public class LootSpawner : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             wasSpawned = true;
-            if (currentDuplicatesValue < maxDuplicatesAllowed)
-                SpawnLootMeteor();
+            // if (currentDuplicatesValue < maxDuplicatesAllowed)
+            SpawnLootMeteor();
         }
     }
 
