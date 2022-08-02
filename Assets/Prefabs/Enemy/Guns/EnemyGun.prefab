@@ -108,14 +108,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
-  damage: 1
+  damage: 10
+  projectileSpeed: 0
   bulletPrefab: {fileID: 0}
   muzzle: {fileID: 0}
   targetVector: {fileID: 0}
-  ship: {fileID: 0}
   OnShoot:
     m_PersistentCalls:
       m_Calls: []
+  canShoot: 1
+  gunAnimator: {fileID: 0}
+  shootParticle: {fileID: 0}
 --- !u!1 &8992793824553857578
 GameObject:
   m_ObjectHideFlags: 0

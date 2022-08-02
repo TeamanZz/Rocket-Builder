@@ -8,8 +8,17 @@ using TMPro;
 public class LowFuelIndication : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
+    private Tween fadeTween;
+
     private void OnEnable()
     {
-        canvasGroup.DOFade(1, 0.8f).SetLoops(-1, LoopType.Yoyo);
+        fadeTween = canvasGroup.DOFade(1, 0.8f).SetLoops(-1, LoopType.Yoyo);
+    }
+
+    private void OnDisable()
+    {
+        fadeTween.Kill();
+        DOTween.Kill(fadeTween);
+        canvasGroup.alpha = 0;
     }
 }

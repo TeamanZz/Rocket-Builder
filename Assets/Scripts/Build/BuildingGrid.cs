@@ -413,11 +413,13 @@ public class BuildingGrid : MonoBehaviour
 
     public void CheckOnDisconnectedParts()
     {
-        for (var i = 0; i < placedItems.Count; i++)
+        for (var i = placedItems.Count - 1; i > 0; i--)
         {
             if (!placedItems[i].isMainRocketPiece)
             {
+                placedItems[i].placingItemUI.IncreaseCount();
                 Destroy(placedItems[i].gameObject);
+                placedItems.Remove(placedItems[i]);
             }
         }
     }

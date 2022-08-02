@@ -4816,7 +4816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df3a83cb1db7644974bd3bc1d4e028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 1000
+  startHealth: 500
   enemyReward: 150
   deathParticles: {fileID: 153912, guid: 932046b7eaf3b554f8d74c81e2f00558, type: 3}
   healthBar: {fileID: 7520981741761877768}

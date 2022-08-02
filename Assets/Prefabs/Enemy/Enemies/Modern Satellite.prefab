@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
-  explodeDamage: 15
+  explodeDamage: 10
 --- !u!65 &2851785561565775014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 1
-  damage: 3
+  damage: 10
   projectileSpeed: 12
   bulletPrefab: {fileID: 6571475669746660478, guid: 5282983d0a2892840ba6d5d7a81c1ba3, type: 3}
   muzzle: {fileID: 8004360046373243097}

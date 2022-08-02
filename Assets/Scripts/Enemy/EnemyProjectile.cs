@@ -29,14 +29,12 @@ public class EnemyProjectile : ProjectileBase
 
     public void DescreaseHealth(float value)
     {
+        currentHealth -= value;
+
         if (currentHealth <= 0)
         {
             Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);
-        }
-        else
-        {
-            currentHealth -= value;
         }
 
         float randValue = Random.Range(-0.1f, 0.1f);
