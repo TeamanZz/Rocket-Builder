@@ -15,6 +15,11 @@ public class Item : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             isCollected = true;
+            var lootTriggers = LevelsHandler.Instance.GetCurrentLootTriggers();
+            for (var i = 0; i < lootTriggers.Count; i++)
+            {
+                lootTriggers[i].currentDuplicatesValue++;
+            }
             NewPartsHandler.Instance.UnlockNewDuplicate();
             Instantiate(pickUpEffect, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             Destroy(gameObject);

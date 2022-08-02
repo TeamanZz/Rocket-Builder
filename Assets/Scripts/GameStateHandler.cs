@@ -84,7 +84,6 @@ public class GameStateHandler : MonoBehaviour
         playerShipMovement.SetNewValues(resourcesHandler.trueMoveSpeedValue);
         ScreenShake.Instance.ShakeScreenOnRocketStart();
         PlayerRocket.Instance.SetRocketVariables();
-        PlayerRocket.Instance.EnableRB();
         LevelProgress.Instance.ResetHeightVariables();
         Menu.Instance.SetNewTriggers(LevelsHandler.Instance.GetCurrentTriggers());
         Menu.Instance.SetNewLootTriggers(LevelsHandler.Instance.GetCurrentLootTriggers());
@@ -164,6 +163,7 @@ public class GameStateHandler : MonoBehaviour
 
     public IEnumerator EndBuildingCoroutine()
     {
+        PlayerRocket.Instance.EnableRB();
         var blackScreen = Instantiate(blackScreenPrefab);
         uiItems.SetActive(false);
         buildingGrid.CheckOnDisconnectedParts();

@@ -33,7 +33,6 @@ public class LootSpawner : MonoBehaviour
 
     public void SpawnLootMeteor()
     {
-        currentDuplicatesValue++;
         float localY = Random.Range(minLocalY, maxLocalY);
         float localX = Random.Range(minLocalX, maxLocalX);
 

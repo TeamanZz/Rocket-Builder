@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.3285469, g: 0.41277236, b: 0.5638747, a: 1}
+  m_IndirectSpecularColor: {r: 0.3285372, g: 0.41277266, b: 0.5638758, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minLocalY: 60
-  maxLocalY: 110
+  maxLocalY: 90
   minLocalX: -3
   maxLocalX: 3
   maxDuplicatesAllowed: 5
@@ -2251,12 +2251,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 181868007}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2365906492827410286, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: m_Name
@@ -10266,8 +10270,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
@@ -11233,12 +11241,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 35
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
@@ -11682,12 +11694,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 181868007}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2365906492827410286, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: m_Name
@@ -15166,6 +15182,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1173875441}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 1
       objectReference: {fileID: 0}
@@ -17753,11 +17773,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
@@ -18877,8 +18897,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 196318188}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
@@ -20158,7 +20182,6 @@ GameObject:
   - component: {fileID: 1383840871}
   - component: {fileID: 1383840870}
   - component: {fileID: 1383840869}
-  - component: {fileID: 1383840872}
   m_Layer: 0
   m_Name: Loot Spawn Trigger
   m_TagString: Untagged
@@ -20230,19 +20253,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!65 &1383840872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383840867}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1388696169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2697182919837054165, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
@@ -21754,7 +21764,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493856228}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -22641,8 +22651,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 100
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
@@ -25626,8 +25640,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 196318188}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: price
+      value: 7000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 100
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
@@ -26397,11 +26415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 379722251835912317, guid: 83693b61038c54412968c75bf4789079, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4381223
+      value: 7.9
       objectReference: {fileID: 0}
     - target: {fileID: 379722251835912317, guid: 83693b61038c54412968c75bf4789079, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.228508
+      value: 169.7
       objectReference: {fileID: 0}
     - target: {fileID: 379722251835912317, guid: 83693b61038c54412968c75bf4789079, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31046,7 +31064,6 @@ MonoBehaviour:
   - {fileID: 15272075}
   - {fileID: 1457460054}
   - {fileID: 1257604952}
-  - {fileID: 833129762}
   - {fileID: 1841404558}
 --- !u!114 &2117168281
 MonoBehaviour:
@@ -31060,7 +31077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df30a1264c5523f42b04fc7d49ef4823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyValue: 451
+  currencyValue: 0
   currencyText: {fileID: 65242397}
 --- !u!114 &2117168282
 MonoBehaviour:
