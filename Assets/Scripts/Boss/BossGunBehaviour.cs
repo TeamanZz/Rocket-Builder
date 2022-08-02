@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class BossGunBehaviour : MonoBehaviour
 {
     public List<BossGun> bossGuns = new List<BossGun>();
-    public BossGun bossTargetGun;
+    public BossTargetGun bossTargetGun;
     [SerializeField] private int timeBetweenBossAttacks;
     private int countOfAttackingGuns;
 

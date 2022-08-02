@@ -40,7 +40,7 @@ public class PlayerProjectile : ProjectileBase
         if (!wasCollided && other.gameObject.TryGetComponent<BossHealth>(out enemyBoss))
         {
             Vector3 particlesPosition = new Vector3(enemyBoss.transform.position.x + Random.Range(-0.5f, 0.5f), enemyBoss.transform.position.y + Random.Range(-1f, 0f), enemyBoss.transform.position.z - 1);
-            var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity, CommonContainer.Instance.transform);
+            var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             wasCollided = true;
             enemyBoss.DescreaseHealth(damage);
             Destroy(gameObject);

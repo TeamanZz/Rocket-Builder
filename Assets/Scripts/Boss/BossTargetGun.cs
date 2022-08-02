@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BossGun : MonoBehaviour
+public class BossTargetGun : MonoBehaviour
 {
     public float timeBetweenShots = 0.5f;
     public float damage = 1;
@@ -16,14 +17,26 @@ public class BossGun : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private ParticleSystem chargeBeforeShotParticle;
-
-
+    private Transform target;
+    [SerializeField] private Transform objectToRotate;
 
     public void AllowShoot()
     {
         gunAnimator = GetComponent<Animator>();
         canShoot = true;
         StartCoroutine(ShootRepeatedely());
+    }
+
+    private void Awake()
+    {
+        target = PlayerRocket.Instance.transform;
+    }
+
+    private void Update()
+    {
+        Vector3 difference = target.position - objectToRotate.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        objectToRotate.transform.rotation = Quaternion.Euler(180, 0, 90 - rotationZ);
     }
 
     public void ForbidShoot()

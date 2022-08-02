@@ -149,7 +149,7 @@ MonoBehaviour:
   shootParticle: {fileID: 7593799828506822273}
   target: {fileID: 0}
   objectToRotate: {fileID: 2602156373042203842}
-  aimDistance: 25
+  aimDistance: 40
 --- !u!95 &2739930025489770396
 Animator:
   serializedVersion: 3

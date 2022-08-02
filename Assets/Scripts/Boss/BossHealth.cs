@@ -15,12 +15,12 @@ public class BossHealth : MonoBehaviour
     private float oneHitHealthBarFill;
     private Money playerMoney;
     [SerializeField] private StartBossFight startBossFight;
+    [SerializeField] private GameObject snowParticles;
 
     private void Awake()
     {
         playerMoney = FindObjectOfType<Money>();
         currentHealth = startHealth;
-
         oneHitHealthBarFill = healthBar.fillAmount / startHealth;
     }
 
@@ -35,7 +35,8 @@ public class BossHealth : MonoBehaviour
         {
             startBossFight.ReturnSpaceShipValuesOnBossDeath();
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            Instantiate(snowParticles,transform.position,Quaternion.identity);
             playerMoney.AddCurrency(enemyReward);
         }
         else

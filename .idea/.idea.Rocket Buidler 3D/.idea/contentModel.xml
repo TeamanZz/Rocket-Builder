@@ -399,6 +399,7 @@
             <e p="BossGunBehaviour.cs" t="Include" />
             <e p="BossHealth.cs" t="Include" />
             <e p="BossName.cs" t="Include" />
+            <e p="BossTargetGun.cs" t="Include" />
             <e p="BossTargetProjectile.cs" t="Include" />
             <e p="StartBossFight.cs" t="Include" />
           </e>

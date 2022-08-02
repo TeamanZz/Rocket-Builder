@@ -26,11 +26,9 @@ public class BossTargetProjectile : ProjectileBase
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, target.position, speed);
         Vector3 difference = target.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0.0f, 180f, 90 - rotationZ);
-        
+        transform.rotation = Quaternion.Euler(180, 0, 90 - rotationZ);
     }
 
     private void OnTriggerEnter(Collider other)

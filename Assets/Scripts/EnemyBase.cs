@@ -58,4 +58,5 @@ public class EnemyBase : MonoBehaviour
         DOTween.To(x => healthBar.fillAmount = x, healthBar.fillAmount,
             newValue, 0.1f);
     }
+    
 }
