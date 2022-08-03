@@ -49,6 +49,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="FadeScreen.cs" t="Include" />
         <e p="GUI PRO Kit - Casual Game" t="Include">
           <e p="Extensions" t="Include">
             <e p="UIParticle" t="Include">
@@ -399,6 +400,7 @@
             <e p="BossGunBehaviour.cs" t="Include" />
             <e p="BossHealth.cs" t="Include" />
             <e p="BossName.cs" t="Include" />
+            <e p="BossTargetGun.cs" t="Include" />
             <e p="BossTargetProjectile.cs" t="Include" />
             <e p="StartBossFight.cs" t="Include" />
           </e>
@@ -423,7 +425,6 @@
             <e p="EnemySpawner.cs" t="Include" />
             <e p="RandomSpawner.cs" t="Include" />
             <e p="SatelliteMovement.cs" t="Include" />
-            <e p="SpawnEnemy.cs" t="Include" />
             <e p="StuckWithEnemy.cs" t="Include" />
           </e>
           <e p="EnemyBase.cs" t="Include" />
@@ -431,6 +432,7 @@
           <e p="EventType.cs" t="Include" />
           <e p="GameStateHandler.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
+          <e p="HumanRotation.cs" t="Include" />
           <e p="IShootable.cs" t="Include" />
           <e p="ItemsListHandler.cs" t="Include" />
           <e p="LevelProgress.cs" t="Include" />
@@ -443,6 +445,7 @@
             <e p="Menu.cs" t="Include" />
           </e>
           <e p="MeteorRotation.cs" t="Include" />
+          <e p="MoneyAnimation.cs" t="Include" />
           <e p="NewPartsHandler.cs" t="Include" />
           <e p="PartsUIItem.cs" t="Include" />
           <e p="PlanetsMovement.cs" t="Include" />
@@ -474,6 +477,13 @@
           </e>
           <e p="StartGameScreen.cs" t="Include" />
           <e p="SwipeDetector.cs" t="Include" />
+          <e p="TutorialManager" t="Include">
+            <e p="LootItemTutorial.cs" t="Include" />
+            <e p="OnDragFuel.cs" t="Include" />
+            <e p="OnEndDragEngine.cs" t="Include" />
+            <e p="Pointer.cs" t="Include" />
+            <e p="TutorialManager.cs" t="Include" />
+          </e>
           <e p="uGUITools.cs" t="Include" />
           <e p="WInLose" t="Include">
             <e p="Lose.cs" t="Include" />

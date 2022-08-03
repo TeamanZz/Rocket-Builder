@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,9 +33,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/BossGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DreamNeighbors/Assets/Scripts/UI/Phone/Chat/ChatManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TutorialManager/LootItemTutorial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/CameraRotation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/Gun/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragEngine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TutorialManager/Pointer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,7 +66,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
@@ -87,6 +88,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/LootItemTutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildItemUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragStartTutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragEngine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnDragFuel.cs" />
+        <option value="$PROJECT_DIR$/Assets/QuestPointer/Scripts/Window_QuestPointer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/Pointer.cs" />
       </list>
     </option>
   </component>
@@ -169,9 +179,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1658141971579" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1658478370072">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1659536292180">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1658478370072" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1659536292180" />
   </component>
 </project>

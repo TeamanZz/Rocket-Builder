@@ -26,5 +26,6 @@ public class BuildItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (BuildingGrid.Instance.placingItem != null)
             BuildingGrid.Instance.HandleDropItem();
+        
     }
 }
