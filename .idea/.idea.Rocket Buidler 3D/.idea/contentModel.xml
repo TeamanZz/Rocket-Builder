@@ -437,6 +437,9 @@
           <e p="EventType.cs" t="Include" />
           <e p="GameStateHandler.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
+          <e p="HeightScore" t="Include">
+            <e p="HeighScoreLine.cs" t="Include" />
+          </e>
           <e p="HumanRotation.cs" t="Include" />
           <e p="IShootable.cs" t="Include" />
           <e p="ItemsListHandler.cs" t="Include" />

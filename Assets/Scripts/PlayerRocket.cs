@@ -126,6 +126,11 @@ public class PlayerRocket : MonoBehaviour
                 currentFuel -= value;
                 playerFuelBar.fillAmount = oneHitFuelBarFill * currentFuel;
             }
+            /*else if(currentFuel <= 0)
+            {
+                CreateHighScoreLine();
+                Dead();
+            }*/
         }
         else
         {
@@ -164,6 +169,8 @@ public class PlayerRocket : MonoBehaviour
         if (isDead)
             return;
         isDead = true;
+        Debug.Log("dead");
+        CreateHighScoreLine();
         LevelProgress.Instance.CancelFillTween();
         playerFuelBar.gameObject.SetActive(false);
         shieldBarText.gameObject.SetActive(false);
@@ -216,5 +223,10 @@ public class PlayerRocket : MonoBehaviour
     {
         lowFuelIndication.SetActive(false);
         lowFuelEnabled = false;
+    }
+
+    public void CreateHighScoreLine()
+    {
+        LevelProgress.Instance.SetHighSCoreLine();
     }
 }

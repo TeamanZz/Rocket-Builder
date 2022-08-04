@@ -28,6 +28,9 @@ public class LevelProgress : MonoBehaviour
     private Coroutine damageIndicatorCoroutine;
     private Tween damageIndicatorTween;
 
+    [Header("HighSCoreLine")]
+    [SerializeField] private GameObject highSCoreLinePrefab;
+
     private void Awake()
     {
         Instance = this;
@@ -96,5 +99,11 @@ public class LevelProgress : MonoBehaviour
         damageIndicatorTween = damageIndicator.DOFade(1, 0.2f).SetLoops(2, LoopType.Yoyo);
         yield return new WaitForSeconds(0.4f);
         damageIndicator.gameObject.SetActive(false);
+    }
+
+    public void SetHighSCoreLine()
+    {
+        var HeightLine = Instantiate(highSCoreLinePrefab, new Vector3(0, PlayerRocket.Instance.transform.position.y, 8), Quaternion.identity, CommonContainer.Instance.transform);
+        HeightLine.GetComponent<HeighScoreLine>().heightScoreText.text = Mathf.RoundToInt(currentHeight).ToString() + "km";
     }
 }
