@@ -24,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,8 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildingGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" />
@@ -97,6 +96,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/NewPartsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LootSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
       </list>
     </option>
   </component>
@@ -162,6 +163,7 @@
       <workItem from="1659348262888" duration="11384000" />
       <workItem from="1659363259791" duration="32000" />
       <workItem from="1659608537866" duration="6512000" />
+      <workItem from="1659623892856" duration="4847000" />
     </task>
     <servers />
   </component>

@@ -1924,7 +1924,12 @@ MonoBehaviour:
   maxLocalX: 6
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
-  lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
+  lootPrefabs:
+  - {fileID: 9130919033157652656, guid: 806b8a443052a0c4e8b775915a53a195, type: 3}
+  - {fileID: 4187999883567012909, guid: 79d0e2e99d33d5449a56d8112bf8b5c3, type: 3}
+  - {fileID: 1785734228699846506, guid: 8a5ed4c25a3bd294182740f76ed0e7a2, type: 3}
+  - {fileID: 154475069623919731, guid: 00dc2f7f56235c84bbcc21983f252309, type: 3}
+  - {fileID: 1234577399979705602, guid: adc6ae17917dd5746a77e1edcef3ae2d, type: 3}
   lootContainer: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!1 &138290629
@@ -18177,7 +18182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167674, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 497390, guid: 567ddeb152b9448488a5c222144ea980, type: 3}
       propertyPath: m_RootOrder
@@ -21867,6 +21872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loot Item
       objectReference: {fileID: 0}
+    - target: {fileID: 6637345069168375974, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}
 --- !u!1 &1292741293
@@ -23680,7 +23689,12 @@ MonoBehaviour:
   maxLocalX: 6
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
-  lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
+  lootPrefabs:
+  - {fileID: 9130919033157652656, guid: 806b8a443052a0c4e8b775915a53a195, type: 3}
+  - {fileID: 4187999883567012909, guid: 79d0e2e99d33d5449a56d8112bf8b5c3, type: 3}
+  - {fileID: 1785734228699846506, guid: 8a5ed4c25a3bd294182740f76ed0e7a2, type: 3}
+  - {fileID: 154475069623919731, guid: 00dc2f7f56235c84bbcc21983f252309, type: 3}
+  - {fileID: 1234577399979705602, guid: adc6ae17917dd5746a77e1edcef3ae2d, type: 3}
   lootContainer: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1383840871
@@ -25598,7 +25612,12 @@ MonoBehaviour:
   maxLocalX: 6
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
-  lootPrefab: {fileID: 2801642455905783612, guid: e87b7b908e3f26043a86733dd3b6d6b1, type: 3}
+  lootPrefabs:
+  - {fileID: 9130919033157652656, guid: 806b8a443052a0c4e8b775915a53a195, type: 3}
+  - {fileID: 4187999883567012909, guid: 79d0e2e99d33d5449a56d8112bf8b5c3, type: 3}
+  - {fileID: 1785734228699846506, guid: 8a5ed4c25a3bd294182740f76ed0e7a2, type: 3}
+  - {fileID: 154475069623919731, guid: 00dc2f7f56235c84bbcc21983f252309, type: 3}
+  - {fileID: 1234577399979705602, guid: adc6ae17917dd5746a77e1edcef3ae2d, type: 3}
   lootContainer: {fileID: 1115710333}
   wasSpawned: 0
 --- !u!65 &1493856232
@@ -30180,6 +30199,79 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
+--- !u!1001 &1776919183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1527142692066402368, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_Name
+      value: SpeedBooster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191903776066878409, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082907666595202721, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1558215972}
+    - target: {fileID: 7082907666595202721, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: speedBooster
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082907666595202721, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: speedBoostDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082907666595202721, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
+      propertyPath: cameraFieldOfViewBoost
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8df328b133c216a4290bcba041ac87a4, type: 3}
 --- !u!1001 &1778731652
 PrefabInstance:
   m_ObjectHideFlags: 0

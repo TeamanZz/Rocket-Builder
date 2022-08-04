@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LootSpawner : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class LootSpawner : MonoBehaviour
     public int maxDuplicatesAllowed = 5;
     public int currentDuplicatesValue = 0;
     [Space]
-    public GameObject lootPrefab;
+    public GameObject[] lootPrefabs;
     public Transform lootContainer;
     public bool wasSpawned;
 
@@ -35,7 +36,8 @@ public class LootSpawner : MonoBehaviour
     {
         float localY = Random.Range(minLocalY, maxLocalY);
         float localX = Random.Range(minLocalX, maxLocalX);
-
-        var lootMeteor = Instantiate(lootPrefab, transform.TransformPoint(new Vector3(localX, localY, -0.5f)), Quaternion.identity, lootContainer);
+        var randomNumber = Random.Range(1, lootPrefabs.Length);
+        var lootMeteor = Instantiate(lootPrefabs[randomNumber], transform.TransformPoint(new Vector3(localX, localY, -0.5f)), Quaternion.identity, lootContainer);
+        Debug.Log(randomNumber + "Container =" + lootPrefabs[randomNumber].name);
     }
 }

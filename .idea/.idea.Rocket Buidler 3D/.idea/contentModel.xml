@@ -395,6 +395,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Boosters" t="Include">
+            <e p="SpeedBooster" t="Include">
+              <e p="SpeedBoosterTrigger.cs" t="Include" />
+            </e>
+          </e>
           <e p="Boss" t="Include">
             <e p="BossGun.cs" t="Include" />
             <e p="BossGunBehaviour.cs" t="Include" />
