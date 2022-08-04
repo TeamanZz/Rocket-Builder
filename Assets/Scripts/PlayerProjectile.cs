@@ -8,6 +8,7 @@ public class PlayerProjectile : ProjectileBase
 {
     public bool wasCollided;
     public GameObject hitParticles;
+    public float timeUntilDestroyProjectile;
 
     private void Start()
     {
@@ -68,9 +69,8 @@ public class PlayerProjectile : ProjectileBase
     }
     private IEnumerator SpawnParticleAfterDestroy()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeUntilDestroyProjectile);
         var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
-        Destroy(hitParticle,2f);
         Destroy(gameObject);
     }
 }

@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab245f7b6495b84097df4738a0aec44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 11
+  startHealth: 5
   enemyReward: 20
   deathParticles: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   lootGameobject: {fileID: 6637345069168375974, guid: 8b85cadc05c8e1b4797aa45111f60e1f, type: 3}

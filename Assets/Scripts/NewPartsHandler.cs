@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewPartsHandler : MonoBehaviour
 {
@@ -22,9 +24,11 @@ public class NewPartsHandler : MonoBehaviour
     public void UnlockNewDuplicate()
     {
         rocketPartPopup.SetActive(true);
-
         int itemIndex = Random.Range(1, boughtedItems.Count);
         boughtedItems[itemIndex].IncreaseCount();
+        rocketPartPopup.GetComponent<RocketPartPopup>().popupText.text = $"You found a {boughtedItems[itemIndex].partName} part!";
+        rocketPartPopup.GetComponent<RocketPartPopup>().rocketPartIcon.sprite =
+            boughtedItems[itemIndex].mainImage.sprite;
     }
 
     [ContextMenu("UnlockNextEvent")]

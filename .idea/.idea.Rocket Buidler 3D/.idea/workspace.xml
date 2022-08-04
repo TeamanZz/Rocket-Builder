@@ -46,12 +46,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildUIButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildingGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
@@ -69,7 +64,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoubleGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gun.cs" />
@@ -85,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGunBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
@@ -93,10 +86,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildItemUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragStartTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragEngine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnDragFuel.cs" />
         <option value="$PROJECT_DIR$/Assets/QuestPointer/Scripts/Window_QuestPointer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/Pointer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RocketPartPopup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PartsUIItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NewPartsHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
       </list>
     </option>
   </component>
@@ -161,6 +161,7 @@
       <workItem from="1659099849466" duration="6631000" />
       <workItem from="1659348262888" duration="11384000" />
       <workItem from="1659363259791" duration="32000" />
+      <workItem from="1659608537866" duration="6512000" />
     </task>
     <servers />
   </component>

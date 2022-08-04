@@ -206,6 +206,8 @@ MonoBehaviour:
   countValue: 2
   buyButton: {fileID: 3002308825473096754}
   isBoughted: 0
+  <collectIcon>k__BackingField: {fileID: 0}
+  <partName>k__BackingField: 
 --- !u!1 &2365906493415071357
 GameObject:
   m_ObjectHideFlags: 0

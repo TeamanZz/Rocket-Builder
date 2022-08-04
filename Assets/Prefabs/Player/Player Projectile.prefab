@@ -50,6 +50,7 @@ MonoBehaviour:
   damage: 1
   wasCollided: 0
   hitParticles: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 3}
+  timeUntilDestroyProjectile: 0.8
 --- !u!54 &6055687186568386683
 Rigidbody:
   m_ObjectHideFlags: 0

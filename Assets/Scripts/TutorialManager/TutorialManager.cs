@@ -21,6 +21,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private Button shieldButton;
     [SerializeField] private Button fuelButton;
     [SerializeField] private Button engineButton;
+    [SerializeField] private Button resetAll;
     private void Awake()
     {
         Instance = this;
@@ -34,6 +35,7 @@ public class TutorialManager : MonoBehaviour
             shieldButton.enabled = true;
             fuelButton.enabled = true;
             engineButton.enabled = true;
+            resetAll.enabled = true;
         }
         else
         {
@@ -41,6 +43,7 @@ public class TutorialManager : MonoBehaviour
             shieldButton.enabled = false;
             fuelButton.enabled = false;
             engineButton.enabled = false;
+            resetAll.enabled = false;
         }
         
         ShowTapToBuildTutorial();
@@ -137,6 +140,7 @@ public class TutorialManager : MonoBehaviour
             SpaceShipMovement.Instance.constantVelocity = 0;
             SpaceShipMovement.Instance.sideSpeed = 0;
             PlayerRocket.Instance.fuelDecreaseMultiplier = 0;
+            LevelProgress.Instance.StopFillingHeightBar();
             StartCoroutine(ContinuePlayingAfterLootTutorial());
         }
     }
@@ -144,6 +148,7 @@ public class TutorialManager : MonoBehaviour
     public IEnumerator ContinuePlayingAfterLootTutorial()
     {
         yield return new WaitForSeconds(4f);
+        LevelProgress.Instance.ContinueFillingHeightBar();
         lootItemTutorialObject.SetActive(false);
         SpaceShipMovement.Instance.constantVelocity = SpaceShipMovement.Instance.defaultConstantVelocity;
         SpaceShipMovement.Instance.sideSpeed = SpaceShipMovement.Instance.defaultSideSpeed;
@@ -161,5 +166,6 @@ public class TutorialManager : MonoBehaviour
         shieldButton.enabled = true;
         fuelButton.enabled = true;
         engineButton.enabled = true;
+        resetAll.enabled = true;
     }
 }

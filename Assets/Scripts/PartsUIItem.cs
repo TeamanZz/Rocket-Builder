@@ -17,6 +17,7 @@ public class PartsUIItem : MonoBehaviour
     public Button buyButton;
 
     public bool isBoughted;
+    [field: SerializeField] public string partName { get; private set; }
 
     private void Awake()
     {
