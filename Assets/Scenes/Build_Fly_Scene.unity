@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.08572551, g: 0.31959152, b: 0.56495583, a: 1}
+  m_IndirectSpecularColor: {r: 0.08561934, g: 0.3195814, b: 0.56496024, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5256,7 +5256,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281492721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 137a7b69377830747972fa720459b0c1, type: 3}
   m_Name: 
@@ -5270,6 +5270,9 @@ MonoBehaviour:
   shuttleModel: {fileID: 245171070}
   playerCanControl: 1
   rocketTrueSpeed: 0
+  newSpeed: 20
+  rotateZMultiplier: 2
+  rotateYMultiplier: 4
 --- !u!114 &281492727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24468,7 +24471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
@@ -30630,6 +30633,7 @@ GameObject:
   - component: {fileID: 1558215973}
   - component: {fileID: 1558215972}
   - component: {fileID: 1558215974}
+  - component: {fileID: 1558215975}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -30704,6 +30708,19 @@ MonoBehaviour:
   ShakeFrequency: 1
   VirtualCamera: {fileID: 1558215972}
   cineCamera: {fileID: 1558215972}
+--- !u!114 &1558215975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558215971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65257a7e9e464c4f97947ae8878305f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ZPosition: 3
 --- !u!1001 &1562463180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38054,21 +38071,37 @@ PrefabInstance:
       propertyPath: axisOptions
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738823, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: moveThreshold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Name
       value: Dynamic Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159579, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_SizeDelta.x
       value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327784587630, guid: 56fae09712773584fb63896d473a98ee, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886327784587630, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fae09712773584fb63896d473a98ee, type: 3}
