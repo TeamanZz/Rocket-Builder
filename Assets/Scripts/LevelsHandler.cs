@@ -19,6 +19,7 @@ public class LevelsHandler : MonoBehaviour
     public List<int> targetDistancesUI = new List<int>();
 
     public List<Material> skyboxes = new List<Material>();
+    public List<BackgroundMovement> backgroundContainerMovement = new List<BackgroundMovement>();
 
     private void Awake()
     {
@@ -94,5 +95,15 @@ public class LevelsHandler : MonoBehaviour
         levelTriggersContainer[currentLevelIndex].SetActive(true);
         targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
         RenderSettings.skybox = skyboxes[currentLevelIndex];
+    }
+
+    public void SetPropsContainerPositionToNormal()
+    {
+        backgroundContainerMovement[currentLevelIndex].ReturnContainerToStartPosition();
+    }
+
+    public void EnableCurrentContainerBackgroundMovement()
+    {
+        backgroundContainerMovement[currentLevelIndex].EnableCurrentContainerMovement();
     }
 }

@@ -175,6 +175,7 @@ public class GameStateHandler : MonoBehaviour
         SetNewRocketContainerOffset();
         LevelProgress.Instance.StartHeightBarFilling();
         rocketObject.transform.position = startRocketPosition.position;
-
+        yield return new WaitForSeconds(1f);
+        LevelsHandler.Instance.EnableCurrentContainerBackgroundMovement();
     }
 }

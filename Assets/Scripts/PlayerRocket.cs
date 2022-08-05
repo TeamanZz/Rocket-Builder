@@ -182,6 +182,7 @@ public class PlayerRocket : MonoBehaviour
         StartCoroutine(TurnOffSpeed());
         GameStateHandler.Instance.DisableGuns();
         BoostersManager.Instance.ClearBoosterList();
+        LevelsHandler.Instance.SetPropsContainerPositionToNormal();
     }
 
     private IEnumerator TurnOffSpeed()
@@ -219,6 +220,7 @@ public class PlayerRocket : MonoBehaviour
         isPlayerOnPlanet = false;
         this.enabled = false;
         BoostersManager.Instance.ClearBoosterList();
+        LevelsHandler.Instance.SetPropsContainerPositionToNormal();
     }
 
     public void DisableLowFuelIndicator()
