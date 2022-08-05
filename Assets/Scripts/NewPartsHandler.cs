@@ -8,40 +8,47 @@ public class NewPartsHandler : MonoBehaviour
 {
     public static NewPartsHandler Instance;
 
-    public int lastUnlockedEventIndex = 0;
-    public List<UnlockableEvent> unlockEvents = new List<UnlockableEvent>();
-    public GameObject shieldsListButton;
-
     public GameObject rocketPartPopup;
-
     public List<PartsUIItem> boughtedItems = new List<PartsUIItem>();
+
+    public List<ItemDropChance> itemsDropChances = new List<ItemDropChance>();
 
     private void Awake()
     {
         Instance = this;
     }
+
     [ContextMenu("UnlockNewDuplicate")]
     public void UnlockNewDuplicate()
     {
         rocketPartPopup.SetActive(true);
-        int itemIndex = Random.Range(1, boughtedItems.Count);
-        boughtedItems[itemIndex].IncreaseCount();
-        rocketPartPopup.GetComponent<RocketPartPopup>().popupText.text = $"You found a {boughtedItems[itemIndex].partName} part!";
-        rocketPartPopup.GetComponent<RocketPartPopup>().rocketPartIcon.sprite =
-            boughtedItems[itemIndex].mainImage.sprite;
-    }
 
-    [ContextMenu("UnlockNextEvent")]
-    public void UnlockNextEvent()
-    {
-        if (lastUnlockedEventIndex > unlockEvents.Count - 1)
-            return;
+        bool itemFounded = false;
+        BuildItem.ItemType newItemType = BuildItem.ItemType.Fuel;
 
-        if (lastUnlockedEventIndex == 0)
-            shieldsListButton.SetActive(true);
+        while (itemFounded == false)
+        {
+            int randomNum = Random.Range(1, 100);
 
-        unlockEvents[lastUnlockedEventIndex].UnlockThisEvent();
-        lastUnlockedEventIndex++;
+            for (int i = 0; i < itemsDropChances.Count; i++)
+            {
+                if (itemsDropChances[i].leftEdge <= randomNum &&
+                itemsDropChances[i].rightEdge >= randomNum &&
+                boughtedItems.Find(x => x.mainImage.GetComponent<BuildItemUI>().buildItemPrefab.itemType == itemsDropChances[i].itemType))
+                {
+                    newItemType = itemsDropChances[i].itemType;
+                    itemFounded = true;
+                    break;
+                }
+            }
+        }
+
+        var allowedItems = boughtedItems.FindAll(x => x.mainImage.GetComponent<BuildItemUI>().buildItemPrefab.itemType == newItemType);
+        var duplicatedItemNum = Random.Range(0, allowedItems.Count);
+        allowedItems[duplicatedItemNum].IncreaseCount();
+
+        rocketPartPopup.GetComponent<RocketPartPopup>().popupText.text = $"You found a {allowedItems[duplicatedItemNum].partName} part!";
+        rocketPartPopup.GetComponent<RocketPartPopup>().rocketPartIcon.sprite = allowedItems[duplicatedItemNum].mainImage.sprite;
     }
 
     public void RemoveAllDuplicates()
@@ -57,29 +64,13 @@ public class NewPartsHandler : MonoBehaviour
             boughtedItems[i].HandleView();
         }
     }
-}
 
-[System.Serializable]
-public class UnlockableEvent
-{
-    public EventType eventType;
-    public PartsUIItem buildItem;
-
-    public void UnlockThisEvent()
+    [System.Serializable]
+    public class ItemDropChance
     {
-        if (eventType == EventType.IncreaseItemCount)
-        {
-            buildItem.IncreaseCount();
-        }
-        else if (eventType == EventType.UnlockItem)
-        {
-            buildItem.gameObject.SetActive(true);
-        }
-    }
-
-    public enum EventType
-    {
-        UnlockItem,
-        IncreaseItemCount
+        public int leftEdge;
+        public int rightEdge;
+        public BuildItem.ItemType itemType;
     }
 }
+
