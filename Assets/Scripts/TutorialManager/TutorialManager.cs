@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject tapToPlayObject;
     [SerializeField] private GameObject lootItemTutorialObject;
 
-    [Header("OtherButtons")] 
+    [Header("OtherButtons")]
     [SerializeField] private Button gunButton;
     [SerializeField] private Button shieldButton;
     [SerializeField] private Button fuelButton;
@@ -45,22 +45,28 @@ public class TutorialManager : MonoBehaviour
             engineButton.enabled = false;
             resetAll.enabled = false;
         }
-        
+
         ShowTapToBuildTutorial();
+    }
+
+    [ContextMenu("Clear Prefs")]
+    public void ClearPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Prefs deleted");
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            PlayerPrefs.DeleteAll();
-            Debug.Log("Prefs deleted");
+            ClearPrefs();
         }
     }
 
     public void ShowTapToBuildTutorial()
     {
-        
+
         if (PlayerPrefs.HasKey("TutorialDone"))
         {
             tapToBuildObject.SetActive(false);
@@ -69,7 +75,7 @@ public class TutorialManager : MonoBehaviour
         {
             tapToBuildObject.SetActive(true);
         }
-        
+
     }
 
     public void ShowDragEngineTutorial()
@@ -132,7 +138,7 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("TutorialDone",1);
+            PlayerPrefs.SetInt("TutorialDone", 1);
             lootItemTutorialObject.SetActive(true);
             SpaceShipMovement.Instance.gameObject.transform.DOMove(
                 new Vector3(3.5f, SpaceShipMovement.Instance.gameObject.transform.position.y,
