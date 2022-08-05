@@ -31,8 +31,8 @@ public class BuildingGrid : MonoBehaviour
 
     private void Start()
     {
-        grid[4, 6] = startCapsule;
-        startCapsule.placedPosition = new Vector2Int(4, 6);
+        grid[3, 6] = startCapsule;
+        startCapsule.placedPosition = new Vector2Int(3, 6);
     }
 
     private void OnEnable()
