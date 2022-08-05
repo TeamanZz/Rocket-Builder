@@ -16,6 +16,11 @@ public class SpeedBoosterTrigger : MonoBehaviour
 
    private float oldSpeed;
 
+   private void Awake()
+   {
+      mainCamera = FindObjectOfType<CinemachineVirtualCamera>();
+   }
+
    private void OnTriggerEnter(Collider other)
    {
       if (wasTriggered)

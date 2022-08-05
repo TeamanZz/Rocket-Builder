@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Build/Connector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boosters/BoostersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RandomSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceShip/GunRotation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocket/RocketController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeightScore/HeighScoreLine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/../ClassRoomMaster/Assets/Scripts/Player/PlayerCamera/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragEngine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TutorialManager/Pointer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RammingEnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Space/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,13 +51,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRotation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Space/ItemPickUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
@@ -73,13 +70,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGunBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/LootItemTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildItemUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/OnEndDragStartTutorial.cs" />
@@ -95,10 +89,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/NewPartsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LootSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HeightScore/HeighScoreLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Space/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/BoostersManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HeightScore/HeighScoreLine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelsHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RammingEnemyBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -166,6 +169,7 @@
       <workItem from="1659608537866" duration="6512000" />
       <workItem from="1659623892856" duration="4847000" />
       <workItem from="1659632579714" duration="3496000" />
+      <workItem from="1659685989019" duration="10020000" />
     </task>
     <servers />
   </component>

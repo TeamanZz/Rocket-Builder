@@ -49,7 +49,6 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
-        <e p="FadeScreen.cs" t="Include" />
         <e p="GUI PRO Kit - Casual Game" t="Include">
           <e p="Extensions" t="Include">
             <e p="UIParticle" t="Include">
@@ -395,8 +394,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BackgroundMovement.cs" t="Include" />
           <e p="Boosters" t="Include">
+            <e p="BoostersManager.cs" t="Include" />
             <e p="SpeedBooster" t="Include">
+              <e p="SpeedBoosterSpawner.cs" t="Include" />
               <e p="SpeedBoosterTrigger.cs" t="Include" />
             </e>
           </e>
@@ -428,6 +430,7 @@
             <e p="EnemyProjectile.cs" t="Include" />
             <e p="EnemyRotation.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
+            <e p="RammingEnemyBehaviour.cs" t="Include" />
             <e p="RandomSpawner.cs" t="Include" />
             <e p="SatelliteMovement.cs" t="Include" />
             <e p="StuckWithEnemy.cs" t="Include" />
@@ -435,6 +438,7 @@
           <e p="EnemyBase.cs" t="Include" />
           <e p="EngineViewController.cs" t="Include" />
           <e p="EventType.cs" t="Include" />
+          <e p="FadeScreen.cs" t="Include" />
           <e p="GameStateHandler.cs" t="Include" />
           <e p="HeightController.cs" t="Include" />
           <e p="HeightScore" t="Include">

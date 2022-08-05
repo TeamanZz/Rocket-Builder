@@ -20,7 +20,7 @@ public class EnemyBase : MonoBehaviour
     private void Awake()
     {
         playerMoney = FindObjectOfType<Money>();
-        currentHealth = startHealth;
+        currentHealth = startHealth * (LevelsHandler.Instance.currentLevelIndex + 1);
 
         oneHitHealthBarFill = healthBar.fillAmount / startHealth;
     }
@@ -37,8 +37,8 @@ public class EnemyBase : MonoBehaviour
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             EnemyManager.Instance.RemoveEnemyFromContainer(this);
-            Destroy(gameObject);
             playerMoney.AddCurrency(enemyReward);
+            Destroy(gameObject);
         }
         else
         {

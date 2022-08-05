@@ -7,7 +7,7 @@ public class LevelsHandler : MonoBehaviour
 {
     public static LevelsHandler Instance;
 
-    [SerializeField] private int currentLevelIndex;
+    public int currentLevelIndex;
 
     public Image targetPlanetIcon;
     public Transform targetPlanet;
@@ -94,7 +94,5 @@ public class LevelsHandler : MonoBehaviour
         levelTriggersContainer[currentLevelIndex].SetActive(true);
         targetPlanetIcon.sprite = targetPlanetIcons[currentLevelIndex];
         RenderSettings.skybox = skyboxes[currentLevelIndex];
-
-
     }
 }

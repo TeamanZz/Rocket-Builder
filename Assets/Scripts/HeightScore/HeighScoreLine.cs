@@ -11,6 +11,6 @@ public class HeighScoreLine : MonoBehaviour
 
     private void Start()
     {
-        transform.DOScale(1, 0.5f);
+        transform.DOScale(1, 1f);
     }
 }

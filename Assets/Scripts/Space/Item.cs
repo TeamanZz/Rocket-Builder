@@ -16,7 +16,6 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("LootCollected");
         if (isCollected) return;
 
         BuildItem buildItem;
