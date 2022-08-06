@@ -13,6 +13,7 @@ public class LootItemTutorial : MonoBehaviour
         BuildItem buildItem;
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
+            Debug.Log("LootTut");
             TutorialManager.Instance.ShowLootItemTutorial();
         }
     }
