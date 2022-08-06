@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.08572551, g: 0.31959152, b: 0.56495583, a: 1}
+  m_IndirectSpecularColor: {r: 0.08561934, g: 0.3195814, b: 0.56496024, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -345,8 +345,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -647,8 +647,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -952,8 +952,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -1625,8 +1625,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -1998,8 +1998,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -2082,8 +2082,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -2429,8 +2429,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -2608,8 +2608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minLocalY: 20
   maxLocalY: 90
-  minLocalX: -6
-  maxLocalX: 6
+  minLocalX: -4
+  maxLocalX: 4
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
   lootPrefabs:
@@ -3205,8 +3205,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -3432,8 +3432,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -3788,8 +3788,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -4006,8 +4006,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -4407,8 +4407,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -4650,8 +4650,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -5287,8 +5287,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -5372,8 +5372,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -5547,8 +5547,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -5699,7 +5699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281492721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 137a7b69377830747972fa720459b0c1, type: 3}
   m_Name: 
@@ -5713,6 +5713,9 @@ MonoBehaviour:
   shuttleModel: {fileID: 245171070}
   playerCanControl: 1
   rocketTrueSpeed: 0
+  newSpeed: 20
+  rotateZMultiplier: 2
+  rotateYMultiplier: 4
 --- !u!114 &281492727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5959,8 +5962,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -6179,7 +6182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6317,8 +6320,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -6544,8 +6547,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -7260,6 +7263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
       value: SpeedBoosterTrigger (2)
@@ -7615,8 +7626,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -8042,8 +8053,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -8127,8 +8138,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -8140,89 +8151,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426429518}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!1 &428002591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 428002592}
-  - component: {fileID: 428002595}
-  - component: {fileID: 428002594}
-  - component: {fileID: 428002593}
-  m_Layer: 0
-  m_Name: SpawnTrigger (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &428002592
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428002591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 85.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1057372474}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &428002593
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428002591}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &428002594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428002591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &428002595
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428002591}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -9522,8 +9450,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -9607,8 +9535,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -10195,8 +10123,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -10264,6 +10192,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -10427,8 +10363,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -10595,6 +10531,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
       value: SpeedBoosterTrigger (2)
@@ -10738,6 +10682,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
       value: SpeedBoosterTrigger
@@ -10815,8 +10767,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -11020,6 +10972,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -11411,8 +11371,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -11889,8 +11849,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -12080,8 +12040,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -12186,7 +12146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &664080138
 Transform:
   m_ObjectHideFlags: 0
@@ -12195,7 +12155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664080137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 294, z: 6.8671}
+  m_LocalPosition: {x: -8, y: 294, z: 6.8671}
   m_LocalScale: {x: 1, y: 586.2822, z: 5.82}
   m_Children: []
   m_Father: {fileID: 328027231}
@@ -12328,8 +12288,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -12413,8 +12373,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -12521,8 +12481,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -12697,8 +12657,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -12857,8 +12817,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -13064,8 +13024,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -13631,8 +13591,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -13945,8 +13905,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -14028,8 +13988,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -14534,8 +14494,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -14933,8 +14893,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -15018,8 +14978,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -15037,11 +14997,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!4 &774243964 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
-  m_PrefabInstance: {fileID: 3789398367551580995}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &781382949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1012988639036959431, guid: 83693b61038c54412968c75bf4789079, type: 3}
@@ -15390,8 +15345,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -16185,8 +16140,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -16680,8 +16635,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -16875,8 +16830,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -17253,8 +17208,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -17543,6 +17498,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -17938,8 +17901,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -18253,8 +18216,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -18546,8 +18509,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -18848,8 +18811,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -19011,8 +18974,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -19230,7 +19193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1057372474}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1001673875
 BoxCollider:
@@ -19323,8 +19286,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -19805,8 +19768,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -20000,14 +19963,8 @@ Transform:
   - {fileID: 1104362271}
   - {fileID: 961301412}
   - {fileID: 889167558}
-  - {fileID: 2091179924}
-  - {fileID: 1565432229}
-  - {fileID: 1493128479}
-  - {fileID: 1887564545}
-  - {fileID: 428002592}
   - {fileID: 1001673874}
   - {fileID: 205257801}
-  - {fileID: 774243964}
   m_Father: {fileID: 1072444631}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20077,8 +20034,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -20328,8 +20285,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -20574,7 +20531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1097753422
 Transform:
   m_ObjectHideFlags: 0
@@ -20583,7 +20540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097753421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 294, z: 6.8671}
+  m_LocalPosition: {x: 8, y: 294, z: 6.8671}
   m_LocalScale: {x: 1, y: 586.2822, z: 5.82}
   m_Children: []
   m_Father: {fileID: 328027231}
@@ -20715,8 +20672,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -21031,8 +20988,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -21100,6 +21057,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -21724,8 +21689,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -22403,8 +22368,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -22545,8 +22510,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -23091,8 +23056,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -23306,8 +23271,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -23390,8 +23355,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -23475,8 +23440,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -23617,8 +23582,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -23836,8 +23801,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -23903,8 +23868,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -24071,8 +24036,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -24213,8 +24178,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -24282,6 +24247,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -24417,8 +24390,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -24523,8 +24496,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -24712,6 +24685,14 @@ PrefabInstance:
     - target: {fileID: 1184198813747415369, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
@@ -24923,7 +24904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: isBoughted
@@ -25282,8 +25263,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -25898,7 +25879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26122,8 +26103,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -27195,8 +27176,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -27280,8 +27261,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -27655,8 +27636,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -27795,8 +27776,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minLocalY: 20
   maxLocalY: 90
-  minLocalX: -6
-  maxLocalX: 6
+  minLocalX: -4
+  maxLocalX: 4
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
   lootPrefabs:
@@ -28318,8 +28299,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -29113,8 +29094,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -29209,8 +29190,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -29367,89 +29348,6 @@ MonoBehaviour:
   minSpeed: 1
   maxSpeed: 15
   rotateValue: 7
---- !u!1 &1493128478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1493128479}
-  - component: {fileID: 1493128482}
-  - component: {fileID: 1493128481}
-  - component: {fileID: 1493128480}
-  m_Layer: 0
-  m_Name: SpawnTrigger (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1493128479
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493128478}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 70, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1057372474}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1493128480
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493128478}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1493128481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493128478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &1493128482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493128478}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &1493856228
 GameObject:
   m_ObjectHideFlags: 0
@@ -29496,8 +29394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minLocalY: 20
   maxLocalY: 90
-  minLocalX: -6
-  maxLocalX: 6
+  minLocalX: -4
+  maxLocalX: 4
   maxDuplicatesAllowed: 5
   currentDuplicatesValue: 0
   lootPrefabs:
@@ -29662,8 +29560,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -29831,8 +29729,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -29916,8 +29814,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -30076,8 +29974,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -30295,8 +30193,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -30380,8 +30278,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -30940,8 +30838,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -30970,6 +30868,7 @@ GameObject:
   - component: {fileID: 1558215973}
   - component: {fileID: 1558215972}
   - component: {fileID: 1558215974}
+  - component: {fileID: 1558215975}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -31044,6 +30943,19 @@ MonoBehaviour:
   ShakeFrequency: 1
   VirtualCamera: {fileID: 1558215972}
   cineCamera: {fileID: 1558215972}
+--- !u!114 &1558215975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558215971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65257a7e9e464c4f97947ae8878305f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ZPosition: 3
 --- !u!1001 &1562463180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31167,8 +31079,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -31180,89 +31092,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564164087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
---- !u!1 &1565432228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1565432229}
-  - component: {fileID: 1565432232}
-  - component: {fileID: 1565432231}
-  - component: {fileID: 1565432230}
-  m_Layer: 0
-  m_Name: SpawnTrigger (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1565432229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565432228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 63, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1057372474}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1565432230
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565432228}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1565432231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565432228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &1565432232
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565432228}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -31759,8 +31588,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -32681,8 +32510,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -33338,8 +33167,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -33423,8 +33252,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -33588,8 +33417,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -33698,8 +33527,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -33939,8 +33768,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -34216,8 +34045,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 4
   enemiesParent: {fileID: 1115710333}
@@ -34299,8 +34128,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -34533,8 +34362,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -34693,8 +34522,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -35257,8 +35086,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -35580,8 +35409,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -35839,6 +35668,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
       value: SpeedBoosterTrigger
@@ -35916,8 +35753,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -36293,8 +36130,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -36518,8 +36355,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -36821,8 +36658,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -36906,8 +36743,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -37335,7 +37172,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 106386, guid: 831c85159903ac84399ac3c3e1d5c5ad, type: 3}
   m_PrefabInstance: {fileID: 1878565075}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1887564544
+=======
+--- !u!1 &1879755125
+>>>>>>> origin/mikita-mc-donalds
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37343,23 +37184,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1887564545}
   - component: {fileID: 1887564548}
   - component: {fileID: 1887564547}
   - component: {fileID: 1887564546}
   m_Layer: 0
   m_Name: SpawnTrigger (6)
+=======
+  - component: {fileID: 1879755126}
+  - component: {fileID: 1879755128}
+  - component: {fileID: 1879755127}
+  m_Layer: 5
+  m_Name: BackGround
+>>>>>>> origin/mikita-mc-donalds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1887564545
 Transform:
+=======
+--- !u!224 &1879755126
+RectTransform:
+>>>>>>> origin/mikita-mc-donalds
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1887564544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 80.9, z: 0}
@@ -37385,11 +37240,30 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1887564547
+=======
+  m_GameObject: {fileID: 1879755125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 191447791}
+  - {fileID: 1341037334}
+  m_Father: {fileID: 293968978}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 652}
+  m_SizeDelta: {x: 735, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1879755127
+>>>>>>> origin/mikita-mc-donalds
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1887564544}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -37407,10 +37281,39 @@ MonoBehaviour:
   wasSpawned: 0
 --- !u!65 &1887564548
 BoxCollider:
+=======
+  m_GameObject: {fileID: 1879755125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d49eb982e882a1d42832996bbe9593db, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1879755128
+CanvasRenderer:
+>>>>>>> origin/mikita-mc-donalds
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1887564544}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -37418,6 +37321,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
   m_Center: {x: 0, y: -0.40331602, z: 0}
+=======
+  m_GameObject: {fileID: 1879755125}
+  m_CullTransparentMesh: 1
+>>>>>>> origin/mikita-mc-donalds
 --- !u!1 &1888053806
 GameObject:
   m_ObjectHideFlags: 0
@@ -37483,8 +37390,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -38470,21 +38377,37 @@ PrefabInstance:
       propertyPath: axisOptions
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738823, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: moveThreshold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Name
       value: Dynamic Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159579, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_SizeDelta.x
       value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327784587630, guid: 56fae09712773584fb63896d473a98ee, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886327784587630, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fae09712773584fb63896d473a98ee, type: 3}
@@ -39163,8 +39086,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -39316,8 +39239,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -39530,8 +39453,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -39724,8 +39647,8 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   randomizePosition: {x: 0, y: 27, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 1
   enemiesParent: {fileID: 1115710333}
@@ -40189,8 +40112,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -40794,8 +40717,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -41055,8 +40978,8 @@ MonoBehaviour:
   - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -41241,89 +41164,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f683447c6570076418716c53d120168a, type: 3}
---- !u!1 &2091179923
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2091179924}
-  - component: {fileID: 2091179927}
-  - component: {fileID: 2091179926}
-  - component: {fileID: 2091179925}
-  m_Layer: 0
-  m_Name: SpawnTrigger (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2091179924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091179923}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1057372474}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2091179925
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091179923}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2091179926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091179923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af70292e2018ec4448927da1a3b97104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesPrefabs:
-  - {fileID: 3928086112683784998, guid: 4f8fe1117fa957144a87817f1cb7365c, type: 3}
-  randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
-  minEnemiesCount: 1
-  maxEnemiesCount: 2
-  enemiesParent: {fileID: 1115710333}
-  wasSpawned: 0
---- !u!65 &2091179927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091179923}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 33, y: 0.19336796, z: 6.7254634}
-  m_Center: {x: 0, y: -0.40331602, z: 0}
 --- !u!1 &2094507203
 GameObject:
   m_ObjectHideFlags: 0
@@ -41390,8 +41230,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 8437895061384747019, guid: 1999bd591cb125447a7e8c35d97d542e, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -41475,8 +41315,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -41606,8 +41446,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 3
   enemiesParent: {fileID: 1115710333}
@@ -42090,8 +41930,8 @@ MonoBehaviour:
   - {fileID: 925957754603105121, guid: 38ed52902cd5bef48978a9c5579f6a21, type: 3}
   - {fileID: 3118934467015349552, guid: ce8294add108229458956079d25f1229, type: 3}
   randomizePosition: {x: 0, y: 32, z: 6.8671}
-  minXPosition: -12
-  maxXpPosition: 12
+  minXPosition: -4
+  maxXpPosition: 4
   minEnemiesCount: 1
   maxEnemiesCount: 2
   enemiesParent: {fileID: 1115710333}
@@ -42516,6 +42356,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: maxLocalX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578316653238038072, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+      propertyPath: minLocalX
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 7764429550912990899, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
       propertyPath: m_Name
       value: SpeedBoosterTrigger (3)
@@ -42883,6 +42731,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048349905166134620}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 39fadbd67fc1e114a949d59681c82932, type: 2}
   m_CullingMode: 0
@@ -42950,3 +42799,110 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08a5ad2406fe40048820f5c06fec045c, type: 3}
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5597fd9557f024548bbb6bdfcbfb0726, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1048349905631672971
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349905631672968}
+  m_CullTransparentMesh: 1
+--- !u!222 &1048349906115113840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349906115113845}
+  m_CullTransparentMesh: 1
+--- !u!1 &1048349906115113845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048349906115113846}
+  - component: {fileID: 1048349906115113840}
+  - component: {fileID: 1048349906115113847}
+  m_Layer: 5
+  m_Name: Cell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1048349906115113846
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349906115113845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1048349904626670894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 51, y: 289}
+  m_SizeDelta: {x: 125, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1048349906115113847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349906115113845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6b103df01c0b72f48bd66b9e75fb8b3b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+>>>>>>> origin/mikita-mc-donalds

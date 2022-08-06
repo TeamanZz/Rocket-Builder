@@ -218,9 +218,10 @@ public class PlayerRocket : MonoBehaviour
         boss.SetActive(false);
         isDead = false;
         isPlayerOnPlanet = false;
-        this.enabled = false;
+        SpaceShipMovement.Instance.enabled = false;
         BoostersManager.Instance.ClearBoosterList();
         LevelsHandler.Instance.SetPropsContainerPositionToNormal();
+        this.enabled = false;
     }
 
     public void DisableLowFuelIndicator()

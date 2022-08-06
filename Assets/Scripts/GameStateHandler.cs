@@ -71,9 +71,6 @@ public class GameStateHandler : MonoBehaviour
             gun.GetComponent<IShootable>().AllowShoot();
         }
 
-        // if (buildingGrid.placedItems.Find(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield))
-        //     PlayerRocket.Instance.shieldParticle.SetActive(true);
-
         PlayerRocket.Instance.enabled = true;
         boundsController.enabled = true;
 
@@ -84,6 +81,7 @@ public class GameStateHandler : MonoBehaviour
         playerShipMovement.SetNewValues(resourcesHandler.trueMoveSpeedValue);
         ScreenShake.Instance.ShakeScreenOnRocketStart();
         PlayerRocket.Instance.SetRocketVariables();
+        playerShipMovement.enabled = true;
         LevelProgress.Instance.ResetHeightVariables();
         Menu.Instance.SetNewTriggers(LevelsHandler.Instance.GetCurrentTriggers());
         Menu.Instance.SetNewLootTriggers(LevelsHandler.Instance.GetCurrentLootTriggers());

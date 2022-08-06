@@ -45,9 +45,6 @@ public class Win : MonoBehaviour
         Menu.Instance.DestroyAllActiveEnemies();
         EnemyManager.Instance.ClearEnemyList();
 
-        if (PlayerRocket.Instance.shieldParticle.activeSelf)
-            PlayerRocket.Instance.shieldParticle.SetActive(false);
-
         var gunsList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Weapon);
         foreach (var gun in gunsList)
             gun.GetComponent<IShootable>().ForbidShoot();
@@ -60,7 +57,7 @@ public class Win : MonoBehaviour
     public IEnumerator FinalScene()
     {
         yield return new WaitForSeconds(1f);
-
+        SpaceShipMovement.Instance.enabled = false;
         PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;

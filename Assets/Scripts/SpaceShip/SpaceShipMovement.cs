@@ -26,6 +26,11 @@ public class SpaceShipMovement : MonoBehaviour
     public bool playerCanControl = true;
 
     public float rocketTrueSpeed;
+    public float newSpeed = 5;
+    public float rotateZMultiplier = 5;
+    public float rotateYMultiplier = 5;
+
+    private bool fingerDown = false;
 
     private void Awake()
     {
@@ -55,26 +60,47 @@ public class SpaceShipMovement : MonoBehaviour
         sideSpeedTween = DOTween.To(() => sideSpeed, x => sideSpeed = x, 0, 2f).SetEase(Ease.OutBack);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        spaceRB.velocity = new Vector3(joystick.Horizontal * sideSpeed, constantVelocity, 0);
-        if (!playerCanControl)
-            return;
-        Heeling();
+        if (Input.GetKey(KeyCode.Mouse0))
+            fingerDown = true;
+        else
+            fingerDown = false;
     }
 
-    private void Heeling()
+    private void FixedUpdate()
     {
-        if (joystick.Horizontal != 0)
-        {
-            needAngle = Quaternion.Euler(0, shuttleModel.rotation.eulerAngles.y, -joystick.Horizontal * 30);
-            shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
-        }
+        spaceRB.velocity += new Vector3(0, constantVelocity - spaceRB.velocity.y, 0);
+        if (!playerCanControl)
+            return;
 
-        if (joystick.Horizontal == 0)
+        var direction = Vector3.zero;
+        if (fingerDown)
         {
-            needAngle = startAngle;
-            shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
+            var mousePos = Input.mousePosition;
+            mousePos.z = 24;
+            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+            var delta = mousePos - transform.position;
+            var movementVector = delta.normalized * Time.deltaTime * newSpeed;
+            spaceRB.MovePosition(transform.position + new Vector3(movementVector.x, 0, 0));
+
+            Heeling(delta);
         }
+        else
+        {
+            HeelingBack();
+        }
+    }
+
+    private void Heeling(Vector3 delta)
+    {
+        needAngle = Quaternion.Euler(0, -delta.x * rotateYMultiplier, -delta.x * rotateZMultiplier);
+        shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
+    }
+
+    private void HeelingBack()
+    {
+        needAngle = startAngle;
+        shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
     }
 }
