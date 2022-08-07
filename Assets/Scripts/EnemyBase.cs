@@ -14,15 +14,13 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private Image healthBarBg;
     private float currentHealth;
-    private float oneHitHealthBarFill;
     private Money playerMoney;
 
     private void Awake()
     {
         playerMoney = FindObjectOfType<Money>();
-        currentHealth = startHealth * (LevelsHandler.Instance.currentLevelIndex + 1);
-
-        oneHitHealthBarFill = healthBar.fillAmount / startHealth;
+        startHealth = startHealth * (LevelsHandler.Instance.currentLevelIndex + 1);
+        currentHealth = startHealth;
     }
 
     private void Start()

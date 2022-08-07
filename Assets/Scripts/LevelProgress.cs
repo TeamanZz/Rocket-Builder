@@ -34,7 +34,7 @@ public class LevelProgress : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        targetHeightText.text = targetHeight.ToString();
+        // targetHeightText.text = targetHeight.ToString();
     }
 
     public void StartHeightBarFilling()
@@ -45,7 +45,7 @@ public class LevelProgress : MonoBehaviour
         iconTween = icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
         fillbarTween = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
         Totween = DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);
-        targetHeightText.text = LevelsHandler.Instance.GetTargetDistanceNuber().ToString();
+        targetHeightText.text = LevelsHandler.Instance.GetTargetDistanceNuber() + " km";
     }
 
     private void FixedUpdate()

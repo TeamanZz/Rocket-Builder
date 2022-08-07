@@ -57,13 +57,13 @@ public class Win : MonoBehaviour
     public IEnumerator FinalScene()
     {
         yield return new WaitForSeconds(1f);
+        PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         SpaceShipMovement.Instance.enabled = false;
         PlayerRocket.Instance.DisableLowFuelIndicator();
-        PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
         PlayerRocket.Instance.transform.position = startPos.position;
+        PlayerRocket.Instance.rb.isKinematic = true;
         moveTween = PlayerRocket.Instance.transform.DOMove(finalPos.position, 3f).SetEase(Ease.OutBack);
         rotateTween = rotatedCamera.transform.DORotate(new Vector3(0, 0, 0), 10f);
-
         secondCamera.SetActive(true);
         buildings.SetActive(true);
 
