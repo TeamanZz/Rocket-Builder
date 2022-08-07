@@ -84,8 +84,8 @@ public class LevelsHandler : MonoBehaviour
         targetPlanetsContainer[currentLevelIndex].SetActive(false);
         levelTriggersContainer[currentLevelIndex].SetActive(false);
 
-        if (currentLevelIndex >= 2)
-            currentLevelIndex = 0;
+        if (currentLevelIndex >= startPlanetsContainer.Count - 1)
+            currentLevelIndex = 1;
         else
             currentLevelIndex++;
 

@@ -368,8 +368,9 @@ MonoBehaviour:
   speedBooster: 15
   enterTriggerEffect: {fileID: 6864857130079627221}
   mainCamera: {fileID: 0}
-  cameraFieldOfViewBoost: 30
   speedBoostDuration: 1
+  defaultFOV: 60
+  increasedFOV: 75
 --- !u!1001 &4787500606466666214
 PrefabInstance:
   m_ObjectHideFlags: 0

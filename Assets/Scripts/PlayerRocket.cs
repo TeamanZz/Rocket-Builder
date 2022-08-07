@@ -41,8 +41,7 @@ public class PlayerRocket : MonoBehaviour
     public GameObject boss;
 
     public SpeedBoosterTrigger lastBoosterTrigger;
-    
-    
+
     private void Awake()
     {
         Instance = this;
@@ -77,6 +76,7 @@ public class PlayerRocket : MonoBehaviour
         oneHitFuelBarFill = playerFuelBar.fillAmount / startFuel;
         oneHitShieldBarFill = playerShieldBar.fillAmount / startShield;
         fuelDecreaseMultiplier = 2;
+        cineCamera.m_Lens.FieldOfView = 60;
 
 
         shieldBarText.text = $"{currentShield} / {startShield}";
@@ -184,7 +184,6 @@ public class PlayerRocket : MonoBehaviour
         SpaceShipMovement.Instance.playerCanControl = false;
         StartCoroutine(TurnOffSpeed());
         GameStateHandler.Instance.DisableGuns();
-        BoostersManager.Instance.ClearBoosterList();
     }
 
     private IEnumerator TurnOffSpeed()

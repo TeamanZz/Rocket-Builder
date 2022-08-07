@@ -10,11 +10,10 @@ public class SpeedBoosterTrigger : MonoBehaviour
     [SerializeField] private float speedBooster;
     [SerializeField] private ParticleSystem enterTriggerEffect;
     [SerializeField] private CinemachineVirtualCamera mainCamera;
-    [SerializeField] private float cameraFieldOfViewBoost;
     [SerializeField] private float speedBoostDuration;
 
-    private float mainCameraFieldOfViewValue;
-    private float mainCameraFieldOFViewIncreasedValues;
+    public float defaultFOV;
+    public float increasedFOV;
 
     private bool wasTriggered;
 
@@ -24,12 +23,15 @@ public class SpeedBoosterTrigger : MonoBehaviour
 
     private Coroutine boostCoroutine;
 
+    public void StopBoostCoroutine()
+    {
+        StopCoroutine(boostCoroutine);
+    }
+
     private void Awake()
     {
         mainCamera = FindObjectOfType<CinemachineVirtualCamera>();
-        mainCameraFieldOfViewValue = mainCamera.m_Lens.FieldOfView;
-        mainCameraFieldOFViewIncreasedValues = mainCamera.m_Lens.FieldOfView + cameraFieldOfViewBoost;
-        Debug.Log($"default fov = {mainCameraFieldOfViewValue} + {mainCameraFieldOFViewIncreasedValues}");
+        Debug.Log($"default fov = {defaultFOV} + {increasedFOV}");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,12 +43,16 @@ public class SpeedBoosterTrigger : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             wasTriggered = true;
-            //ResetSpeedAndFOVValuesOnDuplicates();
+
             boostCoroutine = StartCoroutine(SpeedBooster());
+
             if (PlayerRocket.Instance.lastBoosterTrigger != null)
             {
-                
+                PlayerRocket.Instance.lastBoosterTrigger.ResetSpeedAndFOVValuesOnDuplicates();
+                PlayerRocket.Instance.lastBoosterTrigger.StopBoostCoroutine();
+                PlayerRocket.Instance.lastBoosterTrigger = null;
             }
+
             PlayerRocket.Instance.lastBoosterTrigger = this;
         }
     }
@@ -59,19 +65,18 @@ public class SpeedBoosterTrigger : MonoBehaviour
         yield return new WaitForSeconds(speedBoostDuration);
         SlowlyDecreaseSpeed();
         SlowlyChangeCameraFieldBack();
-        wasTriggered = false;
     }
 
     public void SlowlyChangeCameraFieldUp()
     {
         fovTweenUp = DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
-            mainCameraFieldOFViewIncreasedValues, speedBoostDuration / 2);
+            increasedFOV, speedBoostDuration / 2);
     }
 
     public void SlowlyChangeCameraFieldBack()
     {
         fovTweenDown = DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
-           mainCameraFieldOfViewValue, speedBoostDuration);
+           defaultFOV, speedBoostDuration);
     }
 
     public void SlowlyDecreaseSpeed()
@@ -82,10 +87,13 @@ public class SpeedBoosterTrigger : MonoBehaviour
 
     private void ResetSpeedAndFOVValuesOnDuplicates()
     {
+        DOTween.Kill(fovTweenUp);
+        DOTween.Kill(fovTweenDown);
+        DOTween.Kill(speedTween);
         fovTweenUp.Kill();
         fovTweenDown.Kill();
         speedTween.Kill();
-        mainCamera.m_Lens.FieldOfView = mainCameraFieldOfViewValue;
-        SpaceShipMovement.Instance.constantVelocity = SpaceShipMovement.Instance.rocketTrueSpeed;
+        // mainCamera.m_Lens.FieldOfView = mainCameraFieldOfViewValue;
+        // SpaceShipMovement.Instance.constantVelocity = SpaceShipMovement.Instance.rocketTrueSpeed;
     }
 }
