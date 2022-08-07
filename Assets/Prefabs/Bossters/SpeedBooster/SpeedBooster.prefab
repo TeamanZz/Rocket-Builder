@@ -365,10 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92266e4a7dd15e842a93b18720377a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBooster: 30
+  speedBooster: 15
   enterTriggerEffect: {fileID: 6864857130079627221}
   mainCamera: {fileID: 0}
-  cameraFieldOfViewBoost: 30
+  cameraFieldOfViewBoost: 15
   speedBoostDuration: 1
 --- !u!1001 &4787500606466666214
 PrefabInstance:

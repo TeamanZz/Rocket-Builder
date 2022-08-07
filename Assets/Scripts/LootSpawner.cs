@@ -36,7 +36,7 @@ public class LootSpawner : MonoBehaviour
     {
         float localY = Random.Range(minLocalY, maxLocalY);
         float localX = Random.Range(minLocalX, maxLocalX);
-        var randomNumber = Random.Range(1, lootPrefabs.Length);
+        var randomNumber = Random.Range(0, lootPrefabs.Length);
         var lootMeteor = Instantiate(lootPrefabs[randomNumber], transform.TransformPoint(new Vector3(localX, localY, -0.5f)), Quaternion.identity, lootContainer);
         Debug.Log(randomNumber + "Container =" + lootPrefabs[randomNumber].name);
     }

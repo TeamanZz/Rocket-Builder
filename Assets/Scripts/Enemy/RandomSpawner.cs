@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class RandomSpawner : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class RandomSpawner : MonoBehaviour
         int posX = Random.Range(minXPosition, maxXpPosition + 1);
         var posY = SpaceShipMovement.Instance.gameObject.transform.position.y;
         int index = Random.Range(0, enemiesPrefabs.Length);
-        Instantiate(enemiesPrefabs[index], new Vector3(transform.position.x + posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity).transform.parent = enemiesParent;
+        var newEnemy = Instantiate(enemiesPrefabs[index], new Vector3(transform.position.x + posX, randomizePosition.y + posY, randomizePosition.z), Quaternion.identity);
+        newEnemy.transform.parent = enemiesParent;
+        newEnemy.transform.localScale = Vector3.zero;
+        newEnemy.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
     }
 }
