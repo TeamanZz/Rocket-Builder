@@ -414,7 +414,7 @@ PrefabInstance:
     - target: {fileID: -8809385604320747932, guid: 725dbf85c74f8494aa9ab72903801950, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 347eed3d3870e36408acb9e20787569d, type: 2}
+      objectReference: {fileID: 2100000, guid: ff341b34be788fa46af37c285d179bdf, type: 2}
     - target: {fileID: -8679921383154817045, guid: 725dbf85c74f8494aa9ab72903801950, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -474,7 +474,7 @@ PrefabInstance:
     - target: {fileID: -906759541132299592, guid: 725dbf85c74f8494aa9ab72903801950, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 347eed3d3870e36408acb9e20787569d, type: 2}
+      objectReference: {fileID: 2100000, guid: ff341b34be788fa46af37c285d179bdf, type: 2}
     - target: {fileID: 919132149155446097, guid: 725dbf85c74f8494aa9ab72903801950, type: 3}
       propertyPath: m_Name
       value: Gun 2
