@@ -13,12 +13,23 @@ public class SpeedBoosterTrigger : MonoBehaviour
     [SerializeField] private float cameraFieldOfViewBoost;
     [SerializeField] private float speedBoostDuration;
 
+    private float mainCameraFieldOfViewValue;
+    private float mainCameraFieldOFViewIncreasedValues;
+
     private bool wasTriggered;
-    private float oldSpeed;
+
+    private Tween fovTweenUp;
+    private Tween fovTweenDown;
+    private Tween speedTween;
+
+    private Coroutine boostCoroutine;
 
     private void Awake()
     {
         mainCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        mainCameraFieldOfViewValue = mainCamera.m_Lens.FieldOfView;
+        mainCameraFieldOFViewIncreasedValues = mainCamera.m_Lens.FieldOfView + cameraFieldOfViewBoost;
+        Debug.Log($"default fov = {mainCameraFieldOfViewValue} + {mainCameraFieldOFViewIncreasedValues}");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,14 +41,18 @@ public class SpeedBoosterTrigger : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             wasTriggered = true;
-            StartCoroutine(SpeedBooster());
+            //ResetSpeedAndFOVValuesOnDuplicates();
+            boostCoroutine = StartCoroutine(SpeedBooster());
+            if (PlayerRocket.Instance.lastBoosterTrigger != null)
+            {
+                
+            }
+            PlayerRocket.Instance.lastBoosterTrigger = this;
         }
     }
 
     private IEnumerator SpeedBooster()
     {
-        Debug.Log("trigger");
-        oldSpeed = SpaceShipMovement.Instance.constantVelocity;
         SlowlyChangeCameraFieldUp();
         SpaceShipMovement.Instance.constantVelocity = speedBooster;
         enterTriggerEffect.Play();
@@ -49,19 +64,28 @@ public class SpeedBoosterTrigger : MonoBehaviour
 
     public void SlowlyChangeCameraFieldUp()
     {
-        DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
-           mainCamera.m_Lens.FieldOfView + cameraFieldOfViewBoost, speedBoostDuration / 2);
+        fovTweenUp = DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
+            mainCameraFieldOFViewIncreasedValues, speedBoostDuration / 2);
     }
 
     public void SlowlyChangeCameraFieldBack()
     {
-        DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
-           mainCamera.m_Lens.FieldOfView - cameraFieldOfViewBoost, speedBoostDuration * 2);
+        fovTweenDown = DOTween.To(x => mainCamera.m_Lens.FieldOfView = x, mainCamera.m_Lens.FieldOfView,
+           mainCameraFieldOfViewValue, speedBoostDuration);
     }
 
     public void SlowlyDecreaseSpeed()
     {
-        DOTween.To(x => SpaceShipMovement.Instance.constantVelocity = x, SpaceShipMovement.Instance.constantVelocity,
-           oldSpeed, 0.5f);
+        speedTween = DOTween.To(x => SpaceShipMovement.Instance.constantVelocity = x, SpaceShipMovement.Instance.constantVelocity,
+            SpaceShipMovement.Instance.rocketTrueSpeed, 0.3f);
+    }
+
+    private void ResetSpeedAndFOVValuesOnDuplicates()
+    {
+        fovTweenUp.Kill();
+        fovTweenDown.Kill();
+        speedTween.Kill();
+        mainCamera.m_Lens.FieldOfView = mainCameraFieldOfViewValue;
+        SpaceShipMovement.Instance.constantVelocity = SpaceShipMovement.Instance.rocketTrueSpeed;
     }
 }

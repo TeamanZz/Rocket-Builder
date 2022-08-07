@@ -40,6 +40,9 @@ public class PlayerRocket : MonoBehaviour
     public GameObject shieldBar;
     public GameObject boss;
 
+    public SpeedBoosterTrigger lastBoosterTrigger;
+    
+    
     private void Awake()
     {
         Instance = this;

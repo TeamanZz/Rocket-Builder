@@ -76,7 +76,7 @@ public class RocketProjectile : ProjectileBase
         if (!wasCollided && other.gameObject.TryGetComponent<BossTargetProjectile>(out bossTargetProjectile))
         {
             Vector3 particlesPosition = new Vector3(bossTargetProjectile.transform.position.x + Random.Range(-0.5f, 0.5f), bossTargetProjectile.transform.position.y + Random.Range(-1f, 0f), bossTargetProjectile.transform.position.z - 1);
-            var hitParticle = Instantiate(hitParticles, particlesPosition, Quaternion.identity, CommonContainer.Instance.transform);
+            var hitParticle = Instantiate(hitParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             wasCollided = true;
             bossTargetProjectile.DescreaseHealth(damage);
             Destroy(gameObject);

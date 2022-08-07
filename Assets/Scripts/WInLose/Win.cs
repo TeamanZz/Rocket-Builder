@@ -50,6 +50,7 @@ public class Win : MonoBehaviour
             gun.GetComponent<IShootable>().ForbidShoot();
 
         LevelProgress.Instance.CancelFillTween();
+        LevelProgress.Instance.DeleteHighScoreLineAtWin();
         PlayerRocket.Instance.isPlayerOnPlanet = true;
         StartCoroutine(FinalScene());
     }

@@ -368,7 +368,7 @@ MonoBehaviour:
   speedBooster: 15
   enterTriggerEffect: {fileID: 6864857130079627221}
   mainCamera: {fileID: 0}
-  cameraFieldOfViewBoost: 15
+  cameraFieldOfViewBoost: 30
   speedBoostDuration: 1
 --- !u!1001 &4787500606466666214
 PrefabInstance:
