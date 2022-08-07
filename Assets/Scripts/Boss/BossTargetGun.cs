@@ -51,9 +51,9 @@ public class BossTargetGun : MonoBehaviour
         {
             chargeBeforeShotParticle.Play();
             yield return new WaitForSeconds(1f);
-            gunAnimator.Play("Shoot",0,0);
+            gunAnimator.Play("Shoot", 0, 0);
             shootParticle.Play();
-            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0,transform.parent.rotation.eulerAngles.z), CommonContainer.Instance.transform);
+            var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.parent.rotation.eulerAngles.z), CommonContainer.Instance.transform);
             newProjectile.GetComponent<ProjectileBase>().damage = damage;
             var forceVector = targetVector.position - muzzle.position;
             newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * projectileSpeed, ForceMode.Impulse);
@@ -66,9 +66,9 @@ public class BossTargetGun : MonoBehaviour
     {
         chargeBeforeShotParticle.Play();
         yield return new WaitForSeconds(1f);
-        gunAnimator.Play("Shoot",0,0);
+        gunAnimator.Play("Shoot", 0, 0);
         shootParticle.Play();
-        var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0,transform.parent.rotation.eulerAngles.z), CommonContainer.Instance.transform);
+        var newProjectile = Instantiate(bulletPrefab, muzzle.position, Quaternion.Euler(0, 0, transform.parent.rotation.eulerAngles.z), CommonContainer.Instance.transform);
         newProjectile.GetComponent<ProjectileBase>().damage = damage;
         var forceVector = targetVector.position - muzzle.position;
         newProjectile.GetComponent<Rigidbody>().AddForce(forceVector.normalized * projectileSpeed, ForceMode.Impulse);

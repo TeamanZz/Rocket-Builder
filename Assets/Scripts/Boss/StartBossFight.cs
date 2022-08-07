@@ -33,10 +33,12 @@ public class StartBossFight : MonoBehaviour
         SlowlyChangeSpaceShipSpeedToZero();
         PlayerRocket.Instance.fuelDecreaseMultiplier = 0;
         SpaceShipMovement.Instance.sideSpeed = 12;
+        LevelProgress.Instance.StopFillingHeightBar();
     }
 
     public void ReturnSpaceShipValuesOnBossDeath()
     {
+        LevelProgress.Instance.ContinueFillingHeightBar();
         Debug.Log("boss defeated");
         SlowlyChangeSpaceShipSpeedToDefault();
         PlayerRocket.Instance.fuelDecreaseMultiplier = oldFuelMultiplier;

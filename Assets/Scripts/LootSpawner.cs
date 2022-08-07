@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,7 +28,6 @@ public class LootSpawner : MonoBehaviour
         if (other.TryGetComponent<BuildItem>(out buildItem))
         {
             wasSpawned = true;
-            // if (currentDuplicatesValue < maxDuplicatesAllowed)
             SpawnLootMeteor();
         }
     }
@@ -38,6 +38,9 @@ public class LootSpawner : MonoBehaviour
         float localX = Random.Range(minLocalX, maxLocalX);
         var randomNumber = Random.Range(0, lootPrefabs.Length);
         var lootMeteor = Instantiate(lootPrefabs[randomNumber], transform.TransformPoint(new Vector3(localX, localY, -0.5f)), Quaternion.identity, lootContainer);
+        lootMeteor.transform.localScale = Vector3.zero;
+        lootMeteor.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
         Debug.Log(randomNumber + "Container =" + lootPrefabs[randomNumber].name);
+
     }
 }

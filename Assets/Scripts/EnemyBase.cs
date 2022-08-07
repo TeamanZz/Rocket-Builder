@@ -27,11 +27,13 @@ public class EnemyBase : MonoBehaviour
     {
         healthBarBg.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
         EnemyManager.Instance.AddEnemyAtEnemiesContainer(this);
+        SetNewFillAmount(1);
     }
 
     public void DescreaseHealth(float value)
     {
-        if (currentHealth <= 0 || currentHealth - value <= 0)
+        currentHealth -= value;
+        if (currentHealth <= 0)
         {
             Instantiate(deathParticles, transform.position, Quaternion.identity, CommonContainer.Instance.transform);
             EnemyManager.Instance.RemoveEnemyFromContainer(this);
@@ -40,9 +42,8 @@ public class EnemyBase : MonoBehaviour
         }
         else
         {
-            currentHealth -= value;
             var newFillAmount = currentHealth / startHealth;
-            RemoveHealth(newFillAmount);
+            SetNewFillAmount(newFillAmount);
         }
 
         float randValue = Random.Range(-0.1f, 0.1f);
@@ -51,7 +52,7 @@ public class EnemyBase : MonoBehaviour
         SFX.Instance.PlayHitSound(gameObject);
     }
 
-    public void RemoveHealth(float newValue)
+    public void SetNewFillAmount(float newValue)
     {
         DOTween.To(x => healthBar.fillAmount = x, healthBar.fillAmount,
             newValue, 0.1f);

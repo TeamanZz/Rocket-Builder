@@ -13,15 +13,12 @@ public class LootContainer : MonoBehaviour
     public GameObject lootGameobject;
     [SerializeField] private Image healthBar;
     [SerializeField] private Image healthBarBg;
-    private float oneHitHealthBarFill;
     private Money playerMoney;
     private bool isDead;
     private void Awake()
     {
         playerMoney = FindObjectOfType<Money>();
         currentHealth = startHealth;
-
-        oneHitHealthBarFill = healthBar.fillAmount / startHealth;
     }
 
     private void Start()
@@ -34,6 +31,7 @@ public class LootContainer : MonoBehaviour
         if (isDead)
             return;
 
+        currentHealth -= value;
         if (currentHealth <= 0)
         {
             isDead = true;
@@ -44,8 +42,8 @@ public class LootContainer : MonoBehaviour
         }
         else
         {
-            currentHealth -= value;
-            RemoveHealth();
+            var newFillAmount = currentHealth / startHealth;
+            SetNewFillAmount(newFillAmount);
         }
 
         float randValue = Random.Range(-0.1f, 0.1f);
@@ -54,9 +52,9 @@ public class LootContainer : MonoBehaviour
         SFX.Instance.PlayHitSound(gameObject);
     }
 
-    public void RemoveHealth()
+    public void SetNewFillAmount(float newValue)
     {
-        DOTween.To(x => healthBar.fillAmount = x, (currentHealth * oneHitHealthBarFill),
-            (currentHealth * oneHitHealthBarFill) - oneHitHealthBarFill, 0.1f);
+        DOTween.To(x => healthBar.fillAmount = x, healthBar.fillAmount,
+            newValue, 0.1f);
     }
 }

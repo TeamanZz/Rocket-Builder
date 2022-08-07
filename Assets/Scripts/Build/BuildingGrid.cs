@@ -150,6 +150,7 @@ public class BuildingGrid : MonoBehaviour
             if (!placedItems[i].isMainCapsule)
             {
                 placedItems[i].placingItemUI.IncreaseCount();
+
                 grid[placedItems[i].placedPosition.x, placedItems[i].placedPosition.y] = null;
                 Destroy(placedItems[i].gameObject);
                 placedItems.Remove(placedItems[i]);

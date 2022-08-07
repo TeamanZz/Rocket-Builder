@@ -42,10 +42,12 @@ public class LevelProgress : MonoBehaviour
         var speed = SpaceShipMovement.Instance.GetTrueSpeed();
         var distance = LevelsHandler.Instance.GetTargetPlanetPosition();
         fillTime = (distance - SpaceShipMovement.Instance.transform.position.y) / speed;
+        fillTime -= (fillTime * 0.2f);
         iconTween = icon.transform.DOLocalMoveY(265, fillTime).SetEase(Ease.Linear);
         fillbarTween = fillBar.DOFillAmount(1, fillTime).SetEase(Ease.Linear);
-        Totween = DOTween.To(() => currentHeight, x => currentHeight = x, targetHeight, fillTime).SetEase(Ease.Linear);
-        targetHeightText.text = LevelsHandler.Instance.GetTargetDistanceNuber() + " km";
+        var newTargetHeight = LevelsHandler.Instance.GetTargetDistanceNuber();
+        Totween = DOTween.To(() => currentHeight, x => currentHeight = x, newTargetHeight, fillTime).SetEase(Ease.Linear);
+        targetHeightText.text = newTargetHeight + " km";
     }
 
     private void FixedUpdate()

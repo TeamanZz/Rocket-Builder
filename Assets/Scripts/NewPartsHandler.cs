@@ -61,7 +61,10 @@ public class NewPartsHandler : MonoBehaviour
             {
                 boughtedItems[i].countValue = 1;
             }
+            if (i == 2)
+                boughtedItems[2].countValue = 2;
             boughtedItems[i].HandleView();
+
         }
     }
 
