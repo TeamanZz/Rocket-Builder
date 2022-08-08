@@ -19,6 +19,8 @@ public class BuildingGrid : MonoBehaviour
     private Camera mainCamera;
     private Vector3 debugPosition;
     public BuildItem startCapsule;
+    public BuildItem startFuel;
+    public BuildItem startEngine;
 
     public Vector2 currentPlacingItemPosition;
 
@@ -32,7 +34,11 @@ public class BuildingGrid : MonoBehaviour
     private void Start()
     {
         grid[3, 6] = startCapsule;
+        grid[3, 5] = startFuel;
+        grid[3, 4] = startEngine;
         startCapsule.placedPosition = new Vector2Int(3, 6);
+        startFuel.placedPosition = new Vector2Int(3, 5);
+        startEngine.placedPosition = new Vector2Int(3, 4);
     }
 
     private void OnEnable()
@@ -251,7 +257,8 @@ public class BuildingGrid : MonoBehaviour
     {
         if (OutOfGrid(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
         {
-            Destroy(placingItem.gameObject);
+            placingItem.GetComponent<BuildItemDrag>().ResetPosition();
+            PlaceFlyingItem(placingItem.GetComponent<BuildItemDrag>());
             ClearPlacingVariables();
         }
         else
@@ -264,6 +271,12 @@ public class BuildingGrid : MonoBehaviour
             else if (!IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
             {
                 PlaceFlyingItem();
+                ClearPlacingVariables();
+            }
+            else
+            {
+                placingItem.GetComponent<BuildItemDrag>().ResetPosition();
+                PlaceFlyingItem(placingItem.GetComponent<BuildItemDrag>());
                 ClearPlacingVariables();
             }
         }
@@ -284,7 +297,8 @@ public class BuildingGrid : MonoBehaviour
     private bool CanBeMerged(int dragableItemX, int dragableItemY, BuildItem dragableItem)
     {
         if (grid[dragableItemX, dragableItemY].itemType == dragableItem.itemType &&
-            grid[dragableItemX, dragableItemY].itemLevel == dragableItem.itemLevel)
+            grid[dragableItemX, dragableItemY].itemLevel == dragableItem.itemLevel &&
+            dragableItem.itemLevel != dragableItem.maxItemLevel)
         {
             return true;
         }
@@ -330,6 +344,36 @@ public class BuildingGrid : MonoBehaviour
     {
         int placeX = Mathf.RoundToInt(currentPlacingItemPosition.x);
         int placeY = Mathf.RoundToInt(currentPlacingItemPosition.y);
+
+        for (int x = 0; x < placingItem.Size.x; x++)
+        {
+            for (int y = 0; y < placingItem.Size.y; y++)
+            {
+                placingItem.placedPosition = new Vector2Int(placeX + x, placeY + y);
+
+                grid[placeX + x, placeY + y] = placingItem;
+            }
+        }
+        placingItem.SetNormalScale();
+        placedItems.Add(placingItem);
+        placingItem.SetNormalColor();
+
+        if (placingItem.isMainCapsule)
+        {
+            startCapsule = placingItem;
+        }
+
+        CheckOnMainRocketPiece(placeX, placeY);
+        CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
+    }
+
+    public void PlaceFlyingItem(BuildItemDrag itemDrag)
+    {
+        int placeX = Mathf.RoundToInt(itemDrag.startDragPos.x);
+        int placeY = Mathf.RoundToInt(itemDrag.startDragPos.y);
 
         for (int x = 0; x < placingItem.Size.x; x++)
         {
@@ -478,7 +522,6 @@ public class BuildingGrid : MonoBehaviour
         {
             if (!placedItems[i].isMainRocketPiece)
             {
-                placedItems[i].placingItemUI.IncreaseCount();
                 Destroy(placedItems[i].gameObject);
                 placedItems.Remove(placedItems[i]);
             }

@@ -66,6 +66,7 @@ MonoBehaviour:
   isMainCapsule: 0
   statValue: 25
   itemLevel: 3
+  maxItemLevel: 3
   placedPosition: {x: 1, y: 1}
 --- !u!114 &-15345440215521862
 MonoBehaviour:
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcef74c21b57f54bb0d51ebd473061e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startDragPos: {x: 0, y: 0}
 --- !u!65 &1983813854658912172
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BuildItem : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class BuildItem : MonoBehaviour
     public bool isMainCapsule;
     public float statValue;
     public int itemLevel;
+    public int maxItemLevel;
     [HideInInspector] public Vector2Int placedPosition = Vector2Int.one;
 
     public enum ItemType
@@ -29,12 +31,15 @@ public class BuildItem : MonoBehaviour
 
     public void IncreaseScale()
     {
-        transform.localScale = Vector3.one * 0.55f;
+        //  localScale = Vector3.one * 0.55f;
+        transform.DOScale(Vector3.one * 0.55f, 0.2f);
     }
 
     public void SetNormalScale()
     {
-        transform.localScale = Vector3.one * 0.5f;
+        // transform.localScale = Vector3.one * 0.5f;
+        transform.DOScale(Vector3.one * 0.5f, 0.2f);
+
     }
 
     public void EnableConnectors()
