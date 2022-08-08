@@ -21,6 +21,7 @@ public class BuildingGrid : MonoBehaviour
     public BuildItem startCapsule;
     public BuildItem startFuel;
     public BuildItem startEngine;
+    public BuildItem startWeapon;
 
     public Vector2 currentPlacingItemPosition;
 
@@ -35,15 +36,22 @@ public class BuildingGrid : MonoBehaviour
     {
         grid[3, 6] = startCapsule;
         grid[3, 5] = startFuel;
+        grid[4, 5] = startWeapon;
         grid[3, 4] = startEngine;
         startCapsule.placedPosition = new Vector2Int(3, 6);
         startFuel.placedPosition = new Vector2Int(3, 5);
+        startWeapon.placedPosition = new Vector2Int(4, 5);
         startEngine.placedPosition = new Vector2Int(3, 4);
     }
 
     private void OnEnable()
     {
         EnableItemsConnectors();
+
+        CheckOnCompletedRocket();
+        ResourcesHandler.Instance.SetNewMoveSpeedValue(GetConnectedMoveSpeedValue());
+        ResourcesHandler.Instance.SetNewFuelValue(GetConnectedFuelValue());
+        ResourcesHandler.Instance.SetNewShieldValue(GetConnectedShieldValue());
     }
 
     private void Update()

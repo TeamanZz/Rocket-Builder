@@ -18,7 +18,7 @@ public class BuildItem : MonoBehaviour
     public float statValue;
     public int itemLevel;
     public int maxItemLevel;
-    [HideInInspector] public Vector2Int placedPosition = Vector2Int.one;
+    public Vector2Int placedPosition = Vector2Int.one;
 
     public enum ItemType
     {

@@ -184,7 +184,7 @@ public class PlayerRocket : MonoBehaviour
         SpaceShipMovement.Instance.playerCanControl = false;
         StartCoroutine(TurnOffSpeed());
         GameStateHandler.Instance.DisableGuns();
-        PartsShop.Instance.UpdatePricesView();
+        LevelsHandler.Instance.SlowlyStopMoving();
 
     }
 
@@ -216,6 +216,7 @@ public class PlayerRocket : MonoBehaviour
         transform.localPosition = new Vector3(4, 5, 0);
         GameStateHandler.Instance.UnCenterRocket();
         rb.isKinematic = true;
+        PartsShop.Instance.UpdatePricesView();
         loseScreen.SetActive(false);
         DisableLowFuelIndicator();
         boss.SetActive(false);
