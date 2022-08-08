@@ -20,7 +20,7 @@ public class BuildingGrid : MonoBehaviour
     private Vector3 debugPosition;
     public BuildItem startCapsule;
 
-    private Vector2 currentPlacingItemPosition;
+    public Vector2 currentPlacingItemPosition;
 
     private void Awake()
     {
@@ -68,6 +68,26 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
+    public Vector2Int? GetFreePlace()
+    {
+        for (int x = 0; x < gridSize.x; x++)
+        {
+            for (int y = 0; y < gridSize.y; y++)
+            {
+                //Проверка на то, занята ли ячейка
+                if (grid[x, y])
+                {
+                    continue;
+                }
+                else
+                {
+                    return new Vector2Int(x, y);
+                }
+            }
+        }
+        return null;
+    }
+
     public void RemoveDragComponents()
     {
         for (var i = 0; i < placedItems.Count; i++)
@@ -95,7 +115,7 @@ public class BuildingGrid : MonoBehaviour
         var fuelItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Fuel);
         for (var i = 0; i < fuelItemsList.Count; i++)
         {
-            rocketFuelValue += (int)fuelItemsList[i].placingItemUI.statValue;
+            rocketFuelValue += (int)fuelItemsList[i].statValue;
         }
         return rocketFuelValue;
     }
@@ -106,7 +126,7 @@ public class BuildingGrid : MonoBehaviour
         var shieldItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Shield);
         for (var i = 0; i < shieldItemsList.Count; i++)
         {
-            rocketShieldValue += (int)shieldItemsList[i].placingItemUI.statValue;
+            rocketShieldValue += (int)shieldItemsList[i].statValue;
         }
         return rocketShieldValue;
     }
@@ -117,7 +137,7 @@ public class BuildingGrid : MonoBehaviour
         var engineItemsList = placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet);
         for (var i = 0; i < engineItemsList.Count; i++)
         {
-            moveSpeedValue += engineItemsList[i].placingItemUI.statValue;
+            moveSpeedValue += engineItemsList[i].statValue;
         }
         return moveSpeedValue;
     }
@@ -145,19 +165,19 @@ public class BuildingGrid : MonoBehaviour
 
     public void DeleteAllItems()
     {
-        for (int i = placedItems.Count - 1; i >= 0; i--)
-        {
-            if (!placedItems[i].isMainCapsule)
-            {
-                placedItems[i].placingItemUI.IncreaseCount();
+        // for (int i = placedItems.Count - 1; i >= 0; i--)
+        // {
+        //     if (!placedItems[i].isMainCapsule)
+        //     {
+        //         // placedItems[i].placingItemUI.IncreaseCount();
 
-                grid[placedItems[i].placedPosition.x, placedItems[i].placedPosition.y] = null;
-                Destroy(placedItems[i].gameObject);
-                placedItems.Remove(placedItems[i]);
-            }
-        }
-        CheckOnCompletedRocket();
-        ResourcesHandler.Instance.SetZeroStats();
+        //         grid[placedItems[i].placedPosition.x + 1, placedItems[i].placedPosition.y + 1] = null;
+        //         Destroy(placedItems[i].gameObject);
+        //         placedItems.Remove(placedItems[i]);
+        //     }
+        // }
+        // CheckOnCompletedRocket();
+        // ResourcesHandler.Instance.SetZeroStats();
     }
 
     private void ClearPlacingVariables()
@@ -223,6 +243,7 @@ public class BuildingGrid : MonoBehaviour
             placingItem.isMainRocketPiece = false;
 
         placedItems.Remove(placingItem);
+        Debug.Log("INFO REMOVED " + (placingItem.placedPosition.x) + ":" + (placingItem.placedPosition.y));
         grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
     }
 
@@ -239,7 +260,6 @@ public class BuildingGrid : MonoBehaviour
         }
         else
         {
-            placingItem.placingItemUI.IncreaseCount();
             Destroy(placingItem.gameObject);
         }
 
@@ -427,15 +447,15 @@ public class BuildingGrid : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(debugPosition, 0.5f);
+        // Gizmos.color = Color.green;
+        // Gizmos.DrawSphere(debugPosition, 0.5f);
 
-        for (int i = 0; i < gridSize.x; i++)
-        {
-            for (int j = 0; j < gridSize.y; j++)
-            {
-                Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
-            }
-        }
+        // for (int i = 0; i < gridSize.x; i++)
+        // {
+        //     for (int j = 0; j < gridSize.y; j++)
+        //     {
+        //         Gizmos.DrawWireCube(new Vector3(i, j, 0), new Vector3(1f, 1f, 1f));
+        //     }
+        // }
     }
 }

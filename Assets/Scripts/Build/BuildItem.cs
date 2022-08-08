@@ -14,6 +14,8 @@ public class BuildItem : MonoBehaviour
     public List<Transform> connectorsGO = new List<Transform>();
     public bool isMainRocketPiece;
     public bool isMainCapsule;
+    public float statValue;
+
     [HideInInspector] public Vector2Int placedPosition = Vector2Int.one;
 
     public enum ItemType
@@ -88,19 +90,19 @@ public class BuildItem : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        for (int x = 0; x < Size.x; x++)
-        {
-            for (int y = 0; y < Size.y; y++)
-            {
-                Gizmos.color = new Color(0f, 0.12f, 1f, 0.56f);
-                Gizmos.DrawCube(transform.position + new Vector3(x, y, 0), new Vector3(1f, 1f, 1f));
-            }
-        }
+        // for (int x = 0; x < Size.x; x++)
+        // {
+        //     for (int y = 0; y < Size.y; y++)
+        //     {
+        //         Gizmos.color = new Color(0f, 0.12f, 1f, 0.56f);
+        //         Gizmos.DrawCube(transform.position + new Vector3(x, y, 0), new Vector3(1f, 1f, 1f));
+        //     }
+        // }
 
-        for (int i = 0; i < connectors.Count; i++)
-        {
-            Gizmos.color = new Color(0f, 1f, 0.17f, 0.56f);
-            Gizmos.DrawCube(transform.position + new Vector3(connectors[i].x, connectors[i].y, 0), new Vector3(1f, 1f, 1f));
-        }
+        // for (int i = 0; i < connectors.Count; i++)
+        // {
+        //     Gizmos.color = new Color(0f, 1f, 0.17f, 0.56f);
+        //     Gizmos.DrawCube(transform.position + new Vector3(connectors[i].x, connectors[i].y, 0), new Vector3(1f, 1f, 1f));
+        // }
     }
 }

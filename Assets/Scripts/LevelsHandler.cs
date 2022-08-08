@@ -79,7 +79,7 @@ public class LevelsHandler : MonoBehaviour
     public void SetNewLevel()
     {
         BuildingGrid.Instance.DeleteAllItems();
-        NewPartsHandler.Instance.RemoveAllDuplicates();
+        // NewPartsHandler.Instance.RemoveAllDuplicates();
         startPlanetsContainer[currentLevelIndex].SetActive(false);
         targetPlanetsContainer[currentLevelIndex].SetActive(false);
         levelTriggersContainer[currentLevelIndex].SetActive(false);

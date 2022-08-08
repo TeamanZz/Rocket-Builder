@@ -47,7 +47,7 @@ public class PartsUIItem : MonoBehaviour
         statText.gameObject.SetActive(true);
         statIcon.gameObject.SetActive(true);
         HandleView();
-        NewPartsHandler.Instance.boughtedItems.Add(this);
+        // NewPartsHandler.Instance.boughtedItems.Add(this);
         buyButton.gameObject.SetActive(false);
     }
 
