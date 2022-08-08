@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
@@ -32,7 +33,13 @@ public class BackgroundMovement : MonoBehaviour
         transform.position = startContainerPosition;
         canMove = false;
     }
-    
+
+    public void SlowlyStopMoving()
+    {
+        canMove = false;
+        transform.DOMoveY(transform.position.y - 10, 2);
+    }
+
     public void EnableCurrentContainerMovement()
     {
         canMove = true;

@@ -184,6 +184,7 @@ public class PlayerRocket : MonoBehaviour
         SpaceShipMovement.Instance.playerCanControl = false;
         StartCoroutine(TurnOffSpeed());
         GameStateHandler.Instance.DisableGuns();
+        LevelsHandler.Instance.SlowlyStopMoving();
     }
 
     private IEnumerator TurnOffSpeed()

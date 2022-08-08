@@ -102,6 +102,11 @@ public class LevelsHandler : MonoBehaviour
         backgroundContainerMovement[currentLevelIndex].ReturnContainerToStartPosition();
     }
 
+    public void SlowlyStopMoving()
+    {
+        backgroundContainerMovement[currentLevelIndex].SlowlyStopMoving();
+    }
+
     public void EnableCurrentContainerBackgroundMovement()
     {
         backgroundContainerMovement[currentLevelIndex].EnableCurrentContainerMovement();
