@@ -15,7 +15,7 @@ public class BuildItem : MonoBehaviour
     public bool isMainRocketPiece;
     public bool isMainCapsule;
     public float statValue;
-
+    public int itemLevel;
     [HideInInspector] public Vector2Int placedPosition = Vector2Int.one;
 
     public enum ItemType

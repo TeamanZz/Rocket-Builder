@@ -206,7 +206,7 @@ public class BuildingGrid : MonoBehaviour
                 continue;
             placedItems[i].isMainRocketPiece = false;
         }
-        RemovePlacingItemFromGridData();
+        RemovePlacingItemFromGridData(placingItem);
 
         if (placingItem != startCapsule)
             RecalculateStateOFItems();
@@ -237,36 +237,64 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 
-    private void RemovePlacingItemFromGridData()
+    private void RemovePlacingItemFromGridData(BuildItem removedItem)
     {
-        if (!placingItem.isMainCapsule)
-            placingItem.isMainRocketPiece = false;
+        if (!removedItem.isMainCapsule)
+            removedItem.isMainRocketPiece = false;
 
-        placedItems.Remove(placingItem);
-        Debug.Log("INFO REMOVED " + (placingItem.placedPosition.x) + ":" + (placingItem.placedPosition.y));
-        grid[placingItem.placedPosition.x, placingItem.placedPosition.y] = null;
+        placedItems.Remove(removedItem);
+        Debug.Log("INFO REMOVED " + (removedItem.placedPosition.x) + ":" + (removedItem.placedPosition.y));
+        grid[removedItem.placedPosition.x, removedItem.placedPosition.y] = null;
     }
 
     public void HandleDropItem()
     {
-        bool available = true;
-
-        if (IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
-            available = false;
-
-        if (available)
+        if (OutOfGrid(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
         {
-            PlaceFlyingItem();
+            Destroy(placingItem.gameObject);
+            ClearPlacingVariables();
         }
         else
         {
-            Destroy(placingItem.gameObject);
+            if (IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)) &&
+                    CanBeMerged((int)currentPlacingItemPosition.x, (int)currentPlacingItemPosition.y, placingItem))
+            {
+                MergeItems();
+            }
+            else if (!IsPlaceTaken(Mathf.RoundToInt(currentPlacingItemPosition.x), Mathf.RoundToInt(currentPlacingItemPosition.y)))
+            {
+                PlaceFlyingItem();
+                ClearPlacingVariables();
+            }
         }
+    }
 
+    private void MergeItems()
+    {
+        var bottomItem = grid[(int)currentPlacingItemPosition.x, (int)currentPlacingItemPosition.y];
+        int foundedItemIndex = PartsShop.Instance.rocketItemsPrefabs.FindIndex(x => x.GetComponent<BuildItem>().itemType == placingItem.itemType &&
+         x.GetComponent<BuildItem>().itemLevel == placingItem.itemLevel + 1);
+        RemovePlacingItemFromGridData(bottomItem);
+        Destroy(bottomItem.gameObject);
+        Destroy(placingItem.gameObject);
+        PartsShop.Instance.PlaceUpgradedRocketItem(foundedItemIndex, (int)currentPlacingItemPosition.x, (int)currentPlacingItemPosition.y);
         ClearPlacingVariables();
     }
 
-    private bool IsPlaceTaken(int placeX, int placeY)
+    private bool CanBeMerged(int dragableItemX, int dragableItemY, BuildItem dragableItem)
+    {
+        if (grid[dragableItemX, dragableItemY].itemType == dragableItem.itemType &&
+            grid[dragableItemX, dragableItemY].itemLevel == dragableItem.itemLevel)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool OutOfGrid(int placeX, int placeY)
     {
         for (int x = 0; x < placingItem.Size.x; x++)
         {
@@ -275,6 +303,18 @@ public class BuildingGrid : MonoBehaviour
                 //Проверка на выход за границы сетки
                 if ((placeX + x) >= gridSize.x || (placeY + y) >= gridSize.y || (placeX + x) < 0 || (placeY + y) < 0)
                     return true;
+            }
+        }
+        return false;
+    }
+
+    private bool IsPlaceTaken(int placeX, int placeY)
+    {
+        for (int x = 0; x < placingItem.Size.x; x++)
+        {
+            for (int y = 0; y < placingItem.Size.y; y++)
+            {
+
 
                 //Проверка на то, занята ли ячейка
                 if (grid[placeX + x, placeY + y])

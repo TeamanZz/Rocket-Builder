@@ -64,6 +64,8 @@ MonoBehaviour:
   - {fileID: 397049779857260433}
   isMainRocketPiece: 0
   isMainCapsule: 0
+  statValue: 25
+  itemLevel: 3
   placedPosition: {x: 1, y: 1}
 --- !u!114 &-15345440215521862
 MonoBehaviour:

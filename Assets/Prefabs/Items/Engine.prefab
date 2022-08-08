@@ -61,6 +61,7 @@ MonoBehaviour:
   isMainRocketPiece: 0
   isMainCapsule: 0
   statValue: 0.5
+  itemLevel: 1
   placedPosition: {x: 1, y: 1}
 --- !u!114 &5958809830400985721
 MonoBehaviour:
