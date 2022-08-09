@@ -38,7 +38,7 @@ public class Money : MonoBehaviour
         currencyValue += count * (LevelsHandler.Instance.currentLevelIndex + 1);
         HandleView();
         var moneyText = Instantiate(moneyTextPrefab, moneyTextSpawnPos.position, Quaternion.identity, moneyTextParent);
-        moneyText.GetComponent<TextMeshProUGUI>().text = count.ToString() + "$";
+        moneyText.GetComponent<TextMeshProUGUI>().text = currencyValue.ToString() + "$";
     }
 
     public void DecreaseCurrency(int count)
