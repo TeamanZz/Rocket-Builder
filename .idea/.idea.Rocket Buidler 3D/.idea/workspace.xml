@@ -87,11 +87,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeightScore/HeighScoreLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RammingEnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
@@ -102,6 +100,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
       </list>
     </option>
   </component>
@@ -173,6 +173,8 @@
       <workItem from="1659707887879" duration="1776000" />
       <workItem from="1659898224727" duration="9133000" />
       <workItem from="1660041067052" duration="2164000" />
+      <workItem from="1660058048331" duration="322000" />
+      <workItem from="1660059742919" duration="1558000" />
     </task>
     <servers />
   </component>
@@ -191,9 +193,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1658141971579" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1659536292180">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1660060755480">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1659536292180" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1660060755480" />
   </component>
 </project>

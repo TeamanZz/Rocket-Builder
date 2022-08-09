@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.4719231, g: 0.4719231, b: 0.4719231, a: 1}
+  m_IndirectSpecularColor: {r: 0.07909743, g: 0.30019185, b: 0.53098804, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12406,7 +12406,7 @@ PrefabInstance:
     - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: renderers.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 708616760}
     - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: <placingItemUI>k__BackingField
       value: 
@@ -12679,6 +12679,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4681753433549648, guid: f683447c6570076418716c53d120168a, type: 3}
   m_PrefabInstance: {fileID: 307195738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &708616760 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1699178748255470223, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+  m_PrefabInstance: {fileID: 695454425}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &715880612
 PrefabInstance:

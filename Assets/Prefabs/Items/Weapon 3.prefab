@@ -146,7 +146,7 @@ MonoBehaviour:
   gunAnimator: {fileID: 0}
   shootParticle: {fileID: 7593799828506822273}
   target: {fileID: 0}
-  objectToRotate: {fileID: 0}
+  objectToRotate: {fileID: 2362085669196342520}
   aimDistance: 25
 --- !u!95 &2739930025489770396
 Animator:
