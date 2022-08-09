@@ -32,7 +32,7 @@ public class LevelProgress : MonoBehaviour
     [SerializeField] private GameObject highSCoreLinePrefab;
 
     public GameObject currentHighScoreLine;
-
+    private float heighScore; 
     private void Awake()
     {
         Instance = this;
@@ -107,17 +107,29 @@ public class LevelProgress : MonoBehaviour
 
     public void SetHighSCoreLine()
     {
+
         if (currentHighScoreLine != null)
         {
-            Destroy(currentHighScoreLine.gameObject);
-            var HeightLine = Instantiate(highSCoreLinePrefab, new Vector3(0, PlayerRocket.Instance.transform.position.y, 8), Quaternion.identity, CommonContainer.Instance.transform);
-            HeightLine.GetComponent<HeighScoreLine>().heightScoreText.text = Mathf.RoundToInt(currentHeight).ToString() + "km";
-            currentHighScoreLine = HeightLine;
+            if (currentHeight > heighScore)
+            {
+                Destroy(currentHighScoreLine.gameObject);
+                var HeightLine = Instantiate(highSCoreLinePrefab,
+                    new Vector3(0, PlayerRocket.Instance.transform.position.y, 8), Quaternion.identity,
+                    CommonContainer.Instance.transform);
+                HeightLine.GetComponent<HeighScoreLine>().heightScoreText.text =
+                    Mathf.RoundToInt(currentHeight).ToString() + "km";
+                currentHighScoreLine = HeightLine;
+            }
+            else
+            {
+                return;
+            }
         }
         else
         {
             var HeightLine = Instantiate(highSCoreLinePrefab, new Vector3(0, PlayerRocket.Instance.transform.position.y, 8), Quaternion.identity, CommonContainer.Instance.transform);
             HeightLine.GetComponent<HeighScoreLine>().heightScoreText.text = Mathf.RoundToInt(currentHeight).ToString() + "km";
+            heighScore = currentHeight;
             currentHighScoreLine = HeightLine;
         }
     }

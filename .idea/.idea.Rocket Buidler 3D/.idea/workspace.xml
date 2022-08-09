@@ -91,17 +91,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeightScore/HeighScoreLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/SpaceShipMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RammingEnemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/Money.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
       </list>
     </option>
   </component>
