@@ -59,6 +59,7 @@ public class Win : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PlayerRocket.Instance.GetComponent<SpaceShipMovement>().constantVelocity = 0;
+        GameStateHandler.Instance.ResetEnginesCount();
         SpaceShipMovement.Instance.enabled = false;
         PlayerRocket.Instance.DisableLowFuelIndicator();
         PlayerRocket.Instance.transform.position = startPos.position;

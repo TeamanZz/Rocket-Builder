@@ -17,6 +17,8 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] private Transform rocketObject;
     [SerializeField] private Transform rocketContainer;
 
+    [SerializeField] public int countOfEngines;
+
     [Header("ShipSettings")]
     private ResourcesHandler resourcesHandler;
     private SpaceShipMovement playerShipMovement;
@@ -62,6 +64,20 @@ public class GameStateHandler : MonoBehaviour
             gun.GetComponent<IShootable>().ForbidShoot();
         }
     }
+    
+    public void ReturnEnginesCount()
+    {
+        var engineList = buildingGrid.placedItems.FindAll(x => x.isMainRocketPiece && x.itemType == BuildItem.ItemType.Jet);
+        foreach (var engine in engineList)
+        {
+            countOfEngines++;
+        }
+    }
+
+    public void ResetEnginesCount()
+    {
+        countOfEngines = 0;
+    }
 
     public void SetShipSettings()
     {
@@ -71,6 +87,8 @@ public class GameStateHandler : MonoBehaviour
             gun.GetComponent<IShootable>().AllowShoot();
         }
 
+        ReturnEnginesCount();
+        
         PlayerRocket.Instance.enabled = true;
         boundsController.enabled = true;
 

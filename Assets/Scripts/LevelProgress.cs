@@ -124,7 +124,15 @@ public class LevelProgress : MonoBehaviour
 
     public void DeleteHighScoreLineAtWin()
     {
-        Destroy(currentHighScoreLine.gameObject);
-        currentHighScoreLine = null;
+        if (currentHighScoreLine != null)
+        {
+            Destroy(currentHighScoreLine.gameObject);
+            currentHighScoreLine = null; 
+        }
+        else
+        {
+            currentHighScoreLine = null;
+        }
+        
     }
 }

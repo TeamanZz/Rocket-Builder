@@ -51,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Lose.cs" />
@@ -64,12 +63,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/GunRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLaucnher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/StuckWithEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossGunBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Boss/StartBossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/LootItemTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildItemUI.cs" />
@@ -80,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager/Pointer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Build/BuildItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RocketPartPopup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PartsUIItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NewPartsHandler.cs" />
@@ -95,13 +91,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SatelliteMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RammingEnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EngineViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelProgress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" />
       </list>
     </option>
   </component>
@@ -171,7 +171,8 @@
       <workItem from="1659632579714" duration="3496000" />
       <workItem from="1659685989019" duration="10020000" />
       <workItem from="1659707887879" duration="1776000" />
-      <workItem from="1659898224727" duration="8313000" />
+      <workItem from="1659898224727" duration="9133000" />
+      <workItem from="1660041067052" duration="2164000" />
     </task>
     <servers />
   </component>

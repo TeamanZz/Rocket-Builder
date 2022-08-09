@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.08561934, g: 0.3195814, b: 0.56496024, a: 1}
+  m_IndirectSpecularColor: {r: 0.08572551, g: 0.31959152, b: 0.56495583, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7270,7 +7270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5af188368f839e45b6afc84d80cecaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.6
+  movementSpeed: 0.5
+  movementSpeedIncrease: 0.1
   canMove: 0
 --- !u!1001 &400577113
 PrefabInstance:
@@ -12183,7 +12184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5af188368f839e45b6afc84d80cecaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.6
+  movementSpeed: 0.5
+  movementSpeedIncrease: 0.1
   canMove: 0
 --- !u!1 &690083084
 GameObject:
@@ -13702,7 +13704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5af188368f839e45b6afc84d80cecaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.6
+  movementSpeed: 0.5
+  movementSpeedIncrease: 0.1
   canMove: 0
 --- !u!1 &755006964
 GameObject:
@@ -16129,6 +16132,7 @@ MonoBehaviour:
   uiItems: {fileID: 1610719139}
   rocketObject: {fileID: 281492722}
   rocketContainer: {fileID: 245171070}
+  countOfEngines: 0
   buildingGrid: {fileID: 1256540989}
   boundsController: {fileID: 281492727}
   cantFlyButton: {fileID: 614021556}
@@ -37474,7 +37478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5af188368f839e45b6afc84d80cecaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.6
+  movementSpeed: 0.5
+  movementSpeedIncrease: 0.1
   canMove: 0
 --- !u!1 &1970880762
 GameObject:

@@ -7,9 +7,16 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    public float movementSpeed;
+    public float movementSpeed = 0.5f;
+    public float movementSpeedIncrease = 0.1f;
+    private float trueMovementSpeed;
     public bool canMove = false;
     private Vector3 startContainerPosition;
+
+    private void Awake()
+    {
+        trueMovementSpeed = movementSpeed;
+    }
 
     private void Start()
     {
@@ -31,6 +38,7 @@ public class BackgroundMovement : MonoBehaviour
     public void ReturnContainerToStartPosition()
     {
         transform.position = startContainerPosition;
+        movementSpeed = trueMovementSpeed;
         canMove = false;
     }
 
@@ -42,6 +50,7 @@ public class BackgroundMovement : MonoBehaviour
 
     public void EnableCurrentContainerMovement()
     {
+        movementSpeed += (movementSpeedIncrease * GameStateHandler.Instance.countOfEngines);
         canMove = true;
     }
 }
