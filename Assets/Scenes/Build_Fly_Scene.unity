@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 02cfc4a2b17196440a4f5cf49212c2de, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: dea6b9c1bcbc448ad97333c375aada1d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1415885758}
-  m_IndirectSpecularColor: {r: 0.08572551, g: 0.31959152, b: 0.56495583, a: 1}
+  m_IndirectSpecularColor: {r: 0.07909743, g: 0.30019185, b: 0.53098804, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12289,11 +12289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 289793369578140389, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.0000000018662831
+      value: -0.0000000028485374
       objectReference: {fileID: 0}
     - target: {fileID: 289793369578140389, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0030524053
+      value: 0.003052405
       objectReference: {fileID: 0}
     - target: {fileID: 289793369578140389, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
@@ -12406,22 +12406,22 @@ PrefabInstance:
     - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: renderers.Array.data[0]
       value: 
-      objectReference: {fileID: 1659841901}
+      objectReference: {fileID: 0}
     - target: {fileID: 2193733403149921839, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: <placingItemUI>k__BackingField
       value: 
       objectReference: {fileID: 15272075}
     - target: {fileID: 2240175892563444000, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 2.1827876e-11
+      value: -3.2014216e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2240175892563444000, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0013093575
+      value: 0.0013093608
       objectReference: {fileID: 0}
     - target: {fileID: 2240175892563444000, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -1.7462301e-10
+      value: -2.619345e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2350341988085515092, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -12437,15 +12437,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2397919139358558121, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.0011675647
+      value: 0.0011675683
       objectReference: {fileID: 0}
     - target: {fileID: 2397919139358558121, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0018414921
+      value: 0.0018414924
       objectReference: {fileID: 0}
     - target: {fileID: 2397919139358558121, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00019363422
+      value: -0.00019363468
       objectReference: {fileID: 0}
     - target: {fileID: 2450279162983311824, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_IsActive
@@ -12461,19 +12461,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3660728215573484068, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.0000000017826098
+      value: 0.0000000020663722
       objectReference: {fileID: 0}
     - target: {fileID: 3660728215573484068, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0013093584
+      value: 0.0013093593
       objectReference: {fileID: 0}
     - target: {fileID: 3660728215573484068, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -3.4924602e-10
+      value: -2.9103833e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3756636366580856338, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.0011675677
+      value: -0.0011675641
       objectReference: {fileID: 0}
     - target: {fileID: 3756636366580856338, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -12481,7 +12481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3756636366580856338, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00019363375
+      value: -0.00019363305
       objectReference: {fileID: 0}
     - target: {fileID: 4052579441469433286, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -12589,15 +12589,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324372884175926605, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.00061999896
+      value: 3.3056544e-11
       objectReference: {fileID: 0}
     - target: {fileID: 7324372884175926605, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.001979998
+      value: 0.0019799983
       objectReference: {fileID: 0}
     - target: {fileID: 7324372884175926605, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00006
+      value: -0.000059999533
       objectReference: {fileID: 0}
     - target: {fileID: 7324372884175926605, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_Swing1Limit.limit
@@ -31342,11 +31342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653585294}
   m_CullTransparentMesh: 1
---- !u!23 &1659841901 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2533169933793450929, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
-  m_PrefabInstance: {fileID: 695454425}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1663799434
 GameObject:
   m_ObjectHideFlags: 0
@@ -36593,7 +36588,7 @@ Camera:
   m_GameObject: {fileID: 1923434718}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.43867922, g: 0.6569706, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
