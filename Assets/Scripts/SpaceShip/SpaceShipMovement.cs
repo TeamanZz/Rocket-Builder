@@ -26,11 +26,7 @@ public class SpaceShipMovement : MonoBehaviour
     public bool playerCanControl = true;
 
     public float rocketTrueSpeed;
-    public float newSpeed = 5;
-    public float rotateZMultiplier = 5;
-    public float rotateYMultiplier = 5;
 
-    private bool fingerDown = false;
 
     private void Awake()
     {
@@ -60,47 +56,26 @@ public class SpaceShipMovement : MonoBehaviour
         sideSpeedTween = DOTween.To(() => sideSpeed, x => sideSpeed = x, 0, 2f).SetEase(Ease.OutBack);
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Mouse0))
-            fingerDown = true;
-        else
-            fingerDown = false;
-    }
-
     private void FixedUpdate()
     {
-        spaceRB.velocity += new Vector3(0, constantVelocity - spaceRB.velocity.y, 0);
+        spaceRB.velocity = new Vector3(joystick.Horizontal * sideSpeed, constantVelocity, 0);
         if (!playerCanControl)
             return;
-
-        var direction = Vector3.zero;
-        if (fingerDown)
-        {
-            var mousePos = Input.mousePosition;
-            mousePos.z = 24;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            var delta = mousePos - transform.position;
-            var movementVector = delta.normalized * Time.deltaTime * newSpeed;
-            spaceRB.MovePosition(transform.position + new Vector3(movementVector.x, 0, 0));
-
-            Heeling(delta);
-        }
-        else
-        {
-            HeelingBack();
-        }
+        Heeling();
     }
 
-    private void Heeling(Vector3 delta)
+    private void Heeling()
     {
-        needAngle = Quaternion.Euler(0, -delta.x * rotateYMultiplier, -delta.x * rotateZMultiplier);
-        shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
-    }
+        if (joystick.Horizontal != 0)
+        {
+            needAngle = Quaternion.Euler(0, -joystick.Horizontal * 10, -joystick.Horizontal * 5);
+            shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
+        }
 
-    private void HeelingBack()
-    {
-        needAngle = startAngle;
-        shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
+        if (joystick.Horizontal == 0)
+        {
+            needAngle = startAngle;
+            shuttleModel.rotation = Quaternion.Slerp(shuttleModel.rotation, needAngle, Time.deltaTime * rotationDamping);
+        }
     }
 }
