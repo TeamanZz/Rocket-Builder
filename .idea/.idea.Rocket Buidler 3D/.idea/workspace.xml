@@ -95,13 +95,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Boosters/SpeedBooster/SpeedBoosterTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceShip/RocketProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerProjectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EngineViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerRocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WInLose/Win.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boss/BossTargetProjectile.cs" />
       </list>
     </option>
   </component>
@@ -173,6 +173,7 @@
       <workItem from="1659707887879" duration="1776000" />
       <workItem from="1659898224727" duration="9133000" />
       <workItem from="1660041067052" duration="2164000" />
+      <workItem from="1660136392746" duration="2983000" />
     </task>
     <servers />
   </component>

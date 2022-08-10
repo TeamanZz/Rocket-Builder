@@ -8020,7 +8020,7 @@ MonoBehaviour:
   timeBetweenShots: 0.5
   damage: 5
   projectileSpeed: 15
-  bulletPrefab: {fileID: 6996657570382582201, guid: ebf0d9596c6708c429eff902f04b5581, type: 3}
+  bulletPrefab: {fileID: 4109366325688927796, guid: 40a3e6ce369c5f6499f6d3402132d59b, type: 3}
   muzzle: {fileID: 1893246454998678247}
   targetVector: {fileID: 1893246455239416362}
   OnShoot:

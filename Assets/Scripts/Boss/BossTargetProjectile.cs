@@ -11,16 +11,21 @@ public class BossTargetProjectile : ProjectileBase
     public float timeUntilDestroy;
     public float startHealth;
     private float currentHealth;
-    [SerializeField] private Vector3 target;
     [SerializeField] private float speed;
+    public Vector3 playerTarget;
 
     private void Awake()
     {
-        target = PlayerRocket.Instance.transform.position;
         currentHealth = startHealth;
-        Vector3 difference = target - transform.position;
+        playerTarget = PlayerRocket.Instance.transform.position;
+        Vector3 difference = playerTarget - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(180, 0, 90 - rotationZ);
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position += (playerTarget - transform.position).normalized * speed * Time.deltaTime;
     }
 
     private void Start()
