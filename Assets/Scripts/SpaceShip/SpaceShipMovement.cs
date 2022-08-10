@@ -29,8 +29,9 @@ public class SpaceShipMovement : MonoBehaviour
     public float newSpeed = 5;
     public float rotateZMultiplier = 5;
     public float rotateYMultiplier = 5;
-
     private bool fingerDown = false;
+
+    private Vector3 lastMouseClickPos;
 
     private void Awake()
     {
@@ -62,6 +63,12 @@ public class SpaceShipMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            var mousePos = Input.mousePosition;
+            mousePos.z = 24;
+            lastMouseClickPos = Camera.main.ScreenToWorldPoint(mousePos);
+        }
         if (Input.GetKey(KeyCode.Mouse0))
             fingerDown = true;
         else
@@ -80,11 +87,17 @@ public class SpaceShipMovement : MonoBehaviour
             var mousePos = Input.mousePosition;
             mousePos.z = 24;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            var delta = mousePos - transform.position;
-            var movementVector = delta.normalized * Time.deltaTime * newSpeed;
-            spaceRB.MovePosition(transform.position + new Vector3(movementVector.x, 0, 0));
+            var delta = mousePos - lastMouseClickPos;
 
-            Heeling(delta);
+            if (delta.x > 0 && (spaceRB.position.x - 3) >= 6)
+                return;
+            if (delta.x < 0 && (spaceRB.position.x - 3) <= -6)
+                return;
+
+            spaceRB.position = spaceRB.position + new Vector3(delta.x, 0, 0);
+            lastMouseClickPos = mousePos;
+
+            Heeling(delta * 10);
         }
         else
         {

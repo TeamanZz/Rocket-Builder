@@ -19032,7 +19032,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
@@ -20369,7 +20369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: countValue
