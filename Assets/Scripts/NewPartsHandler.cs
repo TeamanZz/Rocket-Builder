@@ -46,7 +46,8 @@ public class NewPartsHandler : MonoBehaviour
         var allowedItems = boughtedItems.FindAll(x => x.mainImage.GetComponent<BuildItemUI>().buildItemPrefab.itemType == newItemType);
         var duplicatedItemNum = Random.Range(0, allowedItems.Count);
         allowedItems[duplicatedItemNum].IncreaseCount();
-
+        allowedItems[duplicatedItemNum].totalCountValue++;
+        PlayerPrefs.SetInt($"{allowedItems[duplicatedItemNum].index} Item Count", allowedItems[duplicatedItemNum].totalCountValue);
         rocketPartPopup.GetComponent<RocketPartPopup>().popupText.text = $"You found a {allowedItems[duplicatedItemNum].partName} part!";
         rocketPartPopup.GetComponent<RocketPartPopup>().rocketPartIcon.sprite = allowedItems[duplicatedItemNum].mainImage.sprite;
     }
@@ -63,8 +64,10 @@ public class NewPartsHandler : MonoBehaviour
             }
             if (i == 2)
                 boughtedItems[2].countValue = 2;
-            boughtedItems[i].HandleView();
 
+            boughtedItems[i].totalCountValue = boughtedItems[i].countValue;
+            PlayerPrefs.SetInt($"{boughtedItems[i].index} Item Count", boughtedItems[i].countValue);
+            boughtedItems[i].HandleView();
         }
     }
 

@@ -17,6 +17,7 @@ public class Money : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        currencyValue = PlayerPrefs.GetInt("MoneyCount", 0);
         HandleView();
     }
 
@@ -35,15 +36,17 @@ public class Money : MonoBehaviour
 
     public void AddCurrency(int count)
     {
-        currencyValue += (count  * (LevelsHandler.Instance.currentLevelIndex + 1));
+        currencyValue += (count * (LevelsHandler.Instance.currentLevelIndex + 1));
         HandleView();
         var moneyText = Instantiate(moneyTextPrefab, moneyTextSpawnPos.position, Quaternion.identity, moneyTextParent);
         moneyText.GetComponent<TextMeshProUGUI>().text = currencyValue.ToString() + "$";
+        PlayerPrefs.SetInt("MoneyCount", currencyValue);
     }
 
     public void DecreaseCurrency(int count)
     {
         currencyValue -= count;
         HandleView();
+        PlayerPrefs.SetInt("MoneyCount", currencyValue);
     }
 }

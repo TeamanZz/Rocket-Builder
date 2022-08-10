@@ -15,6 +15,9 @@ public class PartsUIItem : MonoBehaviour
     public int price;
     public int countValue;
     public Button buyButton;
+    public int index;
+
+    public int totalCountValue;
 
     public bool isBoughted;
     [field: SerializeField] public string partName { get; private set; }
@@ -22,6 +25,7 @@ public class PartsUIItem : MonoBehaviour
     private void Awake()
     {
         statText.text = statValue.ToString();
+        totalCountValue = PlayerPrefs.GetInt($"{index} Item Count", countValue);
         HandleView();
     }
 
@@ -47,6 +51,7 @@ public class PartsUIItem : MonoBehaviour
         statText.gameObject.SetActive(true);
         statIcon.gameObject.SetActive(true);
         HandleView();
+        PlayerPrefs.SetInt($"{index} Item IsBoughted", 1);
         NewPartsHandler.Instance.boughtedItems.Add(this);
         buyButton.gameObject.SetActive(false);
     }

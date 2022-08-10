@@ -24,6 +24,7 @@ public class LevelsHandler : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        currentLevelIndex = PlayerPrefs.GetInt("CurrentLevelIndex", 0);
     }
 
     private void Start()
@@ -88,6 +89,8 @@ public class LevelsHandler : MonoBehaviour
             currentLevelIndex = 1;
         else
             currentLevelIndex++;
+
+        PlayerPrefs.SetInt("CurrentLevelIndex", currentLevelIndex);
 
         targetPlanet.localPosition = new Vector3(targetPlanet.localPosition.x, targetPlanetYPosition[currentLevelIndex], targetPlanet.localPosition.z);
         startPlanetsContainer[currentLevelIndex].SetActive(true);

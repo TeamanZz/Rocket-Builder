@@ -2496,6 +2496,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 181868007}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 2000
       objectReference: {fileID: 0}
@@ -13933,6 +13937,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 2000
       objectReference: {fileID: 0}
@@ -15007,6 +15015,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 300
       objectReference: {fileID: 0}
@@ -15560,6 +15572,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 181868007}
     m_Modifications:
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 3500
@@ -19087,6 +19103,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1173875441}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 1
       objectReference: {fileID: 0}
@@ -20419,6 +20439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1173875441}
     m_Modifications:
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 3000
@@ -23459,6 +23483,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 196318188}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 15
       objectReference: {fileID: 0}
@@ -24791,6 +24819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 196318188}
     m_Modifications:
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 1500
@@ -28864,6 +28896,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107130632}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 4000
       objectReference: {fileID: 0}
@@ -32874,6 +32910,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 196318188}
     m_Modifications:
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: price
       value: 3500
       objectReference: {fileID: 0}
@@ -34305,6 +34345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 181868007}
     m_Modifications:
+    - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
+      propertyPath: index
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1476593622, guid: e90b0eddadd5c0f48b627346bba18724, type: 3}
       propertyPath: statValue
       value: 1
@@ -39195,6 +39239,7 @@ GameObject:
   - component: {fileID: 2117168282}
   - component: {fileID: 2117168283}
   - component: {fileID: 2117168285}
+  - component: {fileID: 2117168286}
   m_Layer: 0
   m_Name: Main Manager
   m_TagString: Untagged
@@ -39426,6 +39471,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boostersList: []
+--- !u!114 &2117168286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117168276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e02d3e601e77694fa3c757e21e1ebd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsListHandler: {fileID: 879907194}
 --- !u!1 &2117360348
 GameObject:
   m_ObjectHideFlags: 0
