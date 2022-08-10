@@ -53,7 +53,6 @@ public class BossHealth : MonoBehaviour
         float randValue = Random.Range(-0.01f, 0.01f);
         transform.DOPunchScale(Vector3.one * randValue, 0.05f).SetEase(Ease.InBack);
 
-        SFX.Instance.PlayHitSound(gameObject);
     }
 
     public void RemoveHealth(float newValue)

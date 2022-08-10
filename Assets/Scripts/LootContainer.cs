@@ -49,7 +49,6 @@ public class LootContainer : MonoBehaviour
         float randValue = Random.Range(-0.1f, 0.1f);
         transform.DOPunchScale(new Vector3(randValue, randValue, randValue), 0.1f).SetEase(Ease.InBack);
 
-        SFX.Instance.PlayHitSound(gameObject);
     }
 
     public void SetNewFillAmount(float newValue)

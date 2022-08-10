@@ -13,14 +13,8 @@ public class SFX : MonoBehaviour
         Instance = this;
     }
 
-    public void PlayHitSound(GameObject source)
+    public void PlayGunSound()
     {
-        if (lastSource != source)
-        {
-            audioSource.pitch = 1;
-        }
-        lastSource = source;
         audioSource.PlayOneShot(playerGunHit);
-        audioSource.pitch += 0.05f;
     }
 }
