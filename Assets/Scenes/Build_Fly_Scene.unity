@@ -5079,7 +5079,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!114 &281492726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12048,9 +12048,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 695673914112780207, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695673914112780207, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695673914112780207, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 712952356276646035, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976956785476512354, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976956785476512354, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976956785476512354, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1356649538613712522, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_RootOrder
@@ -12176,6 +12200,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 2990574331252472198, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990574331252472198, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990574331252472198, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3660728215573484068, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.0000000017826098
@@ -12211,6 +12247,18 @@ PrefabInstance:
     - target: {fileID: 4052579441469433286, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000044936314
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852892364273868703, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852892364273868703, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852892364273868703, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4908352537854933823, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -12275,6 +12323,14 @@ PrefabInstance:
     - target: {fileID: 5672491388634025579, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672491388634025579, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672491388634025579, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6344811035091738951, guid: 3d059143a1ba50a4b9d63bcd45d7026a, type: 3}
       propertyPath: m_ConnectedAnchor.x

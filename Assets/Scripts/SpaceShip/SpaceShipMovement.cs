@@ -89,10 +89,17 @@ public class SpaceShipMovement : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             var delta = mousePos - lastMouseClickPos;
 
+
             if (delta.x > 0 && (spaceRB.position.x - 3) >= 6)
+            {
+                HeelingBack();
                 return;
+            }
             if (delta.x < 0 && (spaceRB.position.x - 3) <= -6)
+            {
+                HeelingBack();
                 return;
+            }
 
             spaceRB.position = spaceRB.position + new Vector3(delta.x, 0, 0);
             lastMouseClickPos = mousePos;
